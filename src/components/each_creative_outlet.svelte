@@ -12,7 +12,7 @@
 				<img
 					src={creativeOutlet.image}
 					alt="podcast"
-					class="h-full w-full object-cover blur grayscale hover:grayscale-0 group-hover:blur-none"
+					class="h-full w-full object-cover blur grayscale transition-all duration-300 hover:grayscale-0 group-hover:blur-none"
 				/>
 			</div>
 			<div

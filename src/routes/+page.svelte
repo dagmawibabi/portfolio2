@@ -1,6 +1,7 @@
 <script lang="ts">
 	import About from '../sections/about.svelte';
 	import Creativity from '../sections/creativity.svelte';
+	import Experience from '../sections/experience.svelte';
 	import Projects from '../sections/projects.svelte';
 </script>
 
@@ -15,7 +16,7 @@
 	</div>
 
 	<About />
-
 	<Creativity />
 	<Projects />
+	<Experience />
 </div>
