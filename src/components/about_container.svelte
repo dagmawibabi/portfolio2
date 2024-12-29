@@ -22,19 +22,17 @@
 	<div class="group flex items-center">
 		<div class="flex gap-x-3 rounded border-zinc-300 px-2 py-2 pr-4">
 			<!-- PROJECT IMAGE -->
-			<div
-				class="group/me h-72 w-[50%] cursor-pointer rounded border-zinc-300 group-hover:border-black"
-			>
-				<img src={me} alt="project" class="h-full w-full object-cover group-hover/me:hidden" />
+			<div class="group/me h-72 w-[50%] cursor-pointer rounded">
+				<img src={me} alt="project" class="h-full w-full object-contain group-hover/me:hidden" />
 				<img
 					src={me2}
 					alt="project"
-					class="hidden h-full w-full object-cover group-hover/me:block"
+					class="hidden h-full w-full object-contain group-hover/me:block"
 				/>
 			</div>
 
 			<!-- PROJECT DETAILS -->
-			<div class="flex w-full flex-col justify-end gap-y-4">
+			<div class="flex w-full flex-col justify-center gap-y-4">
 				<!-- TITLE -->
 				<div class="flex items-center gap-x-2">
 					<img src={logo} alt="logo" class="w-12" />
@@ -54,7 +52,7 @@
 					<p class="text-sm">
 						Illustrating how we are all intertwined and connected through various facets of life.
 						The artwork featured in this project stems from a vibrant and diverse global creative
-						community, showcasing rich and complex art styles and concepts.
+						community, showcasing rich and complex art.
 					</p>
 				</div>
 

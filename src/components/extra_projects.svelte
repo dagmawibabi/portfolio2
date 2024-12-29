@@ -8,9 +8,15 @@
 	<div class="pl-10">
 		<div class="h-7 border-l border-dashed border-zinc-900"></div>
 	</div>
-	<div class="grid grid-cols-4 gap-2 border border-zinc-300 p-2 shadow-sm">
+	<div
+		class="grid grid-cols-4 gap-2 rounded border border-zinc-300 p-2 shadow-sm transition-all hover:rounded-xl hover:border-black"
+	>
 		{#each extraProjects as extraProject}
-			<div class="border border-zinc-300 px-3 py-1 text-center">{extraProject.title}</div>
+			<div
+				class="cursor-pointer border border-zinc-300 px-3 py-1 text-center hover:rounded hover:bg-black hover:text-white"
+			>
+				{extraProject.title}
+			</div>
 		{/each}
 	</div>
 	<div class="pl-10">

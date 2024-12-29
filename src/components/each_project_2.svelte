@@ -37,7 +37,7 @@
 	<div class=" flex w-full cursor-pointer transition-all">
 		<!-- PROJECT IMAGE -->
 		<div
-			class="line flex h-52 w-[40%] overflow-clip rounded border border-zinc-300 duration-300 group-hover:border-black group-hover:shadow-lg"
+			class="line flex h-56 w-[40%] overflow-clip rounded border border-zinc-300 duration-300 group-hover:border-black group-hover:shadow-lg"
 		>
 			<img
 				src={project.image}

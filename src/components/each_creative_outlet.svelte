@@ -4,7 +4,7 @@
 
 <!-- PROJECT IMAGE -->
 <div
-	class="group h-60 w-[40%] overflow-clip rounded border border-zinc-400 transition-all hover:border-black hover:shadow-lg"
+	class="group h-64 w-[40%] overflow-clip rounded border border-zinc-400 transition-all hover:border-black hover:shadow-lg"
 >
 	<div class="flex h-full w-full flex-col justify-center">
 		<div class="group/picture relative h-full w-full">
