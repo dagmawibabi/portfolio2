@@ -18,18 +18,19 @@
 					<img src={experience.logo} alt="" class="h-6 transition-all hover:scale-150" />
 				</div>
 			{/if}
-			<div class="text-sm">{experience.role}</div>
-			<div>
+			<div class="text-sm font-semibold">{experience.role}</div>
+			<div class="py-1">
 				<p class="text-sm">
-					I'm a member of AASTU's Center of Excellence. It's a research and development program
-					where I've developed multiple complex softwares and apps.
+					{experience.description}
 				</p>
 			</div>
 
 			<div class="text-sm">
 				{#each experience.responsibilities as responsibility}
-					<div class="flex items-center">
-						<ChevronRight size={14} />
+					<div class="flex pt-1">
+						<div class="pt-1">
+							<ChevronRight size={14} />
+						</div>
 						{responsibility}
 					</div>
 				{/each}

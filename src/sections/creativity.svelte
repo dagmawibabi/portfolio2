@@ -12,21 +12,24 @@
 			description:
 				'I like to write here and there about tech, philosophical and spiritual things that interest me. My blog site is called DBlogs',
 			icon: NotebookPen,
-			image: blog
+			image: blog,
+			link: 'https://blog.dagmawibabi.com'
 		},
 		{
 			name: 'Podcast',
 			description:
 				'I like to write here and there about tech, philosophical and spiritual things that interest me. My blog site is called DBlogs',
 			icon: Mic,
-			image: podcast
+			image: podcast,
+			link: 'https://www.youtube.com/@dagmawi_babi'
 		},
 		{
 			name: 'Community',
 			description:
 				'I like to write here and there about tech, philosophical and spiritual things that interest me. My blog site is called DBlogs',
 			icon: Users,
-			image: dagmawibabi
+			image: dagmawibabi,
+			link: 'https://t.me/dagmawi_babi'
 		}
 	];
 </script>
@@ -38,7 +41,7 @@
 	</div>
 
 	<div
-		class="flex justify-evenly gap-x-2 rounded border border-zinc-300 p-2 shadow-md hover:rounded-xl hover:border-black hover:shadow-lg"
+		class="flex flex-col justify-evenly gap-y-2 rounded border border-zinc-300 p-2 shadow-md hover:rounded-xl hover:border-black hover:shadow-lg md:flex-col md:gap-y-2 lg:flex-row lg:gap-x-2 xl:flex-row xl:gap-x-2 2xl:flex-row 2xl:gap-x-2"
 	>
 		{#each creativeOutlets as creativeOutlet}
 			<EachCreativeOutlet {creativeOutlet} />

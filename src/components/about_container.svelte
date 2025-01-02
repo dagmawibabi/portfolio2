@@ -20,9 +20,20 @@
 
 <div class="border-dashed border-black pb-5">
 	<div class="group flex items-center">
-		<div class="flex gap-x-3 rounded border-zinc-300 px-2 py-2 pr-4">
+		<div
+			class="flex flex-col gap-x-3 rounded border-zinc-300 px-2 py-2 pr-4 lg:flex-row xl:flex-row 2xl:flex-row"
+		>
+			<!-- TITLE -->
+			<div class=" flex items-center gap-x-2 md:flex lg:hidden xl:hidden 2xl:hidden">
+				<img src={logo} alt="logo" class="w-12" />
+				<div class="flex flex-col justify-center">
+					<div class="text-xl font-semibold">Dagmawi Babi</div>
+					<span class="-mt-1">Believer | Creative Developer</span>
+				</div>
+			</div>
+
 			<!-- PROJECT IMAGE -->
-			<div class="group/me h-72 w-[50%] cursor-pointer rounded">
+			<div class="group/me h-56 w-[50%] cursor-pointer rounded md:h-56 lg:h-72 xl:h-72 2xl:h-72">
 				<img src={me} alt="project" class="h-full w-full object-contain group-hover/me:hidden" />
 				<img
 					src={me2}
@@ -34,7 +45,7 @@
 			<!-- PROJECT DETAILS -->
 			<div class="flex w-full flex-col justify-center gap-y-4">
 				<!-- TITLE -->
-				<div class="flex items-center gap-x-2">
+				<div class="hidden items-center gap-x-2 md:hidden lg:flex xl:flex 2xl:flex">
 					<img src={logo} alt="logo" class="w-12" />
 					<div class="flex flex-col justify-center">
 						<div class="text-xl font-semibold">Dagmawi Babi</div>
@@ -61,30 +72,50 @@
 					<div
 						class="flex items-center justify-center gap-x-3 rounded-full border-zinc-300 py-1 text-sm transition-all hover:border-black"
 					>
-						<Send
-							class="cursor-pointer text-sm  text-zinc-700 hover:scale-125 hover:text-cyan-500"
-							size={20}
-						/>
-						<Linkedin
-							class="cursor-pointer text-sm  text-zinc-700 hover:scale-125 hover:text-blue-500"
-							size={20}
-						/>
-						<Instagram
-							class="cursor-pointer text-sm  text-zinc-700 hover:scale-125 hover:text-pink-600"
-							size={20}
-						/>
-						<Twitter
-							class="cursor-pointer text-sm  text-zinc-700 hover:scale-125 hover:text-blue-500"
-							size={20}
-						/>
-						<Github
-							class="hover:text-black-500 cursor-pointer  text-sm text-zinc-700 hover:scale-125"
-							size={20}
-						/>
-						<Mail
-							class="cursor-pointer text-sm  text-zinc-700 hover:scale-125 hover:text-green-500"
-							size={20}
-						/>
+						<a href="https://www.t.me/dagmawi_babi" target="_blank" rel="noopener noreferrer">
+							<Send
+								class="cursor-pointer text-sm  text-zinc-700 hover:scale-125 hover:text-cyan-500"
+								size={20}
+							/>
+						</a>
+						<a
+							href="https://www.linkedin.com/in/dagmawibabi"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<Linkedin
+								class="cursor-pointer text-sm  text-zinc-700 hover:scale-125 hover:text-blue-500"
+								size={20}
+							/>
+						</a>
+						<a
+							href="https://www.instagram.com/dagmawibabi"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<Instagram
+								class="cursor-pointer text-sm  text-zinc-700 hover:scale-125 hover:text-pink-600"
+								size={20}
+							/>
+						</a>
+						<a href="https://www.x.com/dagmawibabi" target="_blank" rel="noopener noreferrer">
+							<Twitter
+								class="cursor-pointer text-sm  text-zinc-700 hover:scale-125 hover:text-blue-500"
+								size={20}
+							/>
+						</a>
+						<a href="https://www.github.com/dagmawibabi" target="_blank" rel="noopener noreferrer">
+							<Github
+								class="hover:text-black-500 cursor-pointer  text-sm text-zinc-700 hover:scale-125"
+								size={20}
+							/>
+						</a>
+						<a href="mailto:1babidagi@gmail.com" target="_blank" rel="noopener noreferrer">
+							<Mail
+								class="cursor-pointer text-sm  text-zinc-700 hover:scale-125 hover:text-green-500"
+								size={20}
+							/>
+						</a>
 						<div class="group/phone cursor-pointer">
 							<Phone
 								class="text-sm text-zinc-700 hover:scale-125 group-hover/phone:hidden"

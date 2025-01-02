@@ -8,7 +8,7 @@
 	import Remarks from '../sections/remarks.svelte';
 </script>
 
-<div class="mx-auto w-1/2 pb-56 pt-4">
+<div class="mx-auto w-[96%] pb-56 pt-4 md:w-[96%] lg:w-1/2 xl:w-1/2 2xl:w-1/2">
 	<About />
 	<Creativity />
 	<Events />

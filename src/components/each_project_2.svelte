@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Code2, ExternalLink, Layers } from 'lucide-svelte';
+	import { Code2, ExternalLink, Key, KeyIcon, Layers, Lock } from 'lucide-svelte';
 
 	let { project } = $props();
 
@@ -26,7 +26,11 @@
 		Unity:
 			'https://w7.pngwing.com/pngs/426/535/png-transparent-unity-new-logo-tech-companies-thumbnail.png',
 		Arduino:
-			'https://e7.pngegg.com/pngimages/758/841/png-clipart-arduino-max-electronic-circuit-pure-data-oscilloscope-raspberry-pi-icons-logo-microcontroller-thumbnail.png'
+			'https://e7.pngegg.com/pngimages/758/841/png-clipart-arduino-max-electronic-circuit-pure-data-oscilloscope-raspberry-pi-icons-logo-microcontroller-thumbnail.png',
+		Gemini:
+			'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-gemini-icon.png',
+		ReactJS: 'https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png',
+		Godot: 'https://godotengine.org/assets/press/icon_color.png'
 	};
 </script>
 
@@ -34,15 +38,17 @@
 	<div class="pl-10">
 		<div class="h-7 border-l border-dashed border-zinc-900"></div>
 	</div>
-	<div class=" flex w-full cursor-pointer transition-all">
+	<div
+		class="flex w-full cursor-pointer flex-col transition-all md:flex-row lg:flex-row xl:flex-row 2xl:flex-row"
+	>
 		<!-- PROJECT IMAGE -->
 		<div
-			class="line flex h-56 w-[40%] overflow-clip rounded border border-zinc-300 duration-300 group-hover:border-black group-hover:shadow-lg"
+			class="flex h-56 w-full overflow-clip rounded border border-zinc-300 duration-300 group-hover:border-black group-hover:shadow-lg lg:w-[40%] xl:w-[40%] 2xl:w-[40%]"
 		>
 			<img
 				src={project.image}
 				alt=""
-				class="h-full w-full object-cover grayscale transition-all group-hover:scale-110 group-hover:grayscale-0"
+				class="h-full w-full object-cover transition-all group-hover:scale-110 group-hover:grayscale-0 lg:grayscale xl:grayscale 2xl:grayscale"
 			/>
 		</div>
 
@@ -70,25 +76,41 @@
 
 				<!-- DESCRIPTION -->
 				<div>
-					<p class="text-sm">
+					<p class="pt-1 text-sm md:pt-1 lg:pt-0 xl:pt-0 2xl:pt-0">
 						{project.description}
 					</p>
 				</div>
 
 				<!-- CTA -->
-				<div class="flex gap-x-2">
-					<div
-						class="duration-120 flex items-center justify-center gap-x-2 border border-zinc-300 px-3 py-1 text-sm transition-all hover:border-black group-hover:rounded-full"
-					>
-						<ExternalLink size={16} class="text-zinc-700 hover:text-black" />
-						<span class="text-sm text-zinc-700 hover:text-black"> View Live </span>
-					</div>
-					<div
-						class="duration-120 flex items-center justify-center gap-x-2 border border-zinc-300 px-3 py-1 transition-all hover:border-black group-hover:rounded-full"
-					>
-						<Code2 size={16} class="text-zinc-700 hover:text-black" />
-						<span class="text-sm text-zinc-700 hover:text-black"> Source Code </span>
-					</div>
+				<div class="flex gap-x-2 pt-2 md:pt-2 lg:pt-0 xl:pt-0 2xl:pt-0">
+					{#if project.link != ''}
+						<a href={project.link} target="_blank" rel="noopener noreferrer">
+							<div
+								class="duration-120 flex items-center justify-center gap-x-2 border border-zinc-300 px-3 py-1 text-sm transition-all hover:border-black group-hover:rounded-full"
+							>
+								<ExternalLink size={16} class="text-zinc-700 hover:text-black" />
+								<span class="text-sm text-zinc-700 hover:text-black"> View Live </span>
+							</div>
+						</a>
+					{/if}
+					{#if project.code != ''}
+						<a href={project.code} target="_blank" rel="noopener noreferrer">
+							<div
+								class="duration-120 flex items-center justify-center gap-x-2 border border-zinc-300 px-3 py-1 transition-all hover:border-black group-hover:rounded-full"
+							>
+								<Code2 size={16} class="text-zinc-700 hover:text-black" />
+								<span class="text-sm text-zinc-700 hover:text-black"> Source Code </span>
+							</div>
+						</a>
+					{/if}
+					{#if project.link == '' && project.code == ''}
+						<div
+							class="duration-120 flex items-center justify-center gap-x-2 border border-zinc-300 px-3 py-1 transition-all hover:border-black group-hover:rounded-full"
+						>
+							<Lock size={16} class="text-zinc-700 hover:text-black" />
+							<span class="text-sm text-zinc-700 hover:text-black"> NDA Protected </span>
+						</div>
+					{/if}
 				</div>
 			</div>
 		</div>
