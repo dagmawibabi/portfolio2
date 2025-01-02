@@ -56,14 +56,16 @@
 				<!-- DESCRIPTION -->
 				<div class="flex flex-col gap-y-2">
 					<p class="text-sm">
-						The Unity Project Mural is a diverse and collaborative art initiative, inviting people
-						to contribute their artistic expressions in a way that interlinks with surrounding
-						artworks. This interconnectedness narrates the story of human.
+						Hello! My name is Dagmawi and I enjoy creating tech solutions to my daily problems. My
+						interest in software development started back in 2013 when I accidentally stumbled upon
+						a batch programming ebook in one of my harddrives — turns out there's so much you could
+						do on a black & white terminal!
 					</p>
 					<p class="text-sm">
-						Illustrating how we are all intertwined and connected through various facets of life.
-						The artwork featured in this project stems from a vibrant and diverse global creative
-						community, showcasing rich and complex art.
+						Fast-forward to today, and I've had the privilege of working at multiple start ups, an
+						event organizing company , a huge corporation , and a student-led design club . My main
+						focus these days is building accessible, inclusive products and digital experiences at
+						Dream Intelligence for a variety of clients.
 					</p>
 				</div>
 
