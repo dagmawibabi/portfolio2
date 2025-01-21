@@ -63,8 +63,8 @@
 					</Carousel.Item>
 				{/each}
 			</Carousel.Content>
-			<Carousel.Previous />
-			<Carousel.Next />
+			<Carousel.Previous class="hidden lg:flex xl:flex 2xl:flex" />
+			<Carousel.Next class="hidden lg:flex xl:flex 2xl:flex" />
 		</div>
 	</Carousel.Root>
 </div>
