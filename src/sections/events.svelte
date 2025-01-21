@@ -10,9 +10,13 @@
 	import AASTUTechFest from '$lib/assets/events/AASTUTechFest.jpg';
 
 	let events = [
-		{ name: 'Gugut Podcast', image: GugutPodcast },
-		{ name: 'Halwot Emmanuel', image: HalwotEmmanuel },
-		{ name: 'AASTU TechFest', image: AASTUTechFest }
+		{ name: 'Gugut Podcast', image: GugutPodcast, link: 'https://youtube.com/watch?v=-Wjw37IAdIE' },
+		{
+			name: 'Halwot Emmanuel',
+			image: HalwotEmmanuel,
+			link: 'https://www.instagram.com/p/C_qfv1rI1hd/?igsh=d2gwN2hwdDhkdmln'
+		},
+		{ name: 'AASTU TechFest', image: AASTUTechFest, link: 'https://t.me/Dagmawi_Babi/19837' }
 	];
 </script>
 
@@ -42,16 +46,18 @@
 							<Card.Content
 								class="group/content relative m-0 aspect-square h-full w-full overflow-clip rounded border p-0 hover:border-black"
 							>
-								<img
-									src={eachEvent.image}
-									alt=""
-									class="h-full w-full object-cover transition-all hover:scale-110 hover:grayscale-0 lg:grayscale xl:grayscale 2xl:grayscale"
-								/>
-								<div
-									class="absolute bottom-2 left-[25%] mx-auto hidden w-fit items-center justify-center rounded-full border border-black bg-white px-3 text-center group-hover/content:flex"
-								>
-									{eachEvent.name}
-								</div>
+								<a href={eachEvent.link}>
+									<img
+										src={eachEvent.image}
+										alt=""
+										class="h-full w-full object-cover transition-all hover:scale-110 hover:grayscale-0 lg:grayscale xl:grayscale 2xl:grayscale"
+									/>
+									<div
+										class="absolute bottom-2 left-[25%] mx-auto hidden w-fit items-center justify-center rounded-full border border-black bg-white px-3 text-center group-hover/content:flex"
+									>
+										{eachEvent.name}
+									</div>
+								</a>
 							</Card.Content>
 						</Card.Root>
 					</Carousel.Item>

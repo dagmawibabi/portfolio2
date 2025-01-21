@@ -25,7 +25,9 @@
 					<span class="text-lg font-semibold"> 2 Corinthians 3:5 </span>
 				{/if}
 			</div>
-			<div class="group cursor-pointer pt-3 text-lg">
+			<!-- svelte-ignore a11y_click_events_have_key_events -->
+			<!-- svelte-ignore a11y_no_static_element_interactions -->
+			<div class="group cursor-pointer pt-3 text-lg" onclick={() => (isAmharic = !isAmharic)}>
 				{#if isAmharic}
 					<div class="flex flex-col">
 						<p>ብቃታችን ከእግዚአብሔር ነው እንጂ፣</p>

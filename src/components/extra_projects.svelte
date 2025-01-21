@@ -9,12 +9,12 @@
 		<div class="h-7 border-l border-dashed border-zinc-900"></div>
 	</div>
 	<div
-		class="grid grid-cols-2 gap-2 rounded border border-zinc-300 p-2 shadow-sm transition-all hover:rounded-xl hover:border-black lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4"
+		class="grid grid-cols-2 gap-2 rounded border border-zinc-300 p-2 shadow-sm transition-all hover:rounded-lg hover:border-black lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4"
 	>
 		{#each extraProjects as extraProject}
 			<a href={extraProject.link} target="_blank" rel="noopener noreferrer">
 				<div
-					class="cursor-pointer border border-zinc-300 px-3 py-1 text-center hover:rounded hover:bg-black hover:text-white"
+					class="cursor-pointer border border-zinc-300 px-3 py-1 text-center hover:rounded-lg hover:bg-black hover:text-white"
 				>
 					{extraProject.title}
 				</div>

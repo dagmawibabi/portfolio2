@@ -10,7 +10,7 @@
 		{
 			name: 'Blog',
 			description:
-				'I like to write here and there about tech, philosophical and spiritual things that interest me. My blog site is called DBlogs',
+				'I like to write here and there about tech, philosophical and spiritual topics that interest me. My blog site is called DBlogs',
 			icon: NotebookPen,
 			image: blog,
 			link: 'https://blog.dagmawibabi.com'
@@ -18,7 +18,7 @@
 		{
 			name: 'Podcast',
 			description:
-				'I like to write here and there about tech, philosophical and spiritual things that interest me. My blog site is called DBlogs',
+				'I like having deep and long conversation with people that inspire me. My podcast is about that conversation.',
 			icon: Mic,
 			image: podcast,
 			link: 'https://www.youtube.com/@dagmawi_babi'
@@ -26,7 +26,7 @@
 		{
 			name: 'Community',
 			description:
-				'I like to write here and there about tech, philosophical and spiritual things that interest me. My blog site is called DBlogs',
+				'Building a community of supportive, driven, caring and brilliant people around me is something I love to do.',
 			icon: Users,
 			image: dagmawibabi,
 			link: 'https://t.me/dagmawi_babi'

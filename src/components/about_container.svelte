@@ -32,7 +32,7 @@
 				</div>
 			</div>
 
-			<!-- PROJECT IMAGE -->
+			<!-- IMAGE -->
 			<div class="group/me h-56 w-[50%] cursor-pointer rounded md:h-56 lg:h-72 xl:h-72 2xl:h-72">
 				<img src={me} alt="project" class="h-full w-full object-contain group-hover/me:hidden" />
 				<img
@@ -42,8 +42,8 @@
 				/>
 			</div>
 
-			<!-- PROJECT DETAILS -->
-			<div class="flex w-full flex-col justify-center gap-y-4">
+			<!-- DETAILS -->
+			<div class="flex w-full flex-col justify-center gap-y-4 pt-3 lg:pt-0 xl:pt-0 2xl:pt-0">
 				<!-- TITLE -->
 				<div class="hidden items-center gap-x-2 md:hidden lg:flex xl:flex 2xl:flex">
 					<img src={logo} alt="logo" class="w-12" />
@@ -63,9 +63,9 @@
 					</p>
 					<p class="text-sm">
 						Fast-forward to today, and I've had the privilege of working at multiple start ups, an
-						event organizing company , a huge corporation , and a student-led design club . My main
-						focus these days is building accessible, inclusive products and digital experiences at
-						Dream Intelligence for a variety of clients.
+						event organizing company, a huge corporation, campus clubs and handled government
+						projects. My main focus these days is building modern, minimal and powerful products and
+						digital experiences at Dream Intelligence for the world to explore.
 					</p>
 				</div>
 

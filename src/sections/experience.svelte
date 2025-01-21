@@ -11,24 +11,29 @@
 		{
 			company: 'Dream Intelligence',
 			logo: dreamIntelligence,
+			link: '',
 			role: 'CEO and Founder',
-			date: 'June 2021 - Present',
+			date: 'Nov 2018 - Present',
 			responsibilities: [
 				'Handle day to day business and technology directions',
 				'Architected and implemented multiple products and solutions',
-				'Prototyped and demoed multiple MVPs for a eHealth company',
 				'Offer a great line of products to help ease life and solve problems'
 			],
 			description: [
-				"I've founded and Im running my own technology solutions company which has helped bring a great line of incredible and complex products and services to the world. I'm running all aspects of business and working to expand and enrich my company."
+				"I've founded and run my own tech company which has helped bring a great line of incredible and complex products and services to the world. I'm running all aspects of business and working to expand and enrich my company."
 			]
 		},
 		{
 			company: 'Afriwork',
 			logo: afriwork,
+			link: 'https://www.afriworket.com',
 			role: 'Web and Mobile Fullstack Dev',
-			date: 'February 2022 - Present',
-			responsibilities: ["Designed a hiring pipeline for the company's internal team"],
+			date: 'Aug 2024 - Present',
+			responsibilities: [
+				'Designed a hiring pipeline for the company',
+				'Consulted on outsourcing projects',
+				'Main mobile apps developer for outsourced projects'
+			],
 			description: [
 				'Afriwork is a platform that connects freelancers and clients trusted by over 15k companies and 300k freelancers. And it is the top freelancing platform in Ethiopia.'
 			]
@@ -36,12 +41,13 @@
 		{
 			company: 'ITD3',
 			logo: itd3,
+			link: 'https://aaitdb.gov.et',
 			role: 'Fullstack Dev and DevOps Engineer',
-			date: 'February 2022 - Present',
+			date: 'February 2022 - January 2024',
 			responsibilities: [
 				'Deployed, secured and maintained multiple web apps',
 				'Wrote automating code to backup, log and maintain multiple projects',
-				'Write modern, performant, maintainable code for a diverse array of internal projects',
+				'Wrote modern, performant, maintainable code for a diverse array of internal projects',
 				'Communicate with multi-disciplinary teams of engineers, designers, testers, project managers and stakeholders,'
 			],
 			description: [
@@ -49,10 +55,26 @@
 			]
 		},
 		{
+			company: 'Artificial Intelligence and Robotics Center of Excellence',
+			logo: '',
+			link: '',
+			role: 'Backend and DevOps Engineer',
+			date: 'February 2021 - June 2023',
+			responsibilities: [
+				'Deployed, secured and maintained multiple web apps',
+				'Wrote automating code to backup, log and maintain multiple projects',
+				'Write modern, performant, maintainable code for a diverse array of internal projects'
+			],
+			description: [
+				"I was a member of AASTU's Center of Excellence. It's a research and development program where I've developed multiple complex softwares and apps."
+			]
+		},
+		{
 			company: 'Freelancing',
 			logo: '',
+			link: '',
 			role: 'Web and Mobile App Developer',
-			date: 'February 2022 - Present',
+			date: 'June 2020 - Present',
 			responsibilities: [
 				'Worked on lots of contract-based projects',
 				'System analysis and modeling for multiple clients and projects',
@@ -65,22 +87,9 @@
 			]
 		},
 		{
-			company: 'Artificial Intelligence and Robotics Center of Excellence',
-			logo: '',
-			role: 'Backend and DevOps Engineer',
-			date: 'February 2022 - Present',
-			responsibilities: [
-				'Deployed, secured and maintained multiple web apps',
-				'Wrote automating code to backup, log and maintain multiple projects',
-				'Write modern, performant, maintainable code for a diverse array of internal projects'
-			],
-			description: [
-				"I was a member of AASTU's Center of Excellence. It's a research and development program where I've developed multiple complex softwares and apps."
-			]
-		},
-		{
 			company: 'Arif Events',
 			logo: '',
+			link: '',
 			role: 'web and mobile fullstack dev',
 			date: 'July - September 2019',
 			responsibilities: [

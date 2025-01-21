@@ -10,14 +10,18 @@
 	</div>
 
 	<div class="pl-10">
-		<div class="w-[80%] border-l border-zinc-300 px-3 pb-5 pl-5 pt-3">
-			{#if experience.logo == ''}
-				<div class="text-lg font-bold">{experience.company}</div>
-			{:else}
-				<div class="pb-2">
-					<img src={experience.logo} alt="" class="h-6 transition-all hover:scale-150" />
-				</div>
-			{/if}
+		<div
+			class="w-full border-l border-zinc-300 px-3 pb-5 pl-5 pt-3 lg:w-[80%] xl:w-[80%] 2xl:w-[80%]"
+		>
+			<a href={experience.link}>
+				{#if experience.logo == ''}
+					<div class="text-lg font-bold">{experience.company}</div>
+				{:else}
+					<div class="pb-2">
+						<img src={experience.logo} alt="" class="h-6 transition-all hover:scale-150" />
+					</div>
+				{/if}
+			</a>
 			<div class="text-sm font-semibold">{experience.role}</div>
 			<div class="py-1">
 				<p class="text-sm">
