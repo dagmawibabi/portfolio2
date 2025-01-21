@@ -86,7 +86,7 @@
 					{#if project.link != ''}
 						<a href={project.link} target="_blank" rel="noopener noreferrer">
 							<div
-								class="duration-120 flex items-center justify-center gap-x-2 border border-zinc-300 px-3 py-1 text-sm transition-all hover:border-black group-hover:rounded-full"
+								class="duration-120 flex items-center justify-center gap-x-2 rounded-full border border-zinc-300 px-3 py-1 text-sm transition-all hover:border-black"
 							>
 								<ExternalLink size={16} class="text-zinc-700 hover:text-black" />
 								<span class="text-sm text-zinc-700 hover:text-black"> View Live </span>
@@ -96,7 +96,7 @@
 					{#if project.code != ''}
 						<a href={project.code} target="_blank" rel="noopener noreferrer">
 							<div
-								class="duration-120 flex items-center justify-center gap-x-2 border border-zinc-300 px-3 py-1 transition-all hover:border-black group-hover:rounded-full"
+								class="duration-120 flex items-center justify-center gap-x-2 rounded-full border border-zinc-300 px-3 py-1 transition-all hover:border-black"
 							>
 								<Code2 size={16} class="text-zinc-700 hover:text-black" />
 								<span class="text-sm text-zinc-700 hover:text-black"> Source Code </span>

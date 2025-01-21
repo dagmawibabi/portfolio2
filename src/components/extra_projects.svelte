@@ -14,7 +14,7 @@
 		{#each extraProjects as extraProject}
 			<a href={extraProject.link} target="_blank" rel="noopener noreferrer">
 				<div
-					class="cursor-pointer border border-zinc-300 px-3 py-1 text-center hover:rounded-lg hover:bg-black hover:text-white"
+					class="cursor-pointer border border-zinc-300 px-3 py-1 text-center transition-all hover:rounded-lg hover:bg-black hover:text-white"
 				>
 					{extraProject.title}
 				</div>
@@ -28,7 +28,7 @@
 
 <a href="https://www.github.com/dagmawibabi" target="_blank" rel="noopener noreferrer">
 	<div
-		class="group/moreProjects flex w-fit cursor-pointer items-center justify-center gap-x-1 rounded-full px-3 py-1 hover:bg-black hover:text-white"
+		class="group/moreProjects flex w-fit cursor-pointer items-center justify-center gap-x-1 rounded-full px-3 py-1 transition-all hover:bg-black hover:text-white"
 	>
 		<span class=""> More on Github </span>
 		<Github class="hidden group-hover/moreProjects:block" size={18} />

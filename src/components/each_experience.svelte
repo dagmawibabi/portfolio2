@@ -15,7 +15,9 @@
 		>
 			<a href={experience.link}>
 				{#if experience.logo == ''}
-					<div class="text-lg font-bold">{experience.company}</div>
+					<div class="text-lg font-bold underline-offset-4 transition-all hover:underline">
+						{experience.company}
+					</div>
 				{:else}
 					<div class="pb-2">
 						<img src={experience.logo} alt="" class="h-6 transition-all hover:scale-150" />
