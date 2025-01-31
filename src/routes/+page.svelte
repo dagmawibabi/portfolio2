@@ -1,5 +1,6 @@
 <script lang="ts">
 	import About from '../sections/about.svelte';
+	import AiChat from '../sections/ai_chat.svelte';
 	import Awards from '../sections/awards.svelte';
 	import Creativity from '../sections/creativity.svelte';
 	import Education from '../sections/education.svelte';
@@ -18,4 +19,5 @@
 	<Experience />
 	<Awards />
 	<Remarks />
+	<AiChat />
 </div>
