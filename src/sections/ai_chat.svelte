@@ -20,40 +20,24 @@
 		// }
 	];
 
-	let aiSystemPrompt = '';
-
 	async function aiChat(message: string) {
-		// Setup
-		let openAI = new OpenAI({
-			apiKey: 'AIzaSyAkfJpF6ZdjEapZYuf6La2LBf_KNdYM5rA',
-			baseURL: 'https://generativelanguage.googleapis.com/v1beta/',
-			dangerouslyAllowBrowser: true
+		let result = await fetch('/api/ai', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({ message })
 		});
-
-		// Result
-		console.log('Sending message 2');
-		const result = await openAI.chat.completions.create({
-			model: 'gemini-1.5-flash',
-			messages: [
-				{ role: 'system', content: aiSystemPrompt },
-				{
-					role: 'user',
-					content: message + conversation
-				}
-			]
-		});
-		console.log('Sending message 3');
+		console.log(result.body?.getReader().read());
 		let aiResponse = {
 			role: 'ai',
-			content: result.choices[0].message.content
+			content: result.body
 		};
 		conversation.pop();
 		conversation = [...conversation, aiResponse];
-		console.log('Sending message 4');
 	}
 
 	async function sendMessage() {
-		console.log('Sending message');
 		const inputBox = document.getElementById('inputBox') as HTMLInputElement;
 		let userInput = {
 			role: 'user',
@@ -65,7 +49,7 @@
 		};
 		conversation = [...conversation, userInput, loading];
 
-		await aiChat(conversation[conversation.length - 1]);
+		await aiChat(conversation[conversation.length - 2]);
 	}
 
 	// using moment get the current human readable date
