@@ -1,4 +1,4 @@
-import { json } from '@sveltejs/kit';
+// import { json } from '@sveltejs/kit';
 import OpenAI from 'openai';
 const aiSystemPrompt = '';
 
@@ -23,5 +23,5 @@ export async function POST({ request }) {
 		]
 	});
 	console.log('result', result.choices[0].message.content);
-	return json(result.choices[0].message.content);
+	return Response.json(result.choices[0].message.content);
 }

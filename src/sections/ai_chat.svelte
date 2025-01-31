@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { PersonStanding, Sparkle } from 'lucide-svelte';
-	import SectionTitles from '../components/section_title.svelte';
 	import { BarLoader } from 'svelte-loading-spinners';
-	import OpenAI from 'openai';
 	import moment from 'moment';
+	import Markdown from 'svelte-exmarkdown';
+	import { gfmPlugin } from 'svelte-exmarkdown/gfm';
+	const plugins = [gfmPlugin()];
 
 	let conversation: any = [
 		// {
@@ -20,6 +21,20 @@
 		// }
 	];
 
+	async function readStream(response: any) {
+		const reader = response.body.getReader();
+		const decoder = new TextDecoder();
+
+		let result = '';
+
+		while (true) {
+			const { done, value } = await reader.read();
+			if (done) break;
+			result += decoder.decode(value, { stream: true });
+		}
+		return result;
+	}
+
 	async function aiChat(message: string) {
 		let result = await fetch('/api/ai', {
 			method: 'POST',
@@ -28,10 +43,14 @@
 			},
 			body: JSON.stringify({ message })
 		});
-		console.log(result.body?.getReader().read());
+		let responseStream = await readStream(result);
+		console.log(result);
 		let aiResponse = {
 			role: 'ai',
-			content: result.body
+			content: responseStream
+				.replaceAll('\\n', '')
+				.toString()
+				.substring(1, responseStream.length - 1)
 		};
 		conversation.pop();
 		conversation = [...conversation, aiResponse];
@@ -72,7 +91,9 @@
 			<div>
 				{#if message.role === 'user'}
 					<div class="pl-5">
-						<div class="w-fit rounded-full border px-3 py-1">{message.content}</div>
+						<div class="w-fit cursor-pointer rounded-lg border px-3 py-1 hover:border-black">
+							{message.content}
+						</div>
 					</div>
 				{:else if message.role === 'system'}
 					<div class="pl-10">
@@ -87,7 +108,10 @@
 					<!-- <Sparkle class="h-4 w-4" /> -->
 					<div class="pl-10">
 						<div class="border-l border-dashed border-zinc-900 py-3 pl-3">
-							<div class="w-fit rounded-full border px-3 py-1">{message.content}</div>
+							<div class="w-fit cursor-pointer rounded-lg border px-3 py-1 hover:border-black">
+								<!-- {message.content} -->
+								<Markdown md={message.content} {plugins} />
+							</div>
 						</div>
 					</div>
 				{/if}
