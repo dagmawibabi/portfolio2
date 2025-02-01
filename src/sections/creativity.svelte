@@ -18,7 +18,7 @@
 		{
 			name: 'Podcast',
 			description:
-				'I like having deep and long conversations with people that inspire me. My podcast is about these conversations.',
+				'I like having deep and long conversations with people that inspire me. My podcast is about these conversations',
 			icon: Mic,
 			image: podcast,
 			link: 'https://www.youtube.com/@dagmawi_babi'
@@ -26,7 +26,7 @@
 		{
 			name: 'Community',
 			description:
-				'Building a community of supportive, driven, caring and brilliant people around me is something I love to do.',
+				'Building a community of supportive, driven, caring and brilliant people around me is something I love to do',
 			icon: Users,
 			image: dagmawibabi,
 			link: 'https://t.me/dagmawi_babi'

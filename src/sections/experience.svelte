@@ -48,7 +48,7 @@
 				'Deployed, secured and maintained multiple web apps',
 				'Wrote automating code to backup, log and maintain multiple projects',
 				'Wrote modern, performant, maintainable code for a diverse array of internal projects',
-				'Communicate with multi-disciplinary teams of engineers, designers, testers, project managers and stakeholders,'
+				'Communicate with multi-disciplinary teams of engineers, designers, testers, project managers and stakeholders'
 			],
 			description: [
 				'Innovation and Technology Development Bureau, ITD3, is an Addis Ababa based institution whose main objective is to make the procedures of institutions modern and efficient.'

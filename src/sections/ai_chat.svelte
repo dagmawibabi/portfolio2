@@ -50,7 +50,8 @@
 			content: responseStream
 				.replaceAll('\\n', '')
 				.toString()
-				.substring(1, responseStream.length - 1)
+				.trim()
+				.substring(1, responseStream.length - 3)
 		};
 		conversation.pop();
 		conversation = [...conversation, aiResponse];
