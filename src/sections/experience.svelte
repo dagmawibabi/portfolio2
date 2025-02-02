@@ -67,7 +67,7 @@
 				'Wrote different APIs for different projects'
 			],
 			description: [
-				'Innovation and Technology Development Bureau, ITD3, is an Addis Ababa based institution whose main objective is to make the procedures of institutions modern and efficient.'
+				'A certified Ethiopian Owned Company with 16+ Years of Experience and 200+ emloyees in IT Service Oriented Solutions. They have been involved exclusively in the areas ranging from enterprise network services and business automation intelligence to smart infrastructure and cloud services with partners like Mastercard, Dell, H&M, Visa and so many more.'
 			]
 		},
 		{
