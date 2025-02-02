@@ -59,7 +59,7 @@
 			company: 'IE Network Solutions',
 			logo: IENetworkSolutions,
 			link: 'https://www.ienetworksolutions.com/',
-			role: 'Fullstack Dev',
+			role: 'Fullstack Dev Intern',
 			date: 'June 2023 - September 2024',
 			responsibilities: [
 				'Built internal tools to automate business processes',
@@ -106,7 +106,7 @@
 			company: 'Arif Events',
 			logo: '',
 			link: '',
-			role: 'web and mobile fullstack dev',
+			role: 'Fullstack Dev Intern',
 			date: 'July - September 2019',
 			responsibilities: [
 				'Built new event management related features',
