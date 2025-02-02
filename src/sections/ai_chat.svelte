@@ -59,17 +59,19 @@
 
 	async function sendMessage() {
 		const inputBox = document.getElementById('inputBox') as HTMLInputElement;
-		let userInput = {
-			role: 'user',
-			content: inputBox.value
-		};
-		inputBox.value = '';
-		let loading = {
-			role: 'system'
-		};
-		conversation = [...conversation, userInput, loading];
+		if (inputBox.value.length > 0) {
+			let userInput = {
+				role: 'user',
+				content: inputBox.value
+			};
+			inputBox.value = '';
+			let loading = {
+				role: 'system'
+			};
+			conversation = [...conversation, userInput, loading];
 
-		await aiChat(conversation[conversation.length - 2]);
+			await aiChat(conversation[conversation.length - 2]);
+		}
 	}
 
 	// using moment get the current human readable date
