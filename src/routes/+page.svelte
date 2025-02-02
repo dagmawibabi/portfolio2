@@ -19,5 +19,5 @@
 	<Experience />
 	<Awards />
 	<Remarks />
-	<AiChat />
+	<AiChat isFullscreen={false} />
 </div>

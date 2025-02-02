@@ -1,26 +1,15 @@
 <script lang="ts">
-	import { PersonStanding, Sparkle } from 'lucide-svelte';
+	import { Maximize, Minimize, Sparkle, Trash } from 'lucide-svelte';
 	import { BarLoader } from 'svelte-loading-spinners';
 	import moment from 'moment';
 	import Markdown from 'svelte-exmarkdown';
 	import { gfmPlugin } from 'svelte-exmarkdown/gfm';
+	import { conversationState } from '../state/conversation.svelte';
 	const plugins = [gfmPlugin()];
 
-	let conversation: any = [
-		// {
-		// 	role: 'user',
-		// 	content: 'Hey!'
-		// },
-		// {
-		// 	role: 'ai',
-		// 	content: 'Hey there nice to meet you!'
-		// },
-		// {
-		// 	role: 'system',
-		// 	content: 'Hey there nice to meet you!'
-		// }
-	];
+	let { isFullscreen } = $props();
 
+	let conversation: any = $state(conversationState.conversation);
 	async function readStream(response: any) {
 		const reader = response.body.getReader();
 		const decoder = new TextDecoder();
@@ -44,7 +33,6 @@
 			body: JSON.stringify({ message })
 		});
 		let responseStream = await readStream(result);
-		console.log(result);
 		let aiResponse = {
 			role: 'ai',
 			content: responseStream
@@ -55,6 +43,7 @@
 		};
 		conversation.pop();
 		conversation = [...conversation, aiResponse];
+		conversationState.conversation = conversation;
 	}
 
 	async function sendMessage() {
@@ -69,7 +58,7 @@
 				role: 'system'
 			};
 			conversation = [...conversation, userInput, loading];
-
+			conversationState.conversation = conversation;
 			await aiChat(conversation[conversation.length - 2]);
 		}
 	}
@@ -78,12 +67,20 @@
 	let formattedDate = moment().format('MMMM DD, YYYY');
 </script>
 
-<div class="pb-16 pt-16">
+<div id="aiChat" class="pb-16 pt-16">
 	<!-- <SectionTitles title={'Quick AI Chat'} /> -->
-	<div class="flex items-center gap-x-2 pl-[31px]">
-		<Sparkle size={18} />
-		<p class="pb-1">Gemini</p>
-	</div>
+	<!-- Fullscreen AI Chat -->
+	<a href={isFullscreen == true ? '/#aiChat' : '/aichat'}>
+		<div class="group flex cursor-pointer items-center gap-x-2 pl-[31px]">
+			<Sparkle size={18} class="flex transition-all group-hover:hidden" />
+			{#if isFullscreen == true}
+				<Minimize size={18} class="hidden transition-all group-hover:flex" />
+			{:else}
+				<Maximize size={18} class="hidden transition-all group-hover:flex" />
+			{/if}
+			<p class="pb-1">Gemini</p>
+		</div>
+	</a>
 	<div class="pl-10">
 		<div class="h-7 border-l border-dashed border-zinc-900"></div>
 	</div>
@@ -123,6 +120,11 @@
 	</div>
 
 	<!-- Input Box -->
+	{#if conversation.length > 0}
+		<div class="pl-10">
+			<div class="h-10 border-l border-dashed border-zinc-900"></div>
+		</div>
+	{/if}
 	<div class="overflow-clip rounded border hover:rounded-xl hover:border-black">
 		<div class="flex">
 			<!-- Send message on enter -->
@@ -154,6 +156,20 @@
 		<div class="h-7 border-l border-dashed border-zinc-900"></div>
 	</div>
 	<div class="flex items-center gap-x-2 pl-6 text-sm text-zinc-500">
-		<p class="pb-1">{formattedDate}</p>
+		{#if isFullscreen == true}
+			<!-- svelte-ignore a11y_click_events_have_key_events -->
+			<!-- svelte-ignore a11y_no_static_element_interactions -->
+			<div
+				class="pl-[9px] pt-1"
+				onclick={() => {
+					conversationState.conversation = [];
+					conversation = [];
+				}}
+			>
+				<Trash size={15} class="cursor-pointer hover:text-black" />
+			</div>
+		{:else}
+			<p class="pb-1">{formattedDate}</p>
+		{/if}
 	</div>
 </div>

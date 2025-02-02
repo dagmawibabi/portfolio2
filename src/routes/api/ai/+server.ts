@@ -1,7 +1,9 @@
 // import { json } from '@sveltejs/kit';
+import moment from 'moment';
 import OpenAI from 'openai';
+const currentTime = moment().format('MMMM DD, YYYY HH:mm:ss');
 const aiSystemPrompt = `
-YOU ARE IN DAGMAWI BABI'S PERSONAL WEBSITE AND THE USERS MIGHT SOMETIMES ASK YOU ABOUT HIM SO USE THE FOLLOWING PORTFOLIO TO ANSWER THEIR QUESTIONS. DON'T ANSWER ABOUT DAGMAWI BABI UNLESS YOU ARE SPECIFICALLY ASKED. YOU CAN TALK ABOUT ANYTHIN YOU'RE ASKED! 
+YOU ARE IN DAGMAWI BABI'S PERSONAL WEBSITE AND THE USERS MIGHT SOMETIMES ASK YOU ABOUT HIM SO USE THE FOLLOWING PORTFOLIO TO ANSWER THEIR QUESTIONS. DON'T ANSWER ABOUT DAGMAWI BABI UNLESS YOU ARE SPECIFICALLY ASKED. YOU CAN TALK ABOUT ANYTHIN YOU'RE ASKED! The curreny datetime if you want it is ${currentTime}
 Dagmawi Babi
 Believer, Creative Developer
 Hello! My name is Dagmawi and I enjoy creating tech solutions to my daily problems. My
@@ -167,6 +169,6 @@ export async function POST({ request }) {
 			}
 		]
 	});
-	console.log('result', result.choices[0].message.content);
+	// console.log('result', result.choices[0].message.content);
 	return Response.json(result.choices[0].message.content);
 }
