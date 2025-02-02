@@ -5,6 +5,7 @@
 	// Images
 	import afriwork from '$lib/assets/experience/Afriwork.png';
 	import itd3 from '$lib/assets/experience/ITD3.png';
+	import IENetworkSolutions from '$lib/assets/experience/IENetworkSolutions.png';
 	import dreamIntelligence from '$lib/assets/experience/DreamIntelligence.png';
 
 	let experiences = [
@@ -49,6 +50,21 @@
 				'Wrote automating code to backup, log and maintain multiple projects',
 				'Wrote modern, performant, maintainable code for a diverse array of internal projects',
 				'Communicate with multi-disciplinary teams of engineers, designers, testers, project managers and stakeholders'
+			],
+			description: [
+				'Innovation and Technology Development Bureau, ITD3, is an Addis Ababa based institution whose main objective is to make the procedures of institutions modern and efficient.'
+			]
+		},
+		{
+			company: 'IE Network Solutions',
+			logo: IENetworkSolutions,
+			link: 'https://www.ienetworksolutions.com/',
+			role: 'Fullstack Dev',
+			date: 'June 2023 - September 2024',
+			responsibilities: [
+				'Built internal tools to automate business processes',
+				'Built and maintained ERP systems for their clients',
+				'Wrote different APIs for different projects'
 			],
 			description: [
 				'Innovation and Technology Development Bureau, ITD3, is an Addis Ababa based institution whose main objective is to make the procedures of institutions modern and efficient.'

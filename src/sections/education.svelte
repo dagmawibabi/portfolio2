@@ -26,7 +26,7 @@
 			]
 		},
 		{
-			company: 'Lebawi International Academy)',
+			company: 'Lebawi International Academy',
 			logo: '',
 			link: 'https://www.youtube.com/watch?v=2JYN2F65J4M',
 			role: 'High School Diploma',
