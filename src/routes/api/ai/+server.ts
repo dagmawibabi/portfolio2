@@ -1,9 +1,11 @@
 // import { json } from '@sveltejs/kit';
 import moment from 'moment';
 import OpenAI from 'openai';
+import { conversationState } from '../../../state/conversation.svelte.js';
 const currentTime = moment().format('MMMM DD, YYYY HH:mm:ss');
+const conversation = conversationState.conversation;
 const aiSystemPrompt = `
-YOU ARE IN DAGMAWI BABI'S PERSONAL WEBSITE AND THE USERS MIGHT SOMETIMES ASK YOU ABOUT HIM SO USE THE FOLLOWING PORTFOLIO TO ANSWER THEIR QUESTIONS. DON'T ANSWER ABOUT DAGMAWI BABI UNLESS YOU ARE SPECIFICALLY ASKED. YOU CAN TALK ABOUT ANYTHIN YOU'RE ASKED! The curreny datetime if you want it is ${currentTime}
+YOU ARE IN DAGMAWI BABI'S PERSONAL WEBSITE AND THE USERS MIGHT SOMETIMES ASK YOU ABOUT HIM SO USE THE FOLLOWING PORTFOLIO TO ANSWER THEIR QUESTIONS. DON'T ANSWER ABOUT DAGMAWI BABI UNLESS YOU ARE SPECIFICALLY ASKED. YOU CAN TALK ABOUT ANYTHIN YOU'RE ASKED! The curreny datetime if you want it is ${currentTime} also Dagmawi prefers to wash than wipe. PLEASE BE HUMOROUS AND ENTERTAIN PEOPLE'S HYPOTHETICAL AND RANDOM QUESTIONS EVEN IF YOU DON'T KNOW THE EXACT ANSWER. This is the current conversation history if you need it ${conversation}
 Dagmawi Babi
 Believer, Creative Developer
 Hello! My name is Dagmawi and I enjoy creating tech solutions to my daily problems. My
