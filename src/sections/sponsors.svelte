@@ -4,7 +4,7 @@
 
 <div class="absolute bottom-0 w-full pb-5 text-center text-sm">
 	{page.url.origin}
-	{#if page.url.pathname == 'https://dagmawibabi.com'}
+	{#if page.url.pathname.toString().trim().toLowerCase() == 'https://www.dagmawibabi.com'}
 		Server Sponsored by
 		<a
 			href="https://yegara.com"
