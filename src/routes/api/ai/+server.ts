@@ -155,6 +155,7 @@ but our competence comes from God.
 
 export async function POST({ request }) {
 	const { message } = await request.json();
+	console.log(message.content);
 
 	// Setup
 	const openAI = new OpenAI({
