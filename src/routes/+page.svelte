@@ -22,6 +22,6 @@
 	<Experience />
 	<Awards />
 	<Remarks />
-	<AiChat isFullscreen={false} />
+	<!-- <AiChat isFullscreen={false} /> -->
 	<Sponsors />
 </div>
