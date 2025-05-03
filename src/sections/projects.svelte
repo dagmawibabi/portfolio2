@@ -6,6 +6,7 @@
 
 	// Project Images
 	import ScholarXIV from '$lib/assets/projects/ScholarXIV.png';
+	import NativeChat from '$lib/assets/projects/NativeChat2.png';
 	import TheUnityProjectMural from '$lib/assets/projects/TheUnityProjectMural.png';
 	import RuthfulHearts from '$lib/assets/projects/RuthfulHearts.png';
 	import APIHub from '$lib/assets/projects/APIHub.png';
@@ -16,6 +17,8 @@
 	import MenenArts from '$lib/assets/projects/MenenArts.png';
 	import EthioDatasets from '$lib/assets/projects/EthioDatasets.png';
 	import StatiCall from '$lib/assets/projects/StatiCall.jpg';
+	import BenaiahBlack from '$lib/assets/projects/BenaiahBlack.jpg';
+	import DagmawiBabiJobs from '$lib/assets/projects/DagmawiBabiJobs.png';
 
 	let aimlProjects = [
 		{
@@ -25,6 +28,15 @@
 				'ScholarXIV is an open-source, aesthetic, minimal and AI powered app that allows users to search, read, bookmark, share, download and view summaries of academic papers from the arXiv repository. You can configure your Gemini API key and converse with AI to expand and dive deeper into the papers you are exploring. This app has won flutter app of the year in 2024 (FlutterofTheYear.com) and has been featued on countless articles and YouTube videos.',
 			link: 'https://github.com/dagmawibabi/Scholarxiv/releases/latest',
 			code: 'https://github.com/DagmawiBabi/scholarxiv',
+			tools: ['Flutter', 'Gemini']
+		},
+		{
+			title: 'NativeChat',
+			image: NativeChat,
+			description:
+				'NativeChat is a powerful application designed to bring seamless, context-aware interactions to your mobile device. Using Gemini under the hood, it offers a wide range of features to assist with tasks like fetching system specs, analyzing call logs, summarizing SMS messages, and providing insights into your device’s status. NativeChat makes your chat experience better by providing real-time data and personalized responses.',
+			link: 'https://github.com/dagmawibabi/NativeChat/releases/latest',
+			code: 'https://github.com/dagmawibabi/NativeChat',
 			tools: ['Flutter', 'Gemini']
 		}
 	];
@@ -47,10 +59,28 @@
 			link: 'https://apkpure.net/aastu-ecsf/com.aastu.ecsf.aastu_ecsf',
 			code: 'https://github.com/gemechis-elias/aastu_ecsf',
 			tools: ['Flutter']
+		},
+		{
+			title: 'Benaiah',
+			image: BenaiahBlack,
+			description:
+				'Benaiah exists as a creative conduit, extending a heartfelt invitation for people to draw near to God. We believe the Creator desires relationship and our core mission is to facilitate that connection, calling individuals towards the source of life, truth, and enduring hope through accessible and engaging means. We strive to equip both seekers and the faithful to encounter God more fully and share His love with the world.',
+			link: 'https://Benaiah.org',
+			code: '',
+			tools: ['SvelteKit', 'TailwindCSS', 'Cloudinary']
 		}
 	];
 
 	let socialProjects = [
+		{
+			title: 'Dagmawi Babi Jobs',
+			image: DagmawiBabiJobs,
+			description:
+				'This Telegram channel is where I post different kinds of Events, Hackathons, Opportunities, Resouorces, Job Openings, Internships, Scholarships and more whenever I encounter legit and trustworthy ones. It is a small channel I started to help out my community but so many have benefitted from it. I also share gamejams and also remote jobs whenever I can.',
+			link: 'https://t.me/dagmawibabijobs',
+			code: '',
+			tools: ['Telegram']
+		},
 		{
 			title: 'Ruthful Hearts',
 			image: RuthfulHearts,
@@ -58,7 +88,7 @@
 				"Ruthful Hearts is aiming to change people's lives one person at a time. Using anonymous donations we make meaningful changes on the lives of people in need. We have these core principles: Anonymous Donations, For All Kinds of People, One at a Time and Private and Graceful. We focus on the people being helped instead of focusing on who donated how much and we value a person simply because each human life is valuable. Let's change lives! ",
 			link: 'https://www.RuthfulHearts.com',
 			code: 'https://github.com/dagmawibabi/RuthfulHearts',
-			tools: ['ReactJS', 'TailwindCSS']
+			tools: ['Telegram', 'ReactJS', 'TailwindCSS']
 		},
 		{
 			title: 'The Unity Project Mural',

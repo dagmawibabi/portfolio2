@@ -8,6 +8,8 @@
 	import GugutPodcast from '$lib/assets/events/GugutPodcast.jpg';
 	import HalwotEmmanuel from '$lib/assets/events/HalwotEmmanuel.jpg';
 	import AASTUTechFest from '$lib/assets/events/AASTUTechFest.jpg';
+	import GaraInnovation from '$lib/assets/events/GaraInnovation.jpg';
+	import TesfaBroadcasting from '$lib/assets/events/TesfaBroadcasting.jpg';
 
 	let events = [
 		{ name: 'Gugut Podcast', image: GugutPodcast, link: 'https://youtube.com/watch?v=-Wjw37IAdIE' },
@@ -16,7 +18,13 @@
 			image: HalwotEmmanuel,
 			link: 'https://www.instagram.com/p/C_qfv1rI1hd/?igsh=d2gwN2hwdDhkdmln'
 		},
-		{ name: 'AASTU TechFest', image: AASTUTechFest, link: 'https://t.me/Dagmawi_Babi/19837' }
+		{ name: 'AASTU TechFest', image: AASTUTechFest, link: 'https://t.me/Dagmawi_Babi/19837' },
+		{ name: 'Gara Innovation', image: GaraInnovation, link: 'https://t.me/Garainnovationhub/6' },
+		{
+			name: 'Tesfa Broadcasting',
+			image: TesfaBroadcasting,
+			link: 'https://www.youtube.com/@tbn_eth'
+		}
 	];
 </script>
 
@@ -50,8 +58,9 @@
 									<img
 										src={eachEvent.image}
 										alt=""
-										class="h-full w-full object-cover transition-all hover:scale-110 hover:grayscale-0 lg:grayscale xl:grayscale 2xl:grayscale"
+										class="h-full w-full object-cover transition-all hover:scale-110"
 									/>
+									<!-- class="h-full w-full object-cover transition-all hover:scale-110 hover:grayscale-0 lg:grayscale xl:grayscale 2xl:grayscale" -->
 									<div
 										class="absolute bottom-2 left-[25%] mx-auto hidden w-fit items-center justify-center rounded-full border border-black bg-white px-3 text-center group-hover/content:flex"
 									>
