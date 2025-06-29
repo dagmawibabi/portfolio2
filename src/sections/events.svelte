@@ -10,6 +10,7 @@
 	import AASTUTechFest from '$lib/assets/events/AASTUTechFest.jpg';
 	import GaraInnovation from '$lib/assets/events/GaraInnovation.jpg';
 	import TesfaBroadcasting from '$lib/assets/events/TesfaBroadcasting.jpg';
+	import MuyalogyPodcast from '$lib/assets/events/MuyalogyPodcast.jpg';
 
 	let events = [
 		{ name: 'Gugut Podcast', image: GugutPodcast, link: 'https://youtube.com/watch?v=-Wjw37IAdIE' },
@@ -23,7 +24,12 @@
 		{
 			name: 'Tesfa Broadcasting',
 			image: TesfaBroadcasting,
-			link: 'https://www.youtube.com/@tbn_eth'
+			link: 'https://youtu.be/TXq8BwZfyt4'
+		},
+		{
+			name: 'Muyalogy Podcast',
+			image: MuyalogyPodcast,
+			link: 'https://youtube.com/watch?v=Fx59plUUW-0'
 		}
 	];
 </script>

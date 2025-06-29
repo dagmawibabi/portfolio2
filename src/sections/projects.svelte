@@ -6,7 +6,7 @@
 
 	// Project Images
 	import ScholarXIV from '$lib/assets/projects/ScholarXIV.png';
-	import ScholarXIVWeb from '$lib/assets/projects/ScholarXIVWeb.jpg';
+	import ScholarXIVWeb from '$lib/assets/projects/ScholarXIVWeb.png';
 	import NativeChat from '$lib/assets/projects/NativeChat2.png';
 	import TheUnityProjectMural from '$lib/assets/projects/TheUnityProjectMural.png';
 	import RuthfulHearts from '$lib/assets/projects/RuthfulHearts.png';
