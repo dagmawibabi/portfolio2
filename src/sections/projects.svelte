@@ -6,6 +6,7 @@
 
 	// Project Images
 	import ScholarXIV from '$lib/assets/projects/ScholarXIV.png';
+	import ScholarXIVWeb from '$lib/assets/projects/ScholarXIVWeb.jpg';
 	import NativeChat from '$lib/assets/projects/NativeChat2.png';
 	import TheUnityProjectMural from '$lib/assets/projects/TheUnityProjectMural.png';
 	import RuthfulHearts from '$lib/assets/projects/RuthfulHearts.png';
@@ -29,6 +30,15 @@
 			link: 'https://github.com/dagmawibabi/Scholarxiv/releases/latest',
 			code: 'https://github.com/DagmawiBabi/scholarxiv',
 			tools: ['Flutter', 'Gemini']
+		},
+		{
+			title: 'ScholarXIV Web',
+			image: ScholarXIVWeb,
+			description:
+				'ScholarXIV Web is an open-source, aesthetic, minimal and AI powered app that allows users to search, read, bookmark, share, download and view summaries of academic papers from the arXiv repository. But with more advanced features like commenting and liking papers. You can configure your Gemini API key and converse with AI to expand and dive deeper into the papers you are exploring. This project is the web version of the ScholarXIV mobile app.',
+			link: 'https://www.scholarxiv.com',
+			code: 'https://github.com/DagmawiBabi/scholarXIVWeb',
+			tools: ['SvelteKit', 'TailwindCSS', 'MongoDB', 'Gemini']
 		},
 		{
 			title: 'NativeChat',
