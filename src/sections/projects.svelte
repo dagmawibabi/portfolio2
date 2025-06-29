@@ -5,7 +5,7 @@
 	import ExtraProjects from '../components/extra_projects.svelte';
 
 	// Project Images
-	import ScholarXIV from '$lib/assets/projects/ScholarXIV.png';
+	import ScholarXIV from '$lib/assets/projects/ScholarXIVWhite.jpg';
 	import ScholarXIVWeb from '$lib/assets/projects/ScholarXIVWeb.png';
 	import NativeChat from '$lib/assets/projects/NativeChat2.png';
 	import TheUnityProjectMural from '$lib/assets/projects/TheUnityProjectMural.png';
