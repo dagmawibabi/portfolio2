@@ -6,30 +6,52 @@
 	import afriwork from '$lib/assets/experience/Afriwork.png';
 	import itd3 from '$lib/assets/experience/ITD3.png';
 	import IENetworkSolutions from '$lib/assets/experience/IENetworkSolutions.png';
+	import betterAuth from '$lib/assets/experience/BetterAuthBlack.png';
 	import dreamIntelligence from '$lib/assets/experience/DreamIntelligence.png';
 
 	let experiences = [
 		{
-			company: 'Dream Intelligence',
-			logo: dreamIntelligence,
-			link: '',
-			role: 'CEO and Founder',
-			date: 'Nov 2018 - Present',
+			company: 'Better Auth',
+			logo: betterAuth,
+			link: 'https://better-auth.com',
+			role: 'Full Stack Dev',
+			date: 'July 2025 - Present',
 			responsibilities: [
-				'Handle day to day business and technology directions',
-				'Architected and implemented multiple products and solutions',
-				'Offer a great line of products to help ease life and solve problems'
+				'Develop and maintain Better Auth open source repository',
+				'Implement server-side logic and integrate with databases to ensure seamless data flow', 
+				'Design and optimize user interfaces for responsiveness and performance across devices', 
+				'Collaborate with cross-functional teams to define and refine project requirements', 
+				'Conduct code reviews and provide constructive feedback to improve code quality', 
+				'Troubleshoot and resolve technical issues in both front-end and back-end systems', 
+				'Deploy applications to cloud environments and manage infrastructure as code', 
+				'Ensure security best practices are followed in all aspects of application development', 
+				'Document technical specifications and maintain comprehensive project documentation'
 			],
 			description: [
 				"I've founded and run my own tech company which has helped bring a great line of incredible and complex products and services to the world. I'm running all aspects of business and working to expand and enrich my company."
 			]
 		},
+		// {
+		// 	company: 'Dream Intelligence',
+		// 	logo: dreamIntelligence,
+		// 	link: '',
+		// 	role: 'CEO and Founder',
+		// 	date: 'Nov 2018 - Present',
+		// 	responsibilities: [
+		// 		'Handle day to day business and technology directions',
+		// 		'Architected and implemented multiple products and solutions',
+		// 		'Offer a great line of products to help ease life and solve problems'
+		// 	],
+		// 	description: [
+		// 		"I've founded and run my own tech company which has helped bring a great line of incredible and complex products and services to the world. I'm running all aspects of business and working to expand and enrich my company."
+		// 	]
+		// },
 		{
 			company: 'Afriwork',
 			logo: afriwork,
 			link: 'https://www.afriworket.com',
 			role: 'Web and Mobile Fullstack Dev',
-			date: 'Aug 2024 - Present',
+			date: 'Aug 2024 - April 2025',
 			responsibilities: [
 				'Designed a hiring pipeline for the company',
 				'Consulted on outsourcing projects',

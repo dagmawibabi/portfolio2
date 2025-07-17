@@ -20,7 +20,11 @@
 					</div>
 				{:else}
 					<div class="pb-2">
-						<img src={experience.logo} alt="" class="h-6 transition-all hover:scale-150" />
+						{#if experience.company == 'Afriwork'}
+							<img src={experience.logo} alt="" class="h-5 transition-all hover:scale-150" />
+						{:else}
+							<img src={experience.logo} alt="" class="h-12 transition-all hover:scale-150" />
+						{/if}
 					</div>
 				{/if}
 			</a>
