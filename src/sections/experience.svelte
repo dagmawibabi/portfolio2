@@ -18,17 +18,15 @@
 			date: 'July 2025 - Present',
 			responsibilities: [
 				'Develop and maintain Better Auth open source repository',
-				'Implement server-side logic and integrate with databases to ensure seamless data flow', 
-				'Design and optimize user interfaces for responsiveness and performance across devices', 
-				'Collaborate with cross-functional teams to define and refine project requirements', 
-				'Conduct code reviews and provide constructive feedback to improve code quality', 
-				'Troubleshoot and resolve technical issues in both front-end and back-end systems', 
-				'Deploy applications to cloud environments and manage infrastructure as code', 
-				'Ensure security best practices are followed in all aspects of application development', 
+				'Implement server-side logic and integrate with databases to ensure seamless data flow',
+				'Design and optimize user interfaces for responsiveness and performance across devices',
+				'Conduct code reviews and provide constructive feedback to improve code quality',
+				'Deploy applications to cloud environments and manage infrastructure as code',
+				'Ensure security best practices are followed in all aspects of application development',
 				'Document technical specifications and maintain comprehensive project documentation'
 			],
 			description: [
-				"I've founded and run my own tech company which has helped bring a great line of incredible and complex products and services to the world. I'm running all aspects of business and working to expand and enrich my company."
+				'Better Auth is a Y-Combinator backed, open-source and the most comprehensive authentication framework for TypeScript. It is one of the fastest growing startups and projects in the world.'
 			]
 		},
 		// {

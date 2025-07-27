@@ -13,7 +13,7 @@
 		<div
 			class="w-full border-l border-zinc-300 px-3 pb-5 pl-5 pt-3 lg:w-[80%] xl:w-[80%] 2xl:w-[80%]"
 		>
-			<a href={experience.link}>
+			<a href={experience.link} target="_blank">
 				{#if experience.logo == ''}
 					<div class="text-lg font-bold underline-offset-4 transition-all hover:underline">
 						{experience.company}

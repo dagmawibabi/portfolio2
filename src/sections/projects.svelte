@@ -23,15 +23,6 @@
 
 	let aimlProjects = [
 		{
-			title: 'ScholarXIV',
-			image: ScholarXIV,
-			description:
-				'ScholarXIV is an open-source, aesthetic, minimal and AI powered app that allows users to search, read, bookmark, share, download and view summaries of academic papers from the arXiv repository. You can configure your Gemini API key and converse with AI to expand and dive deeper into the papers you are exploring. This app has won flutter app of the year in 2024 (FlutterofTheYear.com) and has been featued on countless articles and YouTube videos.',
-			link: 'https://github.com/dagmawibabi/Scholarxiv/releases/latest',
-			code: 'https://github.com/DagmawiBabi/scholarxiv',
-			tools: ['Flutter', 'Gemini']
-		},
-		{
 			title: 'ScholarXIV Web',
 			image: ScholarXIVWeb,
 			description:
@@ -39,6 +30,15 @@
 			link: 'https://www.scholarxiv.com',
 			code: 'https://github.com/DagmawiBabi/scholarXIVWeb',
 			tools: ['SvelteKit', 'TailwindCSS', 'MongoDB', 'Gemini']
+		},
+		{
+			title: 'ScholarXIV',
+			image: ScholarXIV,
+			description:
+				'ScholarXIV is an open-source, aesthetic, minimal and AI powered app that allows users to search, read, bookmark, share, download and view summaries of academic papers from the arXiv repository. You can configure your Gemini API key and converse with AI to expand and dive deeper into the papers you are exploring. This app has won flutter app of the year in 2024 (FlutterofTheYear.com) and has been featued on countless articles and YouTube videos.',
+			link: 'https://github.com/dagmawibabi/Scholarxiv/releases/latest',
+			code: 'https://github.com/DagmawiBabi/scholarxiv',
+			tools: ['Flutter', 'Gemini']
 		},
 		{
 			title: 'NativeChat',
