@@ -11,6 +11,7 @@
 	import GaraInnovation from '$lib/assets/events/GaraInnovation.jpg';
 	import TesfaBroadcasting from '$lib/assets/events/TesfaBroadcasting.jpg';
 	import MuyalogyPodcast from '$lib/assets/events/MuyalogyPodcast.jpg';
+	import BetterHack from '$lib/assets/events/BetterHack2.jpg';
 
 	let events = [
 		{ name: 'Gugut Podcast', image: GugutPodcast, link: 'https://youtube.com/watch?v=-Wjw37IAdIE' },
@@ -30,12 +31,17 @@
 			name: 'Muyalogy Podcast',
 			image: MuyalogyPodcast,
 			link: 'https://youtube.com/watch?v=Fx59plUUW-0'
+		},
+		{
+			name: 'Better Hack',
+			image: BetterHack,
+			link: 'https://better-hack.io'
 		}
 	];
 </script>
 
 <div class="pb-10">
-	<SectionTitle title={'Events'} />
+	<SectionTitle title={'Events and Talks'} />
 	<div class="pl-10">
 		<div class="h-7 border-l border-dashed border-zinc-900"></div>
 	</div>

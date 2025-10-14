@@ -29,6 +29,10 @@
 			'https://e7.pngegg.com/pngimages/758/841/png-clipart-arduino-max-electronic-circuit-pure-data-oscilloscope-raspberry-pi-icons-logo-microcontroller-thumbnail.png',
 		Gemini:
 			'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-gemini-icon.png',
+		OpenAI:
+			'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/OpenAI_logo_2025_%28symbol%29.svg/640px-OpenAI_logo_2025_%28symbol%29.svg.png',
+		'JS-TikToken':
+			'https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/640px-Npm-logo.svg.png',
 		ReactJS: 'https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png',
 		Godot: 'https://godotengine.org/assets/press/icon_color.png',
 		Telegram:

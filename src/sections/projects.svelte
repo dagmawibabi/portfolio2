@@ -8,6 +8,7 @@
 	import ScholarXIV from '$lib/assets/projects/ScholarXIVWhite.jpg';
 	import ScholarXIVWeb from '$lib/assets/projects/ScholarXIVWeb.png';
 	import NativeChat from '$lib/assets/projects/NativeChat2.png';
+	import TokenCounter from '$lib/assets/projects/TokenCounter.png';
 	import TheUnityProjectMural from '$lib/assets/projects/TheUnityProjectMural.png';
 	import RuthfulHearts from '$lib/assets/projects/RuthfulHearts.png';
 	import APIHub from '$lib/assets/projects/APIHub.png';
@@ -48,6 +49,15 @@
 			link: 'https://github.com/dagmawibabi/NativeChat/releases/latest',
 			code: 'https://github.com/dagmawibabi/NativeChat',
 			tools: ['Flutter', 'Gemini']
+		},
+		{
+			title: 'Token Counter',
+			image: TokenCounter,
+			description:
+				'ScholarXIV Web is an open-source, aesthetic, minimal and AI powered app that allows users to search, read, bookmark, share, download and view summaries of academic papers from the arXiv repository. But with more advanced features like commenting and liking papers. You can configure your Gemini API key and converse with AI to expand and dive deeper into the papers you are exploring. This project is the web version of the ScholarXIV mobile app.',
+			link: 'https://Token-Counter-nu.vercel.app',
+			code: 'https://github.com/dagmawibabi/token-counter',
+			tools: ['SvelteKit', 'TailwindCSS', 'JS-TikToken', 'OpenAI']
 		}
 	];
 
