@@ -1,5 +1,8 @@
 import type { PageServerLoad } from './$types';
 import fm from 'front-matter';
+import { compile } from 'mdsvex';
+import rehypeSanitize from 'rehype-sanitize';
+import rehypeKatex from 'rehype-katex';
 
 export const load: PageServerLoad = async ({ params }) => {
 	const { blog: slug } = params;
@@ -32,8 +35,20 @@ export const load: PageServerLoad = async ({ params }) => {
 	const [, raw] = match;
 	const { attributes, body } = fm<FrontMatter>(raw as string);
 
+	// Compile markdown to HTML safely
+	// const html = await compile(body, {
+	// 	// @ts-ignore
+	// 	rehypePlugins: [rehypeSanitize, rehypeKatex]
+	// });
+
+	const result = await compile(body, {
+		// @ts-ignore
+		rehypePlugins: [rehypeSanitize, rehypeKatex]
+	});
+
 	return {
-		content: body,
+		// content: String(html),
+		content: result!.code,
 		meta: {
 			title: attributes.title ?? slug,
 			date: attributes.date ?? null,
