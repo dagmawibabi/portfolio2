@@ -3,16 +3,17 @@
 		Instagram,
 		Github,
 		Linkedin,
-		Plane,
 		Mail,
 		Twitter,
-		PlaneIcon,
-		LucidePlane,
 		Send,
 		Phone,
-		Smile
+		SunIcon,
+		MoonIcon
 	} from 'lucide-svelte';
 	import logo from '$lib/assets/logo//DagmawiBabiLogo.png';
+	import logo2 from '$lib/assets/logo//DagmawiBabiLogoWhite.png';
+	import { toggleMode, mode } from 'mode-watcher';
+	import { Button } from '$lib/components/ui/button/index.js';
 
 	import me from '$lib/assets/me/Me.png';
 	import me2 from '$lib/assets/me/Me2.png';
@@ -25,7 +26,7 @@
 		>
 			<!-- TITLE -->
 			<div class=" flex items-center gap-x-2 md:flex lg:hidden xl:hidden 2xl:hidden">
-				<img src={logo} alt="logo" class="w-12" />
+				<img src={mode.current == 'dark' ? logo2 : logo} alt="logo" class="w-12" />
 				<div class="flex flex-col justify-center">
 					<div class="text-xl font-semibold">Dagmawi Babi</div>
 					<span class="-mt-1">Believer | Creative Developer</span>
@@ -45,12 +46,23 @@
 			<!-- DETAILS -->
 			<div class="flex w-full flex-col justify-center gap-y-4 pt-3 lg:pt-0 xl:pt-0 2xl:pt-0">
 				<!-- TITLE -->
-				<div class="hidden items-center gap-x-2 md:hidden lg:flex xl:flex 2xl:flex">
-					<img src={logo} alt="logo" class="w-12" />
-					<div class="flex flex-col justify-center">
-						<div class="text-xl font-semibold">Dagmawi Babi</div>
-						<span class="-mt-1">Believer | Creative Developer</span>
+				<div class="hidden items-center justify-between gap-x-2 md:flex">
+					<div class="flex items-center justify-between gap-x-2">
+						<img src={mode.current == 'dark' ? logo2 : logo} alt="logo" class="w-12" />
+						<div class="flex flex-col justify-center">
+							<div class="text-xl font-semibold">Dagmawi Babi</div>
+							<span class="-mt-1">Believer | Creative Developer</span>
+						</div>
 					</div>
+					<Button onclick={toggleMode} variant="ghost" size="icon">
+						<SunIcon
+							class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 !transition-all dark:-rotate-90 dark:scale-0"
+						/>
+						<MoonIcon
+							class="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 !transition-all dark:rotate-0 dark:scale-100"
+						/>
+						<span class="sr-only">Toggle theme</span>
+					</Button>
 				</div>
 
 				<!-- DESCRIPTION -->
@@ -70,13 +82,13 @@
 				</div>
 
 				<!-- CTA -->
-				<div class="flex gap-x-2">
+				<div class="hidden gap-x-2 md:flex">
 					<div
 						class="flex items-center justify-center gap-x-3 rounded-full border-zinc-300 py-1 text-sm transition-all hover:border-black"
 					>
 						<a href="https://www.t.me/dagmawi_babi" target="_blank" rel="noopener noreferrer">
 							<Send
-								class="cursor-pointer text-sm  text-zinc-700 hover:scale-125 hover:text-cyan-500"
+								class="cursor-pointer text-sm  text-zinc-700 hover:scale-125 hover:text-cyan-500 dark:text-white dark:hover:text-cyan-500"
 								size={20}
 							/>
 						</a>
@@ -86,7 +98,7 @@
 							rel="noopener noreferrer"
 						>
 							<Linkedin
-								class="cursor-pointer text-sm  text-zinc-700 hover:scale-125 hover:text-blue-500"
+								class="cursor-pointer text-sm  text-zinc-700 hover:scale-125 hover:text-blue-500 dark:text-white dark:hover:text-blue-500"
 								size={20}
 							/>
 						</a>
@@ -96,31 +108,31 @@
 							rel="noopener noreferrer"
 						>
 							<Instagram
-								class="cursor-pointer text-sm  text-zinc-700 hover:scale-125 hover:text-pink-600"
+								class="cursor-pointer text-sm  text-zinc-700 hover:scale-125 hover:text-pink-600 dark:text-white dark:hover:text-pink-600"
 								size={20}
 							/>
 						</a>
 						<a href="https://www.x.com/dagmawibabi" target="_blank" rel="noopener noreferrer">
 							<Twitter
-								class="cursor-pointer text-sm  text-zinc-700 hover:scale-125 hover:text-blue-500"
+								class="cursor-pointer text-sm  text-zinc-700 hover:scale-125 hover:text-blue-500 dark:text-white dark:hover:text-blue-500"
 								size={20}
 							/>
 						</a>
 						<a href="https://www.github.com/dagmawibabi" target="_blank" rel="noopener noreferrer">
 							<Github
-								class="hover:text-black-500 cursor-pointer  text-sm text-zinc-700 hover:scale-125"
+								class="hover:text-black-500 cursor-pointer  text-sm text-zinc-700 hover:scale-125 dark:text-white"
 								size={20}
 							/>
 						</a>
 						<a href="mailto:1babidagi@gmail.com" target="_blank" rel="noopener noreferrer">
 							<Mail
-								class="cursor-pointer text-sm  text-zinc-700 hover:scale-125 hover:text-green-500"
+								class="cursor-pointer text-sm  text-zinc-700 hover:scale-125 hover:text-green-500 dark:text-white dark:hover:text-green-500"
 								size={20}
 							/>
 						</a>
 						<div class="group/phone cursor-pointer">
 							<Phone
-								class="text-sm text-zinc-700 hover:scale-125 group-hover/phone:hidden"
+								class="text-sm text-zinc-700 hover:scale-125 group-hover/phone:hidden dark:text-white"
 								size={20}
 							/>
 							<span

@@ -53,7 +53,7 @@
 <div class="pb-10">
 	<SectionTitle title={'Education'} />
 	<div class="pl-10">
-		<div class="h-7 border-l border-dashed border-zinc-900"></div>
+		<div class="h-7 border-l border-dashed border-zinc-900 dark:border-zinc-600"></div>
 	</div>
 
 	{#each educations as education}

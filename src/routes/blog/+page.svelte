@@ -56,7 +56,7 @@
 		{#each Object.entries(data.grouped) as [category, blogs]}
 			<a href={'#' + category}>
 				<div
-					class="cursor-pointer rounded-full bg-neutral-100 px-3 py-1 text-sm italic text-zinc-600 hover:bg-neutral-200 hover:text-black"
+					class="cursor-pointer rounded-full bg-neutral-100 px-3 py-1 text-sm italic text-zinc-600 hover:bg-neutral-200 hover:text-black dark:bg-zinc-900 dark:text-neutral-400 dark:hover:bg-neutral-800"
 				>
 					{category}
 				</div>
@@ -78,8 +78,9 @@
 				{#each blogs as blog, i}
 					<a href={`/blog/${blog.slug}`}>
 						<div
-							class="group h-full w-full overflow-clip rounded border p-2 shadow-sm transition-all hover:border-zinc-400 hover:shadow-lg"
+							class="group h-full w-full overflow-clip rounded border p-2 px-3 shadow-sm transition-all hover:border-zinc-400 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-900"
 							class:border-emerald-500={isNew(blog.date)}
+							class:dark:border-emerald-800={isNew(blog.date)}
 							class:border-zinc-300={!isNew(blog.date)}
 							class:bg-emerald-50={isNew(blog.date)}
 							class:bg-neutral-50={!isNew(blog.date)}
@@ -94,12 +95,16 @@
 							</div>
 							<div class="flex items-center gap-2 pb-2">
 								<div class="flex w-full items-center justify-between">
-									<div class="text-md font-semibold">
+									<div
+										class="text-md font-semibold dark:text-neutral-300 dark:group-hover:text-white"
+									>
 										{blog.title}
 									</div>
 								</div>
 							</div>
-							<div class="text-sm text-neutral-500 group-hover:text-neutral-800">
+							<div
+								class="text-sm text-neutral-500 group-hover:text-neutral-800 dark:group-hover:text-neutral-400"
+							>
 								{blog.description}
 							</div>
 						</div>

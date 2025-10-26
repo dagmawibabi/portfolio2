@@ -37,11 +37,11 @@
 <div class="pb-10">
 	<SectionTitles title={'Creativity'} />
 	<div class="pl-10">
-		<div class="h-7 border-l border-dashed border-zinc-900"></div>
+		<div class="h-7 border-l border-dashed border-zinc-900 dark:border-zinc-600"></div>
 	</div>
 
 	<div
-		class="flex flex-col justify-evenly gap-y-2 rounded border border-zinc-300 p-2 shadow-md hover:rounded-xl hover:border-black hover:shadow-lg md:flex-col md:gap-y-2 lg:flex-row lg:gap-x-2 xl:flex-row xl:gap-x-2 2xl:flex-row 2xl:gap-x-2"
+		class="flex flex-col justify-evenly gap-y-2 rounded border border-zinc-300 p-2 shadow-md hover:rounded-xl hover:border-black hover:shadow-lg dark:border-zinc-600 md:flex-col md:gap-y-2 lg:flex-row lg:gap-x-2 xl:flex-row xl:gap-x-2 2xl:flex-row 2xl:gap-x-2"
 	>
 		{#each creativeOutlets as creativeOutlet}
 			<EachCreativeOutlet {creativeOutlet} />

@@ -38,7 +38,9 @@
 		}}
 		class="w-full"
 	>
-		<div class="group rounded border border-zinc-300 p-2 hover:rounded-xl hover:border-black">
+		<div
+			class="group rounded border border-zinc-300 p-2 hover:rounded-xl hover:border-black dark:border-zinc-600"
+		>
 			<Carousel.Content>
 				{#each awards as eachAward}
 					<Carousel.Item class="h-full w-full basis-80">
@@ -54,7 +56,7 @@
 									/>
 									<!-- class="h-full w-full object-cover transition-all hover:scale-110 hover:grayscale-0 lg:grayscale xl:grayscale 2xl:grayscale" -->
 									<div
-										class="absolute bottom-2 left-[25%] mx-auto hidden w-fit items-center justify-center rounded-full border border-black bg-white px-3 text-center group-hover/content:flex"
+										class="absolute bottom-2 left-[25%] mx-auto hidden w-fit items-center justify-center rounded-full border border-black bg-white px-3 text-center group-hover/content:flex dark:border-neutral-700 dark:bg-black dark:text-white"
 									>
 										{eachAward.name}
 									</div>
