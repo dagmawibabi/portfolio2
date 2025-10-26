@@ -78,7 +78,50 @@
 	>
 		<div class="group rounded border border-zinc-300 p-2 hover:rounded-xl hover:border-black">
 			<Carousel.Content>
-				{#each events as eachEvent}
+				{#each events.slice(0, 5) as eachEvent}
+					<Carousel.Item class="h-full w-full basis-80">
+						<Card.Root>
+							<Card.Content
+								class="group/content relative m-0 aspect-square h-full w-full overflow-clip rounded border p-0 hover:border-black"
+							>
+								<a href={eachEvent.link}>
+									<img
+										src={eachEvent.image}
+										alt=""
+										class="h-full w-full object-cover transition-all hover:scale-110"
+									/>
+									<!-- class="h-full w-full object-cover transition-all hover:scale-110 hover:grayscale-0 lg:grayscale xl:grayscale 2xl:grayscale" -->
+									<div
+										class="absolute bottom-2 left-[25%] mx-auto hidden w-fit items-center justify-center rounded-full border border-black bg-white px-3 text-center group-hover/content:flex"
+									>
+										{eachEvent.name}
+									</div>
+								</a>
+							</Card.Content>
+						</Card.Root>
+					</Carousel.Item>
+				{/each}
+			</Carousel.Content>
+			<Carousel.Previous class="hidden lg:flex xl:flex 2xl:flex" />
+			<Carousel.Next class="hidden lg:flex xl:flex 2xl:flex" />
+		</div>
+	</Carousel.Root>
+
+	<Carousel.Root
+		plugins={[
+			Autoplay({
+				delay: 2000
+			})
+		]}
+		opts={{
+			align: 'start',
+			loop: true
+		}}
+		class="w-full"
+	>
+		<div class="group mt-2 rounded border border-zinc-300 p-2 hover:rounded-xl hover:border-black">
+			<Carousel.Content>
+				{#each events.slice(events.length / 2, events.length) as eachEvent}
 					<Carousel.Item class="h-full w-full basis-80">
 						<Card.Root>
 							<Card.Content
