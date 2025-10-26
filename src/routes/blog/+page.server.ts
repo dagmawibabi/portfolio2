@@ -4,7 +4,8 @@ import matter from 'gray-matter';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async () => {
-	const blogsDir = path.resolve('src/lib/blogs');
+	// const blogsDir = path.resolve('src/lib/blogs');
+	const blogsDir = path.resolve('static/blogs');
 	const files = fs.readdirSync(blogsDir).filter((f) => f.endsWith('.md'));
 
 	const blogs = files
