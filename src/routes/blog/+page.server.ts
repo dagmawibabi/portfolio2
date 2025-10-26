@@ -2,7 +2,11 @@ import type { PageServerLoad } from './$types';
 import matter from 'gray-matter';
 
 export const load: PageServerLoad = async () => {
-	const files = import.meta.glob('/static/blogs/*.md', { as: 'raw', eager: true });
+	const files = import.meta.glob('/static/blogs/*.md', {
+		query: '?raw',
+		import: 'default',
+		eager: true
+	});
 
 	const blogs = Object.entries(files)
 		.map(([path, raw]) => {

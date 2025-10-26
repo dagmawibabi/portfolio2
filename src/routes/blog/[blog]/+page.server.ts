@@ -1,4 +1,3 @@
-// import matter from 'gray-matter';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ params }) => {
@@ -6,9 +5,15 @@ export const load: PageServerLoad = async ({ params }) => {
 	const { blog: slug } = params;
 
 	// Import all markdown files at build time
-	const files = import.meta.glob('/static/blogs/*.md', { as: 'raw', eager: true });
+	const files = import.meta.glob('/static/blogs/*.md', {
+		query: '?raw',
+		import: 'default',
+		eager: true
+	});
 
-	const match = Object.entries(files).find(([path]) => path.endsWith(`/${slug}.md`));
+	const match = Object.entries(files).find(([path]) =>
+		path.toLowerCase().endsWith(`/${slug.toLowerCase()}.md`)
+	);
 
 	if (!match) {
 		return {
@@ -17,16 +22,16 @@ export const load: PageServerLoad = async ({ params }) => {
 		};
 	}
 
-	const [_, raw] = match;
+	const [, raw] = match;
 	const { data, content } = matter(raw as string);
 
 	return {
 		content,
 		meta: {
-			title: data.title || slug,
-			date: data.date || null,
-			description: data.description || '',
-			category: data.category || 'Uncategorized'
+			title: data.title ?? slug,
+			date: data.date ?? null,
+			description: data.description ?? '',
+			category: data.category ?? 'Uncategorized'
 		}
 	};
 };
