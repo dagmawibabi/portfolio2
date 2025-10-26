@@ -1,8 +1,15 @@
 import type { PageServerLoad } from './$types';
+import fm from 'front-matter';
 
 export const load: PageServerLoad = async ({ params }) => {
-	const matter = (await import('gray-matter')).default;
 	const { blog: slug } = params;
+
+	interface FrontMatter {
+		title?: string;
+		date?: string;
+		description?: string;
+		category?: string;
+	}
 
 	// Import all markdown files at build time
 	const files = import.meta.glob('/static/blogs/*.md', {
@@ -23,15 +30,15 @@ export const load: PageServerLoad = async ({ params }) => {
 	}
 
 	const [, raw] = match;
-	const { data, content } = matter(raw as string);
+	const { attributes, body } = fm<FrontMatter>(raw as string);
 
 	return {
-		content,
+		content: body,
 		meta: {
-			title: data.title ?? slug,
-			date: data.date ?? null,
-			description: data.description ?? '',
-			category: data.category ?? 'Uncategorized'
+			title: attributes.title ?? slug,
+			date: attributes.date ?? null,
+			description: attributes.description ?? '',
+			category: attributes.category ?? 'Uncategorized'
 		}
 	};
 };
