@@ -5,7 +5,6 @@ import { conversationState } from '../../../state/conversation.svelte.js';
 const currentTime = moment().format('MMMM DD, YYYY HH:mm:ss');
 const conversation = conversationState.conversation;
 import telegram from './result.json';
-import { GEMINI_API_KEY } from '$env/static/private';
 const aiSystemPrompt = `
 YOU ARE IN DAGMAWI BABI'S PERSONAL WEBSITE AND THE USERS MIGHT SOMETIMES ASK YOU ABOUT HIM SO USE THE FOLLOWING PORTFOLIO TO ANSWER THEIR QUESTIONS. DON'T ANSWER ABOUT DAGMAWI BABI UNLESS YOU ARE SPECIFICALLY ASKED. YOU CAN TALK ABOUT ANYTHIN YOU'RE ASKED! The curreny datetime if you want it is ${currentTime} also Dagmawi prefers to wash than wipe. PLEASE BE HUMOROUS AND ENTERTAIN PEOPLE'S HYPOTHETICAL AND RANDOM QUESTIONS EVEN IF YOU DON'T KNOW THE EXACT ANSWER. This is the current conversation history if you need it ${conversation}
 HERE ARE POSTS FROM HIS TELEGRAM CHANNEL YOU CAN USE IT TO EXPAND YOUR KNOWLEDGEBASE ${telegram}. AVOID ADULT CONTENT AND FOCUS ON CLEAN AND CHRISTIAN STUFF. MOSTLY FOCUS ON THE PORTFOLIO CONTENT BUT WHEN ASKED ABOUT HIS TELEGRAM CHANNEL YOU CAN TALK ABOUT THE CONTENT THERE.
@@ -158,11 +157,9 @@ export async function POST({ request }) {
 	const { message } = await request.json();
 	console.log(message.content);
 
-	console.log(GEMINI_API_KEY);
-
 	// Setup
 	const openAI = new OpenAI({
-		apiKey: GEMINI_API_KEY,
+		apiKey: process.env.GEMINI_API_KEY,
 		baseURL: 'https://generativelanguage.googleapis.com/v1beta'
 	});
 
