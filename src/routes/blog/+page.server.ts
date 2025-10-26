@@ -1,7 +1,9 @@
 import type { PageServerLoad } from './$types';
-import matter from 'gray-matter';
+import fm from 'front-matter';
 
 export const load: PageServerLoad = async () => {
+	// const matter = (await import('gray-matter')).default;
+
 	const files = import.meta.glob('/static/blogs/*.md', {
 		query: '?raw',
 		import: 'default',
@@ -10,7 +12,16 @@ export const load: PageServerLoad = async () => {
 
 	const blogs = Object.entries(files)
 		.map(([path, raw]) => {
-			const { data } = matter(raw as string);
+			// const { data } = matter(raw as string);
+			interface FrontMatter {
+				title?: string;
+				date?: string;
+				description?: string;
+				category?: string;
+			}
+
+			const { attributes } = fm<FrontMatter>(raw as string);
+			const data = attributes;
 			const slug = path.split('/').pop()?.replace('.md', '') ?? '';
 			return {
 				slug,
