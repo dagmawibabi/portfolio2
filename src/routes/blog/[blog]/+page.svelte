@@ -1,7 +1,4 @@
 <script lang="ts">
-	import { page } from '$app/state';
-	const blogTitle = page.url.pathname.split('/').pop();
-
 	import { Carta, Markdown } from 'carta-md';
 	import { math } from '@cartamd/plugin-math';
 	import { code } from '@cartamd/plugin-code';
