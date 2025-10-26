@@ -1,13 +1,14 @@
 import { fontFamily } from 'tailwindcss/defaultTheme';
 import type { Config } from 'tailwindcss';
 import tailwindcssAnimate from 'tailwindcss-animate';
+import typography from '@tailwindcss/typography';
 
 const config: Config = {
 	darkMode: ['class'],
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	safelist: ['dark'],
 	// eslint-disable-next-line @typescript-eslint/no-require-imports
-	plugins: [require('@tailwindcss/typography'), tailwindcssAnimate],
+	plugins: [typography, tailwindcssAnimate],
 	theme: {
 		container: {
 			center: true,
