@@ -1,18 +1,28 @@
-import fs from 'fs';
-import path from 'path';
 import matter from 'gray-matter';
+import type { PageServerLoad } from './$types';
 
-export const load = async ({ params }) => {
-	const blogTitle = params.blog;
-	const filePath = path.resolve('src/lib/blogs', `${blogTitle}.md`);
-	const raw = fs.readFileSync(filePath, 'utf-8');
+export const load: PageServerLoad = async ({ params }) => {
+	const { blog: slug } = params;
 
-	const { data, content } = matter(raw);
+	// Import all markdown files at build time
+	const files = import.meta.glob('/static/blogs/*.md', { as: 'raw', eager: true });
+
+	const match = Object.entries(files).find(([path]) => path.endsWith(`/${slug}.md`));
+
+	if (!match) {
+		return {
+			status: 404,
+			error: new Error(`Blog not found: ${slug}`)
+		};
+	}
+
+	const [_, raw] = match;
+	const { data, content } = matter(raw as string);
 
 	return {
-		content, // markdown content only
+		content,
 		meta: {
-			title: data.title || blogTitle,
+			title: data.title || slug,
 			date: data.date || null,
 			description: data.description || '',
 			category: data.category || 'Uncategorized'
