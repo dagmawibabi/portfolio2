@@ -17,6 +17,9 @@
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^4.0.0",
+		"@tailwindcss/typography": "^0.5.19",
+		"@types/node": "^24.9.1",
+		"@types/sanitize-html": "^2.16.0",
 		"autoprefixer": "^10.4.20",
 		"bits-ui": "^1.0.0-next.74",
 		"clsx": "^2.1.1",
@@ -40,9 +43,16 @@
 		"vite": "^5.4.11"
 	},
 	"dependencies": {
+		"@cartamd/plugin-code": "^4.2.0",
+		"@cartamd/plugin-math": "^4.3.1",
+		"carta-md": "^4.11.1",
 		"embla-carousel-autoplay": "^8.5.1",
+		"gray-matter": "^4.0.3",
+		"isomorphic-dompurify": "^2.30.1",
+		"katex": "^0.16.25",
 		"moment": "^2.30.1",
 		"openai": "^4.81.0",
+		"sanitize-html": "^2.17.0",
 		"svelte-exmarkdown": "^4.0.2",
 		"svelte-loading-spinners": "^0.3.6"
 	}

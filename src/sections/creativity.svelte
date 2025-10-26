@@ -13,7 +13,7 @@
 				'I like to write here and there about tech, philosophical and spiritual topics that interest me. My blog site is called DBlogs',
 			icon: NotebookPen,
 			image: blog,
-			link: 'https://blog.dagmawibabi.com'
+			link: '/blog'
 		},
 		{
 			name: 'Podcast',

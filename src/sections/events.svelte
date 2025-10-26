@@ -11,16 +11,28 @@
 	import GaraInnovation from '$lib/assets/events/GaraInnovation.jpg';
 	import TesfaBroadcasting from '$lib/assets/events/TesfaBroadcasting.jpg';
 	import MuyalogyPodcast from '$lib/assets/events/MuyalogyPodcast.jpg';
-	import BetterHack from '$lib/assets/events/BetterHack2.jpg';
+	import BetterHack from '$lib/assets/events/BetterHack.jpg';
+	import BetterHack2 from '$lib/assets/events/BetterHack2.jpg';
+	import FutureOfWork from '$lib/assets/events/FutureOfWorkSummit.jpg';
+	import FutureOfWork2 from '$lib/assets/events/FutureOfWorkSummit2.jpg';
 
 	let events = [
+		{
+			name: 'Future of Work',
+			image: FutureOfWork,
+			link: 'https://www.instagram.com/p/DQPPHIODcXk/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
+		},
+		{
+			name: 'Future of Work',
+			image: FutureOfWork2,
+			link: 'https://www.instagram.com/p/DQPPHIODcXk/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
+		},
 		{ name: 'Gugut Podcast', image: GugutPodcast, link: 'https://youtube.com/watch?v=-Wjw37IAdIE' },
 		{
 			name: 'Halwot Emmanuel',
 			image: HalwotEmmanuel,
 			link: 'https://www.instagram.com/p/C_qfv1rI1hd/?igsh=d2gwN2hwdDhkdmln'
 		},
-		{ name: 'AASTU TechFest', image: AASTUTechFest, link: 'https://t.me/Dagmawi_Babi/19837' },
 		{ name: 'Gara Innovation', image: GaraInnovation, link: 'https://t.me/Garainnovationhub/6' },
 		{
 			name: 'Tesfa Broadcasting',
@@ -36,7 +48,13 @@
 			name: 'Better Hack',
 			image: BetterHack,
 			link: 'https://better-hack.io'
-		}
+		},
+		{
+			name: 'Better Hack',
+			image: BetterHack2,
+			link: 'https://better-hack.io'
+		},
+		{ name: 'AASTU TechFest', image: AASTUTechFest, link: 'https://t.me/Dagmawi_Babi/19837' }
 	];
 </script>
 
