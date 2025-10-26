@@ -10,11 +10,16 @@
 	import AASTUTechFest from '$lib/assets/events/AASTUTechFest.jpg';
 	import GaraInnovation from '$lib/assets/events/GaraInnovation.jpg';
 	import TesfaBroadcasting from '$lib/assets/events/TesfaBroadcasting.jpg';
+	import TesfaBroadcasting2 from '$lib/assets/events/TesfaBroadcasting2.jpg';
 	import MuyalogyPodcast from '$lib/assets/events/MuyalogyPodcast.jpg';
 	import BetterHack from '$lib/assets/events/BetterHack.jpg';
 	import BetterHack2 from '$lib/assets/events/BetterHack2.jpg';
 	import FutureOfWork from '$lib/assets/events/FutureOfWorkSummit.jpg';
 	import FutureOfWork2 from '$lib/assets/events/FutureOfWorkSummit2.jpg';
+	import FutureOfWork3 from '$lib/assets/events/FutureOfWorkSummit3.jpg';
+	import FutureOfWork4 from '$lib/assets/events/FutureOfWorkSummit4.jpg';
+	import FutureOfWork5 from '$lib/assets/events/FutureOfWorkSummit5.jpg';
+	import FutureOfWork6 from '$lib/assets/events/FutureOfWorkSummit6.jpg';
 
 	let events = [
 		{
@@ -27,22 +32,44 @@
 			image: FutureOfWork2,
 			link: 'https://www.instagram.com/p/DQPPHIODcXk/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
 		},
+		{
+			name: 'Future of Work',
+			image: FutureOfWork4,
+			link: 'https://www.instagram.com/p/DQPPHIODcXk/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
+		},
+		{
+			name: 'Future of Work ',
+			image: FutureOfWork3,
+			link: 'https://www.instagram.com/p/DQPPHIODcXk/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
+		},
+		{
+			name: 'Future of Work',
+			image: FutureOfWork5,
+			link: 'https://www.instagram.com/p/DQPPHIODcXk/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
+		},
+		{
+			name: 'Future of Work',
+			image: FutureOfWork6,
+			link: 'https://www.instagram.com/p/DQPPHIODcXk/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
+		},
 		{ name: 'Gugut Podcast', image: GugutPodcast, link: 'https://youtube.com/watch?v=-Wjw37IAdIE' },
 		{
 			name: 'Halwot Emmanuel',
 			image: HalwotEmmanuel,
 			link: 'https://www.instagram.com/p/C_qfv1rI1hd/?igsh=d2gwN2hwdDhkdmln'
 		},
-		{ name: 'Gara Innovation', image: GaraInnovation, link: 'https://t.me/Garainnovationhub/6' },
-		{
-			name: 'Tesfa Broadcasting',
-			image: TesfaBroadcasting,
-			link: 'https://youtu.be/TXq8BwZfyt4'
-		},
 		{
 			name: 'Muyalogy Podcast',
 			image: MuyalogyPodcast,
 			link: 'https://youtube.com/watch?v=Fx59plUUW-0'
+		},
+
+		{ name: 'AASTU TechFest', image: AASTUTechFest, link: 'https://t.me/Dagmawi_Babi/19837' },
+		{ name: 'Gara Innovation', image: GaraInnovation, link: 'https://t.me/Garainnovationhub/6' },
+		{
+			name: 'Better Hack',
+			image: BetterHack2,
+			link: 'https://better-hack.io'
 		},
 		{
 			name: 'Better Hack',
@@ -50,11 +77,15 @@
 			link: 'https://better-hack.io'
 		},
 		{
-			name: 'Better Hack',
-			image: BetterHack2,
-			link: 'https://better-hack.io'
+			name: 'Tesfa Broadcasting',
+			image: TesfaBroadcasting2,
+			link: 'https://youtu.be/TXq8BwZfyt4'
 		},
-		{ name: 'AASTU TechFest', image: AASTUTechFest, link: 'https://t.me/Dagmawi_Babi/19837' }
+		{
+			name: 'Tesfa Broadcasting',
+			image: TesfaBroadcasting,
+			link: 'https://youtu.be/TXq8BwZfyt4'
+		}
 	];
 </script>
 
@@ -78,8 +109,8 @@
 	>
 		<div class="group rounded border border-zinc-300 p-2 hover:rounded-xl hover:border-black">
 			<Carousel.Content>
-				{#each events.slice(0, 5) as eachEvent}
-					<Carousel.Item class="h-full w-full basis-80">
+				{#each events as eachEvent}
+					<Carousel.Item class="h-full w-full basis-1/2">
 						<Card.Root>
 							<Card.Content
 								class="group/content relative m-0 aspect-square h-full w-full overflow-clip rounded border p-0 hover:border-black"
@@ -104,49 +135,47 @@
 			</Carousel.Content>
 			<Carousel.Previous class="hidden lg:flex xl:flex 2xl:flex" />
 			<Carousel.Next class="hidden lg:flex xl:flex 2xl:flex" />
-		</div>
-	</Carousel.Root>
 
-	<Carousel.Root
-		plugins={[
-			Autoplay({
-				delay: 2000
-			})
-		]}
-		opts={{
-			align: 'start',
-			loop: true
-		}}
-		class="w-full"
-	>
-		<div class="group mt-2 rounded border border-zinc-300 p-2 hover:rounded-xl hover:border-black">
-			<Carousel.Content>
-				{#each events.slice(events.length / 2, events.length) as eachEvent}
-					<Carousel.Item class="h-full w-full basis-80">
-						<Card.Root>
-							<Card.Content
-								class="group/content relative m-0 aspect-square h-full w-full overflow-clip rounded border p-0 hover:border-black"
-							>
-								<a href={eachEvent.link}>
-									<img
-										src={eachEvent.image}
-										alt=""
-										class="h-full w-full object-cover transition-all hover:scale-110"
-									/>
-									<!-- class="h-full w-full object-cover transition-all hover:scale-110 hover:grayscale-0 lg:grayscale xl:grayscale 2xl:grayscale" -->
-									<div
-										class="absolute bottom-2 left-[25%] mx-auto hidden w-fit items-center justify-center rounded-full border border-black bg-white px-3 text-center group-hover/content:flex"
-									>
-										{eachEvent.name}
-									</div>
-								</a>
-							</Card.Content>
-						</Card.Root>
-					</Carousel.Item>
-				{/each}
-			</Carousel.Content>
-			<Carousel.Previous class="hidden lg:flex xl:flex 2xl:flex" />
-			<Carousel.Next class="hidden lg:flex xl:flex 2xl:flex" />
+			<Carousel.Root
+				plugins={[
+					Autoplay({
+						delay: 2000
+					})
+				]}
+				opts={{
+					align: 'start',
+					loop: true
+				}}
+				class="w-full pt-3"
+			>
+				<Carousel.Content>
+					{#each events.reverse() as eachEvent}
+						<Carousel.Item class="h-full w-full basis-64">
+							<Card.Root>
+								<Card.Content
+									class="group/content relative m-0 aspect-square h-full w-full overflow-clip rounded border p-0 hover:border-black"
+								>
+									<a href={eachEvent.link}>
+										<img
+											src={eachEvent.image}
+											alt=""
+											class="h-full w-full object-cover transition-all hover:scale-110"
+										/>
+										<!-- class="h-full w-full object-cover transition-all hover:scale-110 hover:grayscale-0 lg:grayscale xl:grayscale 2xl:grayscale" -->
+										<div
+											class="absolute bottom-2 left-[25%] mx-auto hidden w-fit items-center justify-center rounded-full border border-black bg-white px-3 text-center group-hover/content:flex"
+										>
+											{eachEvent.name}
+										</div>
+									</a>
+								</Card.Content>
+							</Card.Root>
+						</Carousel.Item>
+					{/each}
+				</Carousel.Content>
+				<!-- <Carousel.Previous class="hidden lg:flex xl:flex 2xl:flex" />
+				<Carousel.Next class="hidden lg:flex xl:flex 2xl:flex" /> -->
+			</Carousel.Root>
 		</div>
 	</Carousel.Root>
 </div>

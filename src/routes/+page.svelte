@@ -11,6 +11,10 @@
 	import Sponsors from '../sections/sponsors.svelte';
 </script>
 
+<svelte:head>
+	<title>Dagmawi Babi</title>
+</svelte:head>
+
 <div
 	class="no-scrollbar relative mx-auto w-[96%] pb-56 pt-4 md:w-[96%] lg:w-1/2 xl:w-1/2 2xl:w-1/2"
 >

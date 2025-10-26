@@ -1,7 +1,8 @@
-import matter from 'gray-matter';
+// import matter from 'gray-matter';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ params }) => {
+	const matter = (await import('gray-matter')).default;
 	const { blog: slug } = params;
 
 	// Import all markdown files at build time
