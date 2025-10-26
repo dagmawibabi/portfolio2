@@ -1,8 +1,8 @@
 ---
-title: A letter to void and loneliness
-date: 2025-10-15
+title: A letter to Void and Loneliness
+date: 2021-12-4
 description: This is a small letter I wrote to void and loneliness. Emotions I've been drenched in years ago. I've pictured them as my own two bestfriends by how long I've felt them. But now they've wedded and this's my letter to them.
-category: "Poetry"
+category: "Short Writes and Poems"
 ---
 
 Hey you two, I hope you're as void and lonely as it gets. I heard you two got engaged and now planning your wedding. It's beautiful to hear.

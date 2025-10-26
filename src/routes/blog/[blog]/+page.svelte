@@ -39,7 +39,9 @@
 	class="no-scrollbar relative mx-auto w-[96%] pb-56 pt-4 md:w-[96%] lg:w-1/2 xl:w-1/2 2xl:w-1/2"
 >
 	<!-- Header -->
-	<BlogHeader showDescription={false} link="/blog" />
+	<div class="sticky top-0 mb-3 bg-white">
+		<BlogHeader showDescription={false} link="/blog" />
+	</div>
 
 	<!-- Metadata -->
 	<div class="flex text-sm italic md:hidden">
@@ -58,7 +60,7 @@
 
 	<!-- Content -->
 	<div
-		class="prose prose-h1:text-2xl prose-h1:font-semibold prose-img:my-0 prose-img:py-0 min-w-full"
+		class="prose min-w-full prose-h1:text-2xl prose-h1:font-semibold prose-h2:text-xl prose-h2:font-semibold prose-img:my-0 prose-img:py-0"
 	>
 		<Markdown {carta} value={data.content} />
 	</div>

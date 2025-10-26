@@ -1,8 +1,8 @@
 ---
-title: A month in Better Auth
-date: 2025-10-20
-description: A short intro to my first blog.
-category: "Svelte"
+title: A Month in Better Auth
+date: 2025-7-31
+description: It's been a month since I started interning at Better Auth, one of the fastest growing, open-source and comprehensive auth projects and company out there. I learnt so many things and this's a reflection of things I've discovered.
+category: "Tech"
 ---
 
 ![image](/blog-images/AMonthInBetterAuth/banner.jpg)

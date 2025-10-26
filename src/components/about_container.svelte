@@ -34,9 +34,9 @@
 
 			<!-- IMAGE -->
 			<div class="group/me h-56 w-[50%] cursor-pointer rounded md:h-56 lg:h-72 xl:h-72 2xl:h-72">
-				<img src={me} alt="project" class="h-full w-full object-contain group-hover/me:hidden" />
+				<img src={me2} alt="project" class="h-full w-full object-contain group-hover/me:hidden" />
 				<img
-					src={me2}
+					src={me}
 					alt="project"
 					class="hidden h-full w-full object-contain group-hover/me:block"
 				/>

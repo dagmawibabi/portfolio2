@@ -17,7 +17,7 @@
 	let { showDescription = true, link = '/' } = $props();
 </script>
 
-<div class="w-full pb-5">
+<div class="w-full">
 	<div class="flex flex-col rounded py-2 lg:flex-row xl:flex-row 2xl:flex-row">
 		<!-- Mobile -->
 		<a href={link}>
