@@ -1,7 +1,7 @@
 ---
 title: A Month in Better Auth
 date: 2025-7-31
-description: It's been a month since I started interning at Better Auth, one of the fastest growing, open-source and comprehensive auth projects and company out there. I learnt so many things and this's a reflection of things I've discovered.
+description: A reflection of things I learnt during my first month of internship at Better Auth, one of the fastest growing, open-source and comprehensive auth projects and company out there.
 category: "Tech"
 ---
 
