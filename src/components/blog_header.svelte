@@ -21,15 +21,26 @@
 <div class="w-full">
 	<div class="flex flex-col rounded py-2 lg:flex-row xl:flex-row 2xl:flex-row">
 		<!-- Mobile -->
-		<a href={link}>
-			<div class="flex items-center gap-x-2 md:flex lg:hidden xl:hidden 2xl:hidden">
-				<img src={mode.current == 'dark' ? logo2 : logo} alt="logo" class="flex w-12" />
-				<div class="flex flex-col justify-center">
-					<div class="text-xl font-semibold">Dagmawi Babi</div>
-					<span class="-mt-1">Believer | Creative Developer</span>
+		<div class="flex items-center justify-between">
+			<a href={link}>
+				<div class="flex items-center gap-x-2 md:flex lg:hidden xl:hidden 2xl:hidden">
+					<img src={mode.current == 'dark' ? logo2 : logo} alt="logo" class="flex w-12" />
+					<div class="flex flex-col justify-center">
+						<div class="text-xl font-semibold">Dagmawi Babi</div>
+						<span class="-mt-1">Believer | Creative Developer</span>
+					</div>
 				</div>
-			</div>
-		</a>
+			</a>
+			<Button onclick={toggleMode} variant="ghost" size="icon" class="flex md:hidden">
+				<SunIcon
+					class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 !transition-all dark:-rotate-90 dark:scale-0"
+				/>
+				<MoonIcon
+					class="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 !transition-all dark:rotate-0 dark:scale-100"
+				/>
+				<span class="sr-only">Toggle theme</span>
+			</Button>
+		</div>
 
 		<!-- PC -->
 		<div
