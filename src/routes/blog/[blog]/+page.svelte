@@ -39,7 +39,7 @@
 
 	<!-- Content -->
 	<div
-		class="prose min-w-full prose-h1:text-2xl prose-h1:font-semibold prose-h2:text-xl prose-h2:font-semibold prose-h3:text-lg prose-h3:font-semibold prose-img:my-0 prose-img:py-0 dark:text-white dark:prose-headings:text-white dark:prose-a:text-blue-500 dark:prose-blockquote:text-neutral-300 dark:prose-strong:text-white dark:prose-ol:text-white dark:prose-ul:text-white dark:prose-li:text-white"
+		class="prose min-w-full prose-h1:text-2xl prose-h1:font-semibold prose-h2:text-xl prose-h2:font-semibold prose-h3:text-lg prose-h3:font-semibold prose-code:rounded-l prose-code:bg-neutral-100 prose-code:text-red-500 prose-img:my-0 prose-img:py-0 dark:text-white dark:prose-headings:text-white dark:prose-a:text-blue-500 dark:prose-blockquote:text-neutral-300 dark:prose-strong:text-white dark:prose-code:bg-neutral-900 dark:prose-code:text-orange-500 dark:prose-ol:text-white dark:prose-ul:text-white dark:prose-li:text-white"
 	>
 		{@html data.content}
 	</div>
