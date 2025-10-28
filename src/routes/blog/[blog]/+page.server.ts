@@ -3,6 +3,13 @@ import fm from 'front-matter';
 import { compile } from 'mdsvex';
 import rehypeSanitize from 'rehype-sanitize';
 import rehypeKatex from 'rehype-katex';
+import html from 'remark-html';
+import { remark } from 'remark';
+import remarkParse from 'remark-parse';
+import remarkRehype from 'remark-rehype';
+import rehypeStringify from 'rehype-stringify';
+import rehypeHighlight from 'rehype-highlight';
+import 'highlight.js/styles/github-dark.css';
 
 export const load: PageServerLoad = async ({ params }) => {
 	const { blog: slug } = params;
@@ -35,20 +42,35 @@ export const load: PageServerLoad = async ({ params }) => {
 	const [, raw] = match;
 	const { attributes, body } = fm<FrontMatter>(raw as string);
 
-	// Compile markdown to HTML safely
-	// const html = await compile(body, {
+	// const result = await compile(body, {
 	// 	// @ts-ignore
 	// 	rehypePlugins: [rehypeSanitize, rehypeKatex]
 	// });
 
-	const result = await compile(body, {
-		// @ts-ignore
-		rehypePlugins: [rehypeSanitize, rehypeKatex]
-	});
+	// return {
+	// 	// content: String(html),
+	// 	content: result!.code,
+	// 	meta: {
+	// 		title: attributes.title ?? slug,
+	// 		date: attributes.date ?? null,
+	// 		description: attributes.description ?? '',
+	// 		category: attributes.category ?? 'Uncategorized'
+	// 	}
+	// };
+
+	// Proper Markdown → HTML pipeline
+	const processed = await remark()
+		.use(remarkParse)
+		.use(remarkRehype)
+		.use(rehypeKatex)
+		.use(rehypeHighlight)
+		.use(rehypeSanitize)
+		.use(rehypeStringify)
+		.process(body);
 
 	return {
 		// content: String(html),
-		content: result!.code,
+		content: processed.toString(),
 		meta: {
 			title: attributes.title ?? slug,
 			date: attributes.date ?? null,

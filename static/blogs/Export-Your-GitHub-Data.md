@@ -43,7 +43,7 @@ So after so much digging around, there is no option for you to export all your r
 
 I am currently on a Windows machine and decided to use PowerShell to run this simple script.  I am using the GitHub API to go through all the repos in my account an clone them. I would also like to clone my private repos so I generated a Fine-grained Personal Access Token in the [settings](https://github.com/settings/personal-access-tokens) to authenticate and get them. Here is my script:
 
-```bash
+```js
 $username = "YOUR_GITHUB_USERNAME"
 $token = "YOUR_GITHUB_PERSONAL_ACCESS_TOKEN"
 $page = 1
@@ -66,8 +66,8 @@ while ($true) {
 
     $page++
 }
-
 ```
+[Download Script](/blog-images/ExportYourGitHubData/github-cloner.ps1)
 
 Now just copy the script to a file called `github-clone.ps1`, replace the first two variables with your GitHub username and Personal Access Token, save it and then move this script into an empty folder. Now open your PowerShell terminal, navigate to this folder that contains your script and run it by just typing this `./github-clone.ps1` If you’ve never ran PowerShell scripts it might throw an error so give PowerShell the ability to run scripts with this command`Set-ExecutionPolicy RemoteSigned -Scope CurrentUser` and well that’s it. Now you wait…
 
