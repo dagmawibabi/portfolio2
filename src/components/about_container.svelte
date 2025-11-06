@@ -10,7 +10,7 @@
 		SunIcon,
 		MoonIcon
 	} from 'lucide-svelte';
-	import logo from '$lib/assets/logo//DagmawiBabiLogo.png';
+	import logo from '$lib/assets/logo/DagmawiBabiLogo.png';
 	import { toggleMode } from 'mode-watcher';
 	import { Button } from '$lib/components/ui/button/index.js';
 
@@ -24,7 +24,7 @@
 			class="flex flex-col gap-x-3 rounded border-zinc-300 px-2 py-2 pr-4 lg:flex-row xl:flex-row 2xl:flex-row"
 		>
 			<!-- TITLE -->
-			<div class=" flex items-center gap-x-2 md:flex lg:hidden xl:hidden 2xl:hidden">
+			<div class="flex items-center gap-x-2 md:flex lg:hidden xl:hidden 2xl:hidden">
 				<img src={logo} alt="logo" class="flex w-12 invert-0 dark:invert" />
 				<div class="flex flex-col justify-center">
 					<div class="text-xl font-semibold">Dagmawi Babi</div>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import logo from '$lib/assets/logo//DagmawiBabiLogo.png';
+	import logo from '$lib/assets/logo/DagmawiBabiLogo.png';
 	import {
 		Instagram,
 		Github,
@@ -24,7 +24,6 @@
 			<a href={link}>
 				<div class="flex items-center gap-x-2 md:flex lg:hidden xl:hidden 2xl:hidden">
 					<img src={logo} alt="logo" class="flex w-12 invert-0 dark:invert" />
-					<!-- <img src={mode.current == 'dark' ? logo2 : logo} alt="logo" class="flex w-12" /> -->
 					<div class="flex flex-col justify-center">
 						<div class="text-xl font-semibold">{config.name}</div>
 						<span class="-mt-1">{config.subtitle}</span>
@@ -51,7 +50,6 @@
 				<a href={link}>
 					<div class="hidden items-center gap-x-2 md:hidden lg:flex xl:flex 2xl:flex">
 						<img src={logo} alt="logo" class="flex w-12 invert-0 dark:invert" />
-						<!-- <img src={mode.current == 'dark' ? logo2 : logo} alt="logo" class="w-12" /> -->
 						<div class="flex flex-col justify-center">
 							<div class="text-xl font-semibold">{config.name}</div>
 							<span class="-mt-1">{config.subtitle}</span>
