@@ -11,8 +11,7 @@
 		MoonIcon
 	} from 'lucide-svelte';
 	import logo from '$lib/assets/logo//DagmawiBabiLogo.png';
-	import logo2 from '$lib/assets/logo//DagmawiBabiLogoWhite.png';
-	import { toggleMode, mode } from 'mode-watcher';
+	import { toggleMode } from 'mode-watcher';
 	import { Button } from '$lib/components/ui/button/index.js';
 
 	import me from '$lib/assets/me/Me.png';
@@ -26,7 +25,7 @@
 		>
 			<!-- TITLE -->
 			<div class=" flex items-center gap-x-2 md:flex lg:hidden xl:hidden 2xl:hidden">
-				<img src={mode.current == 'dark' ? logo2 : logo} alt="logo" class="w-12" />
+				<img src={logo} alt="logo" class="flex w-12 invert-0 dark:invert" />
 				<div class="flex flex-col justify-center">
 					<div class="text-xl font-semibold">Dagmawi Babi</div>
 					<span class="-mt-1">Believer | Creative Developer</span>
@@ -48,7 +47,7 @@
 				<!-- TITLE -->
 				<div class="hidden items-center justify-between gap-x-2 md:flex">
 					<div class="flex items-center justify-between gap-x-2">
-						<img src={mode.current == 'dark' ? logo2 : logo} alt="logo" class="w-12" />
+						<img src={logo} alt="logo" class="flex w-12 invert-0 dark:invert" />
 						<div class="flex flex-col justify-center">
 							<div class="text-xl font-semibold">Dagmawi Babi</div>
 							<span class="-mt-1">Believer | Creative Developer</span>

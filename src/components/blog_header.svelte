@@ -1,6 +1,5 @@
 <script lang="ts">
 	import logo from '$lib/assets/logo//DagmawiBabiLogo.png';
-	import logo2 from '$lib/assets/logo//DagmawiBabiLogoWhite.png';
 	import {
 		Instagram,
 		Github,
@@ -12,7 +11,7 @@
 		SunIcon,
 		MoonIcon
 	} from 'lucide-svelte';
-	import { toggleMode, mode } from 'mode-watcher';
+	import { toggleMode } from 'mode-watcher';
 	import { Button } from '$lib/components/ui/button/index.js';
 	import config from '$lib/blog-config.json';
 	let { showDescription = true, link = '/' } = $props();
@@ -24,7 +23,8 @@
 		<div class="flex items-center justify-between">
 			<a href={link}>
 				<div class="flex items-center gap-x-2 md:flex lg:hidden xl:hidden 2xl:hidden">
-					<img src={mode.current == 'dark' ? logo2 : logo} alt="logo" class="flex w-12" />
+					<img src={logo} alt="logo" class="flex w-12 invert-0 dark:invert" />
+					<!-- <img src={mode.current == 'dark' ? logo2 : logo} alt="logo" class="flex w-12" /> -->
 					<div class="flex flex-col justify-center">
 						<div class="text-xl font-semibold">{config.name}</div>
 						<span class="-mt-1">{config.subtitle}</span>
@@ -50,7 +50,8 @@
 				<!-- Title -->
 				<a href={link}>
 					<div class="hidden items-center gap-x-2 md:hidden lg:flex xl:flex 2xl:flex">
-						<img src={mode.current == 'dark' ? logo2 : logo} alt="logo" class="w-12" />
+						<img src={logo} alt="logo" class="flex w-12 invert-0 dark:invert" />
+						<!-- <img src={mode.current == 'dark' ? logo2 : logo} alt="logo" class="w-12" /> -->
 						<div class="flex flex-col justify-center">
 							<div class="text-xl font-semibold">{config.name}</div>
 							<span class="-mt-1">{config.subtitle}</span>
