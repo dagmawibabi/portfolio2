@@ -211,6 +211,14 @@
 		{
 			title: 'Beautiful OS',
 			link: 'https://github.com/dagmawibabi/beautifulelectronsurface'
+		},
+		{
+			title: 'Channel Data Graph',
+			link: 'https://github.com/dagmawibabi/PyTelegramChannelDataGraph'
+		},
+		{
+			title: 'BareBlogs',
+			link: 'https://github.com/dagmawibabi/bareblogs'
 		}
 	];
 </script>
