@@ -54,7 +54,7 @@
 			title: 'Token Counter',
 			image: TokenCounter,
 			description:
-				'ScholarXIV Web is an open-source, aesthetic, minimal and AI powered app that allows users to search, read, bookmark, share, download and view summaries of academic papers from the arXiv repository. But with more advanced features like commenting and liking papers. You can configure your Gemini API key and converse with AI to expand and dive deeper into the papers you are exploring. This project is the web version of the ScholarXIV mobile app.',
+				"Have you ever wondered how many tokens you have given and generated within your ChatGPT chat history? Well, Token Counter is a project to help you find that out. It is an open-source and offline tool you can use to get insights into your ChatGPT chat history. It includes what models you've used, how many tokens you've inputted and generated, and the cost of it all (input/output/total price). You can also sort and see your entire chat list with insights for each.",
 			link: 'https://Token-Counter-nu.vercel.app',
 			code: 'https://github.com/dagmawibabi/token-counter',
 			tools: ['SvelteKit', 'TailwindCSS', 'JS-TikToken', 'OpenAI']

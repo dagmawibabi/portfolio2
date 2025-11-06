@@ -42,22 +42,6 @@ export const load: PageServerLoad = async ({ params }) => {
 	const [, raw] = match;
 	const { attributes, body } = fm<FrontMatter>(raw as string);
 
-	// const result = await compile(body, {
-	// 	// @ts-ignore
-	// 	rehypePlugins: [rehypeSanitize, rehypeKatex]
-	// });
-
-	// return {
-	// 	// content: String(html),
-	// 	content: result!.code,
-	// 	meta: {
-	// 		title: attributes.title ?? slug,
-	// 		date: attributes.date ?? null,
-	// 		description: attributes.description ?? '',
-	// 		category: attributes.category ?? 'Uncategorized'
-	// 	}
-	// };
-
 	// Proper Markdown → HTML pipeline
 	const processed = await remark()
 		.use(remarkParse)
@@ -69,7 +53,6 @@ export const load: PageServerLoad = async ({ params }) => {
 		.process(body);
 
 	return {
-		// content: String(html),
 		content: processed.toString(),
 		meta: {
 			title: attributes.title ?? slug,

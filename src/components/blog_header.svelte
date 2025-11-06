@@ -14,7 +14,7 @@
 	} from 'lucide-svelte';
 	import { toggleMode, mode } from 'mode-watcher';
 	import { Button } from '$lib/components/ui/button/index.js';
-
+	import config from '$lib/blog-config.json';
 	let { showDescription = true, link = '/' } = $props();
 </script>
 
@@ -26,8 +26,8 @@
 				<div class="flex items-center gap-x-2 md:flex lg:hidden xl:hidden 2xl:hidden">
 					<img src={mode.current == 'dark' ? logo2 : logo} alt="logo" class="flex w-12" />
 					<div class="flex flex-col justify-center">
-						<div class="text-xl font-semibold">Dagmawi Babi</div>
-						<span class="-mt-1">Believer | Creative Developer</span>
+						<div class="text-xl font-semibold">{config.name}</div>
+						<span class="-mt-1">{config.subtitle}</span>
 					</div>
 				</div>
 			</a>
@@ -52,8 +52,8 @@
 					<div class="hidden items-center gap-x-2 md:hidden lg:flex xl:flex 2xl:flex">
 						<img src={mode.current == 'dark' ? logo2 : logo} alt="logo" class="w-12" />
 						<div class="flex flex-col justify-center">
-							<div class="text-xl font-semibold">Dagmawi Babi</div>
-							<span class="-mt-1">Believer | Creative Developer</span>
+							<div class="text-xl font-semibold">{config.name}</div>
+							<span class="-mt-1">{config.subtitle}</span>
 						</div>
 					</div>
 				</a>
@@ -63,45 +63,37 @@
 					<div
 						class="flex items-center justify-center gap-x-3 rounded-full border-zinc-300 py-1 text-sm transition-all hover:border-black"
 					>
-						<a href="https://www.t.me/dagmawi_babi" target="_blank" rel="noopener noreferrer">
+						<a href={config.telegram} target="_blank" rel="noopener noreferrer">
 							<Send
 								class="cursor-pointer text-sm  text-zinc-700 hover:scale-125 hover:text-cyan-500 dark:text-white dark:hover:text-cyan-500"
 								size={20}
 							/>
 						</a>
-						<a
-							href="https://www.linkedin.com/in/dagmawibabi"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
+						<a href={config.linkedin} target="_blank" rel="noopener noreferrer">
 							<Linkedin
 								class="cursor-pointer text-sm  text-zinc-700 hover:scale-125 hover:text-blue-500 dark:text-white dark:hover:text-blue-500"
 								size={20}
 							/>
 						</a>
-						<a
-							href="https://www.instagram.com/dagmawibabi"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
+						<a href={config.instagram} target="_blank" rel="noopener noreferrer">
 							<Instagram
 								class="cursor-pointer text-sm  text-zinc-700 hover:scale-125 hover:text-pink-600 dark:text-white dark:hover:text-pink-600"
 								size={20}
 							/>
 						</a>
-						<a href="https://www.x.com/dagmawibabi" target="_blank" rel="noopener noreferrer">
+						<a href={config.twitter} target="_blank" rel="noopener noreferrer">
 							<Twitter
 								class="cursor-pointer text-sm  text-zinc-700 hover:scale-125 hover:text-blue-500 dark:text-white dark:hover:text-blue-500"
 								size={20}
 							/>
 						</a>
-						<a href="https://www.github.com/dagmawibabi" target="_blank" rel="noopener noreferrer">
+						<a href={config.github} target="_blank" rel="noopener noreferrer">
 							<Github
 								class="hover:text-black-500 cursor-pointer  text-sm text-zinc-700 hover:scale-125 dark:text-white"
 								size={20}
 							/>
 						</a>
-						<a href="mailto:1babidagi@gmail.com" target="_blank" rel="noopener noreferrer">
+						<a href="mailto:{config.email}" target="_blank" rel="noopener noreferrer">
 							<Mail
 								class="cursor-pointer text-sm  text-zinc-700 hover:scale-125 hover:text-green-500 dark:text-white dark:hover:text-green-500"
 								size={20}
@@ -135,11 +127,7 @@
 			{#if showDescription}
 				<div class="flex flex-col md:gap-y-2">
 					<p class="text-sm">
-						In this part of my journey I am learning to read and write as per the advice of
-						Dr.Jordan Peterson, So this is an attempt in doing just that. I've been journalling all
-						my life I know how helpful it is to organize and put thoughts into words. So this's a
-						place to host all my writings and I hope it inspires, motivates and helps you grow as it
-						does to me. Enjoy!
+						{config.description}
 					</p>
 				</div>
 			{/if}

@@ -1,22 +1,7 @@
 <script lang="ts">
-	import {
-		Instagram,
-		Github,
-		Linkedin,
-		Plane,
-		Mail,
-		Twitter,
-		PlaneIcon,
-		LucidePlane,
-		Send,
-		Phone,
-		Smile
-	} from 'lucide-svelte';
-	import logo from '$lib/assets/logo//DagmawiBabiLogo.png';
-	import me from '$lib/assets/me/Me.png';
-	import me2 from '$lib/assets/me/Me2.png';
 	import SectionTitle from '../../components/section_title.svelte';
 	import BlogHeader from '../../components/blog_header.svelte';
+	import config from '../../lib/blog-config.json';
 
 	type Blog = {
 		slug: string;
@@ -37,12 +22,12 @@
 		const date = new Date(dateString);
 		const now = new Date();
 		const diffDays = (now.getTime() - date.getTime()) / (1000 * 60 * 60 * 24);
-		return diffDays <= 100; // mark as new if ≤ 7 days old
+		return diffDays <= config.newBlogThreshold; // mark as new if ≤ {config.newBlogThreshold} days old
 	}
 </script>
 
 <svelte:head>
-	<title>Blogs | Dagmawi Babi</title>
+	<title>Blogs | {config.name}</title>
 </svelte:head>
 
 <div
