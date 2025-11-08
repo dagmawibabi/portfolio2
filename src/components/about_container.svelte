@@ -16,6 +16,7 @@
 
 	import me from '$lib/assets/me/Me.png';
 	import me2 from '$lib/assets/me/Me2.png';
+	import BrandAndAssets from './brand_and_assets.svelte';
 </script>
 
 <div class="border-dashed border-black pb-5">
@@ -47,12 +48,9 @@
 				<!-- TITLE -->
 				<div class="hidden items-center justify-between gap-x-2 md:flex">
 					<div class="flex items-center justify-between gap-x-2">
-						<img src={logo} alt="logo" class="flex w-12 invert-0 dark:invert" />
-						<div class="flex flex-col justify-center">
-							<div class="text-xl font-semibold">Dagmawi Babi</div>
-							<span class="-mt-1">Believer | Creative Developer</span>
-						</div>
+						<BrandAndAssets />
 					</div>
+
 					<Button onclick={toggleMode} variant="ghost" size="icon">
 						<SunIcon
 							class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 !transition-all dark:-rotate-90 dark:scale-0"

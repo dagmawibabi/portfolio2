@@ -2,6 +2,7 @@
 	import SectionTitle from '../../components/section_title.svelte';
 	import BlogHeader from '../../components/blog_header.svelte';
 	import config from '../../lib/blog-config.json';
+	import { Toaster } from 'svelte-sonner';
 
 	type Blog = {
 		slug: string;
@@ -99,3 +100,5 @@
 		</div>
 	{/each}
 </div>
+
+<Toaster expand={true} />

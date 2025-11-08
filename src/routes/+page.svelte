@@ -9,6 +9,7 @@
 	import Projects from '../sections/projects.svelte';
 	import Remarks from '../sections/remarks.svelte';
 	import Sponsors from '../sections/sponsors.svelte';
+	import { Toaster } from 'svelte-sonner';
 </script>
 
 <svelte:head>
@@ -29,3 +30,5 @@
 	<!-- <AiChat isFullscreen={false} /> -->
 	<Sponsors />
 </div>
+
+<Toaster expand={true} />

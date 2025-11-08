@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { Toaster } from 'svelte-sonner';
 	import BlogHeader from '../../../components/blog_header.svelte';
 	type BlogData = {
 		content: string;
@@ -47,3 +48,5 @@
 		{@html data.content}
 	</div>
 </div>
+
+<Toaster expand={true} />

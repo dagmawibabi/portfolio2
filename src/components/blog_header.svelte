@@ -14,6 +14,7 @@
 	import { toggleMode } from 'mode-watcher';
 	import { Button } from '$lib/components/ui/button/index.js';
 	import config from '$lib/blog-config.json';
+	import BrandAndAssets from './brand_and_assets.svelte';
 	let { showDescription = true, link = '/' } = $props();
 </script>
 
@@ -49,11 +50,7 @@
 				<!-- Title -->
 				<a href={link}>
 					<div class="hidden items-center gap-x-2 md:hidden lg:flex xl:flex 2xl:flex">
-						<img src={logo} alt="logo" class="flex w-12 invert-0 dark:invert" />
-						<div class="flex flex-col justify-center">
-							<div class="text-xl font-semibold">{config.name}</div>
-							<span class="-mt-1">{config.subtitle}</span>
-						</div>
+						<BrandAndAssets />
 					</div>
 				</a>
 
