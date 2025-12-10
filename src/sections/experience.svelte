@@ -7,15 +7,33 @@
 	import itd3 from '$lib/assets/experience/ITD3.png';
 	import IENetworkSolutions from '$lib/assets/experience/IENetworkSolutions.png';
 	import betterAuth from '$lib/assets/experience/BetterAuthBlack.png';
-	import dreamIntelligence from '$lib/assets/experience/DreamIntelligence.png';
+	// import dreamIntelligence from '$lib/assets/experience/DreamIntelligence.png';
+	import scholarXIV from '$lib/assets/experience/ScholarXIV.png';
 
 	let experiences = [
+		{
+			company: 'ScholarXIV',
+			logo: scholarXIV,
+			link: 'https://scholarxiv.com',
+			role: 'Founder, CEO',
+			date: 'October 2025 - Present',
+			responsibilities: [
+				'Handle day to day tasks',
+				'Manage team',
+				'Lead product development',
+				'Manage marketing',
+				'Implement new features and optimizations'
+			],
+			description: [
+				'ScholarXIV is an AI powered research platform that enables curious learners and researchers explore and analyze research papers. It is one of the fastest growing research start-ups and projects of its kind.'
+			]
+		},
 		{
 			company: 'Better Auth',
 			logo: betterAuth,
 			link: 'https://better-auth.com',
 			role: 'Full Stack Dev',
-			date: 'July 2025 - Present',
+			date: 'July 2025 - October 2025',
 			responsibilities: [
 				'Develop and maintain Better Auth open source repository',
 				'Implement server-side logic and integrate with databases to ensure seamless data flow',
