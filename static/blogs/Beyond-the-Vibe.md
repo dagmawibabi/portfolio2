@@ -7,7 +7,7 @@ category: "Tech"
 
 In this blog I am going to take you on a journey through the world of AI by using vibe-coding as a core example. We’re going to dive into the technicalities and the research involved in making the models great enough to vibe-code with and how these vibe-coding platforms are built. 
 
-Let’s start with what vibe-coding is, which takes us way back to Feb 3, 2025 to [this specific tweet](https://x.com/karpathy/status/1886192184808149383) by Andrej Karpathy ( a well known and leading AI Scientist )
+Let’s start with what vibe-coding is, which takes us way back to Feb 3, 2025 to [this specific tweet](https://x.com/karpathy/status/1886192184808149383) by Andrej Karpathy (a well known and leading AI Scientist)
 
 ![image.png](/blog-images/BeyondTheVibe/tweet.png)
 
@@ -17,7 +17,7 @@ Vibe-coding is a great way to prototype ideas, explore UI/UX concepts and to bui
 
 ### The Model
 
-For a model to be great for vibe-coding it has to get the basics right. 
+For a model to be great for vibe-coding it has to get the basics right...
 
 **One**, these models have to be conversational. They have to be helpful when you’re explaining things to them and they have to respond in an appropriate way. When companies train and produce LLMs, the models produced right after training are called `base-models` and these aren’t good at conversations at all. They’re only good at generating and predicting the next token (symbol, alphabet) in a sequence. There’s an exception to these types of models which are called `instruct-models`. They’re trained with conversational data within the initial training which allows them to converse properly when prompted right after training. But as for base-models extra steps are necessary. 
 
@@ -119,7 +119,7 @@ Vibe-coding is just the start of things, this trend is also entering other domai
 
 ### Showcase
 
-Here are some vibe-coded projects I’ve built and shared as templates 
+Here are some vibe-coded projects I’ve built and shared as templates...
 
 1. [LLM Council](https://llm-council-phi.vercel.app) — This is the first and properly working project I've vibe-coded. LLM council is like ChatGPT except each user query is dispatched to multiple models in your "council" then all the responses from these models is given to a "reviewer" model that rands and finally picks the best response and shows you that. I liked it enough that I've fixed and polished it up and put the source-code [on GitHub](https://github.com/dagmawibabi/llm-council) so people can deploy it if they want.
   ![image.png](/blog-images/BeyondTheVibe/llmCouncil.jpg)
@@ -134,7 +134,7 @@ Here are some vibe-coded projects I’ve built and shared as templates
 
   ![image.png](/blog-images/BeyondTheVibe/openaiEval.png)
 
-**Here are some vibe-coded projects from my community**
+**Here are some vibe-coded projects from my community...**
 
 1. [Founder.et](https://founder.et) — was entirely vibe-coded using Cursor by a person who doesn't know how to code at all. It's got auth, handles subscriptions, got search, even has a listen-to-blogs feature. 
   ![image.png](/blog-images/BeyondTheVibe/founderET.png)
