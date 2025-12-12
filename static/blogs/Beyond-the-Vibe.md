@@ -146,7 +146,11 @@ Here are some vibe-coded projects I’ve built and shared as templates...
   ![image.png](/blog-images/BeyondTheVibe/sensorChaos.png)
 
 4. [The Godfather Original](https://TheGodfatherOriginal.vercel.app) — a tribute site to the Godfather movie. It's got the cast and crew, info about the movie and it's plot, quotes and more. 
-  ![image.png](/blog-images/BeyondTheVibe/theGodfather.jpg)
+  ![image.png](/blog-images/BeyondTheVibe/theGodfather.jpg) 
+
+5. [UniWorx](https://uniworx.robi.work) — a very lovely landing page entirely vibe-coded 
+  ![image.png](/blog-images/BeyondTheVibe/uniWorx.png) 
+
 
 You can explore some vibe-coded projects globally [here](https://v0.app/templates).
 
