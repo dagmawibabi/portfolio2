@@ -45,7 +45,7 @@ Now we’re off to building the vibe-coding platform and the reason we’re doin
 
 I’ve classified these platforms into four. **CLI based**, **IDE based**, **Web Based** and **Mobile Based**. 
 
-1. **CLI based platforms** are arguable the first platforms that enabled vibe-coding. Namely, Claude Code is what was used to vibe-code in during the start. This’s a terminal/command line based solution that was friendly for terminal lovers. Claude Code was such a success that other companies like Google and OpenAI released their own versions called [Gemini CLI](https://google-gemini.github.io/gemini-cli) and [Codex CLI](https://developers.openai.com/codex/cli) while also open-source alternatives like [OpenCode](https://opencode.ai) came up. 
+1. **CLI based platforms** are arguable the first platforms that enabled vibe-coding. Namely, [Claude Code](https://claude.com/product/claude-code) is what was used to vibe-code in during the start. This’s a terminal/command line based solution that was friendly for terminal lovers. Claude Code was such a success that other companies like Google and OpenAI released their own versions called [Gemini CLI](https://google-gemini.github.io/gemini-cli) and [Codex CLI](https://developers.openai.com/codex/cli) while also open-source alternatives like [OpenCode](https://opencode.ai) came up. 
     
     ![image.png](/blog-images/BeyondTheVibe/claudecode.png)
     
@@ -53,7 +53,7 @@ I’ve classified these platforms into four. **CLI based**, **IDE based**, **Web
     
 2. **IDE based platforms** are mostly the VS Code forks of the world. Namely [Cursor](https://cursor.com) and [Windsurf](https://windsurf.com). VS Code is one of, if not the most, popular IDE out there. Beginners and experienced devs liked and used this open-source IDE very much. So companies like Cursor and Windsurf forked it and built an AI chat side panel to it while also building tools to let these LLMs get direct access to read, write, edit and remove your code from files along with the ability to create files and run commands in the terminal. This was such an innovative platform that Cursor became one of the fastest growing and highly valued tech company out there.  
 
-    ![image.png](/blog-images/BeyondTheVibe/cursor.webp)
+    ![image.png](/blog-images/BeyondTheVibe/cursor.png)
 
     IDE based platforms are great for vibe-coding because they are very comfortable to use with multiple layouts and very intuitive UI designs. You have your AI chat on the side, your code beside it and your files nearby. This lets you see all the changes visually, while also easing navigation between files and chatting with the AI models. 
     
