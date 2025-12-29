@@ -132,7 +132,7 @@
 				id="inputBox"
 				type="text"
 				placeholder="Ask about me or anything else..."
-				class="w-full px-4 py-2 outline-none"
+				class="w-full px-4 py-2 outline-hidden"
 				onkeydown={(e) => {
 					if (e.key === 'Enter') {
 						sendMessage();

@@ -9,7 +9,7 @@
 		<div class="h-7 border-l border-dashed border-zinc-900 dark:border-zinc-600"></div>
 	</div>
 	<div
-		class="grid grid-cols-2 gap-2 rounded border border-zinc-300 p-2 shadow-sm transition-all hover:rounded-lg hover:border-black dark:border-zinc-600 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4"
+		class="grid grid-cols-2 gap-2 rounded border border-zinc-300 p-2 shadow-xs transition-all hover:rounded-lg hover:border-black dark:border-zinc-600 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4"
 	>
 		{#each extraProjects as extraProject}
 			<a href={extraProject.link} target="_blank" rel="noopener noreferrer">

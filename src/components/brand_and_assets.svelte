@@ -23,7 +23,7 @@
 		navigator.clipboard.writeText(data);
 		toast.success(`Copied Successfully! `, {
 			class:
-				'bg-white dark:bg-neutral-800 text-black dark:text-white dark:border-none dark:outline-neutral-700 dark:outline dark:outline-2'
+				'bg-white dark:bg-neutral-800 text-black dark:text-white dark:border-none dark:outline-neutral-700 dark:outline-solid dark:outline-2'
 		});
 	}
 	const handleCopyLogo = () => copySVG(mode.current === 'dark' ? logo_white_svg : logo_black_svg);
@@ -33,7 +33,7 @@
 	const downloadFile = (data: string | Blob, filename: string) => {
 		toast.info(`Downloading... `, {
 			class:
-				'bg-white dark:bg-neutral-800 text-black dark:text-white dark:border-none dark:outline-neutral-700 dark:outline dark:outline-2'
+				'bg-white dark:bg-neutral-800 text-black dark:text-white dark:border-none dark:outline-neutral-700 dark:outline-solid dark:outline-2'
 		});
 		const url = typeof data === 'string' ? data : URL.createObjectURL(data);
 		const a = document.createElement('a');
@@ -43,7 +43,7 @@
 		if (data instanceof Blob) URL.revokeObjectURL(url);
 		toast.success(`Downloaded Successfully! `, {
 			class:
-				'bg-white dark:bg-neutral-800 text-black dark:text-white dark:border-none dark:outline-neutral-700 dark:outline dark:outline-2'
+				'bg-white dark:bg-neutral-800 text-black dark:text-white dark:border-none dark:outline-neutral-700 dark:outline-solid dark:outline-2'
 		});
 	};
 	const handleDownloadLogo = async () => {

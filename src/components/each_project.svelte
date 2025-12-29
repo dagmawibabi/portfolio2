@@ -10,7 +10,7 @@
 				class="w-10 border-t border-dashed border-black transition-all group-hover:border-solid"
 			></div>
 			<div
-				class=" flex w-[100%] cursor-pointer gap-x-3 rounded border border-zinc-300 px-2 py-2 pr-4 shadow-md transition-all group-hover:rounded-lg group-hover:border-black group-hover:shadow-lg"
+				class=" flex w-full cursor-pointer gap-x-3 rounded border border-zinc-300 px-2 py-2 pr-4 shadow-md transition-all group-hover:rounded-lg group-hover:border-black group-hover:shadow-lg"
 			>
 				<!-- PROJECT IMAGE -->
 				<div
