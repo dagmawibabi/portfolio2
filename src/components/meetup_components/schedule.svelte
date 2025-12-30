@@ -58,15 +58,19 @@
 	>
 		<div class="text-2xl font-semibold">Schedule</div>
 
-		{#each schedule as eachSession}
-			<div class="flex flex-col border-b border-neutral-700 pb-4 md:pb-5">
-				<div class="font-mono text-xs text-neutral-400 md:text-sm">{eachSession.time}</div>
-				<div class="font-semibold italic md:text-xl">{eachSession.title}</div>
-				<div class="pt-1 text-xs text-neutral-300 italic md:text-sm">
-					{eachSession.description}
+		<div class="">
+			{#each schedule as eachSession}
+				<div
+					class="flex flex-col border-b border-neutral-700 py-3 hover:bg-neutral-800 md:py-5 md:pl-4"
+				>
+					<div class="font-mono text-xs text-neutral-400 md:text-sm">{eachSession.time}</div>
+					<div class="font-semibold italic md:text-xl">{eachSession.title}</div>
+					<div class="pt-1 text-xs text-neutral-300 italic md:text-sm">
+						{eachSession.description}
+					</div>
 				</div>
-			</div>
-		{/each}
+			{/each}
+		</div>
 
 		<a href="#registration" onclick={scrollToPageTwo}>
 			<div
