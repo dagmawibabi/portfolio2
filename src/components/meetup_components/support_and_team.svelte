@@ -27,7 +27,7 @@
 	<div
 		class="absolute inset-0 z-10 flex flex-col justify-center gap-y-5 px-4 text-left text-white md:px-14"
 	>
-		<div class="text-2xl font-semibold">Support and Team</div>
+		<div class="font-lexend text-2xl font-semibold">Support and Team</div>
 
 		<!-- svelte-ignore a11y_no_static_element_interactions -->
 		<div

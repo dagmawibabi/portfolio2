@@ -37,6 +37,10 @@
 	<div
 		class="no-scrollbar h-screen w-full snap-y snap-mandatory overflow-y-scroll bg-linear-to-bl from-neutral-900 to-neutral-800 backdrop-blur-md md:w-1/2"
 	>
+		<div class="h-screen w-full snap-start md:hidden">
+			<img src={header} alt="header" class=" h-full w-full object-cover" />
+		</div>
+
 		<!-- PAGE 1 -->
 		<Introduction />
 

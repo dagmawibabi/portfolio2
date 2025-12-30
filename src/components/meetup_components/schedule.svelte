@@ -56,7 +56,7 @@
 	<div
 		class="absolute inset-0 z-10 flex flex-col justify-center gap-y-3 px-4 text-left text-white md:gap-y-5 md:px-14"
 	>
-		<div class="text-2xl font-semibold">Schedule</div>
+		<div class="font-lexend text-2xl font-semibold">Schedule</div>
 
 		<div class="">
 			{#each schedule as eachSession}
