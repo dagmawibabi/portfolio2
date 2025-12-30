@@ -53,10 +53,10 @@
 
 					<Button onclick={toggleMode} variant="ghost" size="icon">
 						<SunIcon
-							class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all! dark:-rotate-90 dark:scale-0"
+							class="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all! dark:scale-0 dark:-rotate-90"
 						/>
 						<MoonIcon
-							class="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all! dark:rotate-0 dark:scale-100"
+							class="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all! dark:scale-100 dark:rotate-0"
 						/>
 						<span class="sr-only">Toggle theme</span>
 					</Button>
@@ -129,11 +129,11 @@
 						</a>
 						<div class="group/phone cursor-pointer">
 							<Phone
-								class="text-sm text-zinc-700 hover:scale-125 group-hover/phone:hidden dark:text-white"
+								class="text-sm text-zinc-700 group-hover/phone:hidden hover:scale-125 dark:text-white"
 								size={20}
 							/>
 							<span
-								class="hidden text-sm font-semibold text-pink-600 hover:scale-125 group-hover/phone:block"
+								class="hidden text-sm font-semibold text-pink-600 group-hover/phone:block hover:scale-125"
 							>
 								LOL
 							</span>

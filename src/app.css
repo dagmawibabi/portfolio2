@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import 'dither-plugin';
 
 @config '../tailwind.config.ts';
 
@@ -11,23 +12,23 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
-  }
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: var(--color-gray-200, currentcolor);
+	}
 }
 
 @utility no-scrollbar {
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  &::-webkit-scrollbar {
-    display: none;
-  }
-  /* Hide scrollbar for IE, Edge and Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	/* Hide scrollbar for IE, Edge and Firefox */
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
 }
 
 @layer base {
@@ -101,4 +102,11 @@
 		@apply bg-background text-foreground;
 		scroll-behavior: smooth;
 	}
+}
+
+@font-face {
+	font-family: 'Lexend';
+	src: local('Lexend'), local('Lexend'), url('./lib/assets/font/Lexend.ttf');
+	font-weight: normal;
+	font-display: swap;
 }
