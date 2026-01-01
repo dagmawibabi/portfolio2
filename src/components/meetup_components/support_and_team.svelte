@@ -97,10 +97,10 @@
 		<!-- svelte-ignore a11y_no_static_element_interactions -->
 		<div
 			class="flex w-fit cursor-default items-center gap-x-3 rounded-xl border-none py-4 pr-0 pl-0 md:pr-6 md:pl-4"
-			onmouseenter={() => (iconHovered3 = true)}
-			onmouseleave={() => (iconHovered3 = false)}
+			onmouseenter={() => (iconHovered4 = true)}
+			onmouseleave={() => (iconHovered4 = false)}
 		>
-			<Heart size={40} isHovered={iconHovered3} />
+			<Heart size={40} isHovered={iconHovered4} />
 			<div>
 				<div class="font-semibold italic">Organizers</div>
 				<div>

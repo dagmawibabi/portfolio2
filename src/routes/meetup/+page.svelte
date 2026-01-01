@@ -1,6 +1,5 @@
 <script lang="ts">
-	import header from '$lib/assets/meetups/2026/header0.png';
-	import dither from '$lib/assets/meetups/2026/background.png';
+	import header from '$lib/assets/meetups/2026/header.png';
 
 	import Introduction from '../../components/meetup_components/introduction.svelte';
 	import EventDetails from '../../components/meetup_components/event_details.svelte';
