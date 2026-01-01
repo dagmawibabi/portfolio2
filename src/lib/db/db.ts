@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
-import { SECRET_MONGO_URI } from '$env/static/private';
+import dotenv from 'dotenv';
+dotenv.config();
 
 let hasLogged = false;
 
@@ -8,11 +9,11 @@ export const dbConnect = async () => {
 		return;
 	}
 
-	if (!SECRET_MONGO_URI) {
-		throw new Error('SECRET_MONGO_URI is not defined');
+	if (!process.env.MONGO_URI) {
+		throw new Error('MONGO_URI is not defined');
 	}
 
-	await mongoose.connect(SECRET_MONGO_URI);
+	await mongoose.connect(process.env.MONGO_URI);
 
 	if (!hasLogged) {
 		console.log('DB connected');
