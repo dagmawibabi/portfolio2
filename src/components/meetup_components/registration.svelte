@@ -25,7 +25,31 @@
 	let isRegistering = $state(false);
 	let qrCode = $state('');
 
+	function validateForm() {
+		if (
+			!fullname.trim() ||
+			!email.trim() ||
+			!phone.trim() ||
+			!occupation.trim() ||
+			!attendanceType.trim()
+		) {
+			alert('Please fill all required fields.');
+			return false;
+		}
+
+		if (attendanceType === 'Showcasing') {
+			if (!link.trim() || !teammates.trim()) {
+				alert('Please provide your project link and teammates.');
+				return false;
+			}
+		}
+
+		return true;
+	}
+
 	async function rsvp() {
+		if (!validateForm()) return;
+
 		isRegistering = true;
 		let teammateArray: any[] = [];
 		if (attendanceType != 'Showcasing') {
