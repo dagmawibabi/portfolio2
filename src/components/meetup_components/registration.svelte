@@ -170,7 +170,7 @@
 			<div class="mt-4 flex w-full gap-x-1 md:w-3/4">
 				<!-- svelte-ignore a11y_click_events_have_key_events -->
 				<!-- svelte-ignore a11y_no_static_element_interactions -->
-				<div
+				<!-- <div
 					class="md:text-md w-full cursor-pointer border border-dashed py-2 text-center text-sm transition-all hover:border-solid hover:bg-neutral-700"
 					class:border-solid={attendanceType == 'Attending'}
 					class:bg-neutral-700={attendanceType == 'Attending'}
@@ -178,6 +178,30 @@
 					onclick={() => (attendanceType = 'Attending')}
 				>
 					Attending
+				</div> -->
+
+				<!-- svelte-ignore a11y_click_events_have_key_events -->
+				<!-- svelte-ignore a11y_no_static_element_interactions -->
+				<div
+					class="md:text-md w-full cursor-pointer border border-dashed py-2 text-center text-sm transition-all hover:border-solid hover:bg-neutral-700"
+					class:border-solid={attendanceType == 'Guest'}
+					class:bg-neutral-700={attendanceType == 'Guest'}
+					class:font-semibold={attendanceType == 'Guest'}
+					onclick={() => (attendanceType = 'Guest')}
+				>
+					Guest
+				</div>
+
+				<!-- svelte-ignore a11y_click_events_have_key_events -->
+				<!-- svelte-ignore a11y_no_static_element_interactions -->
+				<div
+					class="md:text-md w-full cursor-pointer border border-dashed py-2 text-center text-sm transition-all hover:border-solid hover:bg-neutral-700"
+					class:border-solid={attendanceType == 'Creator'}
+					class:bg-neutral-700={attendanceType == 'Creator'}
+					class:font-semibold={attendanceType == 'Creator'}
+					onclick={() => (attendanceType = 'Creator')}
+				>
+					Creator
 				</div>
 
 				<!-- svelte-ignore a11y_click_events_have_key_events -->
@@ -202,18 +226,6 @@
 					onclick={() => (attendanceType = 'Hackathon')}
 				>
 					Hackathon
-				</div>
-
-				<!-- svelte-ignore a11y_click_events_have_key_events -->
-				<!-- svelte-ignore a11y_no_static_element_interactions -->
-				<div
-					class="md:text-md w-full cursor-pointer border border-dashed py-2 text-center text-sm transition-all hover:border-solid hover:bg-neutral-700"
-					class:border-solid={attendanceType == 'Guest'}
-					class:bg-neutral-700={attendanceType == 'Guest'}
-					class:font-semibold={attendanceType == 'Guest'}
-					onclick={() => (attendanceType = 'Guest')}
-				>
-					Guest
 				</div>
 			</div>
 

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { ArrowRight, MapPin } from 'lucide-svelte';
 	import { BellRing, CalendarDays, MapPinCheck, Users } from '@jis3r/icons';
+	import * as Dialog from '$lib/components/ui/dialog/index.js';
 
 	let iconHovered = false;
 	let iconHovered1 = false;
@@ -67,74 +68,94 @@
 	let schedule = $state(morningSchedule);
 </script>
 
-<div id="schedule" class="relative h-screen snap-start">
-	<!-- <img src={dither} alt="header" class="h-full w-full object-cover" /> -->
+<Dialog.Root>
+	<div id="schedule" class="relative h-screen snap-start">
+		<!-- <img src={dither} alt="header" class="h-full w-full object-cover" /> -->
 
-	<div
-		class="absolute inset-0 z-10 flex flex-col justify-center gap-y-3 px-4 text-left text-white md:gap-y-5 md:px-14"
-	>
-		<div class="font-lexend text-2xl font-semibold">Schedule</div>
+		<div
+			class="absolute inset-0 z-10 flex flex-col justify-center gap-y-3 px-4 text-left text-white md:gap-y-5 md:px-14"
+		>
+			<div class="font-lexend text-2xl font-semibold">Schedule</div>
 
-		<div class="">
-			{#each schedule as eachSession}
-				<div
-					class="flex flex-col border-b border-neutral-700 py-3 hover:bg-neutral-800 md:py-5 md:pl-4"
-				>
-					<div class="font-mono text-xs text-neutral-400 md:text-sm">{eachSession.time}</div>
-					<div class="font-semibold italic md:text-xl">{eachSession.title}</div>
-					<div class="pt-1 text-xs text-neutral-300 italic md:text-sm">
-						{eachSession.description}
-					</div>
-					{#if eachSession.title.includes('Keynotes')}
-						<div class="mt-2 flex gap-x-2">
-							{#each eachSession.tags as tag}
-								<div
-									class="rounded-full border border-neutral-500 px-3 py-0.5 text-xs text-neutral-400"
-								>
-									{tag}
-								</div>
-							{/each}
-						</div>
-					{/if}
-				</div>
-			{/each}
-		</div>
-
-		{#if isMorning}
-			<!-- svelte-ignore a11y_click_events_have_key_events -->
-			<!-- svelte-ignore a11y_no_static_element_interactions -->
-			<div
-				class="mt-5 flex w-fit cursor-pointer items-center justify-between gap-x-1 rounded-full border border-none bg-white py-2 pr-4 pl-6 font-semibold text-black uppercase transition-all hover:gap-x-2 hover:bg-emerald-500 hover:pr-3"
-				onclick={() => {
-					isMorning = false;
-					schedule = afternoonSchedule;
-				}}
-			>
-				Afternoon Schedule
-				<ArrowRight size={20} />
-			</div>
-		{:else}
-			<div class="flex">
-				<a href="#registration" onclick={scrollToPageTwo}>
+			<div class="">
+				{#each schedule as eachSession}
 					<div
-						class="mt-5 flex w-fit cursor-pointer items-center justify-between gap-x-1 rounded-full border border-none bg-white py-2 pr-4 pl-6 font-semibold text-black uppercase transition-all hover:gap-x-2 hover:bg-emerald-500 hover:pr-3"
+						class="flex flex-col border-b border-neutral-700 py-3 hover:bg-neutral-800 md:py-5 md:pl-4"
 					>
-						Join the Event
-						<ArrowRight size={20} />
+						<div class="font-mono text-xs text-neutral-400 md:text-sm">{eachSession.time}</div>
+						<div class="font-semibold italic md:text-xl">{eachSession.title}</div>
+						<div class="pt-1 text-xs text-neutral-300 italic md:text-sm">
+							{eachSession.description}
+						</div>
+						{#if eachSession.title.includes('Keynotes')}
+							<div class="mt-2 flex gap-x-2">
+								{#each eachSession.tags as tag}
+									<div
+										class="rounded-full border border-neutral-500 px-3 py-0.5 text-xs text-neutral-400"
+									>
+										{tag}
+									</div>
+								{/each}
+							</div>
+						{/if}
 					</div>
-				</a>
+				{/each}
+			</div>
+
+			{#if isMorning}
 				<!-- svelte-ignore a11y_click_events_have_key_events -->
 				<!-- svelte-ignore a11y_no_static_element_interactions -->
 				<div
-					class="mt-5 w-fit cursor-pointer py-2 pl-6 font-semibold text-white uppercase hover:text-emerald-500"
+					class="mt-5 flex w-fit cursor-pointer items-center justify-between gap-x-1 rounded-full border border-none bg-white py-2 pr-4 pl-6 font-semibold text-black uppercase transition-all hover:gap-x-2 hover:bg-emerald-500 hover:pr-3"
 					onclick={() => {
-						isMorning = true;
-						schedule = morningSchedule;
+						isMorning = false;
+						schedule = afternoonSchedule;
 					}}
 				>
-					Morning Schedule
+					Afternoon Schedule
+					<ArrowRight size={20} />
 				</div>
-			</div>
-		{/if}
+			{:else}
+				<div class="flex flex-col md:flex-row">
+					<a href="#registration" onclick={scrollToPageTwo}>
+						<div
+							class="mt-5 flex w-fit cursor-pointer items-center justify-between gap-x-1 rounded-full border border-none bg-white py-2 pr-4 pl-6 font-semibold text-black uppercase transition-all hover:gap-x-2 hover:bg-emerald-500 hover:pr-3"
+						>
+							Join the Event
+							<ArrowRight size={20} />
+						</div>
+					</a>
+					<!-- svelte-ignore a11y_click_events_have_key_events -->
+					<!-- svelte-ignore a11y_no_static_element_interactions -->
+					<div
+						class="mt-5 w-fit cursor-pointer py-2 pl-3 font-semibold text-white uppercase hover:text-emerald-500 md:pl-6"
+						onclick={() => {
+							isMorning = true;
+							schedule = morningSchedule;
+						}}
+					>
+						Morning Schedule
+					</div>
+				</div>
+				<Dialog.Trigger>
+					<div
+						class="w-fit cursor-pointer py-2 pl-3 text-xs font-semibold text-neutral-400 uppercase italic hover:text-emerald-500 md:pl-3"
+					>
+						Click here if you are a Creator
+					</div>
+				</Dialog.Trigger>
+			{/if}
+		</div>
 	</div>
-</div>
+	<Dialog.Content>
+		<Dialog.Header>
+			<Dialog.Title>THE NIGHT IS ALSO OURS 🎉</Dialog.Title>
+			<Dialog.Description class="text-black">
+				Once the event during the day is over, DxValley will exclusively be open for us creators
+				during the night. We'll have dinner, connect more, share experiences, play games, watch
+				movies, vibe-code and so much more. So if you wanna bring your laptop, PJs and toothbrush
+				feel free!
+			</Dialog.Description>
+		</Dialog.Header>
+	</Dialog.Content>
+</Dialog.Root>
