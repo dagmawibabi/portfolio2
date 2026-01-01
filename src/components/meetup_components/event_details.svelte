@@ -1,23 +1,11 @@
 <script lang="ts">
 	import { ArrowRight, MapPin } from 'lucide-svelte';
-	import {
-		BellRing,
-		CalendarDays,
-		MapPinCheck,
-		Users,
-		HandCoins,
-		HandHeart,
-		Heart
-	} from '@jis3r/icons';
+	import { BellRing, CalendarDays, MapPinCheck, Users } from '@jis3r/icons';
 
-	let iconHovered = false;
-	let iconHovered1 = false;
-	let iconHovered2 = false;
-	let iconHovered3 = false;
-	let iconHovered4 = false;
-	let iconHovered5 = false;
-	let iconHovered6 = false;
-	let iconHovered7 = false;
+	let iconHovered1 = $state(false);
+	let iconHovered2 = $state(false);
+	let iconHovered3 = $state(false);
+	let iconHovered4 = $state(false);
 
 	function scrollToPageTwo(e: any) {
 		e.preventDefault();

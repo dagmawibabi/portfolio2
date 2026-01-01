@@ -10,10 +10,10 @@
 		Heart
 	} from '@jis3r/icons';
 
-	let iconHovered1 = false;
-	let iconHovered2 = false;
-	let iconHovered3 = false;
-	let iconHovered4 = false;
+	let iconHovered1 = $state(false);
+	let iconHovered2 = $state(false);
+	let iconHovered3 = $state(false);
+	let iconHovered4 = $state(false);
 
 	function scrollToPageTwo(e: any) {
 		e.preventDefault();
