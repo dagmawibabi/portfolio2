@@ -30,7 +30,7 @@
 			<CalendarDays size={40} isHovered={iconHovered1} />
 			<div>
 				<div class="font-semibold italic">Date & Time</div>
-				<div>10am - 6pm | January 24, 2026</div>
+				<div>9am - 6pm | January 24, 2026</div>
 			</div>
 		</div>
 
@@ -43,7 +43,7 @@
 			<MapPinCheck size={40} isHovered={iconHovered2} />
 			<div>
 				<div class="font-semibold italic">Location</div>
-				<div>ALX Ethiopia | Lideta Hub - Addis Ababa, Ethiopia</div>
+				<div>DxValley 2.0 - Addis Ababa, Ethiopia</div>
 			</div>
 		</div>
 

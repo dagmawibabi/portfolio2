@@ -39,8 +39,12 @@
 			<div>
 				<div class="font-semibold italic">Partners</div>
 				<div>
-					<a href="https://ethiopia.alxafrica.com" target="_blank" class="hover:text-emerald-400">
-						ALX
+					<a
+						href="https://maps.app.goo.gl/ZpENosKKRz4BfnDt6"
+						target="_blank"
+						class="hover:text-emerald-400"
+					>
+						DxValley 2.0
 					</a>
 					,
 					<a href="https://t.me/codenight" target="_blank" class="hover:text-emerald-400">

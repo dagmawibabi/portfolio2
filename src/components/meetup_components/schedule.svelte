@@ -13,41 +13,58 @@
 		document.querySelector('#registration')?.scrollIntoView({ behavior: 'smooth' });
 	}
 
-	let schedule = [
+	let morningSchedule = [
 		{
-			time: '08:00 AM - 10:00 AM',
+			time: '08:30 AM - 10:00 AM',
+			title: 'Check-in',
+			description: 'Open doors and welcome attendees.'
+		},
+		{
+			time: '10:00 AM - 10:30 AM',
 			title: 'Opening Ceremony',
+			description: 'Brief introduction of the event, schedule, sponsors and partners.'
+		},
+		{
+			time: '10:30 AM - 01:00 PM',
+			title: 'Keynotes and Showcases Pt.1 ',
 			description:
-				"We'll kick off the event with a welcome speech from our esteemed keynote speakers."
+				'Incredible individuals will take the stage to give talks and showcase their works.',
+			tags: ['AI', 'Design', 'Community Showcase']
 		},
 		{
-			time: '10:00 AM - 12:00 PM',
-			title: 'Keynote Speech',
-			description:
-				'Our keynote speakers will share their insights on the latest trends in the industry.'
-		},
-		{
-			time: '12:00 PM - 1:00 PM',
-			title: 'Lunch Break',
-			description: 'Enjoy a delicious lunch provided by our sponsors.'
-		},
-		{
-			time: '1:00 PM - 3:00 PM',
-			title: 'Panel Discussion',
-			description:
-				'Join our panel of experts for a lively discussion on the future of the industry.'
-		},
-		{
-			time: '3:00 PM - 4:00 PM',
-			title: 'Networking Session',
-			description: 'Meet and greet with other attendees and industry professionals.'
-		},
-		{
-			time: '4:00 PM - 5:00 PM',
-			title: 'Closing Remarks',
-			description: 'Our keynote speakers will wrap up the event with a final message.'
+			time: '01:00 PM - 02:00 PM',
+			title: 'Lunch & Networking',
+			description: 'Enjoy a delicious lunch while connecting with other attendees.'
 		}
 	];
+
+	let afternoonSchedule = [
+		{
+			time: '02:00 PM - 02:30 PM',
+			title: 'Live Podcast',
+			description: 'Join us on a live podcast session by Devtopia.'
+		},
+		{
+			time: '02:30 PM - 04:00 PM',
+			title: 'Keynotes and Showcases Pt.2',
+			description:
+				'More incredible individuals will take the stage to give talks and showcase their works.',
+			tags: ['Dev', 'OSS', 'Community Showcase']
+		},
+		{
+			time: '04:00 PM - 04:30 PM',
+			title: 'Creator Awards',
+			description: "Partnering with Codenight, we'll celebrate the best creators in the community."
+		},
+		{
+			time: '04:30 PM - 06:00 PM',
+			title: 'Closing and Networking',
+			description: 'The event will wrap up and allow for networking opportunities.'
+		}
+	];
+
+	let isMorning = $state(true);
+	let schedule = $state(morningSchedule);
 </script>
 
 <div id="schedule" class="relative h-screen snap-start">
@@ -68,17 +85,56 @@
 					<div class="pt-1 text-xs text-neutral-300 italic md:text-sm">
 						{eachSession.description}
 					</div>
+					{#if eachSession.title.includes('Keynotes')}
+						<div class="mt-2 flex gap-x-2">
+							{#each eachSession.tags as tag}
+								<div
+									class="rounded-full border border-neutral-500 px-3 py-0.5 text-xs text-neutral-400"
+								>
+									{tag}
+								</div>
+							{/each}
+						</div>
+					{/if}
 				</div>
 			{/each}
 		</div>
 
-		<a href="#registration" onclick={scrollToPageTwo}>
+		{#if isMorning}
+			<!-- svelte-ignore a11y_click_events_have_key_events -->
+			<!-- svelte-ignore a11y_no_static_element_interactions -->
 			<div
 				class="mt-5 flex w-fit cursor-pointer items-center justify-between gap-x-1 rounded-full border border-none bg-white py-2 pr-4 pl-6 font-semibold text-black uppercase transition-all hover:gap-x-2 hover:bg-emerald-500 hover:pr-3"
+				onclick={() => {
+					isMorning = false;
+					schedule = afternoonSchedule;
+				}}
 			>
-				Join the Event
+				Afternoon Schedule
 				<ArrowRight size={20} />
 			</div>
-		</a>
+		{:else}
+			<div class="flex">
+				<a href="#registration" onclick={scrollToPageTwo}>
+					<div
+						class="mt-5 flex w-fit cursor-pointer items-center justify-between gap-x-1 rounded-full border border-none bg-white py-2 pr-4 pl-6 font-semibold text-black uppercase transition-all hover:gap-x-2 hover:bg-emerald-500 hover:pr-3"
+					>
+						Join the Event
+						<ArrowRight size={20} />
+					</div>
+				</a>
+				<!-- svelte-ignore a11y_click_events_have_key_events -->
+				<!-- svelte-ignore a11y_no_static_element_interactions -->
+				<div
+					class="mt-5 w-fit cursor-pointer py-2 pl-6 font-semibold text-white uppercase hover:text-emerald-500"
+					onclick={() => {
+						isMorning = true;
+						schedule = morningSchedule;
+					}}
+				>
+					Morning Schedule
+				</div>
+			</div>
+		{/if}
 	</div>
 </div>
