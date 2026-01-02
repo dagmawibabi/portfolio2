@@ -141,7 +141,7 @@
 					<div
 						class="w-fit cursor-pointer py-2 pl-3 text-xs font-semibold text-neutral-400 uppercase italic hover:text-emerald-500 md:pl-3"
 					>
-						Click here if you are a Creator
+						Click here if you are a Creator or Event Organizer
 					</div>
 				</Dialog.Trigger>
 			{/if}
@@ -151,10 +151,10 @@
 		<Dialog.Header>
 			<Dialog.Title>THE NIGHT IS ALSO OURS 🎉</Dialog.Title>
 			<Dialog.Description class="text-black">
-				Once the event during the day is over, DxValley will exclusively be open for us creators
-				during the night. We'll have dinner, connect more, share experiences, play games, watch
-				movies, vibe-code and so much more. So if you wanna bring your laptop, PJs and toothbrush
-				feel free!
+				Once the event during the day is over, DxValley will exclusively be open for us creators and
+				event organizers during the night. We'll have dinner, connect more, share experiences, play
+				games, watch movies, vibe-code and so much more. So if you wanna bring your laptop, PJs and
+				toothbrush feel free!
 			</Dialog.Description>
 		</Dialog.Header>
 	</Dialog.Content>
