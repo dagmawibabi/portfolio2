@@ -21,6 +21,26 @@
 			// TODO: Submit data to server
 		}
 	}
+
+	export let data;
+	interface RsvpInfo {
+		_id: string;
+		fullname: string;
+		email: string;
+		phone: string;
+		occupation: string;
+		attendanceType: string;
+		link: string;
+		teammates: string[];
+		createdAt: string;
+		updatedAt: string;
+		__v: number;
+	}
+	interface RsvpResponse {
+		rsvpCount: number;
+		rsvpInfo: RsvpInfo;
+	}
+	const response = data as RsvpResponse;
 </script>
 
 <!-- <div
@@ -53,7 +73,7 @@
 		<Schedule />
 
 		<!-- PAGE 5 -->
-		<Registration />
+		<Registration count={data.rsvpCount} />
 
 		<!-- PAGE 6 -->
 		<ThankYou />
