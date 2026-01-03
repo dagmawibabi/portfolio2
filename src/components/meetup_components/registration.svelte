@@ -172,7 +172,7 @@
 			<div class="mt-4 flex w-full gap-x-1 md:w-3/4">
 				<!-- svelte-ignore a11y_click_events_have_key_events -->
 				<!-- svelte-ignore a11y_no_static_element_interactions -->
-				<!-- <div
+				<div
 					class="md:text-md w-full cursor-pointer border border-dashed py-2 text-center text-sm transition-all hover:border-solid hover:bg-neutral-700"
 					class:border-solid={attendanceType == 'Attending'}
 					class:bg-neutral-700={attendanceType == 'Attending'}
@@ -180,7 +180,7 @@
 					onclick={() => (attendanceType = 'Attending')}
 				>
 					Attending
-				</div> -->
+				</div>
 
 				<!-- svelte-ignore a11y_click_events_have_key_events -->
 				<!-- svelte-ignore a11y_no_static_element_interactions -->
@@ -196,7 +196,7 @@
 
 				<!-- svelte-ignore a11y_click_events_have_key_events -->
 				<!-- svelte-ignore a11y_no_static_element_interactions -->
-				<div
+				<!-- <div
 					class="md:text-md w-full cursor-pointer border border-dashed py-2 text-center text-sm transition-all hover:border-solid hover:bg-neutral-700"
 					class:border-solid={attendanceType == 'Creator'}
 					class:bg-neutral-700={attendanceType == 'Creator'}
@@ -204,11 +204,11 @@
 					onclick={() => (attendanceType = 'Creator')}
 				>
 					Creator
-				</div>
+				</div> -->
 
 				<!-- svelte-ignore a11y_click_events_have_key_events -->
 				<!-- svelte-ignore a11y_no_static_element_interactions -->
-				<div
+				<!-- <div
 					class="md:text-md w-full cursor-pointer border border-dashed py-2 text-center text-sm transition-all hover:border-solid hover:bg-neutral-700"
 					class:border-solid={attendanceType == 'Showcasing'}
 					class:bg-neutral-700={attendanceType == 'Showcasing'}
@@ -216,11 +216,11 @@
 					onclick={() => (attendanceType = 'Showcasing')}
 				>
 					Showcasing
-				</div>
+				</div> -->
 
 				<!-- svelte-ignore a11y_click_events_have_key_events -->
 				<!-- svelte-ignore a11y_no_static_element_interactions -->
-				<!-- <div
+				<div
 					class="md:text-md w-full cursor-pointer border border-dashed py-2 text-center text-sm transition-all hover:border-solid hover:bg-neutral-700"
 					class:border-solid={attendanceType == 'Hackathon'}
 					class:bg-neutral-700={attendanceType == 'Hackathon'}
@@ -228,7 +228,7 @@
 					onclick={() => (attendanceType = 'Hackathon')}
 				>
 					Hackathon
-				</div> -->
+				</div>
 
 				<!-- svelte-ignore a11y_click_events_have_key_events -->
 				<!-- svelte-ignore a11y_no_static_element_interactions -->
