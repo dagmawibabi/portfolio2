@@ -276,7 +276,7 @@
 					</div>
 					<div class="font-lexend flex text-sm text-neutral-500">
 						( <div class="text-neutral-500">{count}</div>
-						/70 People have registered so far)
+						/100 People have registered so far)
 					</div>
 				</div>
 			{/if}
