@@ -196,7 +196,7 @@
 
 				<!-- svelte-ignore a11y_click_events_have_key_events -->
 				<!-- svelte-ignore a11y_no_static_element_interactions -->
-				<!-- <div
+				<div
 					class="md:text-md w-full cursor-pointer border border-dashed py-2 text-center text-sm transition-all hover:border-solid hover:bg-neutral-700"
 					class:border-solid={attendanceType == 'Creator'}
 					class:bg-neutral-700={attendanceType == 'Creator'}
@@ -204,7 +204,7 @@
 					onclick={() => (attendanceType = 'Creator')}
 				>
 					Creator
-				</div> -->
+				</div>
 
 				<!-- svelte-ignore a11y_click_events_have_key_events -->
 				<!-- svelte-ignore a11y_no_static_element_interactions -->
@@ -232,7 +232,7 @@
 
 				<!-- svelte-ignore a11y_click_events_have_key_events -->
 				<!-- svelte-ignore a11y_no_static_element_interactions -->
-				<div
+				<!-- <div
 					class="md:text-md w-full cursor-pointer border border-dashed py-2 text-center text-sm transition-all hover:border-solid hover:bg-neutral-700"
 					class:border-solid={attendanceType == 'Events'}
 					class:bg-neutral-700={attendanceType == 'Events'}
@@ -240,7 +240,7 @@
 					onclick={() => (attendanceType = 'Events')}
 				>
 					Events
-				</div>
+				</div> -->
 			</div>
 
 			{#if attendanceType == 'Showcasing'}
