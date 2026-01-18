@@ -43,7 +43,13 @@
 			<MapPinCheck size={40} isHovered={iconHovered2} />
 			<div>
 				<div class="font-semibold italic">Location</div>
-				<div>ALX Ethiopia | Lideta Hub - Addis Ababa, Ethiopia</div>
+				<a
+					href="https://maps.app.goo.gl/ntzyK5MFYv5KwzgT9"
+					target="_blank"
+					class="hover:text-emerald-400"
+				>
+					<div>ALX Ethiopia | Lideta Hub - Addis Ababa, Ethiopia</div>
+				</a>
 			</div>
 		</div>
 
