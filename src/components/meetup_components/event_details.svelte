@@ -43,7 +43,7 @@
 			<MapPinCheck size={40} isHovered={iconHovered2} />
 			<div>
 				<div class="font-semibold italic">Location</div>
-				<div>DxValley 2.0 - Addis Ababa, Ethiopia</div>
+				<div>ALX Ethiopia | Lideta Hub - Addis Ababa, Ethiopia</div>
 			</div>
 		</div>
 
@@ -69,7 +69,13 @@
 			<BellRing size={40} isHovered={iconHovered4} />
 			<div>
 				<div class="font-semibold italic">Talks and Guests</div>
-				<div>Soon to be Announced</div>
+				<div>
+					Soon to be Announced on <a
+						href="https://t.me/dagmawi_babi"
+						target="_blank"
+						class="italic underline underline-offset-8 hover:text-emerald-400">my channel</a
+					>
+				</div>
 			</div>
 		</div>
 

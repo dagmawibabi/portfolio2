@@ -91,7 +91,7 @@
 							<div class="mt-2 flex gap-x-2">
 								{#each eachSession.tags as tag}
 									<div
-										class="rounded-full border border-neutral-500 px-3 py-0.5 text-xs text-neutral-400"
+										class="cursor-default rounded-full border border-neutral-500 px-3 py-0.5 text-xs text-neutral-400 hover:border-neutral-600 hover:bg-neutral-700 hover:text-neutral-300"
 									>
 										{tag}
 									</div>
@@ -137,13 +137,13 @@
 						Morning Schedule
 					</div>
 				</div>
-				<Dialog.Trigger>
+				<!-- <Dialog.Trigger>
 					<div
 						class="w-fit cursor-pointer py-2 pl-3 text-xs font-semibold text-neutral-400 uppercase italic hover:text-emerald-500 md:pl-3"
 					>
 						Click here if you are a Creator or Event Organizer
 					</div>
-				</Dialog.Trigger>
+				</Dialog.Trigger> -->
 			{/if}
 		</div>
 	</div>

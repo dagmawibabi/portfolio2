@@ -40,11 +40,11 @@
 				<div class="font-semibold italic">Partners</div>
 				<div>
 					<a
-						href="https://maps.app.goo.gl/ZpENosKKRz4BfnDt6"
+						href="https://maps.app.goo.gl/ntzyK5MFYv5KwzgT9"
 						target="_blank"
 						class="hover:text-emerald-400"
 					>
-						DxValley 2.0
+						ALX Ethiopia
 					</a>
 					,
 					<a href="https://t.me/codenight" target="_blank" class="hover:text-emerald-400">
@@ -66,8 +66,8 @@
 				<div>
 					<a href="https://v0.app" target="_blank" class="hover:text-emerald-400"> v0 by Vercel</a>
 					,
-					<a href="https://gebeta.app" target="_blank" class="hover:text-emerald-400">
-						GebetaMaps
+					<a href="https://better-auth.com" target="_blank" class="hover:text-emerald-400">
+						Better-Auth
 					</a>
 					,
 					<a href="https://horan.et" target="_blank" class="hover:text-emerald-400">
@@ -121,6 +121,10 @@
 					</a>
 					,
 					<a href="https://t.me/Denbit" target="_blank" class="hover:text-emerald-400"> @Denbit </a>
+					,
+					<a href="https://t.me/NaniBecoming" target="_blank" class="hover:text-emerald-400">
+						@NaniBecoming
+					</a>
 				</div>
 			</div>
 		</div>
