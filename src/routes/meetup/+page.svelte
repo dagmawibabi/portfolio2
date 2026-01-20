@@ -7,6 +7,7 @@
 	import Schedule from '../../components/meetup_components/schedule.svelte';
 	import SupportAndTeam from '../../components/meetup_components/support_and_team.svelte';
 	import ThankYou from '../../components/meetup_components/thank_you.svelte';
+	import SeatsTaken from '../../components/meetup_components/seats_taken.svelte';
 
 	let title = '';
 	let description = '';
@@ -73,7 +74,8 @@
 		<Schedule />
 
 		<!-- PAGE 5 -->
-		<Registration count={data.rsvpCount} />
+		<!-- <Registration count={data.rsvpCount} /> -->
+		<SeatsTaken count={data.rsvpCount} />
 
 		<!-- PAGE 6 -->
 		<ThankYou />
