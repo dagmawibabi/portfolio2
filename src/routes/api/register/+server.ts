@@ -30,42 +30,50 @@ export async function GET({ url }) {
 	}
 }
 
-// const result = await Rsvp.find({ isAccepted: true });
-
-// const first100 = await Rsvp.find({})
-// 	.sort({ createdAt: 1 }) // oldest first
-// 	.limit(100)
-// 	.select('_id');
-
-// const ids = first100.map((doc) => doc._id);
-
-// const result = await Rsvp.updateMany({ _id: { $in: ids } }, { $set: { isAccepted: true } });
-
-// console.log(result.length);
-// console.log(result.length);
-
 export async function POST({ request }) {
 	const { rsvp } = await request.json();
 
-	// let doc = await Rsvp.findOne({ email: rsvp.email });
-	let accepted = await Rsvp.find({ isAccepted: true });
+	let doc = await Rsvp.findOne({ email: rsvp.email });
 
-	// for (const user of accepted) {
 	// Send Email
 	const resend = new Resend(process.env.RESEND_API_KEY);
-	const { data, error } = await resend.emails.send({
-		from: 'meetup@dagmawi.dev',
-		// to: [user.email],
-		to: ['jerryayalew696@gmail.com'],
-		subject: "Dagmawi Babi's Meetup",
-		html: acceptedTemplate
-	});
-	console.log(data);
-	console.log(error);
-	// }
+	if (!doc) {
+		doc = await Rsvp.create(rsvp);
+		// Send Email
+		const resend = new Resend(process.env.RESEND_API_KEY);
+		const { data, error } = await resend.emails.send({
+			from: 'meetup@dagmawi.dev',
+			to: [rsvp.email],
+			subject: "Dagmawi Babi's Meetup",
+			html: email_template
+		});
+	}
 
-	return Response.json(accepted, { status: 201 });
+	return Response.json(doc, { status: 201 });
 }
+
+// export async function POST({ request }) {
+// 	const { rsvp } = await request.json();
+
+// 	// let doc = await Rsvp.findOne({ email: rsvp.email });
+// 	let accepted = await Rsvp.find({ isAccepted: true });
+
+// 	// for (const user of accepted) {
+// 	// Send Email
+// 	const resend = new Resend(process.env.RESEND_API_KEY);
+// 	const { data, error } = await resend.emails.send({
+// 		from: 'meetup@dagmawi.dev',
+// 		// to: [user.email],
+// 		to: ['sanyidiriba123@gmail.com'],
+// 		subject: "Dagmawi Babi's Meetup",
+// 		html: acceptedTemplate
+// 	});
+// 	console.log(data);
+// 	console.log(error);
+// 	// }
+
+// 	return Response.json(accepted, { status: 201 });
+// }
 
 // 	if (!doc) {
 // 	doc = await Rsvp.create(rsvp);

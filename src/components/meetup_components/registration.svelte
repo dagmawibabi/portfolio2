@@ -66,7 +66,9 @@
 			occupation: occupation,
 			attendanceType: attendanceType,
 			link: link,
-			teammates: teammateArray
+			teammates: teammateArray,
+			isAccepted: false,
+			hasConfirmed: false
 		};
 
 		const response = await fetch('/api/register', {
