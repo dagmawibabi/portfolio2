@@ -81,7 +81,7 @@
 				<img
 					bind:this={qrImg}
 					use:qr={{
-						data: qrCode,
+						data: 'https://dagmawi.dev/meetup/' + data._id,
 						logo: 'https://www.dagmawi.dev/_app/immutable/assets/logo_black.CLhuNUke.png',
 						shape: 'circle',
 						anchorInnerFill: 'black',
