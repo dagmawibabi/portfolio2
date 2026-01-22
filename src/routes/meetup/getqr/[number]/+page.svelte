@@ -98,7 +98,7 @@
 			<!-- svelte-ignore a11y_no_static_element_interactions -->
 			<!-- svelte-ignore a11y_click_events_have_key_events -->
 			<div
-				class="mt-2 flex w-fit cursor-pointer items-center justify-between gap-x-2 rounded-full border border-none py-2 pr-4 pl-5 font-semibold text-white uppercase transition-all hover:text-emerald-500"
+				class="mt-2 flex w-fit cursor-pointer items-center justify-between gap-x-2 rounded-full border border-none bg-black py-2 pr-4 pl-5 font-semibold text-white uppercase transition-all hover:text-emerald-500"
 				onclick={downloadRenderedQr}
 			>
 				Download Ticket
