@@ -48,7 +48,7 @@
 	}
 
 	async function rsvp() {
-		if (!validateForm()) return;
+		// if (!validateForm()) return;
 
 		isRegistering = true;
 		let teammateArray: any[] = [];

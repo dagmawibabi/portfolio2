@@ -33,6 +33,20 @@ export async function GET({ url }) {
 export async function POST({ request }) {
 	const { rsvp } = await request.json();
 
+	// const result = await Rsvp.find({ isAccepted: true });
+
+	// const first100 = await Rsvp.find({})
+	// 	.sort({ createdAt: 1 }) // oldest first
+	// 	.limit(100)
+	// 	.select('_id');
+
+	// const ids = first100.map((doc) => doc._id);
+
+	// const result = await Rsvp.updateMany({ _id: { $in: ids } }, { $set: { isAccepted: true } });
+
+	// console.log(result.length);
+	// console.log(result.length);
+
 	let doc = await Rsvp.findOne({ email: rsvp.email });
 
 	if (!doc) {

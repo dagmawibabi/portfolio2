@@ -62,14 +62,11 @@
 			</div>
 		{/if}
 	</div>
-
 	{#if response.rsvpInfo.isAccepted}
 		{#if response.rsvpInfo.hasConfirmed}
 			<div class="border border-black bg-emerald-400 px-3 py-2">Can't wait to see you :)</div>
 		{:else}
-			<a href="/meetup/confirm/{response.rsvpInfo._id}">
-				<div class=" cursor-pointer bg-emerald-400 px-3 py-2">Click, to Confirm!</div>
-			</a>
+			<div class="bg-black px-3 py-2 text-sm text-white">Confirm Again or Refresh</div>
 		{/if}
 	{:else}
 		<div class=" bg-black px-3 py-2 text-sm text-white">Sorry, we've reached maximum capacity.</div>

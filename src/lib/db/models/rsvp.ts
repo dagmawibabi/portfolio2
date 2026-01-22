@@ -8,7 +8,9 @@ const RsvpSchema = new Schema(
 		occupation: { type: String },
 		attendanceType: { type: String, required: true },
 		link: { type: String },
-		teammates: { type: Array<String>, default: [] }
+		teammates: { type: Array<String>, default: [] },
+		isAccepted: { type: Boolean, default: false },
+		hasConfirmed: { type: Boolean, default: false }
 	},
 	{ timestamps: true, collection: 'rsvp2026' }
 );
