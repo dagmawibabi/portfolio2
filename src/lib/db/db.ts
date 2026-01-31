@@ -10,7 +10,13 @@ export const dbConnect = async () => {
 	}
 
 	if (!process.env.MONGO_URI) {
-		throw new Error('MONGO_URI is not defined');
+		// Don't throw - just skip connection if MONGO_URI is not set
+		// This allows the app to run without MongoDB for pages that don't need it
+		if (!hasLogged) {
+			console.log('MONGO_URI not set - skipping database connection');
+			hasLogged = true;
+		}
+		return;
 	}
 
 	await mongoose.connect(process.env.MONGO_URI);
