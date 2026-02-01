@@ -10,7 +10,11 @@ export const dbConnect = async () => {
 	}
 
 	if (!process.env.MONGO_URI) {
-		throw new Error('MONGO_URI is not defined');
+		if (!hasLogged) {
+			console.warn('MONGO_URI is not defined - skipping database connection');
+			hasLogged = true;
+		}
+		return;
 	}
 
 	await mongoose.connect(process.env.MONGO_URI);
