@@ -17,7 +17,7 @@
 </svelte:head>
 
 <div
-	class="no-scrollbar relative mx-auto w-[96%] pb-56 pt-4 md:w-[96%] lg:w-1/2 xl:w-1/2 2xl:w-1/2"
+	class="no-scrollbar relative mx-auto min-h-screen w-full bg-emerald-500 pb-56 pt-4"
 >
 	<About />
 	<Creativity />
