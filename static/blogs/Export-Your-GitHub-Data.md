@@ -25,7 +25,7 @@ So click on the “Start Export” button and start the process. GitHub will mak
 
 ![image.png](/blog-images/ExportYourGitHubData/4.jpg)
 
-Now that GitHub has emailed you your data, download it. My data turned out to be 4GB. Now it’s time to extract it. Whoa! That’s a lot of information! So MUCH information. It contains your profile info, releases, attachments (markdown images), bots, PRs, commits, issues, comments, discussions, stars and so much more info.
+Now that GitHub has emailed you your data, download it. My data turned out to be 4 GB. Now it’s time to extract it. Whoa! That’s a lot of information! So MUCH information. It contains your profile info, releases, attachments (markdown images), bots, PRs, commits, issues, comments, discussions, stars and so much more info.
 
 ![image.png](/blog-images/ExportYourGitHubData/5.jpg)
 
@@ -41,7 +41,7 @@ Okay GitHub, if it’s “MY DATA” give me it!
 
 So after so much digging around, there is no option for you to export all your repositories. You will have to manually download each repo as a .ZIP or you’ll have to write a script to clone all your repos. Obviously I went with the second option.
 
-I am currently on a Windows machine and decided to use PowerShell to run this simple script.  I am using the GitHub API to go through all the repos in my account an clone them. I would also like to clone my private repos so I generated a Fine-grained Personal Access Token in the [settings](https://github.com/settings/personal-access-tokens) to authenticate and get them. Here is my script:
+I am currently on a Windows machine and decided to use PowerShell to run this simple script.  I am using the GitHub API to go through all the repos in my account and clone them. I would also like to clone my private repos so I generated a Fine-grained Personal Access Token in the [settings](https://github.com/settings/personal-access-tokens) to authenticate and get them. Here is my script:
 
 ```js
 $username = "YOUR_GITHUB_USERNAME"
@@ -77,7 +77,7 @@ And finally it’s done. That took about 15 minutes for me…
 
 ![image.png](/blog-images/ExportYourGitHubData/7.jpg)
 
-Let’s see what we got. I have 138 repositories and all that source code and media with it came to be a total of 5.07 GB compressed. Which is really nice and neat taking into consideration that I had stored big sized images and assets.
+Let’s see what we got. I have 138 repositories and all that source code and media with it came to be a total of 5.07 GB compressed. Which is really nice and neat taking into consideration that I had stored large images and assets.
 
 ![image.png](/blog-images/ExportYourGitHubData/8.jpg)
 
@@ -87,9 +87,9 @@ Now this is beautiful. A complete backup of all my public and private repositori
 
 ### Summary
 
-So I have a little principle when it comes to data and that is, I should be able to export and have it. That's it. Companies aren't trustworthy enough to keep our privacies and what not, I gave up on that part. But the ability to actually export my data and have a local copy is important. Telegram is my absolute favorite when it comes to this. Then it's YouTube which is extremely good at the amount and type of data they give you. I hate platforms like Snapchat and now GitHub who have the worst export experience.
+So I have a little principle when it comes to data and that is, I should be able to export and have it. That's it. Companies aren't trustworthy enough to keep our privacy and whatnot, I gave up on that part. But the ability to actually export my data and have a local copy is important. Telegram is my absolute favorite when it comes to this. Then it's YouTube which is extremely good at the amount and type of data they give you. I hate platforms like Snapchat and now GitHub who have the worst export experience.
 
-In total my metadata and repositories combined is 8.81GB as of October 28, 2025
+In total my metadata and repositories combined is 8.81 GB as of October 28, 2025
 
 ![image.png](/blog-images/ExportYourGitHubData/10.jpg)
 
