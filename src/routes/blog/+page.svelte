@@ -1,6 +1,8 @@
 <script lang="ts">
+	import BlogHeader from '../../components/blog_components/blog_header.svelte';
+	// import SectionTitle from '../../components/blog_components/section_title.svelte';
+	// import BlogHeader from '../../components/blog_header.svelte';
 	import SectionTitle from '../../components/section_title.svelte';
-	import BlogHeader from '../../components/blog_header.svelte';
 	import config from '../../lib/blog-config.json';
 	import { Toaster } from 'svelte-sonner';
 
@@ -32,17 +34,17 @@
 </svelte:head>
 
 <div
-	class="no-scrollbar relative mx-auto w-[96%] pb-56 pt-4 md:w-[96%] lg:w-1/2 xl:w-1/2 2xl:w-1/2"
+	class="no-scrollbar relative mx-auto w-[96%] pt-4 pb-56 md:w-[96%] lg:w-1/2 xl:w-1/2 2xl:w-1/2"
 >
 	<!-- Header -->
 	<BlogHeader />
 
 	<!-- Nav -->
-	<div class="flex flex-wrap justify-start gap-2 pb-5 pt-3">
+	<div class="flex flex-wrap justify-start gap-2 pt-3 pb-5">
 		{#each Object.entries(data.grouped) as [category, blogs]}
 			<a href={'#' + category}>
 				<div
-					class="cursor-pointer rounded-full bg-neutral-100 px-3 py-1 text-sm italic text-zinc-600 hover:bg-neutral-200 hover:text-black dark:bg-zinc-900 dark:text-neutral-400 dark:hover:bg-neutral-800"
+					class="cursor-pointer rounded-full bg-neutral-100 px-3 py-1 text-sm text-zinc-600 italic hover:bg-neutral-200 hover:text-black dark:bg-zinc-900 dark:text-neutral-400 dark:hover:bg-neutral-800"
 				>
 					{category}
 				</div>
@@ -72,7 +74,7 @@
 							class:bg-neutral-50={!isNew(blog.date)}
 						>
 							<div class="flex items-center justify-between pb-1 text-xs">
-								<div class="italic text-neutral-500">
+								<div class="text-neutral-500 italic">
 									{new Date(blog.date).toDateString()}
 								</div>
 								{#if isNew(blog.date)}
