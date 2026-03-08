@@ -1,6 +1,6 @@
 <footer class="minimal-footer">
 	<div class="footer-inner">
-		<p class="footer-kicker">Dagmawi Babi Meetup Archive</p>
+		<p class="footer-kicker">Dagmawi Babi's Meetup Archive</p>
 		<p class="footer-line">Built for the people who are contributing to the community.</p>
 		<p class="footer-meta">
 			<a href="/meetup" target="_blank" rel="noreferrer">Event site</a>
