@@ -1,191 +1,343 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { ArrowUpRight, ChevronLeft, ChevronRight, Play, X } from 'lucide-svelte';
+	import { ArrowUpRight, CalendarDays, MapPin, Users } from 'lucide-svelte';
+	import ArchiveSection from '../../../components/meetup_archive_components/ArchiveSection.svelte';
+	import DetailsSection from '../../../components/meetup_archive_components/DetailsSection.svelte';
+	import GallerySection from '../../../components/meetup_archive_components/GallerySection.svelte';
+	import HeroSection from '../../../components/meetup_archive_components/HeroSection.svelte';
+	import MinimalFooter from '../../../components/meetup_archive_components/MinimalFooter.svelte';
+	import SponsorsSection from '../../../components/meetup_archive_components/SponsorsSection.svelte';
+	import StatsSection from '../../../components/meetup_archive_components/StatsSection.svelte';
+	import TestimonialsSection from '../../../components/meetup_archive_components/TestimonialsSection.svelte';
+	import TimelineSection from '../../../components/meetup_archive_components/TimelineSection.svelte';
+	import type { GalleryImage, SupporterLogo, VideoSection } from '../../../components/meetup_archive_components/types';
 	import heroImage from '$lib/assets/meetups/2026/announcement2.png';
 
-	interface VideoItem {
-		title: string;
-		url: string;
-		section: string;
-	}
-
-	interface VideoSection {
-		id: string;
-		title: string;
-		subtitle: string;
-		items: VideoItem[];
-	}
-
-	interface GalleryImage {
-		src: string;
-		alt: string;
-	}
-
-	interface DetailItem {
+	type DetailItem = {
 		label: string;
 		value: string;
 		link?: string;
-	}
+		icon: typeof CalendarDays;
+	};
 
-	interface ScheduleItem {
-		time: string;
+	type StatItem = {
+		label: string;
+		value: string;
+		note: string;
+	};
+
+	type TimelineItem = {
+		period: string;
+		phase: string;
 		title: string;
 		description: string;
-	}
-
-	interface SupportGroup {
-		label: string;
-		items: { name: string; link: string }[];
-	}
+		anchor: string;
+		time: string;
+	};
 
 	const videoSections: VideoSection[] = [
 		{
 			id: 'recap',
 			title: 'Event Recap',
-			subtitle: 'One complete replay of the day',
+			subtitle: 'A complete replay of the room, the rhythm, and the people who made it happen.',
 			items: [
-				{ title: 'Event Recap', url: 'https://youtu.be/UH9V-PMrIHk?si=OaYJWE3JhitVJpyj', section: 'Event Recap' }
+				{
+					title: 'Event Recap',
+					url: 'https://youtu.be/UH9V-PMrIHk?si=OaYJWE3JhitVJpyj',
+					speakerOrPresenter: 'Dagmawi Babi Meetup archive',
+					description:
+						"The full-day event recap capturing the keynotes, showcases, live podcast, creator awards, and the overall atmosphere of Dagmawi Babi's Meetup.",
+					secondaryLinks: [{ label: 'Event Site', url: 'https://dagmawibabi.com/meetup' }]
+				}
 			]
 		},
 		{
 			id: 'sponsors-and-guests',
 			title: 'Sponsors & Guests',
-			subtitle: 'Partner remarks and sponsor spotlights',
+			subtitle: 'Partner remarks and sponsor spotlights from the stage.',
 			items: [
-				{ title: 'ALX and Guest Remarks', url: 'https://youtu.be/qFRBbuc8gkQ?si=WRLJYIUKmSMs-Jtl', section: 'Sponsors & Guests' },
-				{ title: 'Hot Spot by Horan Technologies', url: 'https://youtu.be/qedki5wcE0s?si=T7s8atVca0Nxh5mQ', section: 'Sponsors & Guests' },
-				{ title: 'LucyAI by ZEMENU', url: 'https://youtu.be/RWfEOmULgEM?si=sVkF7zD8A97HJCUt', section: 'Sponsors & Guests' }
+				{
+					title: 'ALX and Guest Remarks',
+					url: 'https://youtu.be/qFRBbuc8gkQ?si=WRLJYIUKmSMs-Jtl',
+					speakerOrPresenter: 'Bisrat Gizaw, Mike Atskemichael, and Dagmawi Mekonnen',
+					description:
+						"Bisrat Gizaw, Recruitment Analyst at ALX, gave remarks about the services ALX provides. Mike Atskemichael, CTO of Afriwork, shared remarks about Afriwork's future plans. Dagmawi Mekonnen, host of Gugut Podcast, also gave remarks to the attendees.",
+					secondaryLinks: [
+						{ label: 'ALX Ethiopia', url: 'https://t.me/AlxEthiopiaOfficial' },
+						{ label: 'Afriwork', url: 'https://afriworket.com/' },
+						{ label: 'Gugut Podcast', url: 'https://www.youtube.com/@Gugutpodcast' }
+					]
+				},
+				{
+					title: 'Hot Spot Showcase',
+					url: 'https://youtu.be/qedki5wcE0s?si=T7s8atVca0Nxh5mQ',
+					speakerOrPresenter: 'Gemechis Elias, co-founder of Horan Technologies',
+					description:
+						"Gemechis Elias showcases Hot Spot, an upcoming travel super app for Ethiopia, at Dagmawi Babi's Meetup.",
+					primaryLink: { label: 'Product Link', url: 'https://hotspot.et/' },
+					secondaryLinks: [
+						{ label: 'Horan Technologies', url: 'https://horan.et/' },
+						{ label: 'Gemechis Elias', url: 'https://t.me/CodeItLab' }
+					]
+				},
+				{
+					title: 'LucyAI Showcase',
+					url: 'https://youtu.be/RWfEOmULgEM?si=sVkF7zD8A97HJCUt',
+					speakerOrPresenter: 'Moan Bekele, co-founder of LucyAI',
+					description:
+						"Moan Bekele showcases LucyAI, an AI customer service agent built under ZEMENU, and walks the audience through the product's purpose.",
+					primaryLink: { label: 'Product Link', url: 'https://lucy.zemenu.org/' }
+				}
 			]
 		},
 		{
-			id: 'talks',
-			title: 'Talks',
-			subtitle: 'Core talks from the stage',
+			id: 'ai-and-dev-talks',
+			title: 'AI & Dev Talks',
+			subtitle: 'Technical depth, debugging, systems thinking, and creative engineering process.',
 			items: [
-				{ title: 'Building AI That Ships', url: 'https://youtu.be/4g6ncDSv4B4?si=EeIPxlXpYZ_5vUw-', section: 'Talks' },
-				{ title: 'Designing Visuals that Move', url: 'https://youtu.be/AfV2mSLjlIA?si=dFzy60g6U1ND1DL9', section: 'Talks' },
-				{ title: 'Debugging', url: 'https://youtu.be/qdWXYyvuCNs?si=r02O-JyaqXhSeeQ9', section: 'Talks' },
-				{ title: 'Concept & Functionality', url: 'https://youtu.be/qwENBQRFiOQ?si=BFUg_w7rIglzUkEC', section: 'Talks' },
-				{ title: 'Everything is Broken', url: 'https://youtu.be/IPzM27dJYn4?si=QQy9gci6YRoj-PSt', section: 'Talks' },
-				{ title: 'Bespoke UI', url: 'https://youtu.be/yG91uqjPbQc?si=qV0MZh40pcfQfSQL', section: 'Talks' },
-				{ title: 'Live Coding Music', url: 'https://youtu.be/SJXvTCcEknw?si=FN1TWANFRsiFlccQ', section: 'Talks' }
+				{
+					title: 'Building AI That Ships',
+					url: 'https://youtu.be/4g6ncDSv4B4?si=EeIPxlXpYZ_5vUw-',
+					speakerOrPresenter: 'Biniyam Daniel, Addis AI',
+					description:
+						'This talk is a technical talk for every AI enthusiast covering the parts that make AI work. From infrastructure and platforms to fine-tuning and inference, it is one of the most comprehensive AI talks given in Ethiopia.',
+					secondaryLinks: [{ label: 'Biniyam Daniel', url: 'https://t.me/b1n1yamBuilds' }]
+				},
+				{
+					title: 'Debugging',
+					url: 'https://youtu.be/qdWXYyvuCNs?si=r02O-JyaqXhSeeQ9',
+					speakerOrPresenter: 'Ezra Ashenafi, Afriwork',
+					description:
+						"In his technical talk on debugging and troubleshooting, Ezra shares resources, tools, tricks, do's and don'ts, and practical lessons on how to track issues accurately and fix full-stack products with clarity.",
+					secondaryLinks: [{ label: 'Afriwork', url: 'https://afriworket.com/' }]
+				},
+				{
+					title: 'Everything is Broken',
+					url: 'https://youtu.be/IPzM27dJYn4?si=QQy9gci6YRoj-PSt',
+					speakerOrPresenter: 'Yohanes Fikru',
+					description:
+						'Using game development as the frame, this talk explores how real products are often built around feeling and user desire before code purity. It walks through lessons from building games and running a studio while chasing satisfaction over theory.'
+				},
+				{
+					title: 'Live Coding Music',
+					url: 'https://youtu.be/SJXvTCcEknw?si=FN1TWANFRsiFlccQ',
+					speakerOrPresenter: 'Surafel Yimam',
+					description:
+						'Expect a glimpse into live coding, visual thinking, sonic ideas, and the mindset behind building systems that feel as much as they function. This talk is about process, play, and possibility.'
+				}
+			]
+		},
+		{
+			id: 'design-talks',
+			title: 'Design Talks',
+			subtitle: 'Visual thinking, concept, functionality, and bespoke interface craft.',
+			items: [
+				{
+					title: 'Designing Visuals That Move',
+					url: 'https://youtu.be/AfV2mSLjlIA?si=dFzy60g6U1ND1DL9',
+					speakerOrPresenter: 'Eyuel Zerabruk',
+					description:
+						'Design is bigger than how things look. This talk breaks down design as intention across systems, tools, communication, and feeling, then explores motion design as designing in time through rhythm, pacing, continuity, and change.'
+				},
+				{
+					title: 'Concept and Functionality',
+					url: 'https://youtu.be/qwENBQRFiOQ?si=BFUg_w7rIglzUkEC',
+					speakerOrPresenter: 'Etsub Mekonnen',
+					description:
+						'Good design is not only about how something looks, but also about how it works. This talk argues that every strong design begins with a clear concept and is completed through thoughtful functionality.'
+				},
+				{
+					title: 'Bespoke UI',
+					url: 'https://youtu.be/yG91uqjPbQc?si=qV0MZh40pcfQfSQL',
+					speakerOrPresenter: 'Robel Mezemir',
+					description:
+						'This talk looks at what it takes to move UI from merely tolerable to memorable. Robel walks through bad design, bare minimum design, great design, and the workflow he uses to build half-decent interfaces that feel like experiences.'
+				}
 			]
 		},
 		{
 			id: 'showcases',
 			title: 'Showcases',
-			subtitle: 'Product demos from the community',
+			subtitle: 'Products introduced live, with direct links to what was being built.',
 			items: [
-				{ title: 'ExamBuddy', url: 'https://youtu.be/eJq01B4xnPM?si=22loWQsNLLQ74zcp', section: 'Showcases' },
-				{ title: 'DBStudio', url: 'https://youtu.be/eUK85Y7kOLc?si=FOtII0fXCV5z4G8L', section: 'Showcases' },
-				{ title: 'Better Auth Studio', url: 'https://youtu.be/0gl0gg2kw20?si=-xLc_l61h2ikAOAk', section: 'Showcases' },
-				{ title: 'Ora Browser', url: 'https://youtu.be/mslFVIBEBgs?si=co8vERxzB2a_223V', section: 'Showcases' },
-				{ title: 'Stark', url: 'https://youtu.be/IBQzzWmR-1I?si=TtB8lBm8Jx6RLN4e', section: 'Showcases' }
+				{
+					title: 'ExamBuddy',
+					url: 'https://youtu.be/eJq01B4xnPM?si=22loWQsNLLQ74zcp',
+					speakerOrPresenter: 'Mohammed Ibrahim',
+					description:
+						'Mohammed Ibrahim showcases ExamBuddy, an all-in-one AI-powered study assistant that helps users create exams from documents, generate concise notes, flashcards, audiobooks, and more.',
+					primaryLink: { label: 'Product Link', url: 'https://exambuddy.app/' },
+					secondaryLinks: [{ label: 'Mohammed Ibrahim', url: 'https://t.me/DoughNutDrops' }]
+				},
+				{
+					title: 'DBStudio',
+					url: 'https://youtu.be/eUK85Y7kOLc?si=FOtII0fXCV5z4G8L',
+					speakerOrPresenter: 'Ruhama Bekele',
+					description:
+						'Ruhama Bekele showcases DBStudio, a modern and AI-powered workspace for data teams building, managing, and scaling database applications.',
+					primaryLink: { label: 'Product Link', url: 'https://dbstudio.tech/' },
+					secondaryLinks: [{ label: 'Ruhama Bekele', url: 'https://t.me/ruhambek' }]
+				},
+				{
+					title: 'Better Auth Studio',
+					url: 'https://youtu.be/0gl0gg2kw20?si=-xLc_l61h2ikAOAk',
+					speakerOrPresenter: 'Kinfemichael Tariku',
+					description:
+						'Kinfemichael Tariku showcases Better Auth Studio, an admin dashboard for Better Auth that manages users, sessions, organizations, teams, database tooling, testing, utilities, and more.',
+					primaryLink: { label: 'Product Link', url: 'https://better-auth-studio.vercel.app/' },
+					secondaryLinks: [{ label: 'Kinfemichael Tariku', url: 'https://t.me/kinfishfarms' }]
+				},
+				{
+					title: 'Ora Browser',
+					url: 'https://youtu.be/mslFVIBEBgs?si=co8vERxzB2a_223V',
+					speakerOrPresenter: 'Yonathan Dejene',
+					description:
+						'Ora Browser is an open-source macOS browser built with Swift and WebKit. Yonathan Dejene showcases it as a fast, secure, native Arc alternative with spaces, vertical sidebar, smooth tab management, and more.',
+					primaryLink: { label: 'Product Link', url: 'https://www.orabrowser.com/' },
+					secondaryLinks: [{ label: 'Yonathan Dejene', url: 'https://t.me/yonaries' }]
+				},
+				{
+					title: 'Stark',
+					url: 'https://youtu.be/IBQzzWmR-1I?si=TtB8lBm8Jx6RLN4e',
+					speakerOrPresenter: 'Miheretab Samson',
+					description:
+						'Miheretab Samson showcases Stark.et, a definitive portfolio network for developers, designers, and motion creators.',
+					primaryLink: { label: 'Product Link', url: 'https://stark.et/' },
+					secondaryLinks: [{ label: 'Miheretab Samson', url: 'https://t.me/miheretabtrysstuff' }]
+				}
 			]
 		},
 		{
 			id: 'podcast',
-			title: 'Podcast',
-			subtitle: 'Live conversation from the meetup',
-			items: [{ title: 'Devtopia Live Podcast', url: 'https://youtu.be/EiJQD4FRSSg?si=2eQAPjKYrIKTzbft', section: 'Podcast' }]
+			title: 'Podcast and Vlog',
+			subtitle: 'A live conversation from the stage plus a creator-led recap of the room.',
+			items: [
+				{
+					title: 'Devtopia Live Podcast',
+					url: 'https://youtu.be/EiJQD4FRSSg?si=2eQAPjKYrIKTzbft',
+					speakerOrPresenter: 'Fraol Lemecha, Yafet Getachew, and Biniyam Daniel',
+					description:
+						'Fraol Lemecha and Yafet Getachew host a live podcast session interviewing Addis AI CEO Biniyam Daniel. A longer version of the conversation was slated for the Devtopia YouTube channel.',
+					secondaryLinks: [
+						{ label: 'Fraol Lemecha', url: 'https://t.me/thefrectonz' },
+						{ label: 'Yafet Getachew', url: 'https://t.me/morphandbeyond' },
+						{ label: 'Devtopia', url: 'https://www.youtube.com/@thedevtopia' }
+					]
+				},
+				{
+					title: "A day at Dagmawi Babi's Meetup",
+					url: 'https://www.youtube.com/watch?v=mX4H_soClwM',
+					speakerOrPresenter: 'Tihitina Tesfaye',
+					description:
+						'I had an incredible day at Dagmawi Babi’s meetup, where I connected with fascinating individuals full of big ideas! The conversations were inspiring, and it was a privilege to meet such brilliant minds! In this video, I tried to capture the essence of the event and even got the chance to interview some of the speakers you might recognize from various tech sectors. I hope you enjoy the video.',
+					secondaryLinks: [{ label: 'Tihitina Tesfaye', url: 'https://www.instagram.com/tihitnat/' }]
+				}
+			]
 		},
 		{
 			id: 'outro',
 			title: 'Outro',
-			subtitle: 'Creators award and closing',
-			items: [{ title: 'Telegram Creators Award & Closing', url: 'https://youtu.be/qkRayp-UY9o?si=h_FU0ltPG-vIhW0p', section: 'Outro' }]
+			subtitle: 'Awards, gratitude, and the final statement of the day.',
+			items: [
+				{
+					title: 'Telegram Creators Award and Closing',
+					url: 'https://youtu.be/qkRayp-UY9o?si=h_FU0ltPG-vIhW0p',
+					speakerOrPresenter: 'Codenight and Dagmawi Babi',
+					description:
+						'Codenight and Dagmawi Babi partnered to host the first Telegram Creators Award, celebrating influential creators producing high-quality educational and entertaining content. Dagmawi Babi also gave the closing remarks, congratulating the winners: @SoloDevChronicles, @OnyxDesignX, and @Birhan_Nega.',
+					secondaryLinks: [{ label: 'Codenight', url: 'https://t.me/codenight' }]
+				}
+			]
 		}
 	];
-
-	const initialPlayers = Object.fromEntries(videoSections.map((section) => [section.id, section.items[0]])) as Record<string, VideoItem>;
-	const initialLoading = Object.fromEntries(videoSections.map((section) => [section.id, true])) as Record<string, boolean>;
-
-	const recapSection = videoSections[0];
-	const remainingSections = videoSections.slice(1);
 
 	const detailItems: DetailItem[] = [
-		{ label: 'Date & Time', value: '9am - 6pm | January 24, 2026' },
-		{
-			label: 'Location',
-			value: 'ALX Ethiopia | Lideta Hub - Addis Ababa, Ethiopia',
-			link: 'https://maps.app.goo.gl/ntzyK5MFYv5KwzgT9'
-		},
-		{ label: 'Attendees', value: 'Developers, Designers, Content Creators, Event Organizers' },
-		{ label: 'Talks & Guests', value: 'Announced on my channel', link: 'https://t.me/dagmawi_babi' }
+		{ label: 'Date', value: 'January 24, 2026', link: 'https://calendar.app.google/RMDRcWhFHF5MPmFa6', icon: CalendarDays },
+		{ label: 'Venue', value: 'ALX Hub', link: 'https://maps.app.goo.gl/sHtWNdgN28Rpa57C7', icon: MapPin },
+		{ label: 'Audience', value: 'Creators, communities, companies, designers, and developers building Ethiopia’s ecosystem.', icon: Users },
+		{ label: 'Event Site', value: 'dagmawibabi.com/meetup', link: 'https://dagmawibabi.com/meetup', icon: ArrowUpRight }
 	];
 
-	const morningSchedule: ScheduleItem[] = [
-		{ time: '08:30 AM - 10:00 AM', title: 'Check-in', description: 'Open doors and welcome attendees.' },
+	const timelineItems: TimelineItem[] = [
 		{
-			time: '10:00 AM - 10:30 AM',
+			period: 'Morning',
+			phase: '08:30 - 10:00',
+			title: 'Check-in',
+			description: 'Open doors and welcome attendees.',
+			anchor: '#details',
+			time: '08:30 AM - 10:00 AM'
+		},
+		{
+			period: 'Morning',
+			phase: '10:00 - 10:30',
 			title: 'Opening Ceremony',
-			description: 'Brief introduction of the event, schedule, sponsors and partners.'
+			description: 'Intro to the event, schedule, sponsors, and partners.',
+			anchor: '#archive',
+			time: '10:00 AM - 10:30 AM'
 		},
 		{
-			time: '10:30 AM - 01:00 PM',
+			period: 'Morning',
+			phase: '10:30 - 01:00',
 			title: 'Keynotes and Showcases Pt.1',
-			description: 'Incredible individuals will take the stage to give talks and showcase their works.'
+			description: 'Talks and showcases across AI, design, and the community.',
+			anchor: '#archive',
+			time: '10:30 AM - 01:00 PM'
 		},
 		{
-			time: '01:00 PM - 02:00 PM',
+			period: 'Afternoon',
+			phase: '01:00 - 02:00',
 			title: 'Lunch & Networking',
-			description: 'Enjoy a delicious lunch while connecting with other attendees.'
-		}
-	];
-
-	const afternoonSchedule: ScheduleItem[] = [
-		{ time: '02:00 PM - 02:30 PM', title: 'Live Podcast', description: 'Join us on a live podcast session by Devtopia.' },
+			description: 'Lunch, connections, and a live Devtopia podcast session.',
+			anchor: '#archive',
+			time: '01:00 PM - 02:00 PM'
+		},
 		{
-			time: '02:30 PM - 04:00 PM',
+			period: 'Afternoon',
+			phase: '02:30 - 04:00',
 			title: 'Keynotes and Showcases Pt.2',
-			description: 'More incredible individuals will take the stage to give talks and showcase their works.'
+			description: 'More talks and showcases across dev, OSS, and the community.',
+			anchor: '#archive',
+			time: '02:30 PM - 04:00 PM'
 		},
 		{
-			time: '04:00 PM - 04:30 PM',
+			period: 'Afternoon',
+			phase: '04:00 - 04:30',
 			title: 'Creator Awards',
-			description: "Partnering with Codenight, we'll celebrate the best creators in the community."
+			description: "With Codenight, the event celebrates standout creators in the community.",
+			anchor: '#archive',
+			time: '04:00 PM - 04:30 PM'
 		},
 		{
-			time: '04:30 PM - 06:00 PM',
+			period: 'Afternoon',
+			phase: '04:30 - 06:00',
 			title: 'Closing and Networking',
-			description: 'The event will wrap up and allow for networking opportunities.'
+			description: 'Wrap-up remarks and more room for conversations.',
+			anchor: '#details',
+			time: '04:30 PM - 06:00 PM'
 		}
 	];
 
-	const supportGroups: SupportGroup[] = [
-		{
-			label: 'Partners',
-			items: [
-				{ name: 'ALX Ethiopia', link: 'https://maps.app.goo.gl/ntzyK5MFYv5KwzgT9' },
-				{ name: 'Codenight', link: 'https://t.me/codenight' }
-			]
-		},
-		{
-			label: 'Sponsors',
-			items: [
-				{ name: 'v0 by Vercel', link: 'https://v0.app' },
-				{ name: 'Better-Auth', link: 'https://better-auth.com' },
-				{ name: 'Horan Technologies', link: 'https://horan.et' }
-			]
-		},
-		{
-			label: 'Merch and Stickers',
-			items: [
-				{ name: 'StickerGuy', link: 'https://t.me/stickerguy' },
-				{ name: 'Erbana Clothing', link: 'https://t.me/erbana_clothing' }
-			]
-		},
-		{
-			label: 'Organizers',
-			items: [
-				{ name: '@Natyiu0', link: 'https://t.me/Natyiu0' },
-				{ name: '@Found_this', link: 'https://t.me/found_this' },
-				{ name: '@KinfishFarms', link: 'https://t.me/kinfishfarms' },
-				{ name: '@Denbit', link: 'https://t.me/Denbit' },
-				{ name: '@NaniBecoming', link: 'https://t.me/NaniBecoming' }
-			]
-		}
-	];
+	const sponsorLogoSources = import.meta.glob('/src/lib/assets/meetups/2026/sponsors and partners/*', {
+		eager: true,
+		query: '?url',
+		import: 'default'
+	}) as Record<string, string>;
+
+	const sponsorLogosByBase = Object.fromEntries(
+		Object.entries(sponsorLogoSources).map(([path, src]) => [
+			(path.split('/').pop() ?? '').replace(/\.[^.]+$/, '').toLowerCase(),
+			src
+		])
+	);
+
+	const supporterMarquee: SupporterLogo[] = [
+		{ name: 'ALX Ethiopia', link: 'https://t.me/AlxEthiopiaOfficial', group: 'Partner', src: sponsorLogosByBase.alx },
+		{ name: 'v0 by Vercel', link: 'https://v0.app/', group: 'Sponsor', src: sponsorLogosByBase.v0 },
+		{ name: 'Better Auth', link: 'https://www.better-auth.com/', group: 'Sponsor', src: sponsorLogosByBase.betterauth },
+		{ name: 'Codenight', link: 'https://t.me/CodeNight', group: 'Partner', src: sponsorLogosByBase.codenight },
+		{ name: 'Horan Technologies', link: 'https://horan.et/', group: 'Sponsor', src: sponsorLogosByBase.horantech },
+		{ name: 'Lucy AI', link: 'https://lucy.zemenu.org/', group: 'Sponsor', src: sponsorLogosByBase.lucyai },
+		{ name: 'Sticker Guy', link: 'https://stickerguy.et/', group: 'Sponsor', src: sponsorLogosByBase.stickerguy }
+	].filter((item) => !!item.src);
 
 	const gallerySources = import.meta.glob('/src/lib/assets/meetups/2026/gallery/*', {
 		eager: true,
@@ -197,404 +349,70 @@
 		.filter(([path]) => /\.(png|jpe?g|webp|avif)$/i.test(path))
 		.sort(([a], [b]) => a.localeCompare(b))
 		.map(([path, src], index) => {
-			const file = path.split('/').pop() ?? `image-${index + 1}`;
-			return { src, alt: file.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' ') };
+			const name = path.split('/').pop() ?? `image-${index + 1}`;
+			return { src, alt: name.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' ') };
 		});
 
-	const loopingGallery = galleryImages.length > 1 ? [...galleryImages, ...galleryImages] : galleryImages;
-
-	let activePlayers: Record<string, VideoItem> = initialPlayers;
-	let playerLoading: Record<string, boolean> = initialLoading;
-	let isLightboxOpen = false;
-	let activeImageIndex = 0;
-
-	function getVideoId(url: string): string {
-		try {
-			const parsed = new URL(url);
-			if (parsed.hostname.includes('youtu.be')) return parsed.pathname.slice(1);
-			if (parsed.hostname.includes('youtube.com')) return parsed.searchParams.get('v') ?? '';
-		} catch {
-			return '';
-		}
-		return '';
-	}
-
-	function embedUrl(url: string): string {
-		const id = getVideoId(url);
-		return id ? `https://www.youtube.com/embed/${id}?autoplay=1&rel=0` : '';
-	}
-
-	function thumbnailUrl(url: string): string {
-		const id = getVideoId(url);
-		return id ? `https://img.youtube.com/vi/${id}/mqdefault.jpg` : '';
-	}
-
-	function switchVideo(sectionId: string, item: VideoItem): void {
-		activePlayers = { ...activePlayers, [sectionId]: item };
-		playerLoading = { ...playerLoading, [sectionId]: true };
-	}
-
-	function onPlayerLoaded(sectionId: string): void {
-		playerLoading = { ...playerLoading, [sectionId]: false };
-	}
-
-	function openImage(index: number): void {
-		if (!galleryImages.length) return;
-		activeImageIndex = index;
-		isLightboxOpen = true;
-	}
-
-	function closeLightbox(): void {
-		isLightboxOpen = false;
-	}
-
-	function nextImage(): void {
-		if (!galleryImages.length) return;
-		activeImageIndex = (activeImageIndex + 1) % galleryImages.length;
-	}
-
-	function prevImage(): void {
-		if (!galleryImages.length) return;
-		activeImageIndex = (activeImageIndex - 1 + galleryImages.length) % galleryImages.length;
-	}
-
-	function handleBackdropClick(event: MouseEvent): void {
-		if (event.target === event.currentTarget) closeLightbox();
-	}
-
-	onMount(() => {
-		const handleKey = (event: KeyboardEvent) => {
-			if (!isLightboxOpen) return;
-			if (event.key === 'Escape') closeLightbox();
-			if (event.key === 'ArrowRight') nextImage();
-			if (event.key === 'ArrowLeft') prevImage();
-		};
-		window.addEventListener('keydown', handleKey);
-		return () => window.removeEventListener('keydown', handleKey);
-	});
+	const stats: StatItem[] = [
+		{ label: 'Sessions', value: '19', note: 'Talks, showcases, podcast moments, and the closing archive.' },
+		{ label: 'Sections', value: '8', note: 'Structured chapters that map the flow of the event.' },
+		{ label: 'Partners', value: '7', note: 'Sponsors and ecosystem partners visible across the day.' },
+		{ label: 'Attendees', value: '300', note: 'In the room, out of 900+ people who registered.' }
+	];
 </script>
 
-<main class="min-h-screen bg-neutral-950 text-neutral-100">
-	<div class="mx-auto grid w-[95%] max-w-[1400px] gap-6 py-6 md:grid-cols-[260px_minmax(0,1fr)] md:py-10">
-		<aside class="h-fit rounded-3xl border border-neutral-800 bg-neutral-900/70 p-5 md:sticky md:top-6">
-			<p class="text-[10px] tracking-[0.28em] uppercase text-neutral-400">Archive Navigation</p>
-			<h2 class="font-lexend mt-3 text-2xl">Meetup 2026</h2>
-			<div class="mt-5 space-y-2">
-				<a href="#details" class="block rounded-xl border border-neutral-800 px-3 py-2 text-xs uppercase tracking-[0.15em] text-neutral-300 hover:border-neutral-600">Details</a>
-				<a href="#schedule" class="block rounded-xl border border-neutral-800 px-3 py-2 text-xs uppercase tracking-[0.15em] text-neutral-300 hover:border-neutral-600">Schedule</a>
-				<a href="#more-info" class="block rounded-xl border border-neutral-800 px-3 py-2 text-xs uppercase tracking-[0.15em] text-neutral-300 hover:border-neutral-600">More Info</a>
-				<a href="#recap" class="block rounded-xl border border-neutral-800 px-3 py-2 text-xs uppercase tracking-[0.15em] text-neutral-300 hover:border-neutral-600">Recap</a>
-				<a href="#gallery" class="block rounded-xl border border-neutral-800 px-3 py-2 text-xs uppercase tracking-[0.15em] text-neutral-300 hover:border-neutral-600">Gallery</a>
-				{#each remainingSections as section}
-					<a href={`#${section.id}`} class="block rounded-xl border border-neutral-800 px-3 py-2 text-xs uppercase tracking-[0.15em] text-neutral-300 hover:border-neutral-600">{section.title}</a>
-				{/each}
-			</div>
-		</aside>
+<svelte:head>
+	<title>Dagmawi Babi Meetup Archive 2026 | Talks, Photos, and Event Details</title>
+	<meta
+		name="description"
+		content="Explore the 2026 Dagmawi Babi Meetup archive with full session replays, sponsor highlights, gallery moments, and event details from the gathering."
+	/>
+</svelte:head>
 
-		<div class="space-y-8">
-			<section class="relative overflow-hidden rounded-3xl border border-neutral-800 bg-neutral-900">
-				<div class="hero-grid">
-					<div class="hero-ink"></div>
-					<div class="p-6 md:p-10">
-						<p class="text-[11px] tracking-[0.25em] uppercase text-neutral-400">January 24, 2026</p>
-						<h1 class="font-lexend mt-4 text-4xl leading-[0.95] md:text-6xl">Dagmawi Babi's Meetup</h1>
-						<p class="mt-4 max-w-2xl text-sm leading-relaxed text-neutral-300 md:text-base">
-							A cinematic replay archive with full sessions, showcased projects, and closing moments.
-						</p>
-						<div class="mt-6 flex flex-wrap gap-3">
-							<a href="#recap" class="inline-flex items-center gap-2 rounded-full bg-neutral-100 px-5 py-2 text-xs uppercase tracking-[0.15em] text-neutral-900 hover:bg-white">
-								Play Recap <Play size={14} />
-							</a>
-							<a href="#gallery" class="inline-flex items-center gap-2 rounded-full border border-neutral-700 px-5 py-2 text-xs uppercase tracking-[0.15em] text-neutral-200 hover:border-neutral-500">
-								Browse Gallery
-							</a>
-						</div>
-					</div>
-					<div class="relative overflow-hidden border-l border-neutral-800">
-						<img src={heroImage} alt="Meetup banner" class="h-full min-h-[290px] w-full object-cover" />
-						<div class="absolute inset-0 bg-linear-to-t from-neutral-950/50 to-transparent"></div>
-					</div>
-				</div>
-			</section>
-
-			<section id="details" class="rounded-3xl border border-neutral-800 bg-neutral-900 p-4 md:p-6">
-				<div class="mb-4">
-					<p class="text-[11px] uppercase tracking-[0.22em] text-neutral-500">Event Details</p>
-					<h2 class="font-lexend mt-1 text-3xl">Information</h2>
-				</div>
-				<div class="grid gap-3 md:grid-cols-2">
-					{#each detailItems as item}
-						<div class="rounded-xl border border-neutral-800 bg-neutral-950 p-4">
-							<p class="text-[10px] uppercase tracking-[0.18em] text-neutral-500">{item.label}</p>
-							{#if item.link}
-								<a href={item.link} target="_blank" rel="noopener noreferrer" class="mt-2 inline-flex items-center gap-1 text-sm text-neutral-200 hover:text-white">
-									{item.value}
-									<ArrowUpRight size={14} />
-								</a>
-							{:else}
-								<p class="mt-2 text-sm text-neutral-200">{item.value}</p>
-							{/if}
-						</div>
-					{/each}
-				</div>
-			</section>
-
-			<section id="schedule" class="rounded-3xl border border-neutral-800 bg-neutral-900 p-4 md:p-6">
-				<div class="mb-4">
-					<p class="text-[11px] uppercase tracking-[0.22em] text-neutral-500">Event Schedule</p>
-					<h2 class="font-lexend mt-1 text-3xl">Morning & Afternoon</h2>
-				</div>
-				<div class="grid gap-4 md:grid-cols-2">
-					<div class="rounded-xl border border-neutral-800 bg-neutral-950 p-4">
-						<p class="mb-3 text-xs uppercase tracking-[0.17em] text-neutral-400">Morning</p>
-						<div class="space-y-3">
-							{#each morningSchedule as item}
-								<div class="rounded-lg border border-neutral-800 p-3">
-									<p class="text-[11px] text-neutral-400">{item.time}</p>
-									<p class="mt-1 text-sm font-semibold text-neutral-200">{item.title}</p>
-									<p class="mt-1 text-xs text-neutral-400">{item.description}</p>
-								</div>
-							{/each}
-						</div>
-					</div>
-					<div class="rounded-xl border border-neutral-800 bg-neutral-950 p-4">
-						<p class="mb-3 text-xs uppercase tracking-[0.17em] text-neutral-400">Afternoon</p>
-						<div class="space-y-3">
-							{#each afternoonSchedule as item}
-								<div class="rounded-lg border border-neutral-800 p-3">
-									<p class="text-[11px] text-neutral-400">{item.time}</p>
-									<p class="mt-1 text-sm font-semibold text-neutral-200">{item.title}</p>
-									<p class="mt-1 text-xs text-neutral-400">{item.description}</p>
-								</div>
-							{/each}
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section id="more-info" class="rounded-3xl border border-neutral-800 bg-neutral-900 p-4 md:p-6">
-				<div class="mb-4">
-					<p class="text-[11px] uppercase tracking-[0.22em] text-neutral-500">Support & Team</p>
-					<h2 class="font-lexend mt-1 text-3xl">More Info</h2>
-				</div>
-				<div class="grid gap-3 md:grid-cols-2">
-					{#each supportGroups as group}
-						<div class="rounded-xl border border-neutral-800 bg-neutral-950 p-4">
-							<p class="text-xs uppercase tracking-[0.17em] text-neutral-400">{group.label}</p>
-							<div class="mt-3 flex flex-wrap gap-2">
-								{#each group.items as entry}
-									<a href={entry.link} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 rounded-full border border-neutral-700 px-3 py-1 text-xs text-neutral-300 hover:border-neutral-500 hover:text-white">
-										{entry.name}
-										<ArrowUpRight size={12} />
-									</a>
-								{/each}
-							</div>
-						</div>
-					{/each}
-				</div>
-			</section>
-
-			<section id="recap" class="rounded-3xl border border-neutral-800 bg-neutral-900 p-4 md:p-6">
-				<div class="mb-4 flex items-end justify-between gap-4">
-					<div>
-						<p class="text-[11px] uppercase tracking-[0.22em] text-neutral-500">Featured</p>
-						<h2 class="font-lexend mt-1 text-3xl">{recapSection.title}</h2>
-					</div>
-					<a href={activePlayers[recapSection.id].url} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs uppercase tracking-[0.15em] text-neutral-300 hover:text-white">
-						Open YouTube <ArrowUpRight size={14} />
-					</a>
-				</div>
-				<div class="player-shell">
-					{#if playerLoading[recapSection.id]}
-						<div class="player-loader">
-							<img src={thumbnailUrl(activePlayers[recapSection.id].url)} alt={activePlayers[recapSection.id].title} class="h-full w-full object-cover" />
-							<div class="player-mask"></div>
-							<div class="loader-dot"></div>
-						</div>
-					{/if}
-					<iframe
-						src={embedUrl(activePlayers[recapSection.id].url)}
-						title={activePlayers[recapSection.id].title}
-						class="h-full w-full"
-						onload={() => onPlayerLoaded(recapSection.id)}
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						allowfullscreen
-					></iframe>
-				</div>
-			</section>
-
-			<section id="gallery" class="rounded-3xl border border-neutral-800 bg-neutral-900 p-4 md:p-6">
-				<div class="mb-4">
-					<p class="text-[11px] uppercase tracking-[0.22em] text-neutral-500">Memory Strip</p>
-					<h2 class="font-lexend mt-1 text-3xl">Gallery</h2>
-				</div>
-				{#if galleryImages.length}
-					<div class="overflow-hidden rounded-2xl border border-neutral-800">
-						<div class={`gallery-reel flex gap-3 bg-neutral-950 p-3 ${galleryImages.length > 1 ? 'is-animated' : ''}`}>
-							{#each loopingGallery as image, index}
-								<button type="button" onclick={() => openImage(index % galleryImages.length)} class="w-56 shrink-0 overflow-hidden rounded-xl border border-neutral-800 bg-neutral-900 md:w-64">
-									<img src={image.src} alt={image.alt} loading="lazy" class="h-40 w-full object-cover transition duration-500 hover:scale-105 md:h-48" />
-								</button>
-							{/each}
-						</div>
-					</div>
-				{:else}
-					<div class="rounded-xl border border-dashed border-neutral-700 bg-neutral-950 px-4 py-10 text-center text-sm text-neutral-400">
-						No gallery images found in <code>/src/lib/assets/meetups/2026/gallery</code>.
-					</div>
-				{/if}
-			</section>
-
-			{#each remainingSections as section, i}
-				<section id={section.id} class={`rounded-3xl border border-neutral-800 p-4 md:p-6 ${i % 2 === 0 ? 'bg-neutral-900' : 'bg-neutral-950'}`}>
-					<div class="mb-4 flex flex-wrap items-end justify-between gap-3">
-						<div>
-							<p class="text-[11px] uppercase tracking-[0.22em] text-neutral-500">Section</p>
-							<h3 class="font-lexend mt-1 text-3xl">{section.title}</h3>
-							<p class="mt-1 text-sm text-neutral-400">{section.subtitle}</p>
-						</div>
-						<a href={activePlayers[section.id].url} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs uppercase tracking-[0.15em] text-neutral-300 hover:text-white">
-							Open YouTube <ArrowUpRight size={14} />
-						</a>
-					</div>
-
-					<div class="grid gap-4 lg:grid-cols-[320px_minmax(0,1fr)]">
-						<div class="max-h-[420px] space-y-2 overflow-auto pr-1 no-scrollbar">
-							{#each section.items as item}
-								<button
-									type="button"
-									onclick={() => switchVideo(section.id, item)}
-									class={`w-full rounded-xl border px-4 py-3 text-left text-sm transition ${activePlayers[section.id].url === item.url ? 'border-neutral-100 bg-neutral-100 text-neutral-950' : 'border-neutral-700 bg-neutral-900 text-neutral-200 hover:border-neutral-500'}`}
-								>
-									{item.title}
-								</button>
-							{/each}
-						</div>
-
-						<div class="player-shell">
-							{#if playerLoading[section.id]}
-								<div class="player-loader">
-									<img src={thumbnailUrl(activePlayers[section.id].url)} alt={activePlayers[section.id].title} class="h-full w-full object-cover" />
-									<div class="player-mask"></div>
-									<div class="loader-dot"></div>
-								</div>
-							{/if}
-							<iframe
-								src={embedUrl(activePlayers[section.id].url)}
-								title={activePlayers[section.id].title}
-								class="h-full w-full"
-								onload={() => onPlayerLoaded(section.id)}
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-								allowfullscreen
-							></iframe>
-						</div>
-					</div>
-				</section>
-			{/each}
-
-			<footer class="rounded-3xl border border-neutral-800 bg-neutral-900 px-5 py-7">
-				<div class="flex flex-col gap-2 text-xs uppercase tracking-[0.16em] text-neutral-400 md:flex-row md:items-center md:justify-between">
-					<p>Dagmawi Babi's Meetup 2026 Archive</p>
-					<p>Neutral Edition</p>
-				</div>
-			</footer>
-		</div>
-	</div>
-</main>
-
-{#if isLightboxOpen && galleryImages.length}
-	<div class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4" role="dialog" aria-modal="true" onclick={handleBackdropClick}>
-		<button type="button" onclick={closeLightbox} class="absolute top-4 right-4 rounded-full border border-white/30 bg-black/40 p-2 text-white hover:bg-black" aria-label="Close image viewer">
-			<X size={18} />
-		</button>
-		<button type="button" onclick={prevImage} class="absolute left-3 rounded-full border border-white/30 bg-black/40 p-2 text-white hover:bg-black md:left-6" aria-label="Previous image">
-			<ChevronLeft size={22} />
-		</button>
-		<img src={galleryImages[activeImageIndex].src} alt={galleryImages[activeImageIndex].alt} class="max-h-[86vh] max-w-[92vw] rounded-xl object-contain" />
-		<button type="button" onclick={nextImage} class="absolute right-3 rounded-full border border-white/30 bg-black/40 p-2 text-white hover:bg-black md:right-6" aria-label="Next image">
-			<ChevronRight size={22} />
-		</button>
-		<p class="absolute bottom-4 text-xs uppercase tracking-[0.2em] text-neutral-200">{activeImageIndex + 1} / {galleryImages.length}</p>
-	</div>
-{/if}
+<div class="archive-page">
+	<HeroSection {heroImage} />
+	<SponsorsSection {supporterMarquee} />
+	<StatsSection {stats} />
+	<GallerySection {galleryImages} galleryLink="https://t.me/dagmawibabismeetup" />
+	<ArchiveSection {videoSections} />
+	<TimelineSection items={timelineItems} />
+	<DetailsSection {detailItems} />
+	<TestimonialsSection />
+	<MinimalFooter />
+</div>
 
 <style>
-	.hero-grid {
-		display: grid;
-		grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-		position: relative;
+	@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+	:global(html) {
+		scroll-behavior: smooth;
 	}
 
-	.hero-ink {
-		position: absolute;
-		inset: 0;
-		pointer-events: none;
-		background-image: radial-gradient(circle at 8% 12%, rgba(255, 255, 255, 0.08) 0, transparent 42%);
+	:global(body) {
+		margin: 0;
+		background: #0a0a0a;
 	}
 
-	.player-shell {
-		position: relative;
-		overflow: hidden;
-		border-radius: 1rem;
-		border: 1px solid rgba(115, 115, 115, 0.5);
-		background: #000;
-		aspect-ratio: 16 / 9;
+	.archive-page {
+		--page: #0a0a0a;
+		--line: #525252;
+		--line-soft: #3f3f46;
+		--text: #fafafa;
+		--muted: #a3a3a3;
+		--mono: #e5e5e5;
+		min-height: 100vh;
+		background:
+			linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 22%),
+			repeating-linear-gradient(90deg, transparent 0, transparent 79px, rgba(255, 255, 255, 0.02) 79px, rgba(255, 255, 255, 0.02) 80px),
+			var(--page);
+		color: var(--text);
+		font-family: 'Chivo', sans-serif;
+		padding: 1rem 1rem 1.25rem;
 	}
 
-	.player-loader {
-		position: absolute;
-		inset: 0;
-		z-index: 10;
-	}
-
-	.player-mask {
-		position: absolute;
-		inset: 0;
-		background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.28));
-	}
-
-	.loader-dot {
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
-		width: 38px;
-		height: 38px;
-		border-radius: 999px;
-		border: 3px solid rgba(255, 255, 255, 0.35);
-		border-top-color: #fff;
-		animation: spin 0.8s linear infinite;
-	}
-
-	.gallery-reel.is-animated {
-		animation: reel-slide 28s linear infinite;
-	}
-
-	@keyframes reel-slide {
-		0% {
-			transform: translateX(0);
-		}
-		100% {
-			transform: translateX(-50%);
-		}
-	}
-
-	@keyframes spin {
-		to {
-			transform: translate(-50%, -50%) rotate(360deg);
-		}
-	}
-
-	@media (max-width: 900px) {
-		.hero-grid {
-			grid-template-columns: 1fr;
-		}
-	}
-
-	@media (prefers-reduced-motion: reduce) {
-		.gallery-reel.is-animated,
-		.loader-dot {
-			animation: none;
+	@media (max-width: 720px) {
+		.archive-page {
+			padding: 0.75rem;
 		}
 	}
 </style>
