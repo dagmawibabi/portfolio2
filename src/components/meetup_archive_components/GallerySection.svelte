@@ -174,15 +174,15 @@
 	}
 
 	.row-1 {
-		animation: marquee-left 300s linear infinite;
+		animation: marquee-left 700s linear infinite;
 	}
 
 	.row-2 {
-		animation: marquee-right 400s linear infinite;
+		animation: marquee-right 700s linear infinite;
 	}
 
 	.row-3 {
-		animation: marquee-left 300s linear infinite;
+		animation: marquee-left 500s linear infinite;
 	}
 
 	.marquee-card {

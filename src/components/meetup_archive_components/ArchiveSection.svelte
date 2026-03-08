@@ -60,9 +60,19 @@
 			case 'LucyAI Showcase':
 				return `Moan Bekele, co-founder of <a href="https://lucy.zemenu.org/" target="_blank" rel="noreferrer">Lucy AI</a>`;
 			case 'Building AI That Ships':
-				return `${externalLink('https://t.me/b1n1yamBuilds', 'Biniyam Daniel')}, Addis AI`;
+				return `${externalLink('https://t.me/b1n1yamBuilds', 'Biniyam Daniel')}, <a href="https://addisassistant.com" target="_blank" rel="noreferrer">Addis AI</a>`;
 			case 'Debugging':
-				return `Ezra Ashenafi, <a href="https://afriworket.com/" target="_blank" rel="noreferrer">Afriwork</a>`;
+				return `${externalLink('https://t.me/ezras_channel', 'Ezra Ashenafi')}, <a href="https://afriworket.com/" target="_blank" rel="noreferrer">Afriwork</a>`;
+			case 'Everything is Broken':
+				return externalLink('https://t.me/MajorJohn23', 'Yohanes Fikru');
+			case 'Live Coding Music':
+				return externalLink('https://t.me/SurafelYimam', 'Surafel Yimam');
+			case 'Designing Visuals That Move':
+				return externalLink('https://t.me/eyuelzerostuff', 'Eyuel Zerabruk');
+			case 'Concept and Functionality':
+				return externalLink('https://t.me/nirvanaland7', 'Etsub Mekonnen');
+			case 'Bespoke UI':
+				return externalLink('https://t.me/robi_makes_stuff', 'Robel Mezemir');
 			case 'ExamBuddy':
 				return externalLink('https://t.me/DoughNutDrops', 'Mohammed Ibrahim');
 			case 'DBStudio':

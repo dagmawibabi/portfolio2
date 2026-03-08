@@ -244,11 +244,11 @@
 	}
 
 	.column-1 {
-		animation: testimonials-up 36s linear infinite;
+		animation: testimonials-up 250s linear infinite;
 	}
 
 	.column-2 {
-		animation: testimonials-up 42s linear infinite reverse;
+		animation: testimonials-up 250s linear infinite reverse;
 	}
 
 	.testimonial-card {
