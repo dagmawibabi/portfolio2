@@ -164,6 +164,33 @@
 			role: 'Early Supporter',
 			link: 'https://t.me/birhan_nega/3088',
 			tone: 'wide'
+		},
+
+		{
+			quote:
+				'It was an honor to be part of the team. The team was fun, I joined and felt welcomed immediately. For the Nani two years ago, this event, being part of the team, the whole experience would have felt like an actual dream. I’m honestly still in awe that I got to be part of it all. It was so exciting to meet someone I had only fangirled over on the internet. But more than that, it was such a blessing to meet someone so humble, someone I can now proudly call a friend. ',
+			name: '@NaniBecoming',
+			role: 'Early Supporter',
+			link: 'https://t.me/NaniBecoming/461',
+			tone: 'wide'
+		},
+
+		{
+			quote:
+				'The team, @Natyiu0, @Found_this, @KinfishFarms, you guys welcomed me so fast, it was like we knew each other from the start. I had fun running around with you. I hope more sweet moments keep happening that bring us together.',
+			name: '@NaniBecoming',
+			role: 'Early Supporter',
+			link: 'https://t.me/NaniBecoming/461',
+			tone: 'wide'
+		},
+
+		{
+			quote:
+				"@Dagmawi_Babi, oh Dag, I don't even know what to say... It was so beautiful to work with u. I genuinely am soooo honoured. Thank you for giving me the chance. Thank you for replying to the text. I am happy I got to organize an event with u and host it as well. I am glad I got to know u well through this. I genuinely look forward to the many things we will create together.",
+			name: '@NaniBecoming',
+			role: 'Early Supporter',
+			link: 'https://t.me/NaniBecoming/461',
+			tone: 'wide'
 		}
 	];
 
