@@ -6,6 +6,7 @@
 		label: string;
 		value: string;
 		link?: string;
+		entries?: { label: string; link?: string }[];
 		icon: ComponentType;
 	};
 
@@ -26,7 +27,20 @@
 						<svelte:component this={item.icon} size={18} />
 					</div>
 					<p class="eyebrow subtle">{item.label}</p>
-					{#if item.link}
+					{#if item.entries?.length}
+						<div class="detail-list">
+							{#each item.entries as entry}
+								{#if entry.link}
+									<a href={entry.link} target="_blank" rel="noreferrer">
+										{entry.label}
+										<ArrowUpRight size={14} />
+									</a>
+								{:else}
+									<span>{entry.label}</span>
+								{/if}
+							{/each}
+						</div>
+					{:else if item.link}
 						<a href={item.link} target="_blank" rel="noreferrer">
 							{item.value}
 							<ArrowUpRight size={14} />
@@ -140,6 +154,12 @@
 	.detail-card span {
 		font-size: 0.98rem;
 		line-height: 1.75;
+	}
+
+	.detail-list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.45rem 0.8rem;
 	}
 
 	.detail-card a {

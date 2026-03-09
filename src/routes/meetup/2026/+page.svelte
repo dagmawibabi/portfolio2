@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ArrowUpRight, CalendarDays, MapPin, Users } from 'lucide-svelte';
+	import { ArrowUpRight, CalendarDays, Camera, HeartHandshake, MapPin, Users } from 'lucide-svelte';
 	import ArchiveSection from '../../../components/meetup_archive_components/ArchiveSection.svelte';
 	import DetailsSection from '../../../components/meetup_archive_components/DetailsSection.svelte';
 	import GallerySection from '../../../components/meetup_archive_components/GallerySection.svelte';
@@ -16,6 +16,7 @@
 		label: string;
 		value: string;
 		link?: string;
+		entries?: { label: string; link?: string }[];
 		icon: typeof CalendarDays;
 	};
 
@@ -254,6 +255,31 @@
 		{ label: 'Date', value: 'January 24, 2026', link: 'https://calendar.app.google/RMDRcWhFHF5MPmFa6', icon: CalendarDays },
 		{ label: 'Venue', value: 'ALX Hub', link: 'https://maps.app.goo.gl/sHtWNdgN28Rpa57C7', icon: MapPin },
 		{ label: 'Audience', value: 'Creators, communities, companies, designers, and developers building Ethiopia’s ecosystem.', icon: Users },
+		{
+			label: 'Host',
+			value: '',
+			icon: HeartHandshake,
+			entries: [
+				{ label: 'Dagmawi Babi', link: 'https://t.me/dagmawi_babi' },
+				{ label: '@NaniBecoming', link: 'https://t.me/NaniBecoming' }
+			]
+		},
+		{
+			label: 'Organizers',
+			value: '',
+			icon: Users,
+			entries: [
+				{ label: '@Natyiu0', link: 'https://t.me/Natyiu0' },
+				{ label: '@Found_this', link: 'https://t.me/found_this' },
+				{ label: '@KinfishFarms', link: 'https://t.me/kinfishfarms' }
+			]
+		},
+		{
+			label: 'Camera Crew',
+			value: '@konjo.production',
+			link: 'https://www.instagram.com/konjo.production/',
+			icon: Camera
+		},
 		{ label: 'Event Site', value: 'dagmawibabi.com/meetup', link: 'https://dagmawibabi.com/meetup', icon: ArrowUpRight }
 	];
 
@@ -416,3 +442,4 @@
 		}
 	}
 </style>
+
