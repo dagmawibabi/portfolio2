@@ -1,7 +1,7 @@
 ---
 title: FAQ
 date: 2026-3-15
-description: A list of frequently asked questions I get asked and my answers to them. It's will constantly be updated.
+description: A list of frequently asked questions I get asked and my answers to them. This will be constantly updated as I learn more and I get asked more. Hope this helps :)
 category: "Guides"
 ---
 
