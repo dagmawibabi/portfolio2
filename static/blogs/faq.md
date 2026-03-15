@@ -104,7 +104,7 @@ Please checkout these podcasts I’ve been on if you wanna hear more about me or
 - [Muya Podcast EP#12](https://www.youtube.com/watch?v=Fx59plUUW-0&t=1120s&pp=ygUMZGFnbWF3aSBiYWJp)
 - [The Keb Tsegaye Podcast](https://www.youtube.com/watch?v=rQ4LzUUwn0A&t=1179s&pp=ygUMZGFnbWF3aSBiYWJp)
 - [TechET Podcast S01EP01](https://www.youtube.com/watch?v=21N1x-vJ_gE&t=318s&pp=ygUMZGFnbWF3aSBiYWJp) 
-- [GDSC AASTU Podcast](https://www.youtube.com/watch?v=Rjs33bzqRwA&t=1422s&pp=ygUMZGFnbWF3aSBiYWJp) \
+- [GDSC AASTU Podcast](https://www.youtube.com/watch?v=Rjs33bzqRwA&t=1422s&pp=ygUMZGFnbWF3aSBiYWJp) 
 - [Tesfa Broadcasting Network](https://www.youtube.com/watch?v=TXq8BwZfyt4)
 
 Or send me a message on my channel DMs [@Dagmawi_Babi](https://t.me/Dagmawi_Babi?direct)
