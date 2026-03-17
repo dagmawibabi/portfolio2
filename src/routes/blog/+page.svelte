@@ -66,9 +66,10 @@
 				{#each blogs as blog, i}
 					<a href={`/blog/${blog.slug}`}>
 						<div
-							class="group h-full w-full overflow-clip rounded border p-2 px-3 shadow-xs transition-all hover:border-zinc-400 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-zinc-700"
+							class="group h-full w-full overflow-clip rounded border p-2 px-3 shadow-xs transition-all hover:border-zinc-400 hover:shadow-lg dark:bg-zinc-900 dark:hover:border-zinc-700"
 							class:border-emerald-500={isNew(blog.date)}
-							class:dark:border-emerald-800={isNew(blog.date)}
+							class:dark:border-emerald-700={isNew(blog.date)}
+							class:dark:border-zinc-800={!isNew(blog.date)}
 							class:border-zinc-300={!isNew(blog.date)}
 							class:bg-emerald-50={isNew(blog.date)}
 							class:bg-neutral-50={!isNew(blog.date)}

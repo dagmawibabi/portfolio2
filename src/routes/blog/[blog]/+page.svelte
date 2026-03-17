@@ -1,5 +1,8 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import { ChevronUp } from 'lucide-svelte';
 	import { Toaster } from 'svelte-sonner';
+	import { Button } from '$lib/components/ui/button';
 	import BlogHeader from '../../../components/blog_components/blog_header.svelte';
 	type BlogData = {
 		content: string;
@@ -12,6 +15,49 @@
 	};
 
 	export let data: BlogData;
+
+	// SCROLL TO TOP BUTTON LOGIC
+	const LONG_CONTENT_RATIO = 1.5;
+	const SCROLL_THRESHOLD = 400;
+
+	let articleContainer: HTMLDivElement | null = null;
+	let isLongContent = false;
+	let hasScrolledEnough = false;
+
+	$: showScrollToTop = isLongContent && hasScrolledEnough;
+
+	function updateScrollState() {
+		hasScrolledEnough = window.scrollY > SCROLL_THRESHOLD;
+	}
+
+	function updateContentLengthState() {
+		if (!articleContainer) {
+			isLongContent = false;
+			return;
+		}
+
+		isLongContent = articleContainer.scrollHeight > window.innerHeight * LONG_CONTENT_RATIO;
+	}
+
+	function scrollToTop() {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}
+
+	onMount(() => {
+		const syncState = () => {
+			updateContentLengthState();
+			updateScrollState();
+		};
+
+		syncState();
+		window.addEventListener('scroll', updateScrollState, { passive: true });
+		window.addEventListener('resize', syncState);
+
+		return () => {
+			window.removeEventListener('scroll', updateScrollState);
+			window.removeEventListener('resize', syncState);
+		};
+	});
 </script>
 
 <svelte:head>
@@ -19,6 +65,7 @@
 </svelte:head>
 
 <div
+	bind:this={articleContainer}
 	class="no-scrollbar relative mx-auto w-[96%] pt-4 pb-56 md:w-[96%] lg:w-1/2 xl:w-1/2 2xl:w-1/2"
 >
 	<!-- Header -->
@@ -48,5 +95,16 @@
 		{@html data.content}
 	</div>
 </div>
+
+{#if showScrollToTop}
+	<Button
+		onclick={scrollToTop}
+		size="icon"
+		class="fixed right-4 bottom-6 z-40 rounded-full border border-zinc-200/80 bg-white/92 text-black shadow-lg shadow-zinc-950/10 backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-zinc-50 md:right-8 md:bottom-8 dark:border-zinc-800 dark:bg-zinc-950/92 dark:text-white dark:shadow-black/30"
+		aria-label="Scroll to top"
+	>
+		<ChevronUp class="size-4" />
+	</Button>
+{/if}
 
 <Toaster expand={true} />
