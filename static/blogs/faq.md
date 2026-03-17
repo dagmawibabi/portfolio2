@@ -86,6 +86,9 @@ I like vibe-coding sometimes. My number one vibe-coding tool is [v0](https://v0.
 
 Whenever a new model drops, I use [LM-Studio](https://lmstudio.ai/) to experiment with it. LM-Studio is just perfect. You open it up either in your terminal, or server or in GUI and search up any model on huggingface, download it and get to experimenting. It’s got an incredible DX and gives you the ability to server models too which opens up doors for you to build things using that API.
 
+When I want to train or fine-tune a model I use Prime Intellect's [Labs](https://www.primeintellect.ai/#lab) platform. It's like the Vercel of AI traning. It's also so well built that you can literally "vibe-train" a model. It's really that good! When I want to benchmark a model I use [Evalite](https://www.evalite.dev/) — it's open-source with a very nice DX. You can checkout [Enkokilish Bench](https://enkokilish-bench.vercel.app/) to see how I do it.  
+
+
 ### What tech stack do you use?
 
 Whenever I get asked this I don’t call out any tech stack and proceed to tell people to try out a few of the available ones, and just stick with whatever made them comfortable and made the path from idea to prototype quick. 
