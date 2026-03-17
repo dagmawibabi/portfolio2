@@ -8,14 +8,16 @@ category: "Guides"
 My DMs across my socials get flooded by people every single day. But a large portion of the questions I get are very repetitive. So I figured I should make a comprehensive FAQ about it. This’s the first iteration and I’ll keep updating it. I’ve also rephrased the questions to make them more comprehensive. Enjoy :) 
 
 1. [What’s the Dagmawi Babi Universe?](#user-content-whats-the-dagmawi-babi-universe)
-2. [How did you become a Christian?](#user-content-how-did-you-become-a-christian)
-3. [How do you manage your time?](#user-content-how-do-you-manage-your-time)
-4. [How are you so consistent in content creating?](#user-content-how-are-you-so-consistent-in-content-creating)
-5. [Software Engineering in the age of AI](#user-content-software-engineering-in-the-age-of-ai)
-6. [I have a project at hand, how much should I charge and how much time should I allocate to it?](#user-content-i-have-a-project-at-hand-how-much-should-i-charge-and-how-much-time-should-i-allocate-to-it)
-7. [What projects should I build to land a Job or stand out?](#user-content-what-projects-should-i-build-to-land-a-job-or-stand-out)
-8. [How to make money?](#user-content-how-to-make-money)
-9. [Got More Questions?](#user-content-got-more-questions)
+1. [How did you become a Christian?](#user-content-how-did-you-become-a-christian)
+1. [How do you manage your time?](#user-content-how-do-you-manage-your-time)
+1. [How are you so consistent in content creating?](#user-content-how-are-you-so-consistent-in-content-creating)
+1. [Software Engineering in the age of AI](#user-content-software-engineering-in-the-age-of-ai)
+1. [What AI tools do you use?](#user-content-what-ai-tools-do-you-use)
+1. [What tech stack do you use?](#user-content-what-tech-stack-do-you-use)
+1. [I have a project at hand, how much should I charge and how much time should I allocate to it?](#user-content-i-have-a-project-at-hand-how-much-should-i-charge-and-how-much-time-should-i-allocate-to-it)
+1. [What projects should I build to land a Job or stand out?](#user-content-what-projects-should-i-build-to-land-a-job-or-stand-out)
+1. [How to make money?](#user-content-how-to-make-money)
+1. [Got More Questions?](#user-content-got-more-questions)
 
 
 
@@ -73,6 +75,34 @@ So with this in mind Yes, you should learn how to program, how to manage program
 I am an experienced developer but I get so overwhelmed by the progress of AI, what should I do? We’ve all felt it. I actually call it “AI Induced Depression” but don’t worry there are somethings you can do to get your chin back up. Avoid social media (like Twitter) for a while. Should a person spend everyday looking at ads? NO! That’s basically twitter. Every cool demo, or launch video you see is essentially marketing material for the product they’re selling and we’re consuming it. In-fact this’s such a great marketing scheme that YC and other accelerators started considering Twitter Hype as some kind of metrics to accept candidates. So avoid social for awhile. 
 
 Then, use an LLM. I recommend vibe-coding something using Lovable or v0. Push it to the maximum and get comfortable trying to see how far it can go, how well the code is written and just experience it first hand. Finally, start building an AI tool/project. AI-SDK by Vercel is a great starting point. Use that to build a ChatGPT clone or some other AI powered tool. You will instantly unlock a really creative side of your mind and you’ll actually feel much more excited and adventurous about AI. Hope this helps!
+
+### What AI tools do you use?
+
+I am very interested in a lot of AI tools and apps. You’ll usually see me try a lot of things for research and exploration. I use AI for daily activities and also for coding related tasks and in those areas I have favorites. For day-to-day chats and interactions, I really like ChatGPT (obviously). It’s really nice, quick, available for free, remembers things, and I just like the app experience over all. I’ve always been a ChatGPT guy but in-terms of “AI personality” I really like GPT-5.4 alot. It’s got a very distinct tone and way of responding and I like it a lot.  A part of me wishes Claude Opus 4.6 was as easily and freely available in Ethiopia but it’s not. Not sure but if Anthropic was as consumer friendly as OpenAI I might really like Opus 4.6 for daily interactions.   
+
+When it comes to coding there are two alternatives. One is a terminal based coding agent, the other is a GUI one. For a terminal based one, [OpenCode](https://opencode.ai/) is the one for me. Apart from having great DX and tools, they’re very generous with their limits and it’s a really nice experience. But I have completely moved to a GUI based coding agent, which is the [Codex app](https://openai.com/codex/). I made the switch almost overnight, it was just very comfortable to use and does things just right. I use a GUI based text-editor, it’s only fair I use a GUI based coding agent. The Codex model in on itself is just so incredible. I use it for work and it’s the only AI subscription I pay for. 
+
+I like vibe-coding sometimes. My number one vibe-coding tool is [v0](https://v0.app/) by Vercel. Now and then, maybe when I’m bored or when I’m brainstorming I vibe-code, plus I’m a community representative of v0 for Addis Ababa so I got some credit to burn through (lol). v0 came out of the blue and became such an epic and unique vibe-coding platform. It’s powered by Opus 4.6 by default (at the time of writing this) and it’s just mind blowing. You should checkout the [showcase section of my Vibe-coding blog](/blog/beyond-the-vibe) and see all the impressive things me and people have built with it. One of the most defining features of v0 for me is the ability to import GitHub projects — which is amazing cause you can import any of your own projects or any open-source one and continue building on top of it. AND you can take that code away or deploy it on Vercel. 
+
+Whenever a new model drops, I use [LM-Studio](https://lmstudio.ai/) to experiment with it. LM-Studio is just perfect. You open it up either in your terminal, or server or in GUI and search up any model on huggingface, download it and get to experimenting. It’s got an incredible DX and gives you the ability to server models too which opens up doors for you to build things using that API.
+
+### What tech stack do you use?
+
+Whenever I get asked this I don’t call out any tech stack and proceed to tell people to try out a few of the available ones, and just stick with whatever made them comfortable and made the path from idea to prototype quick. 
+
+But if you’re so keen in knowing my personal stack I’ll tell you. So I really like [SvelteKit](https://svelte.dev/) for web dev ALOT. When I’m building something in Svelte, I’m not thinking about Svelte at all, I’m fully locked in to the idea of what I’m building and that’s an amazing thing. For mobile apps I use [Flutter](https://flutter.dev/). I’m big on Flutter with almost every complete app I’ve built and released is made by Flutter. I love the DX, nothing comes close to it even after all these years. I love the cross-platform abilities, the package ecosystem, the versatility, the community and the speed you go from idea to prototype is insane. 
+
+For APIs I really like [HonoJS](https://hono.dev/). It’s simple, it’s quick-setup, it comes with everything you need to get an API running in your server asap. For databases, I’m big on [MongoDB](https://www.mongodb.com/). It gives me so much freedom when I’m designing relationships and later changing them, I love this about MongoDB. Plus [MongoDB Atlas](https://www.mongodb.com/cloud/atlas/register) gives 512mb of storage for free which is enough for a-lot of side projects and can easily scale. 
+
+For other stuff I really love [Python](https://www.python.org/) and [Go](https://go.dev/). I have a special nostalgic relationship with Python — I basically studied the docs of Python and built SO MANY project when I discovered it in highschool. I was introduced to Go very recently compared to Python but I really enjoyed writing with it quickly after I got the hang of things. I really enjoy easily readable programming languages and Go is one of those. Plus it’s got similarities to Dart (in Flutter) for me and that makes the DX pretty nice. 
+
+I use [Zed](https://zed.dev/) as my code-editor. The speed it opens up and loads files feels so good, I rarely wait for things to load across it’s functions. And for someone who came from Windsurf and VSCode the speed is crazy. A bit of a tangent but I believe with the right leadership Zed is going to be one of the most loves and powerful companies than Cursor-like ones. They’ve got every level of their stack built in-house and somehow caught up with Agentic Coding now. I’m rooting for them to beat these VS-Code forkies. 
+
+I am a big Firefox browser guy. I spent years on the basic [Firefox browser](https://www.firefox.com) and then switched to [Firefox Developers Edition](https://www.firefox.com/en-US/channel/desktop/developer/). But then Arc launched I dailyed that for a while. Then they stopped maintaining the browser, luckily though, [Zen](https://zen-browser.app/) came! Zen is like Arc but so much better and also Firefox based! It's just beautiful and conveinient to use. It gets out of the way and lets you focus on the content you're browsing!
+
+Aside from buying and spinning up my own VPS, I almost always deploy to [Vercel](https://vercel.com/). It’s just my default and I haven’t found any other service that’s as easy and comfortable to deploy to other than Vercel. Also whenever I’m building AI based projects I use Vercel’s [AI Gateway](https://vercel.com/ai-gateway) for inference. It’s slightly more expensive than others but they make it up by giving you faster inference and the best DX. Not to mention you can pay in crypto even (lol) — also Vercel made [AI-SDK](https://ai-sdk.dev) which is the best AI package to build with. 
+
+Finally for project management and tracking I use a mix of [Notion](https://www.notion.com/) and [Linear](https://linear.app/). I usually use both at the same time. I use Notion for personal use and have a project setup in Linear to work with others.
 
 ### I have a project at hand, how much should I charge and how much time should I allocate to it?
 

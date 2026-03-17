@@ -43,7 +43,7 @@
 
 	<!-- Content -->
 	<div
-		class="prose prose-h1:text-2xl prose-h1:font-semibold prose-h2:text-xl prose-h2:font-semibold prose-h3:text-lg prose-h3:font-semibold prose-code:rounded-l prose-code:bg-neutral-100 prose-code:text-red-500 prose-pre:whitespace-pre-wrap prose-pre:break-all prose-pre:bg-neutral-100 prose-pre:font-mono prose-pre:text-black prose-img:my-0 prose-img:py-0 dark:prose-headings:text-white dark:prose-a:text-blue-500 dark:prose-blockquote:text-neutral-300 dark:prose-strong:text-white dark:prose-code:bg-neutral-900 dark:prose-code:text-orange-500 dark:prose-pre:bg-neutral-900 dark:prose-ol:text-white dark:prose-ul:text-white dark:prose-li:text-white min-w-full dark:text-white"
+		class="prose prose-h1:text-2xl prose-h1:font-semibold prose-h2:text-xl prose-h2:font-semibold prose-h3:text-lg prose-h3:font-semibold prose-code:rounded-l prose-code:bg-neutral-100 prose-code:text-red-500 prose-pre:whitespace-pre-wrap prose-pre:break-all prose-pre:bg-neutral-100 prose-pre:font-mono prose-pre:text-black prose-img:my-0 prose-img:py-0 prose-a:text-blue-600 dark:prose-headings:text-white dark:prose-a:text-blue-500 dark:prose-blockquote:text-neutral-300 dark:prose-strong:text-white dark:prose-code:bg-neutral-900 dark:prose-code:text-orange-500 dark:prose-pre:bg-neutral-900 dark:prose-ol:text-white dark:prose-ul:text-white dark:prose-li:text-white min-w-full dark:text-white"
 	>
 		{@html data.content}
 	</div>
