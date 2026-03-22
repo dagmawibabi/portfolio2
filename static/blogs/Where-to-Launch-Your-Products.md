@@ -27,7 +27,7 @@ Then, you can post on **[LinkedIn](https://linkedin.com)**. This really helps wi
 
 ## Finally you're all set for a proper launch...
 
-**[Product Hunt](https://producthunt.com)** and **[HackerNews](https://news.ycombinator.com)** both of which you can do simultaneously. One important thing to do is that on Product Hunt they disable veiwing how many upvotes you got in the first 4 hours on their homepage, and often times the rank you get within those 4 hours stick for the whole day, so work the most to get the most upvotes on those 4 hours by sharing links. One useful thing to do for your Product Hunt page is to add their banner on your sites that urge every visitor to upvote it. Upvotes on Product Hunt translates to actual marketing and actual users. They also have a mailing list that reaches so many people so getting on the top ranks is very valuable.
+**[Product Hunt](https://producthunt.com)** and **[HackerNews](https://news.ycombinator.com)** both of which you can do simultaneously. One important thing to do is that on Product Hunt they disable viewing how many upvotes you got in the first 4 hours on their homepage, and often times the rank you get within those 4 hours stick for the whole day, so work the most to get the most upvotes on those 4 hours by sharing links. One useful thing to do for your Product Hunt page is to add their banner on your sites that urge every visitor to upvote it. Upvotes on Product Hunt translates to actual marketing and actual users. They also have a mailing list that reaches so many people so getting on the top ranks is very valuable.
 
 After Product Hunt is when you should post on HackerNews and go trending hopefully. Getting lots of upvotes on HackerNews is pretty epic and often times translates to GitHub stars as most are devs there. There's really no hack to HackerNews, just keep it simple and hope it gets picked up.
 
@@ -63,7 +63,7 @@ These are the days to keep the momentum going for the launch. A successful first
 
 One important thing to do is write very helpful and valuable blogs just like this one. It is more valuable to the readers but it is also very crucial for you as a founder to have a great reflection on your journey and testifies to your ability to lead the product or company.
 
-## Finaly thoughs...
+## Final thoughts...
 
 So overall this's how I've been navigating ScholarXIV's launch and it's going pretty well. Gotten investment offers which I'll announce in the coming days and many more amazing things.
 
