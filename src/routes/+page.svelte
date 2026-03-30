@@ -12,6 +12,7 @@
 	import Remarks from '../components/portfolio_components/sections/remarks.svelte';
 	import Sponsors from '../components/portfolio_components/sections/sponsors.svelte';
 	import { Toaster } from 'svelte-sonner';
+	import Interviews from '../components/portfolio_components/sections/interviews.svelte';
 </script>
 
 <svelte:head>
@@ -25,13 +26,14 @@
 		<div
 			class="mx-auto mt-2 mb-4 flex w-fit cursor-pointer items-center justify-center gap-x-2 rounded-full bg-neutral-900 py-2 pr-4 pl-5 text-center text-sm text-white hover:text-emerald-400 dark:bg-neutral-700"
 		>
-			DAGMAWI BABI'S MEETUP - 2026
+			DAGMAWI BABI'S MEETUP — 2026
 			<ArrowRight size={20} />
 		</div>
 	</a>
 	<About />
 	<Creativity />
 	<Events />
+	<Interviews />
 	<Projects />
 	<Education />
 	<Experience />

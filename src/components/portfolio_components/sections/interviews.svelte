@@ -5,73 +5,46 @@
 	import Autoplay from 'embla-carousel-autoplay';
 
 	// Images
-	import HalwotEmmanuel from '$lib/assets/events/HalwotEmmanuel.jpg';
-	import AASTUTechFest from '$lib/assets/events/AASTUTechFest.jpg';
-	import GaraInnovation from '$lib/assets/events/GaraInnovation.jpg';
-	import BetterHack from '$lib/assets/events/BetterHack.jpg';
-	import BetterHack2 from '$lib/assets/events/BetterHack2.jpg';
-	import FutureOfWork from '$lib/assets/events/FutureOfWorkSummit.jpg';
-	import FutureOfWork2 from '$lib/assets/events/FutureOfWorkSummit2.jpg';
-	import FutureOfWork3 from '$lib/assets/events/FutureOfWorkSummit3.jpg';
-	import FutureOfWork4 from '$lib/assets/events/FutureOfWorkSummit4.jpg';
-	import FutureOfWork5 from '$lib/assets/events/FutureOfWorkSummit5.jpg';
-	import FutureOfWork6 from '$lib/assets/events/FutureOfWorkSummit6.jpg';
-	import { ExternalLink, PartyPopper } from 'lucide-svelte';
+	import GugutPodcast from '$lib/assets/interviews/GugutPodcast.jpg';
+	import TesfaBroadcasting from '$lib/assets/interviews/TesfaBroadcasting.jpg';
+	import TesfaBroadcasting2 from '$lib/assets/interviews/TesfaBroadcasting2.jpg';
+	import MuyalogyPodcast from '$lib/assets/interviews/MuyalogyPodcast.jpg';
+	import HalakPodcast from '$lib/assets/interviews/HalakPodcast.jpg';
+	import HalakPodcast2 from '$lib/assets/interviews/HalakPodcast2.jpg';
+	import { ExternalLink, Video } from 'lucide-svelte';
 
 	let events = [
+		{ name: 'Gugut Podcast', image: GugutPodcast, link: 'https://youtube.com/watch?v=-Wjw37IAdIE' },
 		{
-			name: 'Future of Work',
-			image: FutureOfWork,
-			link: 'https://www.instagram.com/p/DQPPHIODcXk/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
+			name: 'Muyalogy Podcast',
+			image: MuyalogyPodcast,
+			link: 'https://youtube.com/watch?v=Fx59plUUW-0'
 		},
 		{
-			name: 'Future of Work',
-			image: FutureOfWork2,
-			link: 'https://www.instagram.com/p/DQPPHIODcXk/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
+			name: 'Tesfa Broadcasting',
+			image: TesfaBroadcasting2,
+			link: 'https://youtu.be/TXq8BwZfyt4'
 		},
 		{
-			name: 'Future of Work',
-			image: FutureOfWork4,
-			link: 'https://www.instagram.com/p/DQPPHIODcXk/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
+			name: 'Tesfa Broadcasting',
+			image: TesfaBroadcasting,
+			link: 'https://youtu.be/TXq8BwZfyt4'
 		},
 		{
-			name: 'Future of Work ',
-			image: FutureOfWork3,
-			link: 'https://www.instagram.com/p/DQPPHIODcXk/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
+			name: 'Halak Podcast',
+			image: HalakPodcast,
+			link: 'https://youtu.be/BjF84Y9CH_Y'
 		},
 		{
-			name: 'Future of Work',
-			image: FutureOfWork5,
-			link: 'https://www.instagram.com/p/DQPPHIODcXk/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
-		},
-		{
-			name: 'Future of Work',
-			image: FutureOfWork6,
-			link: 'https://www.instagram.com/p/DQPPHIODcXk/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
-		},
-		{
-			name: 'Halwot Emmanuel',
-			image: HalwotEmmanuel,
-			link: 'https://www.instagram.com/p/C_qfv1rI1hd/?igsh=d2gwN2hwdDhkdmln'
-		},
-		{ name: 'AASTU TechFest', image: AASTUTechFest, link: 'https://t.me/Dagmawi_Babi/19837' },
-		{ name: 'Gara Innovation', image: GaraInnovation, link: 'https://t.me/Garainnovationhub/6' },
-		{
-			name: 'Better Hack',
-			image: BetterHack2,
-			link: 'https://better-hack.io'
-		},
-		{
-			name: 'Better Hack',
-			image: BetterHack,
-			link: 'https://better-hack.io'
+			name: 'Halak Podcast',
+			image: HalakPodcast2,
+			link: 'https://youtu.be/qN8IE8ZnmnA'
 		}
 	];
 </script>
 
 <div class="pb-10">
-	<SectionTitle title={'Events and Talks'} />
-
+	<SectionTitle title={'Interviews and Podcasts'} />
 	<div class="pl-10">
 		<div class="h-7 border-l border-dashed border-zinc-900 dark:border-zinc-600"></div>
 	</div>
@@ -165,12 +138,12 @@
 		<div class="h-7 border-l border-dashed border-zinc-900"></div>
 	</div>
 
-	<a href="/meetup" rel="noopener noreferrer">
+	<a href="https://www.youtube.com/@dagmawi_babi" target="_blank" rel="noopener noreferrer">
 		<div
 			class="group/moreProjects flex w-fit cursor-pointer items-center justify-center gap-x-1 rounded-full px-3 py-1 transition-all hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black"
 		>
-			<span class=""> Checkout My Event&nbsp;</span>
-			<PartyPopper class="hidden group-hover/moreProjects:block" size={18} />
+			<span class=""> Checkout My Podcast&nbsp;</span>
+			<Video class="hidden group-hover/moreProjects:block" size={18} />
 			<ExternalLink class="block group-hover/moreProjects:hidden" size={18} />
 		</div>
 	</a>

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { ExternalLink, Github, MoveDiagonal } from 'lucide-svelte';
 	import EachProject_2 from '../each_project_2.svelte';
 	import SectionTitles from '../../section_title.svelte';
 	import ExtraProjects from '../extra_projects.svelte';
@@ -9,6 +8,7 @@
 	import ScholarXIVWeb from '$lib/assets/projects/ScholarXIVWeb.png';
 	import NativeChat from '$lib/assets/projects/NativeChat2.png';
 	import TokenCounter from '$lib/assets/projects/TokenCounter.png';
+	import EnkokilishBench from '$lib/assets/projects/EnkokilishBench.jpg';
 	import TheUnityProjectMural from '$lib/assets/projects/TheUnityProjectMural.png';
 	import RuthfulHearts from '$lib/assets/projects/RuthfulHearts.png';
 	import APIHub from '$lib/assets/projects/APIHub.png';
@@ -21,6 +21,7 @@
 	import StatiCall from '$lib/assets/projects/StatiCall.jpg';
 	import BenaiahBlack from '$lib/assets/projects/BenaiahBlack.jpg';
 	import DagmawiBabiJobs from '$lib/assets/projects/DagmawiBabiJobs.png';
+	import VibeCodedProjects from '../vibe_coded_projects.svelte';
 
 	let aimlProjects = [
 		{
@@ -30,7 +31,7 @@
 				'ScholarXIV Web is an open-source, aesthetic, minimal and AI powered app that allows users to search, read, bookmark, share, download and view summaries of academic papers from the arXiv repository. But with more advanced features like commenting and liking papers. You can configure your Gemini API key and converse with AI to expand and dive deeper into the papers you are exploring. This project is the web version of the ScholarXIV mobile app.',
 			link: 'https://www.scholarxiv.com',
 			code: 'https://github.com/DagmawiBabi/scholarXIVWeb',
-			tools: ['SvelteKit', 'TailwindCSS', 'MongoDB', 'Gemini']
+			tools: ['SvelteKit', 'TailwindCSS', 'MongoDB']
 		},
 		{
 			title: 'ScholarXIV',
@@ -58,6 +59,15 @@
 			link: 'https://Token-Counter-nu.vercel.app',
 			code: 'https://github.com/dagmawibabi/token-counter',
 			tools: ['SvelteKit', 'TailwindCSS', 'JS-TikToken', 'OpenAI']
+		},
+		{
+			title: 'Enkokilish Bench',
+			image: EnkokilishBench,
+			description:
+				"Enkokilish (እንቆቅልሽ) are Ethiopian/Amharic riddles. Riddles in Amharic are difficult, require in-depth understanding of the language and are often used to test one's knowledge and reasoning skills. So based on Enkokilish, we've made Enkokilish Bench to evaluate the ability of Large Language Models (LLMs) to understand, reason, and solve Amharic riddles. This benchmark is completely free and open-source from dataset to eval code, and to this visualization site.",
+			link: 'https://enkokilish-bench.vercel.app',
+			code: 'https://github.com/ScholarXIV/enkokilish_bench',
+			tools: ['SvelteKit', 'TailwindCSS', 'Evalite']
 		}
 	];
 
@@ -221,6 +231,33 @@
 			link: 'https://github.com/dagmawibabi/bareblogs'
 		}
 	];
+
+	let vibeCodedProjects = [
+		{
+			title: 'Telesight',
+			link: 'https://telesight.vercel.app'
+		},
+		{
+			title: 'MicroGPT Doc',
+			link: 'https://microgptdoc.vercel.app'
+		},
+		{
+			title: 'Scripture & Song',
+			link: 'https://v0-bible-app-with-links.vercel.app'
+		},
+		{
+			title: 'Blogging Agent',
+			link: 'https://ai-blog-peach.vercel.app'
+		},
+		{
+			title: 'Branching Chats ',
+			link: 'https://v0.app/templates/branching-chats-aCicC9hZAB0?ref=2YDLAZ'
+		},
+		{
+			title: 'Research Platform',
+			link: 'https://v0.app/templates/research-platform-wo6EeYUrWnl?ref=2YDLAZ'
+		}
+	];
 </script>
 
 <div class="pb-10">
@@ -259,6 +296,12 @@
 	<!-- GAMES?? -->
 
 	<!-- EXTRA PROJECTS -->
-	<SectionTitles title={'Extra Projects'} />
-	<ExtraProjects {extraProjects} />
+	<div class="pb-10">
+		<SectionTitles title={'Extra Projects'} />
+		<ExtraProjects {extraProjects} />
+	</div>
+
+	<!-- VIBE CODED PROJECTS -->
+	<SectionTitles title={'Vibe-coded Projects'} />
+	<VibeCodedProjects {vibeCodedProjects} />
 </div>
