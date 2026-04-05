@@ -21,6 +21,8 @@ My DMs across my socials get flooded by people every single day. But a large por
 
 
 
+![Dagmawi Babi Universe](/blog-images/FAQ/dagmawibabiuniverse.jpg)
+
 ### What’s the Dagmawi Babi Universe?
 
 This’s just a fun way of calling the projects and initiatives I helped form or lead. So here they are:
@@ -139,6 +141,7 @@ Please checkout these podcasts I’ve been on if you wanna hear more about me or
 - [TechET Podcast S01EP01](https://www.youtube.com/watch?v=21N1x-vJ_gE&t=318s&pp=ygUMZGFnbWF3aSBiYWJp) 
 - [GDSC AASTU Podcast](https://www.youtube.com/watch?v=Rjs33bzqRwA&t=1422s&pp=ygUMZGFnbWF3aSBiYWJp) 
 - [Tesfa Broadcasting Network](https://www.youtube.com/watch?v=TXq8BwZfyt4)
+- Halak Podcast [Part 1](https://www.youtube.com/watch?v=BjF84Y9CH_Y) and [Part 2](https://www.youtube.com/watch?v=qN8IE8ZnmnA)
 
 Or send me a message on my channel DMs [@Dagmawi_Babi](https://t.me/Dagmawi_Babi?direct)
 
