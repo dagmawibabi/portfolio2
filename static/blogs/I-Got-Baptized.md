@@ -26,7 +26,7 @@ Now to be baptized there’s only one requirement, which is to believe in your h
 
 One thing I’d like to point out here is that the Eunuch was returning from Jerusalem in his carriage and reading the book of Isaiah. But he was just reading it and not understanding it. It started with confusion but after Philip told Him the Gospel of Christ, and then finally baptized him, this eunuch was rejoicing on his way back home. So joy could be part of the equation and I’ve heard so many people rejoicing after baptism so that’s something to look out for.    
 
-> “በመጓዝ ላይ ሳሉም ውሃ ካለበት ስፍራ ደረሱ፤ ጃንደረባውም፣ “እነሆ፤ ውሃ እዚህ አለ፤ ታዲያ እንዳልጠመቅ የሚከለክለኝ ምን ነገር አለ?” አለው። ፊልጶስም፣ “በፍጹም ልብህ ካመንህ መጠመቅ ትችላለህ” አለው።
+> በመጓዝ ላይ ሳሉም ውሃ ካለበት ስፍራ ደረሱ፤ ጃንደረባውም፣ “እነሆ፤ ውሃ እዚህ አለ፤ ታዲያ እንዳልጠመቅ የሚከለክለኝ ምን ነገር አለ?” አለው። ፊልጶስም፣ “በፍጹም ልብህ ካመንህ መጠመቅ ትችላለህ” አለው።
 ጃንደረባውም፣ “ኢየሱስ ክርስቶስ የእግዚአብሔር ልጅ እንደ ሆነ አምናለሁ” ሲል መለሰለት፤ ሠረገላውም እንዲቆም አዘዘ። ከዚያም ሁለቱ ዐብረው ወደ ውሃው ወረዱ፤ ፊልጶስም ጃንደረባውን አጠመቀው።” — ሐዋ 8:36-38
 > 
 
@@ -40,10 +40,10 @@ Now there are more stuff I haven’t gotten the answers of like child baptism.  
 
 “Walk in newness of life” (Greek: kainotēs) —  It means a qualitatively new kind of life, not just an improved version of the old one. Life empowered by the Holy Spirit, distinct from the old life under sin. It is a real transformation of nature, not external change only. This is also a bit of a reference to the Jews being exiled from Egypt. They lived a fundamentally different life. 
 
-> “ከክርስቶስ ኢየሱስ ጋራ አንድ እንድንሆን የተጠመቅን ሁላችን፣ ከሞቱ ጋራ አንድ እንሆን ዘንድ እንደ ተጠመቅን አታውቁምን? ስለዚህ ክርስቶስ በአብ ክብር ከሞት እንደ ተነሣ፣ እኛም እንዲሁ በአዲስ ሕይወት እንድንኖር በጥምቀት ሞተን ከርሱ ጋራ ተቀብረናል።” — ሮሜ 6:3-4
+> ከክርስቶስ ኢየሱስ ጋራ አንድ እንድንሆን የተጠመቅን ሁላችን፣ ከሞቱ ጋራ አንድ እንሆን ዘንድ እንደ ተጠመቅን አታውቁምን? ስለዚህ ክርስቶስ በአብ ክብር ከሞት እንደ ተነሣ፣ እኛም እንዲሁ በአዲስ ሕይወት እንድንኖር በጥምቀት ሞተን ከርሱ ጋራ ተቀብረናል።” — ሮሜ 6:3-4
 > 
 
-> “Or do you not know that all of us who have been baptized into Christ Jesus have been baptized into His death? Therefore we have been buried with Him through baptism into death, so that, just as Christ was raised from the dead through the glory of the Father, so we too may walk in newness of life.” — Romans 6:3-4
+> Or do you not know that all of us who have been baptized into Christ Jesus have been baptized into His death? Therefore we have been buried with Him through baptism into death, so that, just as Christ was raised from the dead through the glory of the Father, so we too may walk in newness of life.” — Romans 6:3-4
 > 
 
 ### Role of Faith in Baptism
@@ -52,14 +52,14 @@ Baptism is the circumcision of the old flesh. The body enslaved by sin is no lon
 
 It’s also important to note that baptism isn’t a mechanical function, it’s a spiritual one, everything spiritual involved with it is linked to the faith you have of it. Merely being dunked in water doesn’t transform you, you have to believe in Christ and in the union formed during baptism. 
 
-> “በርሱ ሆናችሁ በእጅ ባልተደረገ መገረዝ ተገረዛችሁ፤ በክርስቶስም መገረዝ የሥጋን ኀጢአታዊ ባሕርይ አስወገዳችሁ፤ በጥምቀትም ከርሱ ጋራ ተቀብራችሁ፣ እርሱን ከሙታን ባስነሣው በእግዚአብሔር ኀይል በማመን ከርሱ ጋራ ደግሞ ተነሣችሁ።” — ቈላስይስ 2:11-12
+> በርሱ ሆናችሁ በእጅ ባልተደረገ መገረዝ ተገረዛችሁ፤ በክርስቶስም መገረዝ የሥጋን ኀጢአታዊ ባሕርይ አስወገዳችሁ፤ በጥምቀትም ከርሱ ጋራ ተቀብራችሁ፣ እርሱን ከሙታን ባስነሣው በእግዚአብሔር ኀይል በማመን ከርሱ ጋራ ደግሞ ተነሣችሁ።” — ቈላስይስ 2:11-12
 > 
 
 ### Baptism unites you with Christ
 
 The part about being in union with Christ is also explained as how the jews had union with Moses and how they were led under him. So by being baptized you’re saying I hereby agree to work with Christ, under Christ as my leader to some goal and purpose.  
 
-> “ወንድሞች ሆይ፤ አባቶቻችን ሁሉ ከደመናው በታች እንደ ነበሩና በባሕሩ ውስጥ እንደ ተሻገሩ ታውቁ ዘንድ እፈልጋለሁ። እነርሱ ሁሉ ከሙሴ ጋራ ለመተባበር በደመናና በባሕር ተጠመቁ።” — 1 ቆሮንቶስ 10:1-2
+> ወንድሞች ሆይ፤ አባቶቻችን ሁሉ ከደመናው በታች እንደ ነበሩና በባሕሩ ውስጥ እንደ ተሻገሩ ታውቁ ዘንድ እፈልጋለሁ። እነርሱ ሁሉ ከሙሴ ጋራ ለመተባበር በደመናና በባሕር ተጠመቁ።” — 1 ቆሮንቶስ 10:1-2
 > 
 
 ### Forgiveness of Sins
@@ -68,10 +68,10 @@ Repentance is not just regret it’s the reorientation of our life. Baptism is a
 
 Not only that but God will give His Spirit to us during or after baptism. 
 
-> “ጴጥሮስም እንዲህ አላቸው፤ “ንስሓ ግቡ፤ ኀጢአታችሁም እንዲሰረይላችሁ፣ እያንዳንዳችሁ በኢየሱስ ክርስቶስ ስም ተጠመቁ፤ የመንፈስ ቅዱስንም ስጦታ ትቀበላላችሁ።” — ሐዋርያት ሥራ 2:38
+> ጴጥሮስም እንዲህ አላቸው፤ “ንስሓ ግቡ፤ ኀጢአታችሁም እንዲሰረይላችሁ፣ እያንዳንዳችሁ በኢየሱስ ክርስቶስ ስም ተጠመቁ፤ የመንፈስ ቅዱስንም ስጦታ ትቀበላላችሁ።” — ሐዋርያት ሥራ 2:38
 > 
 
-> “Peter replied, “Repent and be baptized, every one of you, in the name of Jesus Christ for the forgiveness of your sins. And you will receive the gift of the Holy Spirit.” — Acts 2:38
+> Peter replied, “Repent and be baptized, every one of you, in the name of Jesus Christ for the forgiveness of your sins. And you will receive the gift of the Holy Spirit.” — Acts 2:38
 > 
 
 ### This’s for when you sin after being baptized
@@ -106,9 +106,9 @@ THIS IS MY FAVORITE DAY OF THE YEAR.
 
 The overwhelming joy after baptism is so true. I am overwhelmed by happiness and joy, I feel well rested and so peaceful, I feel so much power and energy, like I can move a mountain!!! I’m just so blessed right now. God is so wonderfully kind to me. I have no words to thank Him for what He has done for me today! I am just loved!
 
-I wish I could put all this joy in a bottle and just get a taste of it every single day! You know, last night I asked God to give me so much energy, now I feel like I’m going to explore with the amount of energy I’ve gotten. I feel so renewed, restored,  I feel healed dude! I feel on top of the world. 
+I wish I could put all this joy in a bottle and just get a taste of it every single day! You know, last night I asked God to give me so much energy, now I feel like I’m going to explode with the amount of energy I’ve gotten. I feel so renewed, restored,  I feel healed dude! I feel on top of the world. 
 
-I love this! I love this so much. I’m so happy that God did all of this for me. I have finally been baptized into Christ, and partaken in His death. The old self has died in that water, all my sins have been forgiven and I am now living a new life. 
+I love this! I love this so much. I’m so happy that God did all of this for me. I have finally been baptized into Christ, and partaken His death. The old self has died in that water, all my sins have been forgiven and I am now living a new life. 
 
 Oh praise God!
 
