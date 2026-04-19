@@ -8,7 +8,7 @@ category: "Spiritual"
 ![image](/blog-images/IGotBaptized/baptism.jpg)
 
 
-The following are taken straight from my private journal, I've only taken one paragraph that's too personal out; everything else is straight from it. It's not fully organized or completely coherent; but it's my genuine thoughts and emotions about baptism, what I was feeling the day before being baptized, and the hours after. So here it is ...
+The followings are taken straight from my private journal, I've only taken one paragraph that's too personal out; everything else is straight from it. It's not fully organized or completely coherent; but it's my genuine thoughts and emotions about baptism, what I was feeling the day before being baptized, and the hours after. So here it is ...
 
 ---
 
