@@ -4,8 +4,9 @@
 	import ExtraProjects from '../extra_projects.svelte';
 
 	// Project Images
-	import ScholarXIV from '$lib/assets/projects/ScholarXIVWhite.jpg';
-	import ScholarXIVWeb from '$lib/assets/projects/ScholarXIVWeb.png';
+	import OpenScholarXIV from '$lib/assets/projects/OpenScholarXIV.png';
+	// import ScholarXIVWeb from '$lib/assets/projects/ScholarXIVWeb.png';
+	import ScholarXIVPoster from '$lib/assets/projects/ScholarXIVPoster.png';
 	import NativeChat from '$lib/assets/projects/NativeChat2.png';
 	import TokenCounter from '$lib/assets/projects/TokenCounter.png';
 	import EnkokilishBench from '$lib/assets/projects/EnkokilishBench.jpg';
@@ -25,8 +26,8 @@
 
 	let aimlProjects = [
 		{
-			title: 'ScholarXIV Web',
-			image: ScholarXIVWeb,
+			title: 'ScholarXIV',
+			image: ScholarXIVPoster,
 			description:
 				'ScholarXIV Web is an open-source, aesthetic, minimal and AI powered app that allows users to search, read, bookmark, share, download and view summaries of academic papers from the arXiv repository. But with more advanced features like commenting and liking papers. You can configure your Gemini API key and converse with AI to expand and dive deeper into the papers you are exploring. This project is the web version of the ScholarXIV mobile app.',
 			link: 'https://www.scholarxiv.com',
@@ -34,12 +35,12 @@
 			tools: ['SvelteKit', 'TailwindCSS', 'MongoDB']
 		},
 		{
-			title: 'ScholarXIV',
-			image: ScholarXIV,
+			title: 'OpenScholarXIV',
+			image: OpenScholarXIV,
 			description:
-				'ScholarXIV is an open-source, aesthetic, minimal and AI powered app that allows users to search, read, bookmark, share, download and view summaries of academic papers from the arXiv repository. You can configure your Gemini API key and converse with AI to expand and dive deeper into the papers you are exploring. This app has won flutter app of the year in 2024 (FlutterofTheYear.com) and has been featued on countless articles and YouTube videos.',
-			link: 'https://github.com/dagmawibabi/Scholarxiv/releases/latest',
-			code: 'https://github.com/DagmawiBabi/scholarxiv',
+				'OpenScholarXIV is an open-source, aesthetic, minimal and AI powered app that allows users to search, read, bookmark, share, download and view summaries of academic papers from the arXiv repository. You can configure your Gemini API key and converse with AI to expand and dive deeper into the papers you are exploring. This app has won flutter app of the year in 2024 (FlutterofTheYear.com) and has been featued on countless articles and YouTube videos.',
+			link: 'https://github.com/ScholarXIV/OpenScholarXIV/releases/latest',
+			code: 'https://github.com/ScholarXIV/OpenScholarXIV',
 			tools: ['Flutter', 'Gemini']
 		},
 		{

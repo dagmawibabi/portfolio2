@@ -142,6 +142,7 @@ Please checkout these podcasts I’ve been on if you wanna hear more about me or
 - [GDSC AASTU Podcast](https://www.youtube.com/watch?v=Rjs33bzqRwA&t=1422s&pp=ygUMZGFnbWF3aSBiYWJp) 
 - [Tesfa Broadcasting Network](https://www.youtube.com/watch?v=TXq8BwZfyt4)
 - Halak Podcast [Part 1](https://www.youtube.com/watch?v=BjF84Y9CH_Y) and [Part 2](https://www.youtube.com/watch?v=qN8IE8ZnmnA)
+- [God Conscious Generation Podcast](https://youtu.be/ln46z2M_TeU)
 
 Or send me a message on my channel DMs [@Dagmawi_Babi](https://t.me/Dagmawi_Babi?direct)
 

@@ -11,6 +11,7 @@
 	import MuyalogyPodcast from '$lib/assets/interviews/MuyalogyPodcast.jpg';
 	import HalakPodcast from '$lib/assets/interviews/HalakPodcast.jpg';
 	import HalakPodcast2 from '$lib/assets/interviews/HalakPodcast2.jpg';
+	import GCGPodcast from '$lib/assets/interviews/GCGPodcast.jpg';
 	import { ExternalLink, Video } from 'lucide-svelte';
 
 	let events = [
@@ -39,6 +40,11 @@
 			name: 'Halak Podcast',
 			image: HalakPodcast2,
 			link: 'https://youtu.be/qN8IE8ZnmnA'
+		},
+		{
+			name: 'GCP Podcast',
+			image: GCGPodcast,
+			link: 'https://youtu.be/ln46z2M_TeU'
 		}
 	];
 </script>
