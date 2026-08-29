@@ -5,16 +5,10 @@
 		Linkedin,
 		Youtube,
 		Mail,
-		Sparkles,
-		CheckCircle2,
 		ArrowRight,
 		Copy,
 		ExternalLink,
-		Check,
-		ShieldCheck,
-		Zap,
-		MessageSquare,
-		Handshake
+		Check
 	} from 'lucide-svelte';
 	import { toast, Toaster } from 'svelte-sonner';
 	import SectionTitle from '../../components/section_title.svelte';
@@ -61,7 +55,6 @@
 			name: 'Telegram Channel',
 			handle: '@dagmawi_babi',
 			link: 'https://t.me/dagmawi_babi',
-			color: 'border-cyan-500/30 bg-cyan-500/5 text-cyan-600 dark:text-cyan-400',
 			icon: Send,
 			badge: 'Highest Engagement',
 			metric: 'Unmatched share & forward rate per post'
@@ -70,7 +63,6 @@
 			name: 'Instagram',
 			handle: '@dagmawibabi',
 			link: 'https://www.instagram.com/dagmawibabi',
-			color: 'border-pink-500/30 bg-pink-500/5 text-pink-600 dark:text-pink-400',
 			icon: Instagram,
 			badge: 'Visual & Stories',
 			metric: 'Creative professionals, designers & youth'
@@ -79,7 +71,6 @@
 			name: 'LinkedIn',
 			handle: 'dagmawibabi',
 			link: 'https://www.linkedin.com/in/dagmawibabi',
-			color: 'border-blue-500/30 bg-blue-500/5 text-blue-600 dark:text-blue-400',
 			icon: Linkedin,
 			badge: 'B2B & Founders',
 			metric: 'Founders, hiring managers & tech leaders'
@@ -88,7 +79,6 @@
 			name: 'YouTube & Podcast',
 			handle: '@dagmawi_babi',
 			link: 'https://www.youtube.com/@dagmawi_babi',
-			color: 'border-red-500/30 bg-red-500/5 text-red-600 dark:text-red-400',
 			icon: Youtube,
 			badge: 'Long-Form Depth',
 			metric: 'Deep dives, builder interviews & tech talks'
@@ -105,16 +95,13 @@
 </svelte:head>
 
 <div
-	class="no-scrollbar relative mx-auto w-[96%] pt-4 pb-40 md:w-[96%] lg:w-1/2 xl:w-1/2 2xl:w-1/2"
+	class="no-scrollbar relative mx-auto w-[96%] pt-4 pb-24 md:w-[96%] lg:w-1/2 xl:w-1/2 2xl:w-1/2"
 >
-	<!-- Navigation & Brand Header -->
 	<AdsHeader />
 
-	<!-- Hero Section -->
-	<section class="pb-10">
+	<section class="pb-7">
 		<div class="flex flex-col gap-6 md:flex-row md:items-center">
-			<!-- Image on left -->
-			<div class="group/me mx-auto h-48 w-44 shrink-0 cursor-pointer rounded md:mx-0 md:h-56 md:w-52">
+			<div class="group/me mx-auto h-40 w-36 shrink-0 cursor-pointer rounded md:mx-0 md:h-48 md:w-44">
 				<img src={me2} alt="Dagmawi Babi" class="h-full w-full object-contain group-hover/me:hidden" />
 				<img
 					src={me}
@@ -123,38 +110,36 @@
 				/>
 			</div>
 
-			<!-- Right side content -->
 			<div class="flex flex-1 flex-col justify-center">
-				<h1 class="text-2xl font-bold tracking-tight text-zinc-900 md:text-3xl dark:text-white">
+				<p class="text-[11px] font-medium tracking-[0.18em] text-zinc-500 uppercase dark:text-zinc-400">
+					Ads & Partnerships
+				</p>
+				<h1 class="mt-2 text-2xl font-semibold tracking-tight text-zinc-900 md:text-3xl dark:text-white">
 					Partner with an ultra-engaged community of builders, creators, and innovators.
 				</h1>
-
 				<p class="mt-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-300">
 					Promote your startup, digital product, event, channel, shop, or craft directly to thousands of
 					forward-thinking builders. High share rates, authentic voice, and deep cross-platform reach
 					across Telegram, Instagram, LinkedIn, and YouTube.
 				</p>
-
-				<!-- Direct CTA Button -->
-				<div class="mt-5 flex flex-wrap items-center gap-3">
+				<div class="mt-5 flex flex-wrap items-center gap-2.5">
 					<a
 						href="https://t.me/dagmawi_babi?direct"
 						target="_blank"
 						rel="noopener noreferrer"
-						class="inline-flex items-center gap-2 rounded-full bg-neutral-900 px-5 py-2.5 text-xs font-semibold text-white transition-all hover:bg-neutral-800 hover:shadow-md dark:bg-white dark:text-neutral-900 dark:hover:bg-zinc-200"
+						class="inline-flex items-center gap-2 rounded-full bg-neutral-900 px-5 py-2.5 text-xs font-medium text-white transition-colors hover:bg-neutral-700 dark:bg-white dark:text-neutral-900 dark:hover:bg-zinc-200"
 					>
 						<Send size={15} />
 						<span>Book an Ad on Telegram</span>
 						<ArrowRight size={14} />
 					</a>
-
 					<button
 						onclick={copyTelegramHandle}
-						class="inline-flex items-center gap-1.5 rounded-full border border-zinc-300 bg-white px-4 py-2.5 text-xs font-medium text-zinc-700 transition-colors hover:border-black dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-300 dark:hover:border-zinc-500"
+						class="inline-flex items-center gap-1.5 rounded-full border border-zinc-300 bg-white px-4 py-2.5 text-xs font-medium text-zinc-700 transition-colors hover:border-black dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-300 dark:hover:border-zinc-400"
 					>
 						{#if copied}
-							<Check size={14} class="text-emerald-500" />
-							<span class="text-emerald-600 dark:text-emerald-400">Link Copied!</span>
+							<Check size={14} />
+							<span>Link Copied!</span>
 						{:else}
 							<Copy size={14} />
 							<span>Copy Direct Link</span>
@@ -165,16 +150,12 @@
 		</div>
 	</section>
 
-	<!-- Story & Context Section -->
-	<section class="pb-10">
+	<section class="pb-7">
 		<SectionTitle title={'The Backstory'} />
 		<div class="pl-10">
-			<div class="h-7 border-l border-dashed border-zinc-900 dark:border-zinc-600"></div>
+			<div class="h-4 border-l border-dashed border-zinc-900 dark:border-zinc-600"></div>
 		</div>
-
-		<div
-			class="space-y-3.5 rounded-xl border border-zinc-200 bg-neutral-50/50 p-5 text-sm leading-relaxed text-zinc-700 dark:border-zinc-800 dark:bg-zinc-900/50 dark:text-zinc-300"
-		>
+		<div class="space-y-3 rounded border border-zinc-300 p-4 text-sm leading-relaxed text-zinc-600 dark:border-zinc-600 dark:text-zinc-300">
 			<p>
 				In the process of content creating I have built this incredible community and channel. This
 				channel has the highest engagement and shares per post of any platform in its space, and
@@ -199,246 +180,173 @@
 		</div>
 	</section>
 
-	<!-- Multi-Social Platforms Section -->
-	<section class="pb-10">
+	<section class="pb-7">
 		<SectionTitle title={'Available Channels'} />
 		<div class="pl-10">
-			<div class="h-7 border-l border-dashed border-zinc-900 dark:border-zinc-600"></div>
+			<div class="h-4 border-l border-dashed border-zinc-900 dark:border-zinc-600"></div>
 		</div>
-
-		<div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+		<div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
 			{#each channels as ch}
 				<a
 					href={ch.link}
 					target="_blank"
 					rel="noopener noreferrer"
-					class="group flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-4 shadow-2xs transition-all hover:border-black hover:shadow-xs dark:border-zinc-800 dark:bg-zinc-900/70 dark:hover:border-zinc-600"
+					class="group flex items-start justify-between gap-3 rounded border border-zinc-300 px-3 py-3 transition-colors hover:border-black dark:border-zinc-600 dark:hover:border-zinc-400"
 				>
-					<div>
-						<div class="flex items-center justify-between pb-2">
-							<div class="flex items-center gap-2">
-								<div class={`flex h-8 w-8 items-center justify-center rounded-lg border ${ch.color}`}>
-									<ch.icon size={16} />
-								</div>
-								<div>
-									<div class="text-sm font-bold text-zinc-900 dark:text-white">
-										{ch.name}
-									</div>
-									<div class="text-xs text-zinc-500 dark:text-zinc-400">
-										{ch.handle}
-									</div>
-								</div>
+					<div class="flex min-w-0 items-start gap-2.5">
+						<div
+							class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded border border-zinc-300 text-zinc-800 dark:border-zinc-600 dark:text-zinc-200"
+						>
+							<ch.icon size={15} />
+						</div>
+						<div class="min-w-0">
+							<div class="flex flex-wrap items-baseline gap-x-2">
+								<span class="text-sm font-semibold text-zinc-900 dark:text-white">{ch.name}</span>
+								<span class="text-xs text-zinc-500 dark:text-zinc-400">{ch.handle}</span>
 							</div>
+							<p class="mt-0.5 text-xs text-zinc-600 dark:text-zinc-400">{ch.metric}</p>
 							<span
-								class="rounded-full bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300"
+								class="mt-1.5 inline-flex items-center gap-1 text-[11px] font-medium text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white"
 							>
-								{ch.badge}
+								View
+								<ExternalLink size={11} />
 							</span>
 						</div>
-
-						<p class="mt-2 text-xs text-zinc-600 dark:text-zinc-300">
-							{ch.metric}
-						</p>
 					</div>
-
-					<div class="mt-3 flex items-center gap-1 text-[11px] font-semibold text-zinc-400 group-hover:text-black dark:group-hover:text-white">
-						<span>View profile</span>
-						<ExternalLink size={12} />
-					</div>
+					<span
+						class="shrink-0 rounded-full border border-zinc-300 px-2 py-0.5 text-[10px] font-medium text-zinc-600 dark:border-zinc-600 dark:text-zinc-300"
+					>
+						{ch.badge}
+					</span>
 				</a>
 			{/each}
 		</div>
 	</section>
 
-	<!-- What Changes vs What Doesn't -->
-	<section class="pb-10">
+	<section class="pb-7">
 		<SectionTitle title={'Transparency First'} />
 		<div class="pl-10">
-			<div class="h-7 border-l border-dashed border-zinc-900 dark:border-zinc-600"></div>
+			<div class="h-4 border-l border-dashed border-zinc-900 dark:border-zinc-600"></div>
 		</div>
-
-		<div class="grid grid-cols-1 gap-3.5 md:grid-cols-2">
-			<!-- What Doesn't Change -->
-			<div
-				class="rounded-xl border border-emerald-500/30 bg-emerald-50/40 p-4.5 dark:border-emerald-500/20 dark:bg-emerald-950/20"
-			>
-				<div class="flex items-center gap-2 pb-2 text-emerald-700 dark:text-emerald-300">
-					<CheckCircle2 size={18} />
-					<h3 class="text-sm font-bold">What DOES NOT Change</h3>
-				</div>
-				<ul class="space-y-2 text-xs leading-relaxed text-zinc-700 dark:text-zinc-300">
-					<li class="flex items-start gap-1.5">
-						<span class="font-bold text-emerald-600">•</span>
-						<span>
-							I will continue to support and showcase creator projects and community works <strong
-								>free of charge</strong
-							>. That is never going to change.
-						</span>
+		<div class="grid grid-cols-1 gap-3 md:grid-cols-2">
+			<div class="rounded border border-zinc-300 p-4 dark:border-zinc-600">
+				<h3 class="text-sm font-semibold text-zinc-900 dark:text-white">What does not change</h3>
+				<ul class="mt-3 space-y-2.5 text-xs leading-relaxed text-zinc-600 dark:text-zinc-300">
+					<li>
+						I will continue to support and showcase creator projects and community works
+						<span class="font-medium text-zinc-900 dark:text-white">free of charge</span>. That is
+						never going to change.
 					</li>
-					<li class="flex items-start gap-1.5">
-						<span class="font-bold text-emerald-600">•</span>
-						<span>
-							Continued free support for companies and individuals that have partnered with and
-							supported ScholarXIV.
-						</span>
+					<li>
+						Continued free support for companies and individuals that have partnered with and
+						supported ScholarXIV.
 					</li>
-					<li class="flex items-start gap-1.5">
-						<span class="font-bold text-emerald-600">•</span>
-						<span>
-							Zero drop in organic content, community vibe, personal writings, and developer
-							education.
-						</span>
-					</li>
+					<li>Zero drop in organic content, community vibe, personal writings, and developer education.</li>
 				</ul>
 			</div>
-
-			<!-- What Changes -->
-			<div
-				class="rounded-xl border border-blue-500/30 bg-blue-50/40 p-4.5 dark:border-blue-500/20 dark:bg-blue-950/20"
-			>
-				<div class="flex items-center gap-2 pb-2 text-blue-700 dark:text-blue-300">
-					<Sparkles size={18} />
-					<h3 class="text-sm font-bold">What Changes</h3>
-				</div>
-				<ul class="space-y-2 text-xs leading-relaxed text-zinc-700 dark:text-zinc-300">
-					<li class="flex items-start gap-1.5">
-						<span class="font-bold text-blue-600">•</span>
-						<span>
-							You will see <strong>clearly labelled ad posts</strong> that last temporarily or permanently
-							depending on the agreed package.
-						</span>
+			<div class="rounded border border-zinc-900 bg-neutral-900 p-4 text-white dark:border-zinc-200 dark:bg-white dark:text-zinc-900">
+				<h3 class="text-sm font-semibold">What changes</h3>
+				<ul class="mt-3 space-y-2.5 text-xs leading-relaxed text-zinc-300 dark:text-zinc-600">
+					<li>
+						You will see
+						<span class="font-medium text-white dark:text-zinc-900">clearly labelled ad posts</span>
+						that last temporarily or permanently depending on the agreed package.
 					</li>
-					<li class="flex items-start gap-1.5">
-						<span class="font-bold text-blue-600">•</span>
-						<span>
-							Ads will not be spammed; every placement is tested thoughtfully to preserve feed
-							quality.
-						</span>
-					</li>
-					<li class="flex items-start gap-1.5">
-						<span class="font-bold text-blue-600">•</span>
-						<span>
-							From a subscriber perspective, nothing changes in daily experience except one clearly
-							marked high-quality ad post.
-						</span>
+					<li>Ads will not be spammed; every placement is tested thoughtfully to preserve feed quality.</li>
+					<li>
+						From a subscriber perspective, nothing changes in daily experience except one clearly
+						marked high-quality ad post.
 					</li>
 				</ul>
 			</div>
 		</div>
 	</section>
 
-	<!-- Ad Packages / Tiers -->
-	<section class="pb-10">
+	<section class="pb-7">
 		<SectionTitle title={'Ad Packages & Tiers'} />
 		<div class="pl-10">
-			<div class="h-7 border-l border-dashed border-zinc-900 dark:border-zinc-600"></div>
+			<div class="h-4 border-l border-dashed border-zinc-900 dark:border-zinc-600"></div>
 		</div>
-
 		<AdTiers />
 	</section>
 
-	<!-- Categories You Can Promote -->
-	<section class="pb-10">
+	<section class="pb-7">
 		<SectionTitle title={'What You Can Promote'} />
 		<div class="pl-10">
-			<div class="h-7 border-l border-dashed border-zinc-900 dark:border-zinc-600"></div>
+			<div class="h-4 border-l border-dashed border-zinc-900 dark:border-zinc-600"></div>
 		</div>
-
-		<div
-			class="rounded-xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-zinc-900/70"
-		>
-			<p class="text-xs text-zinc-600 dark:text-zinc-300">
-				As long as your ad complies with the core guidelines, you have total flexibility to promote
-				a wide range of offerings:
-			</p>
-
-			<div class="mt-3 flex flex-wrap gap-2">
-				{#each categories as cat}
-					<span
-						class="rounded-full border border-zinc-200 bg-neutral-50 px-3 py-1 text-xs font-medium text-zinc-700 transition-colors hover:border-black dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:border-zinc-500"
-					>
-						{cat}
-					</span>
-				{/each}
+		<p class="mb-3 text-xs text-zinc-500 dark:text-zinc-400">
+			As long as your ad complies with the core guidelines, you have total flexibility:
+		</p>
+		<div class="flex flex-wrap gap-1.5">
+			{#each categories as cat}
 				<span
-					class="rounded-full border border-dashed border-zinc-300 px-3 py-1 text-xs italic text-zinc-500 dark:border-zinc-700 dark:text-zinc-400"
+					class="rounded-full border border-zinc-300 px-3 py-1 text-xs text-zinc-700 dark:border-zinc-600 dark:text-zinc-300"
 				>
-					+ and much more!
+					{cat}
 				</span>
-			</div>
+			{/each}
+			<span
+				class="rounded-full border border-dashed border-zinc-400 px-3 py-1 text-xs text-zinc-500 dark:border-zinc-600 dark:text-zinc-400"
+			>
+				+ and much more
+			</span>
 		</div>
 	</section>
 
-	<!-- Guidelines & Rules -->
-	<section class="pb-10">
+	<section class="pb-7">
 		<SectionTitle title={'Guidelines & Rules'} />
 		<div class="pl-10">
-			<div class="h-7 border-l border-dashed border-zinc-900 dark:border-zinc-600"></div>
+			<div class="h-4 border-l border-dashed border-zinc-900 dark:border-zinc-600"></div>
 		</div>
-
-		<div class="mb-3 text-xs text-zinc-500 dark:text-zinc-400">
-			Please review these 10 guidelines before submitting your ad request:
-		</div>
-
+		<p class="mb-3 text-xs text-zinc-500 dark:text-zinc-400">
+			Ten rules. Read them before you submit an ad request.
+		</p>
 		<AdGuidelines />
 	</section>
 
-	<!-- Testimonials Section -->
-	<section class="pb-10">
+	<section class="pb-7">
 		<SectionTitle title={'Testimonials & Partner Feedback'} />
 		<div class="pl-10">
-			<div class="h-7 border-l border-dashed border-zinc-900 dark:border-zinc-600"></div>
+			<div class="h-4 border-l border-dashed border-zinc-900 dark:border-zinc-600"></div>
 		</div>
-
 		<AdTestimonials />
 	</section>
 
-	<!-- Final Booking CTA -->
-	<section class="pb-10">
-		<div
-			class="relative overflow-hidden rounded-2xl border border-zinc-200 bg-linear-to-br from-neutral-900 via-neutral-950 to-neutral-900 p-6 text-white shadow-xl dark:border-zinc-800 md:p-8"
-		>
-			<div class="relative z-10 max-w-xl">
-				<div class="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-emerald-300 backdrop-blur-md">
-					<Sparkles size={13} />
-					<span>Let's collaborate</span>
-				</div>
-
-				<h2 class="mt-3 text-xl font-bold tracking-tight md:text-2xl">
-					Ready to run an ad or launch a partnership?
-				</h2>
-
-				<p class="mt-2 text-xs leading-relaxed text-zinc-300 md:text-sm">
-					Send me a direct message on Telegram with details about what you want to promote, your
-					preferred timeline, and target format.
-				</p>
-
-				<!-- Buttons -->
-				<div class="mt-5 flex flex-wrap items-center gap-3">
-					<a
-						href="https://t.me/dagmawi_babi?direct"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-xs font-bold text-neutral-900 transition-all hover:bg-zinc-100 hover:shadow-lg"
-					>
-						<Send size={15} />
-						<span>Text on Telegram (@dagmawi_babi)</span>
-						<ArrowRight size={14} />
-					</a>
-
-					<a
-						href="mailto:1babidagi@gmail.com?subject=Ad%20or%20Sponsorship%20Inquiry%20-%20Dagmawi%20Babi"
-						class="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/5 px-4 py-2.5 text-xs font-medium text-white transition-colors hover:bg-white/10"
-					>
-						<Mail size={14} />
-						<span>Email Inquiry</span>
-					</a>
-				</div>
+	<section class="pb-7">
+		<div class="rounded border border-zinc-900 bg-neutral-900 px-5 py-6 text-white md:px-7 md:py-8 dark:border-zinc-200 dark:bg-white dark:text-zinc-900">
+			<p class="text-[11px] font-medium tracking-[0.18em] uppercase text-zinc-400 dark:text-zinc-500">
+				Let's collaborate
+			</p>
+			<h2 class="mt-2 text-xl font-semibold tracking-tight md:text-2xl">
+				Ready to run an ad or launch a partnership?
+			</h2>
+			<p class="mt-2 max-w-xl text-xs leading-relaxed text-zinc-400 md:text-sm dark:text-zinc-600">
+				Send me a direct message on Telegram with details about what you want to promote, your
+				preferred timeline, and target format.
+			</p>
+			<div class="mt-5 flex flex-wrap items-center gap-2.5">
+				<a
+					href="https://t.me/dagmawi_babi?direct"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-xs font-medium text-neutral-900 transition-colors hover:bg-zinc-200 dark:bg-neutral-900 dark:text-white dark:hover:bg-neutral-800"
+				>
+					<Send size={15} />
+					<span>Text on Telegram (@dagmawi_babi)</span>
+					<ArrowRight size={14} />
+				</a>
+				<a
+					href="mailto:1babidagi@gmail.com?subject=Ad%20or%20Sponsorship%20Inquiry%20-%20Dagmawi%20Babi"
+					class="inline-flex items-center gap-1.5 rounded-full border border-white/25 px-4 py-2.5 text-xs font-medium text-white transition-colors hover:bg-white/10 dark:border-zinc-400 dark:text-zinc-900 dark:hover:bg-zinc-100"
+				>
+					<Mail size={14} />
+					<span>Email Inquiry</span>
+				</a>
 			</div>
 		</div>
 	</section>
 
-	<!-- Footer remark -->
 	<div class="border-t border-zinc-200 pt-6 text-center text-xs text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
 		<p>© {new Date().getFullYear()} Dagmawi Babi • Creative Developer & Brand Platform</p>
 	</div>

@@ -47,7 +47,7 @@
 					target="_blank"
 					rel="noopener noreferrer"
 					title="Telegram"
-					class="text-zinc-600 transition-colors hover:text-cyan-500 dark:text-zinc-300 dark:hover:text-cyan-400"
+					class="text-zinc-600 transition-colors hover:text-black dark:text-zinc-300 dark:hover:text-white"
 				>
 					<Send size={15} />
 				</a>
@@ -56,7 +56,7 @@
 					target="_blank"
 					rel="noopener noreferrer"
 					title="Instagram"
-					class="text-zinc-600 transition-colors hover:text-pink-500 dark:text-zinc-300 dark:hover:text-pink-400"
+					class="text-zinc-600 transition-colors hover:text-black dark:text-zinc-300 dark:hover:text-white"
 				>
 					<Instagram size={15} />
 				</a>
@@ -65,7 +65,7 @@
 					target="_blank"
 					rel="noopener noreferrer"
 					title="LinkedIn"
-					class="text-zinc-600 transition-colors hover:text-blue-500 dark:text-zinc-300 dark:hover:text-blue-400"
+					class="text-zinc-600 transition-colors hover:text-black dark:text-zinc-300 dark:hover:text-white"
 				>
 					<Linkedin size={15} />
 				</a>
@@ -74,7 +74,7 @@
 					target="_blank"
 					rel="noopener noreferrer"
 					title="YouTube"
-					class="text-zinc-600 transition-colors hover:text-red-500 dark:text-zinc-300 dark:hover:text-red-400"
+					class="text-zinc-600 transition-colors hover:text-black dark:text-zinc-300 dark:hover:text-white"
 				>
 					<Youtube size={15} />
 				</a>
@@ -83,7 +83,7 @@
 					target="_blank"
 					rel="noopener noreferrer"
 					title="Email"
-					class="text-zinc-600 transition-colors hover:text-emerald-500 dark:text-zinc-300 dark:hover:text-emerald-400"
+					class="text-zinc-600 transition-colors hover:text-black dark:text-zinc-300 dark:hover:text-white"
 				>
 					<Mail size={15} />
 				</a>

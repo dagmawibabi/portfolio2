@@ -10,7 +10,6 @@
 			initials: 'BD',
 			image: ambalaymaps,
 			href: 'https://www.ambalaymaps.com',
-			color: 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20',
 			tag: 'LinkedIn Ad',
 			quote:
 				'Working with Dagmawi on LinkedIn was a smooth, genuine collaboration. He understood the work and shared it in a way that felt natural to his audience.'
@@ -22,7 +21,6 @@
 			initials: 'HJ',
 			image: alettech,
 			href: 'https://aletcloud.com',
-			color: 'bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20',
 			tag: 'Sponsorship Ad',
 			quote:
 				"Running a sponsorship campaign with Dagmawi Babi was hands-down one of the best ad runs we've done! We've gotten so many signups just in the first 12 hours and more. He was also great and intelligent to work with."
@@ -31,18 +29,20 @@
 </script>
 
 <div class="w-full">
-	<div class="grid grid-cols-1 gap-3.5 md:grid-cols-2">
+	<div class="grid grid-cols-1 gap-2 md:grid-cols-2">
 		{#each placeholderTestimonials as item}
 			<a
 				href={item.href}
 				target="_blank"
 				rel="noopener noreferrer"
-				class="group relative flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-4.5 shadow-2xs transition-all duration-200 hover:-translate-y-0.5 hover:border-black hover:shadow-xs dark:border-zinc-800 dark:bg-zinc-900/80 dark:hover:border-zinc-600"
+				class="group relative flex flex-col justify-between rounded border border-zinc-300 bg-white p-3.5 transition-colors hover:border-black dark:border-zinc-600 dark:bg-zinc-950 dark:hover:border-zinc-400"
 			>
 				<div>
 					<!-- Top Bar -->
 					<div class="flex items-center pb-3">
-						<span class={`rounded-full px-2 py-0.5 text-[10px] font-semibold ${item.color}`}>
+						<span
+							class="rounded-full border border-zinc-300 px-2 py-0.5 text-[10px] font-medium text-zinc-600 dark:border-zinc-600 dark:text-zinc-300"
+						>
 							{item.tag}
 						</span>
 					</div>
@@ -54,7 +54,7 @@
 				</div>
 
 				<!-- Person Info -->
-				<div class="mt-4 flex items-center gap-3 border-t border-zinc-100 pt-3 dark:border-zinc-800">
+				<div class="mt-4 flex items-center gap-3 border-t border-zinc-200 pt-3 dark:border-zinc-700">
 					{#if item.image}
 						<img
 							src={item.image}
