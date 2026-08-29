@@ -138,8 +138,22 @@
 								LOL
 							</span>
 						</div>
+						<a
+							href="/partnerships"
+							class="ml-1 inline-flex items-center gap-x-1.5 rounded-full bg-neutral-900 px-3 py-1 text-xs font-medium text-white transition-all hover:bg-neutral-800 hover:shadow-sm dark:bg-white dark:text-neutral-900 dark:hover:bg-zinc-200"
+						>
+							<Send size={12} />
+							<span>Book an Ad</span>
+						</a>
 					</div>
 				</div>
+				<a
+					href="/partnerships"
+					class="inline-flex w-fit items-center gap-x-1.5 rounded-full bg-neutral-900 px-3 py-1.5 text-xs font-medium text-white transition-all hover:bg-neutral-800 md:hidden dark:bg-white dark:text-neutral-900 dark:hover:bg-zinc-200"
+				>
+					<Send size={12} />
+					<span>Book an Ad</span>
+				</a>
 			</div>
 		</div>
 	</div>

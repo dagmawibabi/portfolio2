@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { ExternalLink, Github } from 'lucide-svelte';
-
 	let { vibeCodedProjects } = $props();
 </script>
 
@@ -20,5 +18,8 @@
 				</div>
 			</a>
 		{/each}
+	</div>
+	<div class="pl-10">
+		<div class="h-7 border-l border-dashed border-zinc-900"></div>
 	</div>
 </div>

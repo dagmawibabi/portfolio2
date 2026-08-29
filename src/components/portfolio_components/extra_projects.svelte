@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { ExternalLink, Github } from 'lucide-svelte';
-
 	let { extraProjects } = $props();
 </script>
 
@@ -25,13 +23,3 @@
 		<div class="h-7 border-l border-dashed border-zinc-900"></div>
 	</div>
 </div>
-
-<a href="https://www.github.com/dagmawibabi" target="_blank" rel="noopener noreferrer">
-	<div
-		class="group/moreProjects flex w-fit cursor-pointer items-center justify-center gap-x-1 rounded-full px-3 py-1 transition-all hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black"
-	>
-		<span class=""> More on Github </span>
-		<Github class="hidden group-hover/moreProjects:block" size={18} />
-		<ExternalLink class="block group-hover/moreProjects:hidden" size={18} />
-	</div>
-</a>

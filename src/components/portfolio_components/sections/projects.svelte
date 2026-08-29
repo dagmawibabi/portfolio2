@@ -2,6 +2,7 @@
 	import EachProject_2 from '../each_project_2.svelte';
 	import SectionTitles from '../../section_title.svelte';
 	import ExtraProjects from '../extra_projects.svelte';
+	import { ExternalLink, Github } from 'lucide-svelte';
 
 	// Project Images
 	import OpenScholarXIV from '$lib/assets/projects/OpenScholarXIV.png';
@@ -259,50 +260,92 @@
 			link: 'https://v0.app/templates/research-platform-wo6EeYUrWnl?ref=2YDLAZ'
 		}
 	];
+
+	const projectCategories = [
+		{ id: 'aiml', chip: 'AI', title: 'AI/ML Projects', projects: aimlProjects },
+		{ id: 'christian', chip: 'Christian', title: 'Christian Projects', projects: christianProjects },
+		{ id: 'social', chip: 'Social', title: 'Social Projects', projects: socialProjects },
+		{ id: 'notable', chip: 'Notable', title: 'Notable Projects', projects: notableProjects }
+	];
+
+	let selectedCategoryId = $state('aiml');
+	const selectedCategory = $derived(
+		projectCategories.find((category) => category.id === selectedCategoryId) ?? projectCategories[0]
+	);
+
+	const moreProjectCategories = [
+		{ id: 'extra', chip: 'Extra', title: 'Extra Projects' },
+		{ id: 'vibe', chip: 'Vibe-coded', title: 'Vibe-coded Projects' }
+	];
+
+	let selectedMoreId = $state('extra');
+	const selectedMore = $derived(
+		moreProjectCategories.find((category) => category.id === selectedMoreId) ??
+			moreProjectCategories[0]
+	);
 </script>
 
 <div class="pb-10">
-	<!-- AI/ML PROJECTS -->
+	<!-- FEATURED PROJECT CATEGORIES -->
 	<div class="pb-10">
-		<SectionTitles title={'AI/ML Projects'} />
-		{#each aimlProjects as project}
-			<EachProject_2 {project} />
-		{/each}
+		<div class="flex flex-wrap items-center justify-between gap-y-2">
+			<SectionTitles title={selectedCategory.title} />
+			<div class="flex flex-wrap items-center gap-1.5 px-4">
+				{#each projectCategories as category}
+					<button
+						type="button"
+						onclick={() => (selectedCategoryId = category.id)}
+						class={`rounded-full border px-3 py-1 text-xs font-medium transition-colors ${
+							selectedCategoryId === category.id
+								? 'border-neutral-900 bg-neutral-900 text-white dark:border-white dark:bg-white dark:text-neutral-900'
+								: 'border-zinc-300 bg-white text-zinc-600 hover:border-black dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-300 dark:hover:border-zinc-400'
+						}`}
+					>
+						{category.chip}
+					</button>
+				{/each}
+			</div>
+		</div>
+		{#key selectedCategoryId}
+			{#each selectedCategory.projects as project}
+				<EachProject_2 {project} />
+			{/each}
+		{/key}
 	</div>
 
-	<!-- CHRISTIAN PROJECTS -->
-	<div class="pb-10">
-		<SectionTitles title={'Christian Projects'} />
-		{#each christianProjects as project}
-			<EachProject_2 {project} />
-		{/each}
+	<!-- EXTRA / VIBE-CODED PROJECTS -->
+	<div class="flex flex-wrap items-center justify-between gap-y-2">
+		<SectionTitles title={selectedMore.title} />
+		<div class="flex flex-wrap items-center gap-1.5 px-4">
+			{#each moreProjectCategories as category}
+				<button
+					type="button"
+					onclick={() => (selectedMoreId = category.id)}
+					class={`rounded-full border px-3 py-1 text-xs font-medium transition-colors ${
+						selectedMoreId === category.id
+							? 'border-neutral-900 bg-neutral-900 text-white dark:border-white dark:bg-white dark:text-neutral-900'
+							: 'border-zinc-300 bg-white text-zinc-600 hover:border-black dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-300 dark:hover:border-zinc-400'
+					}`}
+				>
+					{category.chip}
+				</button>
+			{/each}
+		</div>
 	</div>
-
-	<!-- SOCIAL PROJECTS -->
-	<div class="pb-10">
-		<SectionTitles title={'Social Projects'} />
-		{#each socialProjects as project}
-			<EachProject_2 {project} />
-		{/each}
-	</div>
-
-	<!-- Notable PROJECTS -->
-	<div class="pb-10">
-		<SectionTitles title={'Notable Projects'} />
-		{#each notableProjects as project}
-			<EachProject_2 {project} />
-		{/each}
-	</div>
-
-	<!-- GAMES?? -->
-
-	<!-- EXTRA PROJECTS -->
-	<div class="pb-10">
-		<SectionTitles title={'Extra Projects'} />
-		<ExtraProjects {extraProjects} />
-	</div>
-
-	<!-- VIBE CODED PROJECTS -->
-	<SectionTitles title={'Vibe-coded Projects'} />
-	<VibeCodedProjects {vibeCodedProjects} />
+	{#key selectedMoreId}
+		{#if selectedMoreId === 'extra'}
+			<ExtraProjects {extraProjects} />
+		{:else}
+			<VibeCodedProjects {vibeCodedProjects} />
+		{/if}
+	{/key}
+	<a href="https://www.github.com/dagmawibabi" target="_blank" rel="noopener noreferrer">
+		<div
+			class="group/moreProjects flex w-fit cursor-pointer items-center justify-center gap-x-1 rounded-full px-3 py-1 transition-all hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black"
+		>
+			<span> More on Github </span>
+			<Github class="hidden group-hover/moreProjects:block" size={18} />
+			<ExternalLink class="block group-hover/moreProjects:hidden" size={18} />
+		</div>
+	</a>
 </div>
