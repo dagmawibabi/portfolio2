@@ -1,7 +1,7 @@
 ---
 title: A Guide on Content Creating 
 date: 2026-9-4
-description: Now that you understand why you should start content creating, here’s a definitive and deep guide on how to navigate, manage and engage with people after creating your channel. 
+description: Now that you understand why you should start content creating, here’s a definitive and deep guide on how to navigate and manage your content and engage with people after creating your channel. 
 category: "Guides"
 ---
 
@@ -9,7 +9,7 @@ category: "Guides"
 
 ### Introduction
 
-Congratulations you finally decided to jump in and start creating content on Telegram, this’s awesome and the start of an extremely adventurous journey! Creating content is not a single skill it’s an entire department of roles mixed into one. From researching to marketing, from organizing your content to brand deals and so much more. I recommend you read [this blog](/blog/Thoughts-and-advices-on-being-a-Telegram-Content-Creator) to really dive deep into the benefits of content creating. Now that you understand why you should create, here’s a definitive and deep guide on how to navigate, manage and engage with people after creating your channel. 
+Congratulations you finally decided to jump in and start creating content on Telegram, this’s awesome and the start of an extremely adventurous journey! Creating content is not a single skill it’s an entire department of roles mixed into one. From researching to marketing, from organizing your content to brand deals and so much more. I recommend you read [this blog](/blog/Thoughts-and-advices-on-being-a-Telegram-Content-Creator) to really dive deep into the benefits of content creating. Now that you understand why you should create, here’s a definitive and deep guide on how to navigate and manage your content and engage with people after creating your channel.
 
 I am [Dagmawi Babi](https://dagmawibabi.com), I have been running [my main channel on Telegram](https://t.me/dagmawi_babi) for over 9 years now. It’s been a spectacular journey for me and I’ve been encouraging so many people to start content creating as well and that has given birth to a growing and vibrant community of content creators. The advices and guides in this blog post are from my experiences and from what I’ve observed very closely from other creators. These things are also what I have advised to close friends and family creating content on Telegram. These things aren’t all exclusive to Telegram and will apply to most other platforms so I hope this really helps you in creating quality content, managing it with care, monetizing it well, and also form an amazing community around your brand. 
 
