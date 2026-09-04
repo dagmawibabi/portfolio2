@@ -175,7 +175,7 @@ On Telegram, there are two types of ads. The ones Telegram will show across each
 
 With a stable and growing channel you can make people pay to promote on your channel. Lots of other channel owners and shops will gladly pay you so you can promote their channels and products. The pay increases the higher the number of subscribers you have but smart people will also check your engagement rates so you can make more money selling ads as the owner of a highly engaged community than the owner of a high subscriber count. 
 
-If your channel is niche or caters to a specific audience more (say students, developers, movie enthusiasts…) then you’ve got a great shot at running targeted ads for people/companies at a great price. This is also where you can land brand deals and sponsorships. For me in particular, a large portion of my subscribers are developers and founders, so I’ve had deals with companies that want to target these audiences at a very high rate. So I definitely recommend you to explore ads. 
+If your channel is niche or caters to a specific audience more (say students, developers, movie enthusiasts…) then you’ve got a great shot at running targeted ads for people/companies at a great price. This is also where you can land brand deals and sponsorships. For me in particular, a large portion of my subscribers are developers and founders, so I’ve had deals with companies that want to target these audiences at a very high rate. Even have [a site](/ads) setup for it. So I definitely recommend you to explore ads. 
 
 3. **Crowdfunding**
 
