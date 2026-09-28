@@ -22,6 +22,31 @@ export type LaunchVideo = {
 // Keep the original URL so viewers can visit the source if playback is unavailable.
 export const launchVideos: LaunchVideo[] = [
 	{
+		id: 'qwen-3-8-max',
+		category: 'Launch Videos',
+		date: '2026-08-03',
+		title: 'Meet Qwen3.8-Max: A New Bar for Coding and Cowork',
+		creator: 'Qwen',
+		platform: 'X',
+		url: 'https://x.com/Alibaba_Qwen/status/2084093402967396594',
+		thumbnail:
+			'https://pbs.twimg.com/amplify_video_thumb/2084093069323104256/img/9MfuQy8RFs_nQmFF.jpg',
+		videoUrl:
+			'https://video.twimg.com/amplify_video/2084093069323104256/vid/avc1/1280x720/kP9KgRTTkSUNbHxT.mp4'
+	},
+	{
+		id: 'claude-opus-5-5',
+		category: 'Launch Videos',
+		date: '2026-09-22',
+		title: 'Introducing Claude Opus 5.5',
+		creator: 'Anthropic',
+		platform: 'X',
+		url: 'https://x.com/claudeai/status/2102435511222890900',
+		thumbnail: 'https://pbs.twimg.com/media/HS1aPgYWMAAP9sw.jpg',
+		videoUrl:
+			'https://video.twimg.com/amplify_video/2102432417352929280/vid/avc1/1280x720/HoXazX3unCQX2Mrb.mp4'
+	},
+	{
 		id: 'tesla-cybertruck-unveiling',
 		category: 'Keynotes',
 		date: '2019-11-21',
