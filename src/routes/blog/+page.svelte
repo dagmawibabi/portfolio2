@@ -5,25 +5,25 @@
 	import SectionTitle from '../../components/section_title.svelte';
 	import config from '../../lib/blog-config.json';
 	import { Toaster } from 'svelte-sonner';
+	import { blogDateToUtc, formatBlogDate } from '$lib/blog-date';
 
 	type Blog = {
 		slug: string;
 		title: string;
-		date: string;
+		date: string | null;
 		description: string;
 		category: string;
 	};
 
 	type Data = {
 		grouped: Record<string, Blog[]>;
-		origin: string;
 	};
 
 	export let data: Data;
 
-	function isNew(dateString: string) {
-		if (!dateString) return false;
-		const date = new Date(dateString);
+	function isNew(dateString: string | null) {
+		const date = blogDateToUtc(dateString);
+		if (!date) return false;
 		const now = new Date();
 		const diffDays = (now.getTime() - date.getTime()) / (1000 * 60 * 60 * 24);
 		return diffDays <= config.newBlogThreshold; // mark as new if ≤ {config.newBlogThreshold} days old
@@ -37,14 +37,21 @@
 	<meta property="og:site_name" content={config.name} />
 	<meta property="og:title" content={`Blogs | ${config.name}`} />
 	<meta property="og:description" content={config.description} />
-	<meta property="og:url" content={`${data.origin}/blog`} />
-	<meta property="og:image" content={`${data.origin}/blog/og.png`} />
+	<meta property="og:url" content={`${config.siteUrl}/blog`} />
+	<meta property="og:image" content={`${config.siteUrl}/blog/og.png`} />
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@dagmawibabi" />
-	<meta name="twitter:image" content={`${data.origin}/blog/og.png`} />
+	<meta name="twitter:image" content={`${config.siteUrl}/blog/og.png`} />
+	<link rel="canonical" href={`${config.siteUrl}/blog`} />
+	<link
+		rel="alternate"
+		type="application/rss+xml"
+		title={`${config.name}'s Blog`}
+		href="/blog/rss.xml"
+	/>
 </svelte:head>
 
 <div
@@ -94,7 +101,7 @@
 						>
 							<div class="flex items-center justify-between pb-1 text-xs">
 								<div class="text-neutral-500 italic">
-									{new Date(blog.date).toDateString()}
+									{formatBlogDate(blog.date)}
 								</div>
 								{#if isNew(blog.date)}
 									<div class="rounded-full px-2 py-[0.8px] text-emerald-500">New</div>

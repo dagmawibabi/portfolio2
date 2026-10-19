@@ -3,6 +3,7 @@ import { resolve } from 'node:path';
 import satori from 'satori';
 import { Resvg } from '@resvg/resvg-js';
 import config from '$lib/blog-config.json';
+import { formatBlogDate } from '$lib/blog-date';
 
 export const OG_WIDTH = 1200;
 export const OG_HEIGHT = 630;
@@ -58,8 +59,7 @@ export const renderOgCard = async ({
 	footer = 'dagmawibabi.com/blog'
 }: OgCardOptions): Promise<Uint8Array<ArrayBuffer>> => {
 	const { regular, semibold, logo } = loadAssets();
-	const parsedDate = date ? new Date(date) : null;
-	const dateLabel = parsedDate && !isNaN(parsedDate.getTime()) ? parsedDate.toDateString() : '';
+	const dateLabel = formatBlogDate(date);
 	const titleSize = title.length > 60 ? 54 : title.length > 32 ? 64 : 76;
 
 	const tree = h(

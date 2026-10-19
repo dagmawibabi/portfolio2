@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /pass/admin
+
+Sitemap: https://www.dagmawi.dev/sitemap.xml
