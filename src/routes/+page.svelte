@@ -22,14 +22,24 @@
 <div
 	class="no-scrollbar relative mx-auto w-[96%] pt-0 pb-56 md:w-[96%] lg:w-1/2 xl:w-1/2 2xl:w-1/2"
 >
-	<a href="/meetup">
-		<div
-			class="mx-auto mt-2 mb-4 flex w-fit cursor-pointer items-center justify-center gap-x-2 rounded-full bg-neutral-900 py-2 pr-4 pl-5 text-center text-sm text-white hover:text-emerald-400 dark:bg-neutral-700"
-		>
-			DAGMAWI BABI'S MEETUP — 2026
-			<ArrowRight size={20} />
-		</div>
-	</a>
+	<div class="mx-auto mt-2 mb-4 flex flex-wrap items-center justify-center gap-2">
+		<a href="/meetup">
+			<div
+				class="flex w-fit cursor-pointer items-center justify-center gap-x-2 rounded-full bg-neutral-900 py-2 pr-4 pl-5 text-center text-sm text-white hover:text-emerald-400 dark:bg-neutral-700"
+			>
+				DAGMAWI BABI'S MEETUP — 2026
+				<ArrowRight size={20} />
+			</div>
+		</a>
+		<a href="/pass">
+			<div
+				class="flex w-fit cursor-pointer items-center justify-center gap-x-2 rounded-full border border-neutral-900 py-2 pr-4 pl-5 text-center text-sm text-neutral-900 hover:bg-neutral-900 hover:text-white dark:border-neutral-500 dark:text-white dark:hover:bg-neutral-700"
+			>
+				GET YOUR PASS
+				<ArrowRight size={20} />
+			</div>
+		</a>
+	</div>
 	<About />
 	<Creativity />
 	<Events />

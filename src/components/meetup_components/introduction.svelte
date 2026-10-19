@@ -40,7 +40,7 @@
 				community that can be much better than what it is and working towards your vision.
 			</div>
 
-			<div class="flex">
+			<div class="flex flex-wrap items-center">
 				<a href="/meetup/2026">
 					<div
 						class="mt-5 flex w-fit cursor-pointer items-center justify-between gap-x-1 rounded-full border-none bg-white py-2 pr-4 pl-6 font-semibold text-black uppercase transition-all hover:gap-x-2 hover:bg-emerald-500 hover:pr-3"
@@ -54,6 +54,13 @@
 						class="mt-5 w-fit cursor-pointer py-2 pl-6 font-semibold text-white uppercase hover:text-emerald-500"
 					>
 						Portfolio
+					</div>
+				</a>
+				<a href="/pass">
+					<div
+						class="mt-5 w-fit cursor-pointer py-2 pl-6 font-semibold text-white uppercase hover:text-emerald-500"
+					>
+						Get a pass
 					</div>
 				</a>
 			</div>
