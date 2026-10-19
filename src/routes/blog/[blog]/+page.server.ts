@@ -1,5 +1,5 @@
 import type { PageServerLoad } from './$types';
-import fm from 'front-matter';
+import { getBlog } from '$lib/blogs';
 import rehypeSanitize, { defaultSchema } from 'rehype-sanitize';
 import rehypeKatex from 'rehype-katex';
 import { remark } from 'remark';
@@ -77,36 +77,18 @@ for (const tagName of headingTags) {
 	];
 }
 
-export const load: PageServerLoad = async ({ params }) => {
+export const load: PageServerLoad = async ({ params, url }) => {
 	const { blog: slug } = params;
+	const blog = getBlog(slug);
 
-	interface FrontMatter {
-		title?: string;
-		date?: string;
-		description?: string;
-		category?: string;
-	}
-
-	// Import all markdown files at build time
-	const files = import.meta.glob('/static/blogs/*.md', {
-		query: '?raw',
-		import: 'default',
-		eager: true
-	});
-
-	const match = Object.entries(files).find(([path]) =>
-		path.toLowerCase().endsWith(`/${slug.toLowerCase()}.md`)
-	);
-
-	if (!match) {
+	if (!blog) {
 		return {
 			status: 404,
 			error: new Error(`Blog not found: ${slug}`)
 		};
 	}
 
-	const [, raw] = match;
-	const { attributes, body } = fm<FrontMatter>(raw as string);
+	const { body } = blog;
 
 	// Proper Markdown → HTML pipeline
 	const processed = await remark()
@@ -122,10 +104,15 @@ export const load: PageServerLoad = async ({ params }) => {
 	return {
 		content: processed.toString(),
 		meta: {
-			title: attributes.title ?? slug,
-			date: attributes.date ?? null,
-			description: attributes.description ?? '',
-			category: attributes.category ?? 'Uncategorized'
+			title: blog.title,
+			date: blog.date,
+			description: blog.description,
+			category: blog.category
+		},
+		og: {
+			url: `${url.origin}/blog/${blog.slug}`,
+			image: new URL(blog.headerImage ?? `/blog/${blog.slug}/og.png`, url.origin).href,
+			isGenerated: !blog.headerImage
 		}
 	};
 };

@@ -1,7 +1,7 @@
 import type { PageServerLoad } from './$types';
 import fm from 'front-matter';
 
-export const load: PageServerLoad = async () => {
+export const load: PageServerLoad = async ({ url }) => {
 	const files = import.meta.glob('/static/blogs/*.md', {
 		query: '?raw',
 		import: 'default',
@@ -39,5 +39,5 @@ export const load: PageServerLoad = async () => {
 		grouped[blog.category].push(blog);
 	}
 
-	return { grouped };
+	return { grouped, origin: url.origin };
 };

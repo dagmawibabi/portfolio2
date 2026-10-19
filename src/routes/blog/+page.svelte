@@ -16,6 +16,7 @@
 
 	type Data = {
 		grouped: Record<string, Blog[]>;
+		origin: string;
 	};
 
 	export let data: Data;
@@ -31,6 +32,19 @@
 
 <svelte:head>
 	<title>Blogs | {config.name}</title>
+	<meta name="description" content={config.description} />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content={config.name} />
+	<meta property="og:title" content={`Blogs | ${config.name}`} />
+	<meta property="og:description" content={config.description} />
+	<meta property="og:url" content={`${data.origin}/blog`} />
+	<meta property="og:image" content={`${data.origin}/blog/og.png`} />
+	<meta property="og:image:type" content="image/png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@dagmawibabi" />
+	<meta name="twitter:image" content={`${data.origin}/blog/og.png`} />
 </svelte:head>
 
 <div

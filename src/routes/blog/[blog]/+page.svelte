@@ -4,6 +4,7 @@
 	import { Toaster } from 'svelte-sonner';
 	import { Button } from '$lib/components/ui/button';
 	import BlogHeader from '../../../components/blog_components/blog_header.svelte';
+	import config from '$lib/blog-config.json';
 	type BlogData = {
 		content: string;
 		meta: {
@@ -11,6 +12,11 @@
 			date: string;
 			description: string;
 			category: string;
+		};
+		og: {
+			url: string;
+			image: string;
+			isGenerated: boolean;
 		};
 	};
 
@@ -62,6 +68,31 @@
 
 <svelte:head>
 	<title>{data.meta.title}</title>
+	<meta name="description" content={data.meta.description} />
+	<link rel="canonical" href={data.og.url} />
+
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content={config.name} />
+	<meta property="og:title" content={data.meta.title} />
+	<meta property="og:description" content={data.meta.description} />
+	<meta property="og:url" content={data.og.url} />
+	<meta property="og:image" content={data.og.image} />
+	<meta property="og:image:alt" content={data.meta.title} />
+	{#if data.og.isGenerated}
+		<meta property="og:image:type" content="image/png" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+	{/if}
+	{#if data.meta.date}
+		<meta property="article:published_time" content={data.meta.date} />
+	{/if}
+	<meta property="article:section" content={data.meta.category} />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@dagmawibabi" />
+	<meta name="twitter:title" content={data.meta.title} />
+	<meta name="twitter:description" content={data.meta.description} />
+	<meta name="twitter:image" content={data.og.image} />
 </svelte:head>
 
 <div
