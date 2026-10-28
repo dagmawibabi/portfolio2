@@ -31,6 +31,7 @@
 				<ArrowRight size={20} />
 			</div>
 		</a>
+		<!-- Hidden for now
 		<a href="/pass">
 			<div
 				class="flex w-fit cursor-pointer items-center justify-center gap-x-2 rounded-full border border-neutral-900 py-2 pr-4 pl-5 text-center text-sm text-neutral-900 hover:bg-neutral-900 hover:text-white dark:border-neutral-500 dark:text-white dark:hover:bg-neutral-700"
@@ -39,6 +40,7 @@
 				<ArrowRight size={20} />
 			</div>
 		</a>
+		-->
 	</div>
 	<About />
 	<Creativity />

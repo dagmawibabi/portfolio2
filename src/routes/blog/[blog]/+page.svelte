@@ -6,12 +6,15 @@
 	import { Button } from '$lib/components/ui/button';
 	import BlogHeader from '../../../components/blog_components/blog_header.svelte';
 	import SeriesNav from '../../../components/blog_components/series_nav.svelte';
+	import PostActions from '../../../components/blog_components/post_actions.svelte';
 	import config from '$lib/blog-config.json';
 	import { formatBlogDate } from '$lib/blog-date';
 	import type { SeriesInfo } from '$lib/blogs';
 	type BlogData = {
 		content: string;
 		meta: {
+			slug: string;
+			headerImage: string | null;
 			title: string;
 			date: string | null;
 			description: string;
@@ -111,7 +114,7 @@
 	class="no-scrollbar relative mx-auto w-[96%] pt-4 pb-56 md:w-[96%] lg:w-1/2 xl:w-1/2 2xl:w-1/2"
 >
 	<!-- Header -->
-	<div class="sticky top-0 mb-3 bg-white dark:bg-zinc-950">
+	<div class="sticky top-0 mb-3 bg-white print:hidden dark:bg-zinc-950">
 		<BlogHeader showDescription={false} link="/blog" />
 	</div>
 
@@ -143,8 +146,15 @@
 		{@html data.content}
 	</div>
 
+	<!-- Share / download -->
+	<div class="mt-12 border-t border-dashed border-zinc-300 pt-5 dark:border-zinc-800">
+		<PostActions post={data.meta} />
+	</div>
+
 	{#if data.series}
-		<SeriesNav series={data.series} />
+		<div class="print:hidden">
+				<SeriesNav series={data.series} />
+		</div>
 	{/if}
 </div>
 
@@ -152,7 +162,7 @@
 	<Button
 		onclick={scrollToTop}
 		size="icon"
-		class="fixed right-4 bottom-6 z-40 rounded-full border border-zinc-200/80 bg-white/92 text-black shadow-lg shadow-zinc-950/10 backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-zinc-50 md:right-8 md:bottom-8 dark:border-zinc-800 dark:bg-zinc-950/92 dark:text-white dark:shadow-black/30"
+		class="fixed right-4 bottom-6 z-40 print:hidden rounded-full border border-zinc-200/80 bg-white/92 text-black shadow-lg shadow-zinc-950/10 backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-zinc-50 md:right-8 md:bottom-8 dark:border-zinc-800 dark:bg-zinc-950/92 dark:text-white dark:shadow-black/30"
 		aria-label="Scroll to top"
 	>
 		<ChevronUp class="size-4" />

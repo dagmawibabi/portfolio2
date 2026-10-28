@@ -30,3 +30,10 @@ export const formatBlogDate = (date: string | null): string => {
 	const day = String(parsed.getUTCDate()).padStart(2, '0');
 	return `${DAYS[parsed.getUTCDay()]} ${MONTHS[parsed.getUTCMonth()]} ${day} ${parsed.getUTCFullYear()}`;
 };
+
+// "Oct 25, 2026", the way Substack prints post dates
+export const formatBlogDateShort = (date: string | null): string => {
+	const parsed = blogDateToUtc(date);
+	if (!parsed) return '';
+	return `${MONTHS[parsed.getUTCMonth()]} ${parsed.getUTCDate()}, ${parsed.getUTCFullYear()}`;
+};

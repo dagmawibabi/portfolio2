@@ -190,6 +190,8 @@ export const load: PageServerLoad = async ({ params }) => {
 	return {
 		content: processed.toString(),
 		meta: {
+			slug: blog.slug,
+			headerImage: blog.headerImage,
 			title: blog.title,
 			date: blog.date,
 			description: blog.description,

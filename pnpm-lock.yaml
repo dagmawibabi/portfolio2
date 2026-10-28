@@ -14,6 +14,12 @@ importers:
       '@cartamd/plugin-math':
         specifier: ^4.3.1
         version: 4.3.1(carta-md@4.11.1(supports-color@7.2.0)(svelte@5.39.12))(supports-color@7.2.0)(svelte@5.39.12)
+      '@fontsource/lora':
+        specifier: ^5.3.0
+        version: 5.3.0
+      '@fontsource/oswald':
+        specifier: ^5.3.0
+        version: 5.3.0
       '@jis3r/icons':
         specifier: ^1.25.0
         version: 1.25.0
@@ -636,6 +642,12 @@ packages:
 
   '@fontsource/lexend@5.3.0':
     resolution: {integrity: sha512-4igbsooynC6xwfagkAW6eo9JMrw8ALFGkWn1YChYmYchufMJSPgWihD+cy5ruX5YX/gDk/gllcl1Oj7q6KUZmw==}
+
+  '@fontsource/lora@5.3.0':
+    resolution: {integrity: sha512-OK1g1z01rHVPqO5aw/FOIoDqc46KKYZdgL3NOLkxLWDk6QhDHhdr/h2BV1cke6gTvR1tzpDfdKyUkGsC+sQLeQ==}
+
+  '@fontsource/oswald@5.3.0':
+    resolution: {integrity: sha512-16r2aHActe0pH+9FLdk/74/YxXM7HpGak05kAzx3RvSToiJwGvyhv6GvckPz+YuZmvL1nxWbEop2jAXRcXYPRg==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -3668,6 +3680,10 @@ snapshots:
   '@floating-ui/utils@0.2.10': {}
 
   '@fontsource/lexend@5.3.0': {}
+
+  '@fontsource/lora@5.3.0': {}
+
+  '@fontsource/oswald@5.3.0': {}
 
   '@humanfs/core@0.19.1': {}
 
