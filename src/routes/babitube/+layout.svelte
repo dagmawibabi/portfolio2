@@ -25,6 +25,7 @@
 		TELEGRAM,
 		avatarColor,
 		channelHref,
+		filterParams,
 		formatPostDate,
 		initial,
 		matchVideos,
@@ -68,7 +69,10 @@
 		WATCH_LATER,
 		{ href: '/babitube/feed/popular', label: 'Most reacted', icon: Flame }
 	];
-	const primary = $derived(prefs.hideShorts ? [HOME] : [HOME, SHORTS]);
+	// Links back to the feed carry its sort and length filter, so it stays as you left it.
+	const homeHref = $derived(ui.homeFilters ? `/babitube?${ui.homeFilters}` : '/babitube');
+	const home = $derived({ ...HOME, href: homeHref });
+	const primary = $derived(prefs.hideShorts ? [home] : [home, SHORTS]);
 	const mini = $derived([...primary, SUBSCRIPTIONS, WATCH_LATER]);
 
 	const SETTINGS: { heading: string; rows: { key: keyof typeof prefs; label: string }[] }[] = [
@@ -124,6 +128,10 @@
 		untrack(() => (shuffleRound += 1));
 	});
 
+	$effect(() => {
+		if (path === '/babitube') ui.homeFilters = filterParams(page.url.searchParams);
+	});
+
 	$effect(persistPrefs);
 
 	// BabiTube keeps its own theme, so it defaults to dark without touching the rest of the site.
@@ -167,7 +175,7 @@
 	);
 
 	const isActive = (href: string) =>
-		href === '/babitube' ? path === '/babitube' && !activeCategory : path === href;
+		href.split('?')[0] === '/babitube' ? path === '/babitube' && !activeCategory : path === href;
 
 	// Coming back Home by clicking deals a fresh feed. The Back button keeps the one you left.
 	beforeNavigate(({ type, to, from }) => {
@@ -271,7 +279,11 @@
 		{#if prefs.openExplore}
 			{#each explore as cat}
 				{@render guideLink(
-					{ href: `/babitube?c=${cat.key}`, label: cat.label, icon: cat.icon },
+					{
+					href: `/babitube?c=${cat.key}${ui.homeFilters ? `&${ui.homeFilters}` : ''}`,
+					label: cat.label,
+					icon: cat.icon
+				},
 					activeCategory === cat.key
 				)}
 			{/each}
@@ -297,7 +309,7 @@
 {/snippet}
 
 {#snippet brand()}
-	<a class="logo" href="/babitube" aria-label="BabiTube home">
+	<a class="logo" href={homeHref} aria-label="BabiTube home">
 		<svg viewBox="0 0 30 20" width="30" height="20" aria-hidden="true">
 			<rect width="30" height="20" rx="5.5" fill="#ff0033" />
 			<path d="M12 5.8v8.4l7.2-4.2z" fill="#fff" />

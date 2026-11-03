@@ -94,7 +94,7 @@
 			channel pages.
 		</li>
 		<li><strong>Every video page</strong> shows what I said about it and what people said in the comments, with links back to Telegram.</li>
-		<li><strong>Playlists</strong> play through in order, with loop and shuffle.</li>
+		<li><strong>Playlists</strong> play through in order, with loop and shuffle, and can be sorted by size, runtime and more.</li>
 		<li><strong>Watch later and History</strong> work like you'd expect.</li>
 		<li>
 			<strong>Keyboard shortcuts</strong> follow YouTube's. Press <kbd>?</kbd> to see them all.

@@ -8,10 +8,13 @@
 		channelHref,
 		clearHistory,
 		compactNumber,
+		formatRuntime,
 		initial,
 		itemToVideo,
 		latestAt,
 		loadPlaylistContents,
+		PLAYLIST_SIZES,
+		PLAYLIST_SORTS,
 		reactionTotal,
 		readHistory,
 		thumb,
@@ -87,12 +90,23 @@
 	];
 	const channelSort = $derived(page.url.searchParams.get('sort') ?? 'videos');
 
-	function setChannelSort(value: string) {
+	function setParam(param: string, value: string, fallback = '') {
 		const url = new URL(page.url);
-		if (value === 'videos') url.searchParams.delete('sort');
-		else url.searchParams.set('sort', value);
+		if (value === fallback) url.searchParams.delete(param);
+		else url.searchParams.set(param, value);
 		goto(url, { keepFocus: true, noScroll: true, replaceState: true });
 	}
+
+	const playlistSort = $derived(page.url.searchParams.get('sort') ?? 'shared');
+	const playlistSize = $derived(page.url.searchParams.get('size') ?? '');
+	const playlists = $derived.by(() => {
+		const size = PLAYLIST_SIZES.find((s) => s.key === playlistSize);
+		const compare =
+			PLAYLIST_SORTS.find((s) => s.key === playlistSort)?.compare ?? PLAYLIST_SORTS[0].compare;
+		return data.babitube.playlists
+			.filter((p) => !size || (p.count != null && size.test(p.count)))
+			.toSorted(compare);
+	});
 
 	// Every channel that has a shared video, plus channels only ever linked directly.
 	const channels = $derived.by(() => {
@@ -184,9 +198,33 @@
 				<select
 					aria-label="Sort channels"
 					value={channelSort}
-					onchange={(e) => setChannelSort(e.currentTarget.value)}
+					onchange={(e) => setParam('sort', e.currentTarget.value, 'videos')}
 				>
 					{#each CHANNEL_SORTS as option}
+						<option value={option.key}>{option.label}</option>
+					{/each}
+				</select>
+			</div>
+		{/if}
+		{#if name === 'playlists'}
+			<div class="channel-controls">
+				<span>{playlists.length} {playlists.length === 1 ? 'playlist' : 'playlists'}</span>
+				<select
+					aria-label="Sort playlists"
+					value={playlistSort}
+					onchange={(e) => setParam('sort', e.currentTarget.value, 'shared')}
+				>
+					{#each PLAYLIST_SORTS as option}
+						<option value={option.key}>{option.label}</option>
+					{/each}
+				</select>
+				<select
+					aria-label="Filter by size"
+					value={playlistSize}
+					onchange={(e) => setParam('size', e.currentTarget.value)}
+				>
+					<option value="">Any size</option>
+					{#each PLAYLIST_SIZES as option}
 						<option value={option.key}>{option.label}</option>
 					{/each}
 				</select>
@@ -226,13 +264,15 @@
 				</a>
 			{/each}
 		</div>
+	{:else if name === 'playlists' && !playlists.length}
+		<p class="empty">No playlists match this filter.</p>
 	{:else if name === 'playlists'}
 		<div
 			class="playlist-grid"
 			class:set-columns={prefs.columns > 0}
 			style:--columns={prefs.columns}
 		>
-			{#each data.babitube.playlists as playlist (playlist.id)}
+			{#each playlists as playlist (playlist.id)}
 				{@const image = playlistThumb(playlist) ?? fromVideoThumb(playlist)}
 				<a class="playlist" href="/babitube/watch?list={playlist.id}">
 					<span class="stack">
@@ -246,7 +286,9 @@
 					</span>
 					<strong>{playlist.title}</strong>
 					<small>
-						{playlist.channel ?? 'Playlist'} • Shared {timeAgo(latestAt(playlist))}
+						{playlist.channel ?? 'Playlist'}
+						{#if playlist.duration}• {formatRuntime(playlist.duration)}{/if}
+						• Shared {timeAgo(latestAt(playlist))}
 					</small>
 				</a>
 			{/each}

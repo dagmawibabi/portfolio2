@@ -64,6 +64,9 @@ export type TubePlaylist = {
 	channelUrl?: string;
 	thumb?: string;
 	count?: number;
+	published?: string;
+	duration?: number;
+	discussion?: number;
 	missing?: boolean;
 	cats: string[];
 	posts: TubePost[];
@@ -223,6 +226,45 @@ export const SORT_OPTIONS: {
 	{ key: 'shortest', label: 'Shortest', compare: byValue((v) => v.duration ?? null, 1) }
 ];
 
+const playlistUpload = (p: TubePlaylist) => (p.published ? new Date(p.published).getTime() : null);
+
+// Same rule as videos: playlists missing the value go last, whichever the direction.
+function playlistBy(value: (p: TubePlaylist) => number | null, direction: 1 | -1) {
+	return (a: TubePlaylist, b: TubePlaylist) => {
+		const [x, y] = [value(a), value(b)];
+		if (x === null) return y === null ? 0 : 1;
+		if (y === null) return -1;
+		return (x - y) * direction;
+	};
+}
+
+export const PLAYLIST_SORTS: {
+	key: string;
+	label: string;
+	compare: (a: TubePlaylist, b: TubePlaylist) => number;
+}[] = [
+	{ key: 'shared', label: 'Recently shared', compare: playlistBy(latestAt, -1) },
+	{ key: 'most', label: 'Most videos', compare: playlistBy((p) => p.count ?? null, -1) },
+	{ key: 'fewest', label: 'Fewest videos', compare: playlistBy((p) => p.count ?? null, 1) },
+	{ key: 'longest', label: 'Longest runtime', compare: playlistBy((p) => p.duration ?? null, -1) },
+	{ key: 'shortest', label: 'Shortest runtime', compare: playlistBy((p) => p.duration ?? null, 1) },
+	{ key: 'newest', label: 'Created (newest)', compare: playlistBy(playlistUpload, -1) },
+	{ key: 'oldest', label: 'Created (oldest)', compare: playlistBy(playlistUpload, 1) },
+	{ key: 'comments', label: 'Most commented', compare: playlistBy((p) => p.discussion ?? 0, -1) },
+	{ key: 'reacted', label: 'Most reacted', compare: playlistBy(reactionTotal, -1) },
+	{
+		key: 'name',
+		label: 'Name (A to Z)',
+		compare: (a, b) => a.title.localeCompare(b.title)
+	}
+];
+
+export const PLAYLIST_SIZES: { key: string; label: string; test: (count: number) => boolean }[] = [
+	{ key: 'small', label: 'Under 10 videos', test: (n) => n < 10 },
+	{ key: 'medium', label: '10 to 50 videos', test: (n) => n >= 10 && n <= 50 },
+	{ key: 'large', label: 'Over 50 videos', test: (n) => n > 50 }
+];
+
 /** Applies the `len` and `sort` URL params, keeping the given order when no sort is chosen. */
 export function applyFilters(videos: TubeVideo[], params: URLSearchParams) {
 	const length = LENGTH_FILTERS.find((f) => f.key === params.get('len'));
@@ -346,6 +388,12 @@ export function timeAgo(seconds: number) {
 		if (value >= 1) return `${value} ${name}${value > 1 ? 's' : ''} ago`;
 	}
 	return 'just now';
+}
+
+export function formatRuntime(total: number) {
+	const hours = Math.floor(total / 3600);
+	const minutes = Math.round((total % 3600) / 60);
+	return hours ? `${hours}h ${minutes}m` : `${minutes}m`;
 }
 
 export function formatDuration(total: number) {

@@ -50,7 +50,7 @@ export function resetPrefs() {
 }
 
 // Shared so page-level shortcuts can stand down while the help dialog is open.
-export const ui = $state({ shortcutsOpen: false, feedRound: 0 });
+export const ui = $state({ shortcutsOpen: false, feedRound: 0, homeFilters: '' });
 
 export const logo = () => (prefs.theme === 'dark' ? profileDark : profileLight);
 

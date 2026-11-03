@@ -187,6 +187,7 @@ def main(src, out_dir, comments_path=None):
                     'channelUrl': yt.get('channelUrl'),
                     'thumb': yt.get('thumbnail'),
                     'count': yt.get('videoCount'),
+                    'published': yt.get('publishedAt'),
                     'cats': [c for c in link['categories'] if c != 'playlists'],
                     'missing': not yt.get('title'),
                 }))
@@ -212,6 +213,13 @@ def main(src, out_dir, comments_path=None):
         count = comment_count(video)
         if count:
             video['discussion'] = count
+    for pid, playlist in playlists.items():
+        count = comment_count(playlist)
+        if count:
+            playlist['discussion'] = count
+        runtime = sum(i.get('duration', 0) for i in contents.get(pid, {}).get('items', []))
+        if runtime:
+            playlist['duration'] = runtime
     # The chips filter unique videos, so their counts must too.
     counts = collections.Counter(cat for v in videos.values() for cat in v['cats'])
     site = {
