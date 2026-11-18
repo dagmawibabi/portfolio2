@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Dagmawi Babi — CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=block" rel="stylesheet" />
+<style>
+	@page { size: A4; margin: 0; }
+	:root {
+		--ink: #0b0b0c;
+		--ink-2: #27272a;
+		--muted: #63636b;
+		--faint: #a1a1aa;
+		--line: #e4e4e7;
+		--accent: #059669;
+		--accent-on-dark: #34d399;
+		--paper: #ffffff;
+	}
+	* { box-sizing: border-box; margin: 0; padding: 0; }
+	html, body { background: #d4d4d8; }
+	body {
+		font-family: 'Geist', 'Segoe UI', sans-serif;
+		font-size: 8.6pt;
+		line-height: 1.45;
+		color: var(--ink-2);
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+	}
+	a { color: inherit; text-decoration: none; }
+	.mono { font-family: 'Geist Mono', monospace; }
+	.serif { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; }
+
+	.page {
+		width: 210mm; height: 297mm; overflow: hidden; position: relative;
+		background: var(--paper); margin: 0 auto 8mm;
+		break-after: page;
+	}
+	.page:last-child { break-after: auto; margin-bottom: 0; }
+	@media print { html, body { background: none; } .page { margin: 0; } }
+
+	/* ---------- HERO ---------- */
+	.hero {
+		background: var(--ink); color: #fafafa;
+		padding: 10mm 14mm 8mm;
+		display: grid; grid-template-columns: auto 1fr auto; gap: 7mm; align-items: center;
+		position: relative;
+	}
+	.hero::after {
+		content: ''; position: absolute; left: 14mm; right: 14mm; bottom: 0; height: 1.2pt;
+		background: linear-gradient(90deg, var(--accent-on-dark), transparent 70%);
+	}
+	.photo {
+		width: 30mm; height: 30mm; border-radius: 50%; object-fit: cover;
+		border: 1.2pt solid #3f3f46; background: #fff;
+	}
+	.hero h1 { font-size: 40pt; line-height: 0.95; letter-spacing: -0.4pt; }
+	.hero h1 em { color: var(--accent-on-dark); font-style: italic; }
+	.hero .role { margin-top: 3mm; font-size: 9.4pt; color: #d4d4d8; font-weight: 300; letter-spacing: 0.2pt; }
+	.hero .role b { font-weight: 500; color: #fff; }
+	.contact { display: grid; gap: 1.6mm; font-size: 7.6pt; color: #a1a1aa; text-align: right; }
+	.contact a { color: #e4e4e7; }
+	.contact span { color: #71717a; margin-right: 1.5mm; text-transform: uppercase; letter-spacing: 0.8pt; font-size: 6.4pt; }
+
+	/* ---------- BODY GRID ---------- */
+	.body { display: grid; grid-template-columns: 1fr 56mm; gap: 8mm; padding: 7mm 14mm 0; align-items: start; }
+	.side { border-left: 0.6pt solid var(--line); padding-left: 6mm; }
+
+	h2 {
+		display: flex; align-items: baseline; gap: 2.5mm;
+		font-family: 'Instrument Serif', Georgia, serif; font-weight: 400;
+		font-size: 17pt; line-height: 1; color: var(--ink); margin-bottom: 3.5mm;
+	}
+	h2 .n { font-family: 'Geist Mono', monospace; font-size: 6.6pt; color: var(--accent); letter-spacing: 0.6pt; }
+	.block + .block { margin-top: 5mm; }
+
+	.summary { font-size: 9.2pt; line-height: 1.55; color: var(--ink-2); margin-bottom: 5.5mm; }
+	.summary b { color: var(--ink); font-weight: 600; }
+
+	/* timeline */
+	.tl { position: relative; padding-left: 5mm; }
+	.tl::before { content: ''; position: absolute; left: 0.9mm; top: 1.6mm; bottom: 2mm; width: 0.6pt; background: var(--line); }
+	.job { position: relative; margin-bottom: 3.3mm; }
+	.job::before {
+		content: ''; position: absolute; left: -5mm; top: 1.25mm; width: 2.2mm; height: 2.2mm;
+		border-radius: 50%; background: var(--paper); border: 0.9pt solid var(--faint);
+	}
+	.job.now::before { background: var(--accent); border-color: var(--accent); }
+	.job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; }
+	.job-title { font-size: 9.6pt; font-weight: 600; color: var(--ink); }
+	.job-title .at { font-weight: 400; color: var(--muted); }
+	.date { font-family: 'Geist Mono', monospace; font-size: 6.9pt; color: var(--muted); white-space: nowrap; }
+	.job.now .date { color: var(--accent); }
+	.job-desc { color: var(--muted); font-size: 8.1pt; margin-top: 0.4mm; }
+	.job ul { list-style: none; margin-top: 1mm; }
+	.job li { position: relative; padding-left: 3mm; margin-bottom: 0.4mm; }
+	.job li::before { content: '—'; position: absolute; left: 0; color: var(--faint); font-size: 7pt; top: 0.2mm; }
+
+	/* side items */
+	.edu { margin-bottom: 2.4mm; }
+	.edu b { display: block; font-weight: 600; color: var(--ink); font-size: 8.6pt; line-height: 1.3; }
+	.edu .what { color: var(--muted); }
+	.award { display: grid; grid-template-columns: 4.5mm 1fr; margin-bottom: 2.4mm; }
+	.award .star { color: var(--accent); font-size: 8pt; line-height: 1.5; }
+	.award b { font-weight: 600; color: var(--ink); }
+	.award div div { color: var(--muted); font-size: 7.8pt; }
+	.skill-group + .skill-group { margin-top: 3mm; }
+	.skill-label { font-family: 'Geist Mono', monospace; font-size: 6.4pt; letter-spacing: 0.8pt; text-transform: uppercase; color: var(--faint); margin-bottom: 1.4mm; }
+	.chips { display: flex; flex-wrap: wrap; gap: 1.2mm; }
+	.chip { border: 0.6pt solid #d4d4d8; border-radius: 10mm; padding: 0.3mm 2.2mm; font-size: 7.4pt; color: var(--ink-2); }
+	.chip.k { background: var(--ink); border-color: var(--ink); color: #fff; }
+
+	.quote {
+		margin-top: 6.5mm; padding-top: 4mm; border-top: 0.6pt solid var(--line);
+		font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 11pt; line-height: 1.3; color: var(--ink);
+	}
+	.quote span { display: block; margin-top: 1.5mm; font-family: 'Geist Mono', monospace; font-style: normal; font-size: 6.6pt; color: var(--muted); letter-spacing: 0.6pt; }
+
+	/* ---------- PAGE 2 ---------- */
+	.strip {
+		display: flex; justify-content: space-between; align-items: center;
+		padding: 7mm 14mm 4mm; border-bottom: 0.6pt solid var(--line);
+	}
+	.strip .nm { font-family: 'Instrument Serif', Georgia, serif; font-size: 14pt; color: var(--ink); }
+	.strip .meta { font-family: 'Geist Mono', monospace; font-size: 7pt; color: var(--muted); }
+
+	.p2 { padding: 5mm 14mm 0; }
+	.feature {
+		display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 3.5mm; margin-bottom: 6mm;
+	}
+	.card {
+		background: var(--ink); color: #e4e4e7; border-radius: 2.2mm; padding: 4mm 4mm 3.6mm;
+		display: flex; flex-direction: column; gap: 1.4mm;
+	}
+	.card .tag { font-family: 'Geist Mono', monospace; font-size: 6.2pt; letter-spacing: 0.8pt; text-transform: uppercase; color: var(--accent-on-dark); }
+	.card b { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 15pt; line-height: 1; color: #fff; }
+	.card p { font-size: 7.9pt; line-height: 1.45; color: #a1a1aa; flex: 1; }
+	.card .u { font-family: 'Geist Mono', monospace; font-size: 6.8pt; color: #d4d4d8; }
+
+
+	/* podcast band */
+	.pod { background: var(--ink); color: #e4e4e7; border-radius: 2.6mm; padding: 5mm 5.5mm 4.5mm; margin-bottom: 6mm; }
+	.pod-head { display: grid; grid-template-columns: 1fr auto; gap: 8mm; align-items: end; padding-bottom: 4mm; border-bottom: 0.6pt solid #27272a; }
+	.pod .tag { font-family: 'Geist Mono', monospace; font-size: 6.4pt; letter-spacing: 0.8pt; text-transform: uppercase; color: var(--accent-on-dark); margin-bottom: 1.6mm; }
+	.pod h2.on-dark { color: #fff; margin-bottom: 1.8mm; }
+	.pod h2.on-dark .n { color: var(--accent-on-dark); }
+	.pod-head p { font-size: 8pt; color: #a1a1aa; max-width: 95mm; line-height: 1.45; }
+	.pod-stats { display: flex; gap: 6mm; }
+	.pod-stats div { display: flex; flex-direction: column; }
+	.pod-stats b { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 22pt; line-height: 1; color: #fff; }
+	.pod-stats em { font-style: normal; color: var(--accent-on-dark); }
+	.pod-stats span { font-size: 6.8pt; color: #a1a1aa; margin-top: 0.8mm; }
+	.guests { display: grid; grid-template-columns: repeat(6, 1fr); gap: 2.6mm 2.6mm; padding-top: 3.6mm; }
+	.g { display: flex; flex-direction: column; border-left: 1pt solid #3f3f46; padding-left: 2mm; }
+	.g:nth-child(-n+2) { border-left-color: var(--accent-on-dark); }
+	.g b { font-weight: 600; font-size: 7.9pt; color: #fff; line-height: 1.3; white-space: nowrap; letter-spacing: -0.1pt; }
+	.g span { font-size: 7pt; color: #a1a1aa; line-height: 1.35; }
+	.groups { columns: 3; column-gap: 7mm; }
+	.group { break-inside: avoid; margin-bottom: 4.6mm; }
+	.group h3 {
+		font-family: 'Geist Mono', monospace; font-weight: 500; font-size: 6.6pt; letter-spacing: 1pt;
+		text-transform: uppercase; color: var(--accent); margin-bottom: 2mm;
+		padding-bottom: 1.2mm; border-bottom: 0.6pt solid var(--line);
+	}
+	.proj { margin-bottom: 2.3mm; break-inside: avoid; }
+	.proj .t { display: flex; justify-content: space-between; align-items: baseline; gap: 2mm; }
+	.proj b { font-weight: 600; color: var(--ink); font-size: 8.5pt; }
+	.proj .u { font-family: 'Geist Mono', monospace; font-size: 6.4pt; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+	.proj p { color: var(--muted); font-size: 7.8pt; line-height: 1.4; }
+	.proj .s { color: var(--faint); font-family: 'Geist Mono', monospace; font-size: 6.4pt; }
+
+	.bottom {
+		position: absolute; left: 14mm; right: 14mm; bottom: 12mm;
+		padding-top: 5mm; border-top: 0.6pt solid var(--line);
+	}
+	.bullets { list-style: none; }
+	.bullets.two { columns: 2; column-gap: 8mm; }
+	.bullets.two li { break-inside: avoid; }
+	.bullets b.ac { color: var(--accent); }
+	.bullets li { position: relative; padding-left: 4mm; margin-bottom: 1.6mm; }
+	.bullets li::before { content: ''; position: absolute; left: 0; top: 1.7mm; width: 1.5mm; height: 1.5mm; background: var(--accent); border-radius: 50%; }
+	.bullets b { color: var(--ink); font-weight: 600; }
+	.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2mm; }
+	.stat { border: 0.6pt solid var(--line); border-radius: 2mm; padding: 2.6mm 2.4mm; }
+	.stat .v { font-family: 'Instrument Serif', Georgia, serif; font-size: 22pt; line-height: 1; color: var(--ink); }
+	.stat .v em { color: var(--accent); font-style: normal; }
+	.stat .l { margin-top: 1.2mm; font-size: 7.4pt; color: var(--muted); line-height: 1.3; }
+	.closing {
+		position: absolute; left: 14mm; right: 14mm; bottom: 11mm; padding-top: 3.5mm; border-top: 0.6pt solid var(--line);
+		display: flex; justify-content: space-between; align-items: baseline; gap: 6mm;
+		font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 11.5pt; color: var(--ink);
+	}
+	.closing span { font-family: 'Geist Mono', monospace; font-style: normal; font-size: 6.6pt; color: var(--muted); letter-spacing: 0.6pt; white-space: nowrap; }
+	.side .bullets li { font-size: 8pt; margin-bottom: 1.8mm; }
+	.bullets b.ac { color: var(--accent); }
+	.foot {
+		position: absolute; left: 14mm; right: 14mm; bottom: 6mm;
+		display: flex; justify-content: space-between;
+		font-family: 'Geist Mono', monospace; font-size: 6.4pt; color: var(--faint);
+	}
+</style>
+</head>
+<body>
+
+<!-- ======================= PAGE 1 ======================= -->
+<div class="page">
+	<header class="hero">
+		<img class="photo" src="photo.jpg" alt="Dagmawi Babi" />
+		<div>
+			<h1 class="serif">Dagmawi <em>Babi</em></h1>
+			<div class="role">Believer · Creative Developer<br /><b>Founder &amp; CEO, ScholarXIV</b></div>
+		</div>
+		<div class="contact mono">
+			<div><span>Web</span><a href="https://www.dagmawi.dev">dagmawi.dev</a></div>
+			<div><span>Mail</span><a href="mailto:1babidagi@gmail.com">1babidagi@gmail.com</a></div>
+			<div><span>Git</span><a href="https://www.github.com/dagmawibabi">github.com/dagmawibabi</a></div>
+			<div><span>In</span><a href="https://www.linkedin.com/in/dagmawibabi">linkedin.com/in/dagmawibabi</a></div>
+			<div><span>X · TG</span><a href="https://www.x.com/dagmawibabi">@dagmawibabi</a> · <a href="https://t.me/dagmawi_babi">@dagmawi_babi</a></div>
+		</div>
+	</header>
+
+	<div class="body">
+		<main>
+			<p class="summary">
+				Full-stack web and mobile developer, programming since <b>2013</b>. I've worked at startups including the
+				Y&nbsp;Combinator-backed <b>Better Auth</b>, at a large IT corporation, on government projects and on campus R&amp;D
+				teams, and I now run <b>ScholarXIV</b>, an AI research platform. I build modern, minimal and powerful products,
+				mostly in Flutter, SvelteKit and TypeScript, and open-source most of them.
+			</p>
+
+			<section class="block">
+				<h2><span class="n">01</span>Experience</h2>
+				<div class="tl">
+					<div class="job now">
+						<div class="job-head"><div class="job-title">Founder, CEO <span class="at">· ScholarXIV</span></div><div class="date">OCT 2025 — NOW</div></div>
+						<div class="job-desc">AI-powered platform for exploring and analyzing research papers.</div>
+						<ul>
+							<li>Lead product development and the team, and ship new features and optimizations</li>
+							<li>Run day-to-day operations and marketing</li>
+						</ul>
+					</div>
+					<div class="job">
+						<div class="job-head"><div class="job-title">Full Stack Developer <span class="at">· Better Auth</span></div><div class="date">JUL — OCT 2025</div></div>
+						<div class="job-desc">Y Combinator-backed, the most comprehensive open-source auth framework for TypeScript.</div>
+						<ul>
+							<li>Developed and maintained the open-source repository: server logic, database integrations and UI performance</li>
+							<li>Reviewed code, deployed to cloud with infrastructure as code, enforced security best practices and wrote docs</li>
+						</ul>
+					</div>
+					<div class="job">
+						<div class="job-head"><div class="job-title">Web &amp; Mobile Full-stack Developer <span class="at">· Afriwork</span></div><div class="date">AUG 2024 — APR 2025</div></div>
+						<div class="job-desc">Ethiopia's top freelancing platform: 15k+ companies, 300k+ freelancers.</div>
+						<ul>
+							<li>Main mobile developer for outsourced projects; consulted on outsourcing and designed the hiring pipeline</li>
+						</ul>
+					</div>
+					<div class="job">
+						<div class="job-head"><div class="job-title">Full-stack Dev &amp; DevOps Engineer <span class="at">· ITD3</span></div><div class="date">FEB 2022 — JAN 2024</div></div>
+						<div class="job-desc">Addis Ababa's Innovation and Technology Development Bureau, modernizing government institutions.</div>
+						<ul>
+							<li>Deployed, secured and maintained web apps, automated their backups and logging, and built internal projects</li>
+						</ul>
+					</div>
+					<div class="job">
+						<div class="job-head"><div class="job-title">Full-stack Developer Intern <span class="at">· IE Network Solutions</span></div><div class="date">JUN 2023 — SEP 2024</div></div>
+						<div class="job-desc">IT solutions company with 200+ employees, partnering with Mastercard, Dell and Visa.</div>
+						<ul><li>Built internal automation tools, client ERP systems and APIs</li></ul>
+					</div>
+					<div class="job">
+						<div class="job-head"><div class="job-title">Backend &amp; DevOps Engineer <span class="at">· AASTU AI Center</span></div><div class="date">FEB 2021 — JUN 2023</div></div>
+						<div class="job-desc">Artificial Intelligence and Robotics Center of Excellence.</div>
+						<ul>
+							<li>Built complex software for the university's R&amp;D program, and deployed and secured its web apps</li>
+						</ul>
+					</div>
+					<div class="job">
+						<div class="job-head"><div class="job-title">Web &amp; Mobile App Developer <span class="at">· Freelance</span></div><div class="date">JUN 2020 — NOW</div></div>
+						<ul><li>Built, secured and deployed apps for startups, including requirements engineering for a ride-hailing company</li></ul>
+					</div>
+					<div class="job">
+						<div class="job-head"><div class="job-title">Full-stack Developer Intern <span class="at">· Arif Events</span></div><div class="date">JUL — SEP 2019</div></div>
+						<div class="job-desc">First internship: built and maintained event-management features.</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<aside class="side">
+			<section class="block">
+				<h2><span class="n">02</span>Skills</h2>
+				<div class="chips">
+					<span class="chip k">Flutter / Dart</span><span class="chip k">TypeScript</span><span class="chip k">SvelteKit</span>
+					<span class="chip">JavaScript</span><span class="chip">React</span><span class="chip">Next.js</span><span class="chip">Node.js</span>
+					<span class="chip">Hono</span><span class="chip">Tailwind</span><span class="chip">Python</span><span class="chip">Rust</span>
+					<span class="chip">Godot</span><span class="chip">MongoDB</span><span class="chip">SQLite</span><span class="chip">Docker</span>
+					<span class="chip">CI/CD</span><span class="chip">Auth &amp; security</span><span class="chip">Gemini</span><span class="chip">OpenAI</span>
+					<span class="chip">AI agents &amp; evals</span>
+				</div>
+			</section>
+
+			<section class="block">
+				<h2><span class="n">03</span>Education</h2>
+				<div class="edu"><b>Addis Ababa Science &amp; Technology University</b><div class="what">BSc Software Engineering<span class="date" style="display:block">2019 — 2024</span></div></div>
+				<div class="edu"><b>Unity University</b><div class="what">Management (distance)<span class="date" style="display:block">2020 — 2024</span></div></div>
+				<div class="edu"><b>Lebawi International Academy</b><div class="what">High School Diploma<span class="date" style="display:block">2018 — 2019</span></div></div>
+			</section>
+
+			<section class="block">
+				<h2><span class="n">04</span>Awards</h2>
+				<div class="award"><span class="star">✦</span><div><b>Flutter App of the Year</b><div>2024 · OpenScholarXIV</div></div></div>
+				<div class="award"><span class="star">✦</span><div><b>GDSC Impact Award</b><div>Google Developer Student Clubs</div></div></div>
+				<div class="award"><span class="star">✦</span><div><b>UNSPSC Certificate</b><div>EthioDatasets</div></div></div>
+			</section>
+
+			<section class="block">
+				<h2><span class="n">05</span>Community</h2>
+				<ul class="bullets">
+					<li>Organized <b>Meetup 2026</b>: <b class="ac">300</b> attendees, <b class="ac">900+</b> registered, <b class="ac">19</b> sessions</li>
+					<li>Run the <b>Dagmawi Babi</b> tech community and <b>Jobs</b> channel on Telegram</li>
+					<li>Featured at Future of Work, AASTU TechFest, Gara Innovation and Better Hack</li>
+					<li>Interviewed on Gugut, Muyalogy, Halak, GCP and Tesfa</li>
+				</ul>
+			</section>
+		</aside>
+	</div>
+</div>
+
+<!-- ======================= PAGE 2 ======================= -->
+<div class="page">
+	<div class="strip">
+		<div class="nm">Dagmawi Babi</div>
+		<div class="meta">SELECTED WORK · dagmawi.dev</div>
+	</div>
+
+	<div class="p2">
+		<section class="pod">
+			<div class="pod-head">
+				<div>
+					<div class="tag">Podcast · youtube.com/@dagmawi_babi</div>
+					<h2 class="on-dark"><span class="n">06</span>Long-form conversations</h2>
+					<p>Hours-long talks with founders, engineers and creators about their upbringing, faith, careers and the things they build.</p>
+				</div>
+				<div class="pod-stats">
+					<div><b>15</b><span>episodes</span></div>
+					<div><b>24<em>h</em></b><span>of conversation</span></div>
+					<div><b>57k<em>+</em></b><span>views</span></div>
+				</div>
+			</div>
+			<div class="guests">
+				<div class="g"><b>Guillermo Rauch</b><span>CEO, Vercel</span></div>
+				<div class="g"><b>Akshay Kothari</b><span>Co-founder, Notion</span></div>
+				<div class="g"><b>Andreas Kling</b><span>SerenityOS · Ladybird</span></div>
+				<div class="g"><b>Jack Rhysider</b><span>Host, Darknet Diaries</span></div>
+				<div class="g"><b>Birk Jernström</b><span>Founder, Polar · Tictail</span></div>
+				<div class="g"><b>Jamon Holmgren</b><span>Infinite Red · React Native</span></div>
+				<div class="g"><b>Viktor Löfgren</b><span>Creator, Marginalia Search</span></div>
+				<div class="g"><b>Tadas Petra</b><span>Flutter GDE · Hungrimind</span></div>
+				<div class="g"><b>Thomas Lopes</b><span>Melt UI · Svelte Ambassador</span></div>
+				<div class="g"><b>Emre Varol</b><span>A2SV · Eskalate</span></div>
+				<div class="g"><b>Cameron Pak</b><span>Faith Tools · WisePhone</span></div>
+				<div class="g"><b>Bemhreth Gezahegn</b><span>Gebeta Maps</span></div>
+			</div>
+		</section>
+
+		<h2><span class="n">07</span>Projects</h2>
+		<div class="groups">
+			<div class="group">
+				<h3>AI / ML</h3>
+				<div class="proj"><div class="t"><b>ScholarXIV</b><span class="u">scholarxiv.com</span></div><p>Search, read, summarize and discuss arXiv papers with AI. <span class="s">SvelteKit · MongoDB</span></p></div>
+				<div class="proj"><div class="t"><b>OpenScholarXIV</b><span class="u">github</span></div><p>Open-source mobile app. Flutter App of the Year 2024. <span class="s">Flutter · Gemini</span></p></div>
+				<div class="proj"><div class="t"><b>NativeChat</b></div><p>Gemini assistant that reads device specs, call logs and SMS. <span class="s">Flutter</span></p></div>
+				<div class="proj"><div class="t"><b>Enkokilish Bench</b></div><p>Open benchmark of LLMs on Amharic riddles. <span class="s">SvelteKit · Evalite</span></p></div>
+				<div class="proj"><div class="t"><b>Token Counter</b></div><p>Offline insights and costs for your ChatGPT history. <span class="s">SvelteKit</span></p></div>
+			</div>
+			<div class="group">
+				<h3>Apps</h3>
+				<div class="proj"><div class="t"><b>Triangle</b><span class="u">triangle.dagmawi.dev</span></div><p>Telegram client with an AI workspace that asks before it acts. <span class="s">Flutter · TDLib</span></p></div>
+				<div class="proj"><div class="t"><b>Alexandria</b><span class="u">alexandria.dagmawi.dev</span></div><p>Reader for PDF, EPUB and DOCX, plus audiobooks, podcasts and radio. <span class="s">Flutter</span></p></div>
+				<div class="proj"><div class="t"><b>Mentos</b><span class="u">mentos.dagmawi.dev</span></div><p>Serverless peer-to-peer social network over iroh/QUIC. <span class="s">Flutter · Rust</span></p></div>
+				<div class="proj"><div class="t"><b>TokenStats</b><span class="u">tokenstats.dagmawi.dev</span></div><p>See where your AI coding tokens went, fully in-browser. <span class="s">SvelteKit</span></p></div>
+				<div class="proj"><div class="t"><b>NetCheck</b><span class="u">github</span></div><p>Speed tests, connection history and per-app data usage. <span class="s">Flutter</span></p></div>
+			</div>
+			<div class="group">
+				<h3>Packages &amp; Games</h3>
+				<div class="proj"><div class="t"><b>omni_ai</b><span class="u">pub.dev</span></div><p>One Flutter API for every AI provider. <span class="s">Dart</span></p></div>
+				<div class="proj"><div class="t"><b>buildremove</b><span class="u">pub.dev</span></div><p>CLI that reclaims Flutter/Dart build space and unused SDKs. <span class="s">Dart</span></p></div>
+				<div class="proj"><div class="t"><b>DnD</b><span class="u">dnd.dagmawi.dev</span></div><p>Solo D&amp;D with an AI Dungeon Master or fully offline. <span class="s">Flutter</span></p></div>
+				<div class="proj"><div class="t"><b>Nostalgia</b><span class="u">nostalgia.dagmawi.dev</span></div><p>Pixel-flavored retro game emulator and library. <span class="s">Flutter</span></p></div>
+				<div class="proj"><div class="t"><b>Fidel Pops</b><span class="u">itch.io</span></div><p>Learn the Amharic alphabet in 33 levels. <span class="s">Godot</span></p></div>
+			</div>
+			<div class="group">
+				<h3>Christian</h3>
+				<div class="proj"><div class="t"><b>Benaiah</b><span class="u">benaiah.org</span></div><p>A creative ministry inviting people to draw near to God. <span class="s">SvelteKit</span></p></div>
+				<div class="proj"><div class="t"><b>My Bible</b></div><p>Minimal Bible app with 9 translations side by side. <span class="s">Flutter</span></p></div>
+				<div class="proj"><div class="t"><b>AASTU ECSF App</b></div><p>Devotions, blogs, songs and anonymous counseling for my fellowship. <span class="s">Flutter</span></p></div>
+			</div>
+			<div class="group">
+				<h3>Notable</h3>
+				<div class="proj"><div class="t"><b>EthioDatasets</b></div><p>Secure trade data platform for Ethiopia's Ministry of Finance. <span class="s">Next.js · Docker</span></p></div>
+				<div class="proj"><div class="t"><b>Telegram Community Gallery</b></div><p>Discover and submit Telegram communities. <span class="s">SvelteKit · Hono</span></p></div>
+				<div class="proj"><div class="t"><b>API Hub</b></div><p>One uniform wrapper around many popular APIs. <span class="s">Hono</span></p></div>
+				<div class="proj"><div class="t"><b>Menen Arts</b></div><p>Fashion illustration app built for a startup. <span class="s">Flutter</span></p></div>
+			</div>
+			<div class="group">
+				<h3>Social</h3>
+				<div class="proj"><div class="t"><b>Ruthful Hearts</b><span class="u">ruthfulhearts.com</span></div><p>Anonymous donations that change one life at a time. <span class="s">React</span></p></div>
+				<div class="proj"><div class="t"><b>The Unity Project Mural</b><span class="u">unitymural.art</span></div><p>Collaborative global art mural. <span class="s">SvelteKit</span></p></div>
+				<div class="proj"><div class="t"><b>Dagmawi Babi Jobs</b><span class="u">t.me</span></div><p>Telegram channel sharing vetted jobs, hackathons and scholarships. <span class="s">Telegram</span></p></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="closing">
+		“Not that we are competent in ourselves… but our competence comes from God.”
+		<span>2 CORINTHIANS 3:5</span>
+	</div>
+
+	<div class="foot"><span>DAGMAWI BABI — CURRICULUM VITAE</span><span>1babidagi@gmail.com · dagmawi.dev</span></div>
+</div>
+
+</body>
+</html>

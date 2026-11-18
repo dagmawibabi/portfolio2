@@ -23,7 +23,106 @@
 	import StatiCall from '$lib/assets/projects/StatiCall.jpg';
 	import BenaiahBlack from '$lib/assets/projects/BenaiahBlack.jpg';
 	import DagmawiBabiJobs from '$lib/assets/projects/DagmawiBabiJobs.png';
+	import Triangle from '$lib/assets/projects/Triangle.png';
+	import Alexandria from '$lib/assets/projects/Alexandria.png';
+	import Mentos from '$lib/assets/projects/Mentos.png';
+	import NetCheck from '$lib/assets/projects/NetCheck.png';
+	import TokenStats from '$lib/assets/projects/TokenStats.png';
+	import DnD from '$lib/assets/projects/DnD.png';
+	import Nostalgia from '$lib/assets/projects/Nostalgia.png';
+	import OmniAI from '$lib/assets/projects/OmniAI.png';
+	import BuildRemove from '$lib/assets/projects/BuildRemove.png';
 	import VibeCodedProjects from '../vibe_coded_projects.svelte';
+
+	let vibeCodedApps = [
+		{
+			title: 'Triangle',
+			image: Triangle,
+			description:
+				'Triangle is a Telegram client with an AI workspace built in. It connects to your own Telegram account through TDLib so you can browse and manage chats, folders, channels and media, and gives an assistant permission-aware tools to search your chats, summarize activity and act on your behalf. Every send, edit or moderation the assistant wants to make is shown to you for approval first.',
+			link: 'https://triangle.dagmawi.dev',
+			code: 'https://github.com/dagmawibabi/triangle',
+			tools: ['Flutter', 'Telegram']
+		},
+		{
+			title: 'Alexandria',
+			image: Alexandria,
+			description:
+				'Alexandria is one minimal, industrial machine for everything you read and hear. Read PDF, EPUB and DOCX files, and listen to audiobooks, podcasts and radio stations from around the world. It is free, needs no account, and runs on Android and Windows.',
+			link: 'https://alexandria.dagmawi.dev',
+			code: 'https://github.com/dagmawibabi/Alexandria',
+			tools: ['Flutter']
+		},
+		{
+			title: 'Mentos',
+			image: Mentos,
+			description:
+				'Mentos is peer-to-peer social media and messaging with no central server. Posts, stories, chats, groups, channels, files and calls live on the device that made them and travel directly between devices over iroh (QUIC with hole punching). Content is signed by its author, there are no accounts on any server, and you choose how much of your IP to reveal: direct, relay only, or Tor.',
+			link: 'https://mentos.dagmawi.dev',
+			code: 'https://github.com/dagmawibabi/mentos',
+			tools: ['Flutter', 'Rust']
+		},
+		{
+			title: 'NetCheck',
+			image: NetCheck,
+			description:
+				'NetCheck is a network monitor that runs speed tests against Cloudflare, logs your connection over time and shows which apps are using your data. Browse your history in graphs and logs, and import or export your test results as CSV or JSON.',
+			link: '',
+			code: 'https://github.com/dagmawibabi/netcheck',
+			tools: ['Flutter']
+		},
+		{
+			title: 'TokenStats',
+			image: TokenStats,
+			description:
+				'TokenStats lets you browse and read your local AI coding sessions from Claude Code, Codex, OpenCode, Grok, Antigravity and Cursor, and see where your tokens and money went. Everything is parsed in your browser with Web Workers. There is no backend and nothing about your sessions is uploaded.',
+			link: 'https://tokenstats.dagmawi.dev',
+			code: 'https://github.com/dagmawibabi/TokenStats',
+			tools: ['SvelteKit']
+		}
+	];
+
+	let gameProjects = [
+		{
+			title: 'DnD',
+			image: DnD,
+			description:
+				'Solo Dungeons & Dragons in a minimal, dark app. Play with an AI Dungeon Master or fully offline through handcrafted branching adventures and endless generated quests. It has a full character creator, tactile dice, turn-based combat with companions, an interactive map, NPC chat, a compendium, and living campaigns where relationships and world consequences carry between chapters.',
+			link: 'https://dnd.dagmawi.dev',
+			code: 'https://github.com/dagmawibabi/dnd',
+			tools: ['Flutter']
+		},
+		{
+			title: 'Nostalgia',
+			image: Nostalgia,
+			description:
+				'Nostalgia is a minimal, pixel-flavored retro game emulator and library. Keep your games organized with covers and game info, play with configurable controls and display options, use cheats and save backups, record GIFs of your gameplay, and discover homebrew games.',
+			link: 'https://nostalgia.dagmawi.dev',
+			code: 'https://github.com/dagmawibabi/nostalgia',
+			tools: ['Flutter']
+		}
+	];
+
+	let packageProjects = [
+		{
+			title: 'OmniAI',
+			image: OmniAI,
+			description:
+				'omni_ai is one easy Flutter API for every AI provider. Chat, stream, call tools, build agents, and generate images, speech, video and embeddings with the same few calls, whichever provider you use: Vercel AI Gateway, Gemini, OpenRouter, ElevenLabs, LM Studio, Addis AI, Cloudflare Workers AI, on-device models or any OpenAI-compatible API. It can also list models with prices and voices with previews.',
+			link: 'https://pub.dev/packages/omni_ai',
+			code: 'https://github.com/dagmawibabi/omni_ai',
+			tools: ['Flutter']
+		},
+		{
+			title: 'BuildRemove',
+			image: BuildRemove,
+			description:
+				'buildremove is an interactive command-line tool that frees up disk space taken by Flutter and Dart development. It finds every Flutter/Dart project on your drives, shows how much space each build takes and cleans the ones you pick. It also lists your Flutter SDKs, FVM versions, Android NDKs, Gradle versions and package caches, and tells you which ones none of your projects use anymore.',
+			link: 'https://pub.dev/packages/buildremove',
+			code: 'https://github.com/dagmawibabi/buildremove',
+			tools: ['Flutter']
+		}
+	];
 
 	let aimlProjects = [
 		{
@@ -263,6 +362,9 @@
 
 	const projectCategories = [
 		{ id: 'aiml', chip: 'AI', title: 'AI/ML Projects', projects: aimlProjects },
+		{ id: 'vibeapps', chip: 'Vibe-coded', title: 'Vibe-coded Projects', projects: vibeCodedApps },
+		{ id: 'games', chip: 'Games', title: 'Games', projects: gameProjects },
+		{ id: 'packages', chip: 'Packages', title: 'Packages', projects: packageProjects },
 		{ id: 'christian', chip: 'Christian', title: 'Christian Projects', projects: christianProjects },
 		{ id: 'social', chip: 'Social', title: 'Social Projects', projects: socialProjects },
 		{ id: 'notable', chip: 'Notable', title: 'Notable Projects', projects: notableProjects }
@@ -275,7 +377,7 @@
 
 	const moreProjectCategories = [
 		{ id: 'extra', chip: 'Extra', title: 'Extra Projects' },
-		{ id: 'vibe', chip: 'Vibe-coded', title: 'Vibe-coded Projects' }
+		{ id: 'vibe', chip: 'Vibe experiments', title: 'Vibe-coded Experiments' }
 	];
 
 	let selectedMoreId = $state('extra');

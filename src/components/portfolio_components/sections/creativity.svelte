@@ -21,7 +21,7 @@
 				'I like having deep and long conversations with people that inspire me. My podcast is about these conversations',
 			icon: Mic,
 			image: podcast,
-			link: 'https://www.youtube.com/@dagmawi_babi'
+			link: '/podcast'
 		},
 		{
 			name: 'Community',

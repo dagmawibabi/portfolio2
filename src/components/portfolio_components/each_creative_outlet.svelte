@@ -10,7 +10,7 @@
 		<div class="group/picture relative h-full w-full">
 			<a
 				href={creativeOutlet.link}
-				target={creativeOutlet.name == 'Blog' ? '_self' : '_blank'}
+				target={creativeOutlet.link.startsWith('/') ? '_self' : '_blank'}
 				rel="noopener noreferrer"
 			>
 				<div class="absolute hidden h-full w-full transition-all group-hover/picture:flex">

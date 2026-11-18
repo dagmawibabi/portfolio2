@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Dagmawi Babi — CV</title>
+<style>
+	@page { size: A4; margin: 14mm 15mm 14mm 15mm; }
+	* { box-sizing: border-box; margin: 0; padding: 0; }
+	body {
+		font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+		font-size: 9.4pt;
+		line-height: 1.42;
+		color: #18181b;
+	}
+	a { color: inherit; text-decoration: none; }
+
+	header { display: flex; justify-content: space-between; align-items: flex-end; padding-bottom: 9pt; border-bottom: 1.4pt solid #000; }
+	.who { display: flex; align-items: center; gap: 11pt; }
+	.photo { width: 66pt; height: 66pt; border-radius: 50%; object-fit: cover; border: 0.8pt solid #d4d4d8; }
+	h1 { font-size: 25pt; font-weight: 700; letter-spacing: -0.6pt; line-height: 1; }
+	.tagline { margin-top: 5pt; line-height: 1.35; font-size: 10.5pt; color: #52525b; }
+	.contact { white-space: nowrap; text-align: right; font-size: 8.6pt; line-height: 1.6; color: #3f3f46; }
+
+	.summary { margin-top: 10pt; font-size: 9.6pt; color: #27272a; }
+
+	section { margin-top: 13pt; }
+	h2 {
+		font-size: 8.4pt; font-weight: 700; letter-spacing: 1.6pt; text-transform: uppercase;
+		padding-bottom: 3pt; margin-bottom: 7pt; border-bottom: 0.6pt dashed #71717a;
+	}
+
+	.entry { margin-bottom: 8pt; break-inside: avoid; }
+	.row { display: flex; justify-content: space-between; align-items: baseline; gap: 10pt; }
+	.title { font-weight: 700; font-size: 10pt; }
+	.role { color: #3f3f46; font-weight: 400; }
+	.date { flex-shrink: 0; font-size: 8.4pt; color: #52525b; font-variant-numeric: tabular-nums; }
+	.desc { color: #52525b; margin-top: 1pt; }
+	ul { margin: 2.5pt 0 0 12pt; }
+	li { margin-bottom: 1pt; }
+	li::marker { color: #a1a1aa; }
+
+	.projgroup { margin-bottom: 7pt; break-inside: avoid; }
+	.projgroup h3 { font-size: 8.4pt; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8pt; color: #71717a; margin-bottom: 3pt; }
+	.proj { margin-bottom: 4pt; break-inside: avoid; }
+	.proj b { font-weight: 700; }
+	.proj .url { font-size: 8.2pt; color: #71717a; }
+	.proj .stack { font-size: 8pt; color: #71717a; }
+
+	.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18pt; }
+	.tags { display: flex; flex-wrap: wrap; gap: 3pt; }
+	.tag { border: 0.6pt solid #a1a1aa; border-radius: 20pt; padding: 0.5pt 6pt; font-size: 8.2pt; }
+	.label { font-weight: 600; font-size: 8.6pt; margin: 4pt 0 3pt; }
+	.label:first-child { margin-top: 0; }
+	.page-break { break-before: page; }
+	.p2 { font-size: 8.7pt; line-height: 1.34; }
+	section.p2 { margin-top: 10pt; }
+	.p2 .proj { margin-bottom: 3pt; }
+	.p2 .projgroup { margin-bottom: 5pt; }
+	.p2 .entry { margin-bottom: 5pt; }
+</style>
+</head>
+<body>
+
+<header>
+	<div class="who">
+		<img class="photo" src="photo.jpg" alt="Dagmawi Babi" />
+		<div>
+		<h1>Dagmawi Babi</h1>
+		<div class="tagline">Believer &nbsp;|&nbsp; Creative Developer<br />Founder &amp; CEO of ScholarXIV</div>
+		</div>
+	</div>
+	<div class="contact">
+		<a href="https://www.dagmawi.dev">dagmawi.dev</a><br />
+		<a href="mailto:1babidagi@gmail.com">1babidagi@gmail.com</a><br />
+		<a href="https://www.github.com/dagmawibabi">github.com/dagmawibabi</a><br />
+		<a href="https://www.linkedin.com/in/dagmawibabi">linkedin.com/in/dagmawibabi</a><br />
+		<a href="https://www.x.com/dagmawibabi">x.com/dagmawibabi</a> &nbsp;·&nbsp;
+		<a href="https://t.me/dagmawi_babi">t.me/dagmawi_babi</a>
+	</div>
+</header>
+
+<p class="summary">
+	Full-stack web and mobile developer who has been programming since 2013. I have worked at startups including the
+	Y Combinator-backed Better Auth, at a large IT corporation, on government projects and on campus R&amp;D teams, and I now
+	run ScholarXIV, an AI research platform. I build modern, minimal and powerful products, mostly in Flutter, SvelteKit and
+	TypeScript, and I publish most of them as open source. I also run a large tech community on Telegram,
+	host a podcast and organize meetups.
+</p>
+
+<section>
+	<h2>Experience</h2>
+
+	<div class="entry">
+		<div class="row"><div class="title">ScholarXIV <span class="role">— Founder, CEO</span></div><div class="date">Oct 2025 – Present</div></div>
+		<div class="desc">An AI-powered research platform that helps curious learners and researchers explore and analyze research papers.</div>
+		<ul>
+			<li>Lead product development and the team, and ship new features and optimizations</li>
+			<li>Run day-to-day operations and marketing</li>
+		</ul>
+	</div>
+
+	<div class="entry">
+		<div class="row"><div class="title">Better Auth <span class="role">— Full Stack Developer</span></div><div class="date">Jul 2025 – Oct 2025</div></div>
+		<div class="desc">A Y Combinator-backed, open-source and the most comprehensive authentication framework for TypeScript.</div>
+		<ul>
+			<li>Developed and maintained the Better Auth open-source repository, including server-side logic and database integrations</li>
+			<li>Designed and optimized user interfaces for responsiveness and performance across devices</li>
+			<li>Reviewed code, deployed to cloud environments, managed infrastructure as code and enforced security best practices</li>
+			<li>Wrote technical specifications and project documentation</li>
+		</ul>
+	</div>
+
+	<div class="entry">
+		<div class="row"><div class="title">Afriwork <span class="role">— Web and Mobile Full-stack Developer</span></div><div class="date">Aug 2024 – Apr 2025</div></div>
+		<div class="desc">Ethiopia's top freelancing platform, trusted by over 15k companies and 300k freelancers.</div>
+		<ul>
+			<li>Main mobile app developer for outsourced projects, and consulted on outsourcing work</li>
+			<li>Designed the company's hiring pipeline</li>
+		</ul>
+	</div>
+
+	<div class="entry">
+		<div class="row"><div class="title">ITD3, Innovation and Technology Development Bureau <span class="role">— Full-stack Developer and DevOps Engineer</span></div><div class="date">Feb 2022 – Jan 2024</div></div>
+		<div class="desc">An Addis Ababa institution that modernizes the procedures of government institutions.</div>
+		<ul>
+			<li>Deployed, secured and maintained multiple web apps, and automated their backups, logging and maintenance</li>
+			<li>Wrote performant, maintainable code for a range of internal projects with engineers, designers, testers and stakeholders</li>
+		</ul>
+	</div>
+
+	<div class="entry">
+		<div class="row"><div class="title">IE Network Solutions <span class="role">— Full-stack Developer Intern</span></div><div class="date">Jun 2023 – Sep 2024</div></div>
+		<div class="desc">An Ethiopian IT solutions company with 16+ years of experience and 200+ employees, partnering with Mastercard, Dell and Visa.</div>
+		<ul>
+			<li>Built internal tools to automate business processes, ERP systems for clients and APIs for several projects</li>
+		</ul>
+	</div>
+
+	<div class="entry">
+		<div class="row"><div class="title">AASTU Artificial Intelligence and Robotics Center of Excellence <span class="role">— Backend and DevOps Engineer</span></div><div class="date">Feb 2021 – Jun 2023</div></div>
+		<ul>
+			<li>Developed complex software and apps for the university's R&amp;D program</li>
+			<li>Deployed, secured and maintained web apps, and automated their backups, logging and maintenance</li>
+		</ul>
+	</div>
+
+	<div class="entry">
+		<div class="row"><div class="title">Freelance <span class="role">— Web and Mobile App Developer</span></div><div class="date">Jun 2020 – Present</div></div>
+		<ul>
+			<li>Developed, secured, deployed and maintained web and mobile apps for startups and clients</li>
+			<li>System analysis, modeling and requirements engineering, including for a ride-hailing company</li>
+		</ul>
+	</div>
+
+	<div class="entry">
+		<div class="row"><div class="title">Arif Events <span class="role">— Full-stack Developer Intern</span></div><div class="date">Jul 2019 – Sep 2019</div></div>
+		<ul><li>Built new event-management features and maintained existing ones</li></ul>
+	</div>
+</section>
+
+<section class="page-break p2">
+	<h2>Selected Projects</h2>
+	<div class="cols">
+		<div>
+			<div class="projgroup">
+				<h3>AI / ML</h3>
+				<div class="proj"><b>ScholarXIV</b> <span class="url">scholarxiv.com</span><br />AI-powered app to search, read, summarize and discuss arXiv papers, with comments and likes. <span class="stack">SvelteKit · MongoDB</span></div>
+				<div class="proj"><b>OpenScholarXIV</b> <span class="url">github.com/ScholarXIV</span><br />Open-source mobile version. Won Flutter App of the Year 2024 and was featured in many articles and videos. <span class="stack">Flutter · Gemini</span></div>
+				<div class="proj"><b>NativeChat</b><br />Context-aware Gemini assistant that reads device specs, call logs and SMS. <span class="stack">Flutter · Gemini</span></div>
+				<div class="proj"><b>Enkokilish Bench</b><br />Open benchmark of LLMs on Amharic riddles, from dataset to eval code. <span class="stack">SvelteKit · Evalite</span></div>
+				<div class="proj"><b>Token Counter</b><br />Offline insights and costs for your ChatGPT history. <span class="stack">SvelteKit · TikToken</span></div>
+			</div>
+			<div class="projgroup">
+				<h3>Packages</h3>
+				<div class="proj"><b>omni_ai</b> <span class="url">pub.dev/packages/omni_ai</span><br />One Flutter API for every AI provider: chat, tools, agents, images, speech, video and embeddings. <span class="stack">Dart</span></div>
+				<div class="proj"><b>buildremove</b> <span class="url">pub.dev/packages/buildremove</span><br />CLI that finds Flutter/Dart projects on your drives and reclaims their build space and unused SDKs. <span class="stack">Dart</span></div>
+			</div>
+			<div class="projgroup">
+				<h3>Games</h3>
+				<div class="proj"><b>DnD</b> <span class="url">dnd.dagmawi.dev</span><br />Solo Dungeons &amp; Dragons with an AI Dungeon Master or fully offline. <span class="stack">Flutter</span></div>
+				<div class="proj"><b>Nostalgia</b> <span class="url">nostalgia.dagmawi.dev</span><br />Minimal, pixel-flavored retro game emulator and library. <span class="stack">Flutter</span></div>
+				<div class="proj"><b>Fidel Pops</b> <span class="url">dagmawibabi.itch.io/fidelpops</span><br />Educational game for learning the Amharic alphabet, 33 levels. <span class="stack">Godot</span></div>
+			</div>
+		</div>
+		<div>
+			<div class="projgroup">
+				<h3>Apps</h3>
+				<div class="proj"><b>Triangle</b> <span class="url">triangle.dagmawi.dev</span><br />Telegram client with a permission-aware AI workspace that asks before it acts. <span class="stack">Flutter · TDLib</span></div>
+				<div class="proj"><b>Alexandria</b> <span class="url">alexandria.dagmawi.dev</span><br />Reader for PDF, EPUB and DOCX, plus audiobooks, podcasts and world radio. <span class="stack">Flutter</span></div>
+				<div class="proj"><b>Mentos</b> <span class="url">mentos.dagmawi.dev</span><br />Serverless peer-to-peer social network and messenger over iroh/QUIC. <span class="stack">Flutter · Rust</span></div>
+				<div class="proj"><b>TokenStats</b> <span class="url">tokenstats.dagmawi.dev</span><br />Browse your local AI coding sessions and see where your tokens went, fully in-browser. <span class="stack">SvelteKit</span></div>
+				<div class="proj"><b>NetCheck</b> <span class="url">github.com/dagmawibabi/netcheck</span><br />Speed tests, connection history and per-app data usage. <span class="stack">Flutter</span></div>
+			</div>
+			<div class="projgroup">
+				<h3>Christian</h3>
+				<div class="proj"><b>Benaiah</b> <span class="url">benaiah.org</span><br />A creative ministry inviting people to draw near to God. <span class="stack">SvelteKit · Cloudinary</span></div>
+				<div class="proj"><b>My Bible</b><br />Minimal Bible app with 9 translations read in parallel. <span class="stack">Flutter</span></div>
+			</div>
+			<div class="projgroup">
+				<h3>Notable</h3>
+				<div class="proj"><b>EthioDatasets</b><br />Secure trade data platform for Ethiopia's Ministry of Finance. <span class="stack">Next.js · Node.js · MongoDB · Docker</span></div>
+				<div class="proj"><b>Telegram Community Gallery</b> <span class="url">telegram.dagmawi.dev</span><br />Discover and submit Telegram channels and groups. <span class="stack">SvelteKit · Hono · MongoDB</span></div>
+				<div class="proj"><b>API Hub</b><br />One uniform wrapper around many popular APIs. <span class="stack">Hono</span></div>
+				<div class="proj"><b>Ruthful Hearts</b> <span class="url">ruthfulhearts.com</span><br />Anonymous donations that change one life at a time. <span class="stack">React</span></div>
+				<div class="proj"><b>The Unity Project Mural</b> <span class="url">unitymural.art</span><br />Collaborative global art mural. <span class="stack">SvelteKit</span></div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="p2">
+	<div class="cols">
+		<div>
+			<h2>Education</h2>
+			<div class="entry">
+				<div class="row"><div class="title">Addis Ababa Science and Technology University</div><div class="date">2019 – 2024</div></div>
+				<div class="desc">BSc, Software Engineering</div>
+			</div>
+			<div class="entry">
+				<div class="row"><div class="title">Unity University</div><div class="date">2020 – 2024</div></div>
+				<div class="desc">Management degree (distance)</div>
+			</div>
+			<div class="entry">
+				<div class="row"><div class="title">Lebawi International Academy</div><div class="date">2018 – 2019</div></div>
+				<div class="desc">High School Diploma</div>
+			</div>
+
+			<h2 style="margin-top: 12pt">Awards</h2>
+			<ul style="margin-top: 0">
+				<li><b>Flutter App of the Year 2024</b> — OpenScholarXIV</li>
+				<li><b>GDSC Impact Award</b></li>
+				<li><b>UNSPSC Certificate</b> — EthioDatasets</li>
+			</ul>
+		</div>
+		<div>
+			<h2>Community &amp; Speaking</h2>
+			<ul style="margin-top: 0">
+				<li>Run the <b>Dagmawi Babi</b> Telegram community and the <b>Dagmawi Babi Jobs</b> channel for opportunities, hackathons and jobs</li>
+				<li>Organized <b>Dagmawi Babi's Meetup 2026</b>: 300 attendees from 900+ registrations, 19 sessions and 7 partners</li>
+				<li>Host of a long-form podcast on YouTube, and writer of DBlogs on tech, philosophy and faith</li>
+				<li>Featured at events including Future of Work, AASTU TechFest, Gara Innovation, Halwot Emmanuel and Better Hack</li>
+				<li>Interviewed on Gugut, Muyalogy, Halak and GCP podcasts and Tesfa Broadcasting</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<section class="p2">
+	<h2>Skills</h2>
+	<div class="tags">
+		<span class="tag">Dart / Flutter</span><span class="tag">TypeScript</span><span class="tag">JavaScript</span><span class="tag">SvelteKit</span><span class="tag">React</span><span class="tag">Next.js</span><span class="tag">Node.js</span><span class="tag">Hono</span><span class="tag">Tailwind CSS</span><span class="tag">Python</span><span class="tag">Rust</span><span class="tag">Godot</span>
+		<span class="tag">MongoDB</span><span class="tag">SQLite</span><span class="tag">Docker</span><span class="tag">CI/CD &amp; DevOps</span><span class="tag">Authentication &amp; security</span><span class="tag">Gemini</span><span class="tag">OpenAI</span><span class="tag">Vercel AI Gateway</span><span class="tag">LLM agents &amp; evals</span><span class="tag">Telegram / TDLib</span>
+	</div>
+</section>
+
+</body>
+</html>
