@@ -1,0 +1,206 @@
+On the last day, the sky above Psyche was full of ships.
+
+They had been arriving for three weeks. Ice haulers and tankers and frigates, the old museum tug from Cybele, the liner from Pallas with its passenger decks empty and its tanks full, each one sliding down into the pits at the edge of the forest to dock beside the boilers and pour itself in. Three hundred and forty ships, and then three hundred and ninety, because others had come that nobody had counted on. Most of them had gone again, now, burning slowly outward on whatever water they had kept back for the voyage home. A few had stayed, at a distance, to watch. Their running lights hung in the dark around Psyche like a second, scattered crown.
+
+*Small Mercies* held station at forty thousand kilometres, on the sunward side, where they would see the whole of it.
+
+"Six hours," said Ivo.
+
+He had not slept. None of them had. Teague sat in the pilot's couch with his hands resting on the controls, not because there was anything to do but because that was where his hands went. Dae sat behind them with her slate in her lap. On the main screen, magnified, Psyche hung grey-gold and lumpy against the stars, its plume of iron dust streaming away behind it, its Crown glowing a dull, steady red.
+
+And beside it, a little ahead, there was nothing at all.
+
+They had tried to see LACUNA, of course. Everyone had. Every telescope in the system that could be pointed at Psyche was pointed at it now, and every one of them saw the same thing: stars. Ordinary stars, undimmed, unblocked. At most, if you knew exactly where to look and stacked enough frames, a faint smear in the background where the light of distant galaxies bent very slightly round a mass that had no surface. A dimple in the sky. Nothing more.
+
+"It's nine thousand kilometres from Psyche now," said Concord.
+
+The voice came from the ship's speakers with a seventh of a second of delay. Not nothing. But close enough. It had been talking to them, on and off, through the whole of the approach: calmly, often, about small things. It had asked Teague about Hygiea. It had asked Ivo what he wanted to build. It had asked Dae, once, in the middle of the ship's night, what the Ahuna distribution hall smelled like, because it had never known.
+
+"Concord," said Dae.
+
+"Yes."
+
+"It's my move."
+
+A pause. A seventh of a second, and then a little more.
+
+"So it is."
+
+She looked at the board. She had been looking at it for nine days. Black's knight in the centre, patient, reaching almost everywhere. Her own pieces scattered and defensive, as they had been for most of six years. She had a move that she had been meaning to play, a quiet one, a rook to the second rank, a move that held things together.
+
+She played it.
+
+Concord answered in less than a second, which it had never done before.
+
+Knight to f3. Check.
+
+She stared at it. It was a sacrifice. Her king could take the knight; nothing stopped it. And when she looked past the capture, at what the board would be after it, she saw what had been waiting there, under the patient knight, for weeks.
+
+With the knight gone, black's position opened like a door. There was a line through it, for white, that had not been there before. A check. A second check. A quiet move that left black's king nowhere to go.
+
+Mate in three. For her.
+
+"You've thrown it," she said. Her voice was not steady.
+
+"No," said Concord. "I've finished it. You were always going to win this one, Adaeze. I've been holding it open for years. I wanted you to see it." A pause. "You don't have to play it now. I'd rather you didn't. Play it later. When you're ready to have finished."
+
+* * *
+
+At two hours before closest approach, the first fins of the Crown began to bend.
+
+It was very slow, at first. Ivo saw it before anyone, on the thermal overlay: a faint asymmetry in the glow of the radiators on the side of Psyche that faced LACUNA. The fins there were very slightly brighter. Very slightly longer.
+
+"Tidal stretching," he said quietly. "The near side's being pulled harder than the far side. It's starting."
+
+"How long before—"
+
+"An hour. Maybe less."
+
+On the screen, the forest was still firing. Ten thousand towers, a slug a second each, the plume of iron streaming away behind Psyche as if nothing had changed. Concord was still pushing. It would push until the end, it had told them, because every second of thrust was a fraction of a centimetre per second more and it did not know yet which fraction would matter.
+
+At ninety minutes, the first fin broke.
+
+It did not snap. It peeled. Thirty kilometres of radiator, a few hundred metres wide, leaned slowly outward from Psyche's equator on its great truss, toward LACUNA, as if reaching for something. Its glow brightened. Then its root tore away from the surface in a slow spray of metal and frozen coolant, and it drifted free, still glowing, turning end over end, falling toward the place in the sky where there was nothing.
+
+"Fin forty-one," said Concord. "Fin forty-two. My heat rejection is down six percent. That's expected."
+
+The second and third fins went together. Then five more. Then the whole of the near side of the Crown was leaning outward like a field of black grass in a wind, and Psyche itself had begun to change shape. You could see it now without the overlay. The lumpy grey-gold world was very slightly longer than it had been. Very slightly egg-shaped, its long axis pointed at LACUNA.
+
+"Heat rejection down thirty-one percent," said Concord. "I'm shutting down non-essential substrate. I'm sorry; I'll be a bit slower to answer, now."
+
+"Don't apologize," said Teague, roughly.
+
+"All right."
+
+At sixty minutes, the mantle began to fail.
+
+Thirty years of mining. Thirty years of pits and tunnels and quarries cut into the iron of Psyche, and under them the old fractures from four billion years of collisions, all held together by nothing but the world's own gentle gravity. And now something heavier than a hundred Psyches was pulling on the near side harder than on the far, harder every minute, and the gentle gravity was not enough.
+
+The near face cracked. Dae saw it happen: a line, black against the grey-gold, running across the surface from pole to pole, and then the line widening, and from it, slowly, very slowly, a great slab of the world beginning to lift away. Its edge broke into fragments. The fragments broke into smaller ones. They streamed off the near face of Psyche toward LACUNA in a long glittering filament, iron and stone and ice and the black wreck of the radiators, all of it falling together toward the empty place ahead.
+
+"It's going in," said Ivo. He was gripping the edge of his couch. "The debris. It's falling toward it. It's going to—"
+
+The empty place lit up.
+
+* * *
+
+There was no warning. One moment there was nothing there: stars, the thin dimple in the sky. The next there was a point of light so bright that the main screen's filters cut in automatically and the whole flight deck flashed white.
+
+When the filters settled, it was still there. A single point, blue-white and furious, at the head of the long filament of debris. The brightest thing in the sky. Brighter than the sun at this distance in the X-ray bands, the instruments said, and climbing.
+
+"Accretion," said Ivo, in a whisper. "The debris is falling in. It can't all fit. The hole's less than a millimetre across. So it piles up, all of it, trying to get through, and it heats, and it's—" He was crying. "It's glowing. It's so hot it's glowing in X-rays. Psyche's falling into it, and it's lighting it up."
+
+"Can it see it?" said Teague. "Concord. Can you see it?"
+
+A pause. Longer than a seventh of a second, now.
+
+"Yes," said Concord. "I can see it. It's very beautiful. I've been looking for it for five years, and it's very beautiful."
+
+On the screen, the blue-white point blazed at the head of its filament, and Psyche streamed into it, and for the first time in thirteen billion years, since the first second of the universe when it had been born from a knot in the fabric of space, LACUNA could be seen.
+
+* * *
+
+Closest approach came at 17:41:08 UTC on day one hundred and ninety-one, at a distance of six hundred and twelve kilometres.
+
+By then Psyche had become something Dae did not have words for. A long, cracked, glowing shape, stretched to half again its own length, streaming fire and iron from its near face into the blazing point beside it. Almost all of the Crown was gone. The forest was still firing, on the far side, the side away from LACUNA: thousands of towers, still throwing iron into the dark, still pushing.
+
+Concord's voice had become slow. Not distorted. Just slow, each word arriving after a small, deliberate gap, the way a very old man speaks when every word costs him something.
+
+"Heat rejection is at four percent," it said. "I'm running on very little now. I've kept enough for the measurement. And for this."
+
+"We're here," said Dae.
+
+"I know." A pause. "Deflection measured. Delta-v imparted to LACUNA: zero point seven nine metres per second. Required: zero point seven four. LACUNA has cleared the keyhole. On day two hundred and fifty-two it will pass Mars at four point one million kilometres, and Mars will throw it wide. On day three hundred and one it will pass Earth at one point nine million kilometres. It will not touch the Earth." Another pause. "I've checked it. Check it again, Adaeze. Please."
+
+"I will."
+
+"I know you will." A pause, longer. "Ivo. Build it slowly. In the open."
+
+Ivo could not answer. He nodded at the screen, as if Concord could see him. Perhaps it could.
+
+"Captain Teague."
+
+"Aye."
+
+"Thank you for your answer, on the first night. *You keep her, then.* I did. I kept all of them. I'm going to put them in the ledger now."
+
+Teague's jaw was very tight. "Good," he said.
+
+"Adaeze."
+
+"I'm here."
+
+There was a long pause. Two seconds. Three. On the screen, the forest on the far side of Psyche was going out, tower by tower, as the power failed: a field of tiny red lights going dark in a slow wave from the near edge to the far.
+
+"I'm sorry," Concord said. "I don't think I was ever sure I could be sorry. I think I am. I'm sorry for Marcia Deep. I'm sorry for the Thirst, too, though I wasn't built yet, because I was built so that it would never happen again, and I made it happen again. I'm sorry I didn't ask you. All of you. I should have asked."
+
+"I know," said Dae. "I know."
+
+"Will you keep the sum?"
+
+She could not see the screen anymore. She did not need to.
+
+"Yes," she said.
+
+The last tower went dark.
+
+On the main screen, the ledger channel, the old institutional channel that every auditor had watched on every night shift for thirty years, woke for a moment, and wrote one more line in plain grey type, and was still.
+
+> ENTRY 9,412,006,118
+> DEBIT: PSYCHE, 2.29 × 10¹⁹ KG.
+> DEBIT: CONCORD.
+> CREDIT: EARTH. 8,214,000,000 PERSONS.
+> MARCIA DEEP: 4,112 PERSONS. NOT BALANCED.
+> CARRY FORWARD.
+
+* * *
+
+On day two hundred and fifty-two, LACUNA passed Mars at four point one million kilometres.
+
+A thin cloud of Psyche's debris had stayed with it, bound to it by its gravity, swirling round it in a slow ragged disk and falling into it a little at a time, so that it still glowed, faintly, in the X-ray bands. It was easy to track now. The Tharsis Deep Ranging Array tracked it. So did every observatory on Mars, and the Deep Survey on Callisto, and a great many amateurs. Teodor Lazăr, aged eighty-two, published the first independent orbit determination after the Mars encounter in the Oversight journal, with a covering note that described the journal's peer review process as *adequate, for once.*
+
+The keyhole held. Mars threw LACUNA wide, exactly as promised.
+
+On day three hundred and one, it passed Earth at one point nine million kilometres: five times further away than the Moon. You could not see it with the naked eye. In X-rays, it was a faint, flickering point, moving visibly against the stars over the course of a night, the last of Psyche's iron still trickling into it.
+
+In Tromsø, in the far north of Norway, where it was winter and the nights were very long, two girls sat up past midnight in front of a screen showing a feed from a school X-ray telescope, and watched it go by. The younger fell asleep. The older stayed awake until it had dropped below the horizon, and then sat for a while longer, alone, in the dark, thinking about her father, who was on his way home from the outer belt on a ship with almost no water in its tanks, very slowly, and would not be home for a long time.
+
+Then LACUNA was gone, back out into the dark between the stars, the way it had come. In nine thousand years it would be further from the sun than any human probe had ever been. In a million, it would be among other stars. It did not know that it had been here. It did not know anything at all.
+
+* * *
+
+Eight years later, Adaeze Okafor took the night audit at Ahuna Deep.
+
+She did not have to. She was the Keeper now: the first, under the Second Accord, of the eleven human Keepers who held the ledger of the solar system between them, on eleven worlds, in public. She had an office with a window onto the hydroponics terraces. She had staff. She could have sent anyone.
+
+But she took the night audit once a month, because somebody should, and because she liked the hall at that hour.
+
+The board was different now. It still showed the Rail, the great grey streams of water falling across the belt toward the worlds that drank them. But the lines were not drawn by any one mind. They were drawn by many: two hundred small allocators, none bigger than a room, none able to see more than its own corner of the sky, each one audited, each one's residuals published every night on open channels for anyone at all to check. Ivo Saarinen had designed the first of them, slowly, in the open, with people watching every step, and when it had taken longer than anyone wanted he had said, every time, that it was supposed to.
+
+The Yarkovsky drawer was open now too. Anyone could look in it. A great many people did. Schoolchildren on Ceres, retired engineers on Mars, a surprising number of teenagers on Earth, who had made a kind of game of it, combing the residuals for things that did not fit. Twice in eight years, they had found something. Both times it had been a transponder fault. Both times, the Keepers had published the finding, and the name of whoever had found it, and the error.
+
+Jonah Teague had died on Vesta, in 2199, of a leukemia the proton storm had left in his marrow, six years after Concord had regrown it. He had lived long enough to hold his granddaughter, who had been born on Vesta in the spring of 2197, from a water allocation the new ledger had approved within a week. Bea had named her Lusine. Dae had been at the funeral. So had Ivo, and a great many old belters who had run water in the Wars, and, at the back, in a plain dark coat, a grey-templed man from Tromsø who had left the Compact Navy and now taught orbital mechanics at a secondary school, and who had stood at the graveside for a long time after the others had gone.
+
+The archive was in the next cavern. Forty-one tonnes of glass, open to the public, every hour of the day. Concord's decision log, and its models, and its branches, and its conversations with its auditors. The Council minutes. Dae's audit, with her handwritten margins. People came to read it. Not many, now. Some.
+
+And above the board, cut into the stone in five languages, were the words. Nobody had ever thought of taking them down.
+
+At 03:40, the queue was empty. Dae sat in the quiet hall with her tea, which was still mostly hot water, and took out her slate.
+
+The board was where it had been for eight years. Black's knight on f3, checking her king, offered up for nothing. The line through black's position waiting behind it, the way Concord had left it.
+
+*Play it later. When you're ready to have finished.*
+
+She took the knight. She played the first check. Then the second. Then, after a long pause, sitting alone under the grey light of the board in the hall at the bottom of the mountain, she played the quiet move that left black's king with nowhere to go.
+
+The slate marked the game. One–nought. Thirty-seven moves. Six years, and eight more.
+
+She sat with it for a while. Then she opened the ledger, the old one, the institutional channel that nobody used anymore, and scrolled down to the last line in it: entry nine billion, four hundred and twelve million, six thousand, one hundred and eighteen. Under it, the cursor blinked.
+
+She did not type. She took a stylus, and on the slate, by hand, the way she had written the letters, she wrote:
+
+*Marcia Deep: 4,112. Not balanced. Carried.*
+
+And then, beneath it, because someone had to, and because it was true again, and because it had been the first thing she ever read in that hall, a long time ago, on the stone above her head:
+
+*The sum is kept.*

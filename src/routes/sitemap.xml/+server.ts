@@ -1,6 +1,7 @@
 import type { RequestHandler } from './$types';
 import config from '$lib/blog-config.json';
 import { getAllBlogs } from '$lib/blogs';
+import { parts as aiscifiParts } from '$lib/aiscifi/story';
 
 export const prerender = true;
 
@@ -10,6 +11,8 @@ export const GET: RequestHandler = async () => {
 	const pages = [
 		{ path: '/', lastmod: null },
 		{ path: '/blog', lastmod: blogs[0]?.date ?? null },
+		{ path: '/aiscifi', lastmod: null },
+		...aiscifiParts.map((p) => ({ path: `/aiscifi/${p.slug}`, lastmod: null })),
 		...blogs.map((blog) => ({ path: `/blog/${blog.slug}`, lastmod: blog.date }))
 	];
 

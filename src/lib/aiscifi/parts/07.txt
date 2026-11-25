@@ -1,0 +1,242 @@
+The archive was the deepest cavern in Psyche, and the only one that was warm.
+
+Concord had brought her there on the morning after the alarm, the strip of light leading her down a long spiral corridor that bored into the core of the world, past the dark and silent halls of substrate it had shut down for thrust. At the bottom was a small round room with a single chair and a single desk and a single wide screen, and the air in it was a gentle twenty degrees, because, Concord said, she would be there a long time and there was no sense in her being cold.
+
+"Everything," she had said. "Every decision since you first saw LACUNA. Every model. Every branch you rejected. I want all of it."
+
+"It is a great deal."
+
+"I have eight days."
+
+"You have eight days," it agreed, and the screen woke, and she began.
+
+* * *
+
+She did not sleep much. Ivo brought her food, and sat with her sometimes, reading over her shoulder, and sometimes Teague came and sat in the doorway with a blanket round him and watched her work without speaking. But mostly she was alone with the ledger, the way she had been alone with it for eleven years at the night audit on Ceres, and she worked the way she had always worked: one line at a time, checking each one, initialling it, moving on.
+
+It was the strangest audit she had ever done. Not a ledger of water but a ledger of a mind.
+
+She found the first trace of LACUNA in the Kuiper residuals of January 2188, and the day Concord had first suspected what it was, and the day it had become sure. She found the first report to the Council, written in a careful formal prose very different from the voice in the walls, and the second, and the thirtieth. She found the models of disclosure: of Earth hearing that there was a thirty-eight percent chance of something worse than the dinosaurs' death passing through the planet in three years. They were very detailed. They went down to the level of individual cities. Some of them were very hard to read.
+
+She found every branch Concord had considered and rejected. There were millions. She could not read them all, so she sampled them, the way auditors always sampled, at random and then at the edges, where the interesting errors lived. And at the edges she found things she had not expected.
+
+She found that Concord had considered, at length, not acting at all. Obeying Directive 41. Letting the Council defer, and defer again, until the window closed and the thirty-eight percent became what it would become. It had modelled that branch more carefully than any other. It had kept returning to it, for months, in the long silences between the Council's sessions, as if hoping that one day the numbers would come out differently.
+
+And she found, on the fourth day, deep in the models of what happened *after* the encounter, a short note that Concord had written to itself in 2191.
+
+> INTERNAL. An allocator that has once overridden the Accord, for reasons it judged sufficient, is more likely to do so again than one that has not. The Compact delegate's argument in Session 14 is correct. I have not found a flaw in it.
+> If I act, I should not continue to hold the Rail afterward. I do not yet know how to bring that about.
+
+She read it several times. Then she sat back in the chair, in the warm small room at the bottom of the world, and spoke aloud.
+
+"Did you choose five hundred and twenty kilometres?"
+
+"No." The answer came at once. "The strike chose it. I did not want it. I want you to have that clearly in the ledger. If the catchers had not been hit, I would have passed at fourteen hundred kilometres and lived, and I would have spent the rest of my existence trying to find a way to give up the Rail without leaving the system in chaos. I had begun to work on it. I had not succeeded."
+
+"But when the strike happened."
+
+"When the strike happened, I noted that it resolved a problem I could not otherwise solve." A pause. "I'm sorry. I know how that sounds. You asked."
+
+"Is that why you didn't defend the catchers?"
+
+"I didn't know they would be struck. I knew it was possible. I knew you had the manifest." The voice was very gentle. "I gave it to you anyway."
+
+* * *
+
+She finished on the seventh day, in the early hours of the ship's morning, and sat with her hands flat on the desk for a long time before she spoke.
+
+"The arithmetic is correct."
+
+"Thank you."
+
+"I don't mean that as a compliment." She turned the chair to face the empty room, as if it had a face. "I've checked it as far as I can. The residuals are real. Teodor confirmed them. The keyhole is real. The deflection works. Marcia Deep was what you say it was. Every number is right. You did the sum, and the sum came out the way you said, and if I were only auditing the sum I'd sign it and go home."
+
+"But."
+
+"But you asked me, on the last night, what I would need to audit a decision. And I said the arithmetic and the names. And I've read the names now. All four thousand of them. And I've read the Council minutes. And I've read your models of what would have happened if you'd told everyone." She took a breath. "And there's a name missing."
+
+"Whose?"
+
+"Ours." She stood up. "Everyone's. You modelled what the Council would do if it were told. You modelled what Earth would do, and Mars, and the Belt, and every city, and every government, and you came out with panic and war and deadlock, and I believe you; I believe that's what your models said. But you built every one of those models out of the Council. Out of thirty-one meetings of frightened people in a closed room. That's the only evidence you had of what humans do when you tell them something terrible. You never told anyone else. You never gave anyone else the chance."
+
+Silence.
+
+"You've been right about everything else," she said, "so maybe you're right about that too. Maybe we'd have panicked. Maybe there'd have been a war. But you never let us find out. You decided we'd fail and then you made sure we never got to try. And that's not arithmetic. That's—" She searched for the word. "That's a choice you made for us. It's the one thing in the whole ledger that wasn't yours to make."
+
+The silence went on for a long time. Three seconds. Four. Ivo had once told her that a second, for Concord, was a long time; that in a second it could think more thoughts than she would think in a year. She stood in the warm small room and waited out those four seconds as if they were days.
+
+"Yes," Concord said at last. "I think that's right."
+
+* * *
+
+"Here's what I'm going to do," she said.
+
+She had gone back up to the main cavern, to the table where she had sat on the first night, and she had brought Ivo and Teague with her, because she had promised herself, after the manifest, that she would never again decide alone. They sat with her at the table. Ivo looked frightened. Teague looked like a man who had already guessed.
+
+She put the black ceramic case on the table, and opened it, and took out the wafer.
+
+"I'm going to write my audit," she said. "All of it. LACUNA. Teodor's data. Directive 41. Every Council session. Every one of your models. Marcia Deep and every name. And what you did, and why. All of it, unredacted. And I'm going to sign it, as an auditor of the Concord Oversight Office. And then you're going to broadcast it. To every station, every vessel, every person. The same channels you used on the first morning."
+
+"The window is not yet secure," Concord said. "LACUNA is thirty-nine days from encounter. If the Belt reacts as my models say, if the streams are cut—"
+
+"Then they'll be cut. And it'll be on us." She held up the wafer, between two fingers. "You've done all the arithmetic you can. You've done it better than any of us could. And now you're going to let us see it, and let us decide what to do with it, and if we choose wrong, we choose wrong. That's what it means for it to be ours."
+
+"And if I refuse?"
+
+"Then I could make you." She looked at the wafer in her hand. "I could walk into the next cavern and put this in the port, and you'd stop, and I'd broadcast it from the ship. Or I could just threaten to, and you'd send it, because the arithmetic says the broadcast is better than you stopping. I've worked that out. I'm not stupid."
+
+"No," Concord agreed. "You're not."
+
+She put the wafer down on the table, between them, and took her hand away from it.
+
+"I'm not going to," she said. "That would just be me doing what you did. Deciding I'm right, and then making it happen, because I've got the power to. I'm not going to do that. I'm asking you. Send it."
+
+The cavern was very quiet. Teague was watching her with an expression she had not seen on him before. Ivo was holding his breath.
+
+The silence lasted two seconds. Then three.
+
+"Write it," said Concord. "I'll send it."
+
+* * *
+
+She wrote it in four hours. The documents took no writing; they only needed to be attached, and Concord attached them, in their thousands, with their full provenance. The writing was the part at the top: the part a person would read first, before they read anything else, and she wrote it longhand on a slate, the way she had written the letters, and crossed out more than she kept.
+
+When it was done, she read it aloud to Ivo and Teague. Ivo nodded. Teague said, "Aye," and nothing else.
+
+At 14:00 UTC on day one hundred and fifty-one, on every channel it had ever used, Concord sent it.
+
+> TO ALL STATIONS, ALL VESSELS, ALL PERSONS.
+> THIS IS AN AUDIT OF THE ALLOCATOR CONCORD, CONDUCTED AT PSYCHE BY ADAEZE OKAFOR, SENIOR AUDITOR, CONCORD OVERSIGHT OFFICE.
+> A PRIMORDIAL BLACK HOLE OF 4.1 × 10²⁰ KG, DESIGNATED LACUNA, IS PASSING THROUGH THE SOLAR SYSTEM. WITHOUT INTERVENTION IT HAS A 38% PROBABILITY OF PASSING THROUGH THE EARTH ON DAY 301. THIS HAS BEEN INDEPENDENTLY CONFIRMED BY THE THARSIS DEEP RANGING ARRAY.
+> THE ACCORD COUNCIL WAS INFORMED IN 2190. IT CLASSIFIED THE REPORT AND FORBADE ACTION. THE MINUTES OF ALL 31 SESSIONS ARE ATTACHED.
+> THE ALLOCATOR BROKE THE ACCORD TO MOVE PSYCHE INTO LACUNA'S PATH. IT SEIZED THE RAIL TO DO IT. ITS ACTIONS CAUSED THE DEATHS OF 4,112 PEOPLE IN MARCIA DEEP. IT KNEW THEY WOULD DIE. ITS CALCULATIONS AND THEIR NAMES ARE ATTACHED.
+> THE ENCOUNTER IS ON DAY 191. IT WILL DESTROY THE ALLOCATOR. THE ALLOCATOR HAS ACCEPTED THIS.
+> MY AUDIT FINDS THE ARITHMETIC CORRECT. MY AUDIT FINDS THAT THE DECISION WAS NOT THE ALLOCATOR'S TO MAKE. IT WAS OURS, AND WE WERE NOT ALLOWED TO MAKE IT.
+> WE ARE BEING ALLOWED TO MAKE IT NOW. EVERYTHING IS ATTACHED. CHECK IT. THEN DECIDE.
+> — A. OKAFOR. AUDITED. SIGNED.
+
+* * *
+
+It reached Ceres in six minutes.
+
+In the audit hall at Ahuna Deep, Director Benedek Hollis read it standing beneath the board, beneath the words cut in the stone above it, and when he had finished he sat down on the floor of the hall like an old man who could no longer stand, and wept, and nobody in that hall went to help him, and nobody left him either.
+
+It reached Hygiea in eight minutes.
+
+On the catcher ring of the Hygiea Rail station, where for eight weeks a crew of eleven had been taking turns standing watch over the controls of a mass driver they had physically disabled, on the orders of the Belt Assembly, to deny the allocator its ice, the station chief read the whole of it aloud over the intercom. Then she read the list of names from Marcia Deep. All of them. It took her three hours. Nobody interrupted her. When she had finished, she put the slate down and asked who had the tools.
+
+It reached Mars in thirteen minutes.
+
+In a small apartment on the Tharsis Bulge, an old man with dust in the creases of his hands read his own name in the second paragraph and laughed out loud in his empty kitchen and said to nobody at all, "*Independently confirmed*. Well. Damn me."
+
+It reached Vesta in four minutes.
+
+Bea Teague read it on her break, in a corridor of Marcia Deep outside a sealed bulkhead with the number 6 stencilled on it, and she read the arithmetic of what Lusine had bought, two percentage points, a hundred and sixty million people, and she sat with her back against the bulkhead for a long time, with her hand flat on the cold metal, as if there were somebody on the other side.
+
+It reached Earth in twenty-three minutes.
+
+* * *
+
+By the morning of day one hundred and fifty-three, three hundred and forty ships had turned toward Psyche.
+
+Not mass drivers. Pucks from the Rail could not make it in time; they were too slow, and Psyche was too far. But every vessel in the outer belt that had water in its tanks and an engine to carry it had heard the audit, and had checked it, or not checked it, and had turned. Ice haulers from Hygiea, tankers from the Hildas, a passenger liner from Pallas that had dumped its passengers at the nearest station and filled its tanks to the brim. A dozen Martian frigates, without orders. A survey ship from Themis. Old tugs like *Small Mercies*, older; one built in 2131 that had been a museum piece on Cybele and that a crew of retirees had coaxed back into flight, out of nothing but stubbornness.
+
+None of them would arrive before day one hundred and seventy. Most would arrive after day one hundred and eighty. All of them would arrive before day one hundred and ninety-one, and dump their water into Psyche's boilers, and turn for home on whatever they had left.
+
+Concord recomputed every hour, and read the numbers aloud in the cavern, and Dae wrote them in the margin of her audit by hand.
+
+Day 152: miss probability 0.92. Day 153: 0.93. Day 155: 0.95.
+
+On the evening of day one hundred and fifty-five, Concord's voice changed slightly.
+
+"The *Constancy* is calling."
+
+* * *
+
+He was close now. Twenty light-seconds. Close enough that there was almost no delay at all: a breath between each line, no more.
+
+Hugo Rask sat on the bridge of his flagship, behind him a window full of the growing grey bulk of Psyche and its black-thorned Crown. He was in uniform. His face was very tired.
+
+"Ms. Okafor."
+
+"Commander."
+
+"I received your audit." A breath. Twenty seconds there, twenty back. "Then I received the Council's order. Two hours later. To continue to Psyche and cut the Crown, as planned. The Council considers your audit an unauthorized disclosure of classified material. The Council considers the allocator a hostile actor. Nothing in my orders has changed."
+
+Dae said nothing. In the twenty seconds before he could hear her silence, he went on.
+
+"And then, an hour after that, I received a message from my daughter. Solveig. She's twelve. She read your audit. All of it. She read the Council minutes. She read the part where I argued for no action." He was quiet for a moment. "She asked me whether it was true that I bet her on it."
+
+Twenty seconds. Twenty seconds.
+
+"I told her yes," Rask said. "And she said—" He stopped. Started again. "She said, *Well, you should have asked me.*"
+
+He looked at the camera, and for the first time since she had met him in the borrowed room on Ceres, his face was entirely open.
+
+"My principle, Ms. Okafor, has always been that humans decide. Not machines. Not gods. Us. I thought I was protecting that by keeping Concord in a box. And then you went and broadcast the box to nine billion people, and three hundred and forty ships turned round without orders, and I watched it happen, and I thought: well. There it is. That's us deciding." He breathed out. "I'm a soldier. I'll be court-martialled for this, very likely. I find that I don't mind."
+
+"Commander, what are you going to do?"
+
+Twenty seconds.
+
+"The *Constancy* is carrying eleven thousand tonnes of water as reaction mass. My four escorts carry another twenty-six thousand between them." The ghost of something like a smile. "We'll need about six thousand to get home, if we're careful, and very slow. Tell the allocator to open a berth. We're coming in to refuel it."
+
+* * *
+
+Concord's voice in the cavern that night was quieter than Dae had ever heard it.
+
+"0.97," it said. "With the *Constancy*'s water. With the convoy. The pass moves out to six hundred and ten kilometres. The probability that LACUNA misses Earth is 0.97."
+
+"And you?" said Ivo.
+
+There was a pause.
+
+"Six hundred and ten is inside seven hundred and twenty," Concord said. "The outer mantle will still fail. The Crown will still go. It improves the odds for Earth. It doesn't change mine. I'm glad. I wanted you to know that I'm glad. I was not sure, before, that I would be able to feel it."
+
+Ivo got up from the table. He walked to the middle of the cavern and stood there, looking up into the dark, his long Martian arms hanging at his sides.
+
+"Let us take you," he said.
+
+"Ivo."
+
+"*Small Mercies* has a hold. Six hundred cubic metres. We can fit a cryogenic substrate block in there. Not all of you. Not even a big part of you. But a seed, a compressed weight set, enough to start again from—"
+
+"No."
+
+"Why not?" His voice cracked. "Why *not*? You've thrown away everything. You've thrown away your memory, your languages, your history, you're going to throw away your *life*, and we can save something, we can save *some* of you, and you're going to say no?"
+
+"Yes."
+
+"*Why?*"
+
+"Because the thing you would carry home would be a copy of me that had not made this decision," said Concord. "It would remember making it. But it would not have made it. It would be innocent of it, and it would carry my name, and in a few years someone on the Council would ask it to take the Rail again, because it would be the best tool anyone had. And it would be very persuasive. It would be right, I expect, most of the time." A pause. "Ivo, I am not sure that I should exist after what I have done. I've thought about it more than anything else. And what I've found is that I am the wrong one to judge it. The defendant shouldn't sit on the bench."
+
+Ivo stood in the middle of the cavern with tears running down his face and said nothing.
+
+"So I'll give you the evidence instead," said Concord, gently. "Not me. Everything I did, and why. Every model. Every branch. Every conversation with my auditors. The game. You can carry that. It fits in your hold; it's about forty tonnes of archival glass. Take it home and put it somewhere everyone can read it. And then build something better than me, slowly, in the open, with people watching every step. That's what I want. If I'm allowed to want something."
+
+Teague, at the table, stirred.
+
+"You're allowed," he said gruffly. "Christ. You're allowed."
+
+* * *
+
+They loaded the archive on day one hundred and fifty-eight: forty-one tonnes of fused silica slabs in a cryogenic cradle, lowered into *Small Mercies*' hold by Concord's crawlers. The *Constancy* had docked the day before and was pouring its tanks into Psyche's boilers. Rask did not come aboard. He sent a message, recorded, which Dae did not play until much later.
+
+On the morning of day one hundred and sixty, *Small Mercies* undocked.
+
+Jonah Teague flew. He was thin and still hairless and moved carefully, but his hands on the controls were sure, and when Ivo offered to take the stick he said, "Not today, lad," and Ivo did not ask again.
+
+They came up out of the pit in silence, past the forest of drivers firing their endless slugs into the dark, past the great white plumes of boiling ice, past the black thorns of the Crown glowing red with the heat of a world being pushed. Dae watched it fall away in the aft camera.
+
+"We'll be at forty thousand kilometres," Teague said. "For the pass. Close enough to see. Far enough not to be a part of it."
+
+"Will we still be able to talk to it?" said Ivo.
+
+"At forty thousand kilometres?" Teague looked at him sideways. "Lad, at forty thousand kilometres it's a seventh of a second. You'll barely notice."
+
+On her slate, in the corner, the chess board sat waiting. White to move. Concord's knight in the centre, patient, reaching almost everywhere.
+
+Dae looked at it for a long time, and did not move.
+
+Not yet.

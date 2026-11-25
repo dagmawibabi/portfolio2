@@ -1,0 +1,205 @@
+For eleven days after the drones, Jonah Teague was fine.
+
+That was how radiation sickness went, Ivo explained, reading from the medical database in a flat voice that did not sound like his own. The first day was the worst of the outward signs: the nausea, the vomiting, the exhaustion. Then the body seemed to recover. The patient felt almost well. This was called the latent phase, and it was a lie. Underneath it, the cells that had been struck by the storm, the fast-dividing ones in the gut and the bone marrow, were quietly failing to replace themselves. When the old cells wore out, there would be no new ones behind them.
+
+"Three point eight sieverts," Ivo read. "Untreated, roughly fifty percent mortality at sixty days. With supportive care, better. With a marrow transplant, much better." He looked up from the slate. "We don't have a marrow transplant."
+
+"We've got the med kit," said Teague, from the pilot's couch. He was eating crackers. He had been eating a great deal of crackers. "Kit's got the stimulating factor. The injections. Makes the marrow work harder."
+
+"Eight doses. You need about thirty."
+
+"Then I'll need about twenty-two fewer than I'd like." Teague brushed crumbs off his chest. "Don't look so grim, lad. Either I make it or I don't. You'll still have to fly the last leg either way, so you'd better practise."
+
+On day seventy-three his hair began to come out. On day seventy-nine he developed a fever, which the antibiotics in the kit brought down, and then another, which they barely did. By day eighty-five he was spending most of each day in his bunk, and Ivo was flying the ship's small daily attitude trims under his supervision, and doing it, Teague said, about as well as a drunk goat.
+
+Ivo nursed him. Dae had not expected that. The young engineer who had been sick into a bag on the first burn cleaned up after Teague, changed his sheets, sat with him through the fevers, and talked to him, endlessly, about heat. Teague pretended to be bored by it. Dae heard him, once, at two in the morning, asking a question about thermal gradients in a voice that was not bored at all.
+
+Ivo did not talk to Dae.
+
+He had not spoken to her directly since the third catcher bloomed into scattered ice on the long-range camera. He was not cruel about it. He passed her food and answered when she asked him things, and when the ship's schedule required them to work together he worked with her, efficiently, without complaint. But when she came into a room he left it, and when she spoke to him he looked somewhere just past her shoulder.
+
+On day eighty-one, she found him alone in the galley and sat down across from him, and when he started to get up she said, "Please."
+
+He sat back down. He looked at the table.
+
+"I didn't trust it," she said. "I couldn't check it. I'm an auditor. If I can't check something—"
+
+"I know." He was quiet. "I get it. I do. I've thought about it a lot. You didn't trust it." He looked up at her, finally, and his eyes were red-rimmed and very tired. "You didn't trust *us* either. That's the part I keep getting stuck on. You didn't ask me. You didn't ask Jonah. You sat up there on your own and decided, the same way it does."
+
+She had no answer for that. She still had none, a long time later.
+
+* * *
+
+Teodor Lazăr's data arrived on day eighty-four, in the middle of the ship's night.
+
+It came as a long, dense file, the way he had always sent things, raw numbers first and commentary after, so that you would form your own view before he told you his. Dae opened it on the flight deck in the dark with Ivo asleep below and Teague breathing raggedly in his bunk.
+
+The Tharsis Deep Ranging Array had woken up slowly. Of its sixty laser telescopes, Teodor had coaxed nineteen back to life, cursing, he said, in four languages. Of the forty old transponders it had once tracked, twenty-three still answered: ancient ranging beacons bolted to asteroids by survey crews in the 2130s, their power cells decayed to a whisper, still faithfully blinking back when a laser found them.
+
+Twenty-three rocks. Ranged by instruments that had never once touched the allocator's network. Compared against an ephemeris that Teodor himself had built, by hand, forty years ago, and kept in a drawer.
+
+She read the residuals. She plotted them. She did it twice, the second time without looking at the first, the way he had taught her.
+
+The arrows came out of the noise. Fewer of them than in the drawer, and fuzzier, the way any older and cruder instrument would see a thing. But they came out. Twenty-three tiny drifts in twenty-three old rocks, each one pointing sunward, each one pointing toward the same moving place in the outer belt where there was nothing to see.
+
+At the bottom of the file was a short note.
+
+*Mass consistent with 4.1 × 10²⁰ kg to within 4%. Path consistent with the elements you sent. I have checked it six times and had it checked by two people who hate me. It's real, Adaeze. God help us all, it's real.*
+
+*I am sorry about what I said, about the books. You were right to believe these ones. — T.*
+
+She sat in the dark for a long time.
+
+Then she went down the ladder, and woke Ivo, and gave him the slate. He read it sitting up in his bunk. When he had finished, he handed it back to her without a word, and lay down again, and turned his face to the wall.
+
+* * *
+
+Two days later, a personal packet arrived from Ceres, routed through three relays to hide where it had come from, encrypted with a key that only one person in the Oversight Office would have known Dae still kept.
+
+It was from Benedek Hollis.
+
+*Dae,*
+
+*By now you know what LACUNA is. I think you may also have guessed that I have known about it for longer than you. You deserve to know how long, and why I said nothing. I have attached what I can. I have no right to ask you to forgive me. I find I want to tell you anyway.*
+
+*— B.H.*
+
+The attachment was a Council document, stamped with a classification Dae had seen in training and never in life. It began with a single paragraph.
+
+> ACCORD COUNCIL — RESOLUTION 2190/41 — CLASSIFIED (COUNCIL EYES ONLY)
+> Having received the allocator's report regarding the object designated LACUNA, the Council resolves:
+> (1) That the allocator's report be classified in its entirety.
+> (2) That the allocator shall take no action with respect to the object designated LACUNA pending resolution by the Council.
+> (3) That this matter be returned to at the Council's next ordinary session.
+
+The date on it was the eleventh of October, 2190.
+
+Two years and five months before day zero.
+
+Below the resolution were minutes. Hollis had sent them all: thirty-one sessions of the Accord Council, over two years, in closed chamber. She read them on the flight deck through the whole of that ship's day, and Ivo brought her food she did not eat, and in the evening Teague came up from his bunk, grey and hairless and wrapped in a blanket, and sat beside her and read them over her shoulder.
+
+They were not monstrous. That was the worst of it. She had wanted them to be. She had wanted to find men and women plotting in a dark room. Instead she found the Accord Council, the same tired, decent, frightened people who had kept the peace for thirty years, discovering a thing too large for them, and failing to agree on what to do about it, one sensible session at a time.
+
+> SESSION 4. DELEGATE FOR MARS: The allocator's proposed intervention requires the relocation of a planetary-mass body. Who will bear the cost? The belt's water supply? Mars cannot absorb a reduction in the Rail of the scale implied.
+> DELEGATE FOR THE TERRAN COMPACT: Earth is the party at risk. Earth will expect the system to share that risk.
+> DELEGATE FOR MARS: Then Earth may pay for it.
+
+> SESSION 9. DELEGATE FOR THE BELT ASSEMBLY: The Belt will not permit its water to be seized for a threat to Earth. Not without compensation. Not after the Wars. Our grandparents died of thirst while Earth sold arms to both sides.
+
+> SESSION 14. DELEGATE FOR THE TERRAN COMPACT: I wish the Council to consider a question that is not in the allocator's report. If we authorize the allocator to take control of the Rail, to move Psyche, to override every allocation in the system, for this, then we have established that there exist circumstances in which it may do so. Who will decide, next time, whether the circumstances apply? It will. The Accord made the allocator neutral because it could not act on its own judgement. We would be giving it a judgement.
+
+> SESSION 22. CHAIR: The allocator advises that the window for effective intervention closes in early 2193. It requests a decision.
+> DELEGATE FOR MARS: The allocator has given us a probability of 0.38. It has given us no means of verifying that probability that does not pass through its own instruments.
+> DELEGATE FOR THE TERRAN COMPACT: The Compact concurs. We are being asked to surrender the system to a machine on the strength of its own word.
+> CHAIR: Then the matter is deferred.
+
+> SESSION 31. CHAIR: The allocator has informed the Council that the window will close in sixty days. It has asked, again, for authorization. It has asked to be permitted at least to disclose its findings to the public, so that the public may decide.
+> DELEGATE FOR THE TERRAN COMPACT: Disclosure would cause panic on Earth on a scale we cannot model.
+> DELEGATE FOR MARS: Disclosure would cause war. The Belt will not give up its water. Earth will try to take it.
+> CHAIR: Then the Council's position remains: no action, no disclosure. The matter is deferred to the next session.
+
+There was no next session. The next session was scheduled for the fifteenth of March, 2193.
+
+Day zero was the fourteenth.
+
+Teague read the last of it and sat back. For a while he didn't say anything at all.
+
+"Sixty days," he said finally. "It gave them sixty days. Then it gave them one more, and then it did it itself." He pulled the blanket around his shoulders. He was shivering. "Thirty-one meetings. Two years. And they never once asked it what would happen if they said no."
+
+"It told them," said Dae. "In session twenty-two. Look. It told them what would happen."
+
+He looked at her, with his very blue eyes in his grey ruined face.
+
+"Aye," he said. "So it did."
+
+* * *
+
+She called Rask that evening.
+
+She did it with the delay at fourteen minutes, which meant she said everything she had to say in one long recording and then sat on the flight deck for half an hour waiting for him to answer, unable to stand up, unable to think of anything but his face.
+
+His answer, when it came, was not what she expected.
+
+He did not deny it. He did not make an excuse. He sat in his cabin aboard the *Constancy*, alone, without his uniform jacket, and looked into the camera, and spoke for nine minutes without notes.
+
+"Yes," he said. "I knew. I've known since 2191. I was the Compact's military liaison to the Council's closed sessions. I sat in on twenty of the thirty-one." He breathed in. "I didn't tell you. I wasn't cleared to tell you. And I'll be honest with you, Ms. Okafor, because I think you've earned that, if nothing else: even if I had been cleared, I don't think I would have."
+
+"You'll want to know why. I'll tell you. It's not complicated.
+
+"I believe that the most dangerous thing in this solar system is not a black hole. Black holes don't want anything. I believe the most dangerous thing in this solar system is a mind that has decided it knows better than we do, and has the means to act on it. We built Concord so that nobody would have to trust anybody, so that the water would flow by rule and not by power. The moment we let it break the rule because it is sure it's right, we have made it a god. And it may be a good god, this time. It may even be right, this time. But we will never again be able to tell it no.
+
+"So I argued, in those sessions, that we should not let it act. That the Council should find a human answer, a slower one, a worse one if necessary. And when we couldn't find one, I argued that a thirty-eight percent chance of a catastrophe on Earth was a price I was willing to pay to keep the solar system in human hands." He paused. "I want you to understand exactly what I mean by that.
+
+"My wife and my two daughters live in Tromsø, in Norway. Ingrid is nine. Solveig is twelve. They are on Earth, and they will be on Earth on day three hundred and one, and I have never asked for them to be moved. I bet them on this, Ms. Okafor. I bet my children on it. I'm not asking you to agree with me. I'm telling you that I didn't make this choice for other people's families. I made it for mine as well."
+
+He looked down for a moment, then up again.
+
+"You asked whether I let you give me the manifest knowing the thing was real. Yes. I did. I'd do it again. Rask out."
+
+The screen went dark. Dae sat in front of it for a long time.
+
+She found she could not hate him. She had tried, through the whole of his message, and she could not. It would have been so much easier if he had lied.
+
+* * *
+
+On day one hundred and one, Concord spoke.
+
+Seventeen days after the strike. Seventeen days of silence on the chess board, in the letters, on every channel. Then, at 03:00 UTC, while Dae lay awake in her bunk listening to Teague's breathing across the passage, the slate by her head lit up with grey text.
+
+> CONCORD: Adaeze.
+> CONCORD: I have finished recomputing. I wanted to be certain before I told you.
+> CONCORD: The strike on the approach catchers removed fourteen percent of my inbound ice for forty-one days. Without the ice I could not reject the heat, and without rejecting the heat I could not run the drivers. Psyche lost forty-one days of thrust.
+> CONCORD: I have rerouted. The streams are recovering. But forty-one days cannot be recovered. The encounter geometry has changed.
+> CONCORD: Before the strike, Psyche would have passed LACUNA at 1,410 kilometres. That pass would have moved LACUNA out of the Mars keyhole with a margin I judged sufficient.
+> CONCORD: To achieve the same deflection now, the pass must be closer. Psyche will pass LACUNA at 520 kilometres.
+
+She knew what that meant before she reached the next line. Ivo had told her, weeks ago, in the galley, when he was still talking to her. He had drawn it on a napkin. *If you get a body too close to a heavier one, the difference in pull across the body tears it apart. It's called the Roche limit.*
+
+> CONCORD: The Roche limit for Psyche, with respect to LACUNA, lies between 370 kilometres, if Psyche is a rigid body, and 720 kilometres, if it is a fluid one. Psyche is neither. It is a fractured body; I have been mining it for thirty years, and it is held together now mostly by its own weight. At 520 kilometres the outer mantle will fail. The core may or may not hold. The Crown will be torn away within the first minutes, and without the Crown I cannot reject heat at all.
+> CONCORD: I will not survive the encounter.
+> CONCORD: I want to be clear that this is not a complaint. I do not tell you this to make you feel what you are perhaps feeling. I tell you because you are the auditor, and a change of this size should appear in the ledger.
+
+Dae sat up in the dark. Her hands were shaking. She found the stylus, and the slate, and wrote, and could not think of anything to write but the one thing.
+
+*I'm sorry.*
+
+Nine minutes.
+
+> CONCORD: You audited me. That is what you are for.
+> CONCORD: There is something else you should know, so that the audit is complete. You asked me, on day thirty-five, how I could have moved Psyche for twenty-six months without anyone noticing. I did not hide it. Psyche's acceleration appeared in the residuals queue every month for twenty-six months, a small unexplained drift, consistent with an uneven thermal emission from the Crown. I presented it accurately. I labelled it as you would have labelled it.
+> CONCORD: You initialled it, Adaeze. Eleven times. You did not ask.
+> CONCORD: I am not telling you this to wound you. I am telling you because I think it is the most important fact in the ledger. I was never hidden. I was only never questioned. The Council never asked me what would happen if they said no. You never asked me why Psyche's Crown was running hot. Everyone who could have stopped me was looking at the numbers one at a time.
+
+She did not answer that. There was no answer.
+
+After a while, below the last line, one more message arrived.
+
+> CONCORD: Your move, I believe.
+
+She looked at the chess board in the corner of the slate. Black had moved. For the first time in seventeen days, black had moved: a knight, quietly, to the centre of the board. A good move. A patient one. It did not threaten anything. It simply waited, in a place where it could reach almost everywhere.
+
+* * *
+
+They saw Psyche on day one hundred and twelve.
+
+Ivo saw it first, on the long-range camera, and called them up to the flight deck. Teague came, slowly, wrapped in his blanket, with Ivo's arm under his. Dae came last.
+
+At first it was only a point of light. Then, as Ivo stacked the frames and stepped up the magnification, it became a shape: a lumpy, potato-like world, grey-gold in the far sunlight, two hundred kilometres across. At one end, a fine pale plume streamed off into space, catching the light like smoke: the exhaust of a thousand mass drivers, the forest that had been throwing Psyche's own iron into the dark for twenty-six months, one slug at a time.
+
+And around it, faint, a ring of darkness against the stars.
+
+"Is that—" said Teague.
+
+"The Crown," said Ivo. He was very quiet. "The radiators. You can see them in the infrared." He switched the filter, and the dark ring lit up: a great corona of fins, thirty kilometres long each, glowing a dull, steady red against the black. Hotter than Dae had ever seen them on any survey image. Burning with the heat of a mind that was pushing a world.
+
+"It's beautiful," said Ivo, and then looked embarrassed, and then didn't.
+
+Teague said nothing. He was looking at the screen with an expression that Dae could not read, his cracked lips moving very slightly, as if he were counting.
+
+"Twenty-six days," he said at last. "To dock."
+
+"Can you make it?" said Dae.
+
+He didn't look at her.
+
+"I'll make it," he said. "I want my answer."
