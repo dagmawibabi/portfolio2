@@ -1,7 +1,9 @@
 import type { RequestHandler } from './$types';
 import config from '$lib/blog-config.json';
 import { getAllBlogs } from '$lib/blogs';
-import { parts as aiscifiParts } from '$lib/aiscifi/story';
+import { catalog } from '$lib/aiscifi/catalog';
+import { BASE as perihelionBase, parts as perihelionParts } from '$lib/aiscifi/perihelion/story';
+import { BASE as heartbeatBase, parts as heartbeatParts } from '$lib/aiscifi/heartbeat/story';
 
 export const prerender = true;
 
@@ -12,7 +14,9 @@ export const GET: RequestHandler = async () => {
 		{ path: '/', lastmod: null },
 		{ path: '/blog', lastmod: blogs[0]?.date ?? null },
 		{ path: '/aiscifi', lastmod: null },
-		...aiscifiParts.map((p) => ({ path: `/aiscifi/${p.slug}`, lastmod: null })),
+		...catalog.map((s) => ({ path: s.href, lastmod: null })),
+		...perihelionParts.map((p) => ({ path: `${perihelionBase}/${p.slug}`, lastmod: null })),
+		...heartbeatParts.map((p) => ({ path: `${heartbeatBase}/${p.slug}`, lastmod: null })),
 		...blogs.map((blog) => ({ path: `/blog/${blog.slug}`, lastmod: blog.date }))
 	];
 

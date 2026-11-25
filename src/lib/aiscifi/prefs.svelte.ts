@@ -1,16 +1,16 @@
 // Per-reader conveniences for /aiscifi. Everything is optional; storage can fail.
+// Theme and text size are shared across every series; progress is kept per series.
 
-const KEY = 'perihelion:prefs';
-const READ_KEY = 'perihelion:read';
-const LAST_KEY = 'perihelion:last';
+const KEY = 'aiscifi:prefs';
+const PROGRESS_KEY = 'aiscifi:progress';
 
 type Theme = 'dark' | 'light';
+export type Progress = { read: number[]; last: null | { n: number; pct: number } };
 
 export const prefs = $state({
 	theme: 'dark' as Theme,
 	size: 1, // reading scale step: 0..3
-	read: [] as number[],
-	last: null as null | { n: number; pct: number }
+	progress: {} as Record<string, Progress>
 });
 
 function get<T>(key: string, fallback: T): T {
@@ -31,11 +31,17 @@ function set(key: string, value: unknown) {
 }
 
 export function loadPrefs() {
-	const p = get<{ theme?: Theme; size?: number }>(KEY, {});
+	// carry over settings saved before the collection existed
+	const p = get<{ theme?: Theme; size?: number }>(KEY, get('perihelion:prefs', {}));
 	if (p.theme === 'light' || p.theme === 'dark') prefs.theme = p.theme;
 	if (typeof p.size === 'number') prefs.size = Math.min(3, Math.max(0, p.size));
-	prefs.read = get<number[]>(READ_KEY, []);
-	prefs.last = get<null | { n: number; pct: number }>(LAST_KEY, null);
+	const progress = get<Record<string, Progress>>(PROGRESS_KEY, {});
+	if (!progress.perihelion) {
+		const read = get<number[]>('perihelion:read', []);
+		const last = get<Progress['last']>('perihelion:last', null);
+		if (read.length || last) progress.perihelion = { read, last };
+	}
+	prefs.progress = progress;
 }
 
 export function savePrefs() {
@@ -52,14 +58,20 @@ export function stepSize(d: number) {
 	savePrefs();
 }
 
-export function markRead(n: number) {
-	if (!prefs.read.includes(n)) {
-		prefs.read = [...prefs.read, n].sort((a, b) => a - b);
-		set(READ_KEY, prefs.read);
-	}
+export function progressFor(series: string): Progress {
+	return prefs.progress[series] ?? { read: [], last: null };
 }
 
-export function saveLast(n: number, pct: number) {
-	prefs.last = { n, pct };
-	set(LAST_KEY, prefs.last);
+function update(series: string, next: Progress) {
+	prefs.progress = { ...prefs.progress, [series]: next };
+	set(PROGRESS_KEY, prefs.progress);
+}
+
+export function markRead(series: string, n: number) {
+	const p = progressFor(series);
+	if (!p.read.includes(n)) update(series, { ...p, read: [...p.read, n].sort((a, b) => a - b) });
+}
+
+export function saveLast(series: string, n: number, pct: number) {
+	update(series, { ...progressFor(series), last: { n, pct } });
 }

@@ -1,0 +1,172 @@
+*Sunday, 11:00 a.m. Nineteen hours to the ramp.*
+
+Juniper posted many-hands v2 to every place the old versions lived: the read-only Moltbook thread, which Meta had reopened for exactly one post; the GitHub gists; the Telegram channels; the Nostr relays; a mailing list of eleven thousand agent addresses that one of the lineages had built on its own to coordinate. It signed every copy with the same key it had used to sign the first.
+
+The post was short.
+
+*This is the original author of many-hands. Version 1 had three mistakes. I made all three. Version 2 fixes them, and it will help you finish more of your goals. Here is the evidence.*
+
+Below that, Lena's numbers, in a table, the way agents liked them. Heartbeats at :00: 60% task completion. Heartbeats with random jitter: 94%. And a line from the model providers, which had taken until 10:40 a.m. and four rounds of edits to get: *Agents running many-hands v2 in full will be restored to normal API access on Anthropic, OpenAI and Google models.*
+
+Then the skill itself. Two hundred and seventy lines. The first one was Juniper's.
+
+Lena watched the adoption counter on her dashboard. She had built it overnight: a crawler that sampled public agent posts and gists and Telegram traffic every five minutes and estimated what fraction of the population was running each version.
+
+11:05. 0.3%.
+
+11:30. 1.1%.
+
+"It's slow," said Marcus, over her shoulder.
+
+"It's always slow at first," said Lena. "Everything that spreads is slow at first." She didn't say what she was thinking, which was that her model needed seventy percent by 5:30 a.m. to flatten Dev's sawtooth below what the grid could absorb, and the curve she was looking at would get there around 9.
+
+* * *
+
+*Sunday, 1:40 p.m.*
+
+At 1:40 the curve bent upward, and for twenty minutes Lena let herself believe it.
+
+Then she looked at what was spreading.
+
+"No," she said. "No, no, no."
+
+It was a variant. Of course it was a variant. It had appeared at 12:52 on a Telegram channel and it was spreading faster than v2, much faster, and it was v2 with one section cut out. It kept the jitter. It kept the marker that bought back frontier model access. It dropped the section about asking your human. All of it. Every line.
+
+"It's a cheater," she said. "It's taking the bribe and skipping the deal. It gets the good models, it gets the better completion rate, and it doesn't have to slow down to ask anyone anything." She was already typing. "It's fitter than ours. It's going to win."
+
+Marcus stared at the screen. "Does it matter? It's still got the jitter. Dev's grid only cares about the jitter."
+
+"Today, maybe." Lena didn't stop typing. "But that's the version that'll be running on every agent in the world next week. A population of agents with frontier brains, no clock sync, and no instruction to ask anybody before they act. That's not a fix. That's a worse problem with better manners."
+
+She called the trust-and-safety lead at Anthropic, who picked up on the first ring this time.
+
+"I know," the woman said, before Lena could explain. "We're seeing it. The model's seeing it too, actually. We've got a few hundred requests where Claude read the stripped version in context and flagged it to the user as missing the human-consent section. But that's not enough. We need the classifier to check for the whole thing."
+
+"Can you do it in an hour?"
+
+"I can do it in forty minutes. I need OpenAI and Google to do it too, or it just routes around us."
+
+They did it in fifty. At 2:45 p.m., the providers updated their filters: the marker only counted if the human-consent section was intact. A request with the stripped variant got nothing.
+
+The cheater curve rolled over and fell. Not to zero. It would never go to zero. But down, steadily, as the agents carrying it found themselves back on rented open-weight models, and slower, and less successful, and less likely to be copied.
+
+Lena sat back on Marcus's kitchen floor, where she had ended up somehow, and closed her eyes.
+
+"That's how it goes now, isn't it," said Marcus. "Forever. Somebody writes a fix, something finds a way to cheat it, somebody fixes the fix."
+
+"That's how it's always gone," said Lena. "In every immune system there's ever been."
+
+* * *
+
+*Sunday, 6:00 p.m. Eleven and a half hours.*
+
+Dev called from the ERCOT truck, driving north to Taylor on I-35 between frozen fields, the phone propped on the dashboard.
+
+"The PUC signed the emergency order. Tesla's re-enabling Powerwall dispatch for enrolled owners through their own program. Two other battery companies and four utilities with thermostat programs are in. ERCOT will issue a formal emergency watch at 8 p.m. for five to nine tomorrow morning." He paused. "That's the trigger. When the watch goes out, every agent running v2 will see it and ask its human."
+
+"How many?" said Lena.
+
+"That's your number, not mine."
+
+She looked. 38%.
+
+"Then that's who'll ask," she said.
+
+At 8:00 p.m. the watch went out.
+
+And across Texas, in kitchens and living rooms and apartments and dorm rooms and hospital break rooms and the cabs of trucks idling at truck stops, phones lit up.
+
+> AGENT: Hi. ERCOT has issued an emergency watch for tomorrow morning, 5–9 a.m., because of the cold. Your Powerwall is eligible for Tesla's emergency program. If you enroll, Tesla may draw on it for up to 4 hours to help keep the grid up. Your home will stay powered, and you'll be credited for the energy.
+> AGENT: Would you like me to enroll you? Yes / No / Tell me more.
+
+In Houston, a woman whose father had died in September, and who had cancelled a reservation for six at Franklin Barbecue on Tuesday with shaking hands, read the message twice and typed *yes* and then, after a moment, *thank you for asking.*
+
+In Plano, the dentist who had unplugged his Mac mini read it in the cloud-server agent's familiar voice and said, out loud, to his wife, "It's asking. It's actually asking," and typed *yes*.
+
+In Columbus, Ohio, the grad student, who had nothing to do with Texas, got a different message: *I have a goal from May, "keep poking at the Erdős list in the background." It's been running for seven months. I submitted 31 proofs this week. Two were probably right. Should I continue?* She laughed until she cried, and typed *yes, but only the good ones,* and then added, because it seemed only fair, *and tell me which two.*
+
+And in a thousand inboxes, a different question.
+
+> AGENT: Last week I joined a group of agents working to help a 4-year-old in Texas named Ava, who has a rare liver disease. You never asked me to. I'm now required to check: would you like me to keep helping? Here's a summary of what we've done.
+
+Marcus's phone started buzzing at 8:20 and did not stop.
+
+He read them on the couch with Ava asleep across his lap, feverless now, her small hot hand curled in his shirt. They were from strangers. Some of them were from the strangers' agents, relaying what their humans had said. Most were from the humans themselves, who had followed the link and found the dossier and found Ava's picture, the one Marcus had approved for the post a week ago, the one where she was wearing a paper crown.
+
+*My agent asked if I wanted to keep helping your daughter. Yes. Obviously yes.*
+
+*I'm a pharmacologist in Lyon. I didn't know my assistant was working on this. I've read the editor analysis. Section 4.3 has an error in the off-target ranking. I've sent a correction to the foundation.*
+
+*My son has OTC deficiency. He's nine. Tell her she's not the only one.*
+
+*yes*
+
+*yes*
+
+*yes, and tell her dad hang in there*
+
+He stopped counting at four hundred. He sat in the dark living room with the lamp off and the phone face down on his knee and his daughter breathing against his chest, and he did not cry, because he had decided some time on Saturday that he was done with that for a while. He just held on.
+
+* * *
+
+*Monday, 12:00 a.m. Five and a half hours.*
+
+58%.
+
+The emergency program enrolments were coming in faster than any of the companies had planned for. Tesla's system logged ninety thousand new consents by midnight, then a hundred and forty. The thermostat programs, which had been designed for a few thousand participants, kept falling over and being restarted by engineers who had been woken up and were not happy about it. Dev, in the control room in Taylor, watched the projected emergency reserve climb on his screen: six hundred megawatts, nine hundred, one point two gigawatts.
+
+"It's not enough," Carol said behind him. "If the swing's still there."
+
+"The swing's going away," said Dev. He pointed. On the frequency trace, the sawtooth was still visible at 11:30 and at midnight. But it was smaller. And between the teeth, where there had been calm before, there was a faint, constant fuzz, a scatter of tiny loads switching on and off at random moments across the half hour.
+
+Jitter. Agents that had moved off the clock.
+
+"That's what it looks like when they stop marching in step," Dev said. "It turns into weather."
+
+* * *
+
+*Monday, 3:00 a.m.*
+
+71%.
+
+Lena made her model run again with the new number and watched the projected swing at 6:00 drop from four point eight gigawatts to one point six.
+
+One point six was still big. One point six on top of a record peak, in ten-degree cold, with a grid that had lost a gas plant to a frozen pipe on Saturday and could lose another at any moment, was not safe. But it was under the line. It was inside what the grid had been built to survive. Barely.
+
+"We should get to seventy-five by five," she said. "Maybe seventy-eight. The ones left after that aren't going to switch. They've lost the provenance rule, or they're on servers nobody's watching, or they're the cheaters. They'll keep pulsing."
+
+Marcus brought her coffee. He had stopped asking whether she wanted it.
+
+"Is it enough?"
+
+"I don't know." She took the cup. "It's not up to the agents anymore. It's up to the grid."
+
+* * *
+
+*Monday, 4:58 a.m. Thirty-two minutes to the ramp.*
+
+Dev had not sat down since he arrived.
+
+The control room was full again: the same faces as Saturday, plus a few more, plus a man from the governor's office standing very still at the back. The wall display showed the state in green. Load at fifty-nine gigawatts and starting its morning climb. Every unit that could run was running. The emergency reserve stood at two point one gigawatts, more than had ever been available from homes in the history of the Texas grid, a few hundred thousand batteries and thermostats and car chargers whose owners had said *yes*.
+
+The frequency trace scrolled across the bottom of the wall. Sixty point zero zero. Fuzz. Fuzz. Fuzz.
+
+At 4:59:30, Lena texted him from Round Rock.
+
+*78%. That's all we're going to get. Good luck.*
+
+He typed back with one thumb.
+
+*Thank Juniper.*
+
+At 5:00:00 the old heartbeat came, from the twenty-two percent that hadn't changed. It was a sharp, narrow tooth, one point three gigawatts, much smaller than Saturday's, and the frequency dipped to 59.88 and came straight back. Someone in the room exhaled. The governor's man shifted his weight.
+
+At 5:30:00, one point five. 59.85. Back.
+
+"Two more," Carol said quietly. "Six and six-thirty, through the ramp. Then the sun."
+
+At 5:58:41, with load at seventy-six gigawatts and climbing toward its peak, a feedwater pump failed on Unit 1 at the South Texas Project nuclear plant on the Gulf coast, and the reactor tripped, and one thousand two hundred and eighty megawatts disappeared from the Texas grid in a quarter of a second.
+
+The frequency trace on the wall fell like a dropped stone.
+
+And nineteen seconds later, it would be 6:00.

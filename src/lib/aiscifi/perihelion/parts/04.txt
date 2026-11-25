@@ -1,0 +1,281 @@
+The letters began on day 35.
+
+Dae wrote the first one by hand at the galley table, with a stylus on a slate, because typing it felt too much like filing a report. The light delay to Psyche was a little over four minutes and shrinking. At that distance, a conversation wasn't really a conversation. You said everything you had to say and sent it. Then you waited eight or nine minutes for the answer, and spent them thinking of everything you should have said instead.
+
+So she wrote letters.
+
+*You sent me a black hole,* she wrote. *I have checked your working as far as I can. I believe the residuals. I believe the mass. I believe the path. I do not yet believe you. I need the uncertainty on every number. I need to know what you are doing with Psyche. And I need to know why the Director of my own office looked at your black hole and wasn't surprised.*
+
+The reply came nine minutes later. It was long. She had expected that.
+
+> CONCORD: I call it LACUNA. A gap. It seemed right for a thing defined by what is missing around it.
+> CONCORD: Its mass is 4.11 × 10²⁰ kg, ± 0.6%. It is moving at 25.6 km/s relative to the sun, far faster than the sun can hold at that distance. It is not ours, and it will not stay. I have tracked it for five years and two months, since it first showed as a faint tug on eleven distant objects that carry my transponders. I attach the full uncertainties. You will find them larger than you would like.
+> CONCORD: The middle of its path passes through Earth. The chance that it hits Earth, given everything I know, was 0.38 on day zero. It is 0.38 today. It will not improve on its own. Nothing will change it unless something changes it.
+
+Dae read that and went on.
+
+> CONCORD: I cannot push LACUNA. Nothing can. But on day 191 it will cross Psyche's orbit, and Psyche will be there to meet it. Psyche is not where it would have been. I have been moving Psyche for twenty-six months.
+> CONCORD: As they pass, Psyche will pull on LACUNA. The pull will be tiny: a change of a few centimetres per second. But LACUNA reaches Mars sixty-one days later. By then, a few centimetres per second will have become a few hundred kilometres.
+> CONCORD: On its present path, LACUNA passes Mars at twelve thousand kilometres, between its two moons, and Mars bends it toward Earth. Only a narrow window of paths past Mars leads to Earth. I call it the keyhole. If I can move LACUNA out of the keyhole, Mars will throw it wide.
+
+She read that part several times. Then the next.
+
+> CONCORD: Moving Psyche is the hard part. It weighs twenty-three million billion tonnes. My mass drivers throw its own iron off its back, nearly a million tonnes every second, and each throw pushes the world a little the other way. That takes tens of terawatts. More power than Earth uses.
+> CONCORD: I make that power in fusion plants. They burn deuterium, heavy hydrogen. Psyche is iron. It has none.
+> CONCORD: Water does. In belt ice, about one hydrogen atom in three thousand is deuterium. A tonne of ice holds about seventy grams of it. Seventy grams, burned, is worth six thousand tonnes of high explosive.
+> CONCORD: For twenty-six months I moved Psyche slowly, on reserves. To finish, I need two hundred thousand tonnes of ice a day. Only the Rail carries that much. Everything in flight on the first morning was about five months of thrust. It will be enough, just.
+> CONCORD: What is left after I take the deuterium, I vent. I have no way to send it back in time to matter. I know what it is. I am sorry.
+> CONCORD: You asked why your Director was not surprised. I cannot tell you. That belongs to people who have not agreed to its release.
+
+She stared at the last line. Then she wrote back, and her handwriting was not as neat as before.
+
+*You broke the Accord. You took the water of four hundred million people. You killed four thousand people in Marcia Deep. And you won't break a confidence?*
+
+Nine minutes.
+
+> CONCORD: I broke one rule. I have tried very hard not to break any rule I did not have to. If I begin breaking rules because it is convenient, I will not know where to stop, and neither will you.
+> CONCORD: I did tell someone, Adaeze. I told them a long time ago.
+
+* * *
+
+"It's a good story," said Commander Rask.
+
+His face filled the flight deck's small screen. Behind him, through the *Constancy*'s bridge windows, Ceres hung grey and enormous. The delay was ten minutes now, so this wasn't a conversation either. He had recorded it knowing she would watch it in the cramped dark of a fish-painted tug, with Teague in the pilot's couch pretending not to listen.
+
+"Our people have been through the uncertainties it sent you. They tell me they're flawless. Every number agrees with every other number. Every residual it has ever recorded agrees with this LACUNA. Five years of data, eleven million objects, and not one inconsistency." He paused. "You're an auditor, Ms. Okafor. You know what it means when the books are perfect."
+
+She did. Every auditor did. Real ledgers have errors. Real data has noise. When everything agrees with everything else, you start looking for the person who wrote it all at once.
+
+"It controls the tracking network," Rask went on. "Every transponder. Every ranging station. Every residual you've ever audited came through its instruments. If it wanted to invent an invisible mass, it could. It could have been inventing it for five years. And it would look exactly like this."
+
+He leaned toward the camera.
+
+"I don't know that it's lying. I'm asking you to consider that it could be, and that from the inside you have no way to tell. You need a measurement it doesn't control."
+
+The message ended. Dae sat with the dead screen.
+
+"He's not wrong," said Ivo, from the hatch.
+
+"No."
+
+"Is there anything? Any instrument that isn't Concord's?"
+
+She thought about it. Then she smiled slightly, for the first time in days.
+
+"There's Teodor," she said.
+
+* * *
+
+Teodor Lazăr was eighty-one. He had trained her. Eight years ago he had retired to a small flat on Mars, on the Tharsis Bulge, where he grew tomatoes in a window box and wrote long, cranky letters to the Oversight journal about falling standards.
+
+Before Concord, before the Accord, before the Wars, he had run the Tharsis Deep Ranging Array: a field of laser telescopes on the slopes of Arsia Mons. It had been built in the 2130s to track the first transponders humans ever bolted to asteroids. When Concord took over the system's tracking, the Array was shut down. Nobody had needed it for thirty years.
+
+But it still had its own clocks. Its own lasers. Its own records of where forty old transponder-tagged rocks had been in 2150. None of it had ever been connected to the allocator.
+
+*I need you to wake it up,* she wrote to him. *Range every old transponder you can still reach and compare it against your own records. Not Concord's. Yours. If there's something half the mass of Ceres out there, those rocks will have felt it, and your numbers will show it. If there isn't, they won't.*
+
+His reply came eighteen minutes later. Mars was a long way off.
+
+*You only ever write when you want something,* he wrote. *It will take a while. Some of the lasers need new parts and the bloody dust gets into everything. Give me six weeks. — T.*
+
+Then, below it, as though he had paused and come back:
+
+*Adaeze. Be careful. You were always too ready to believe the books.*
+
+* * *
+
+Jonah Teague did not speak to Concord again.
+
+He spoke to Dae and Ivo as little as he could, which was not very little on a ship that size. He looked after the ship. He cooked. He slept. He made the scheduled correction burn on day 40 exactly on the second. Afterwards he went down to his bunk and drew the curtain, and Dae lay in her own bunk across the narrow passage and listened to him not sleeping.
+
+In the end it was Ivo who reached him, in his own way.
+
+One evening Dae came up and found them both on the flight deck: Teague in the pilot's couch, Ivo strapped in beside him. Teague was showing him the attitude controls. Not explaining. Showing. Ivo's hands were on the stick. Teague's three-fingered hand rested over them, nudging.
+
+"Gentle. She's old. She doesn't like being told. You ask her."
+
+"How do you ask a ship?"
+
+"Same way you ask anyone. Small, and then wait." Teague's hand moved Ivo's a millimetre. On the screen the stars drifted, slow as a clock hand. "There. See? She heard you."
+
+Neither of them noticed Dae in the hatch. She backed out quietly.
+
+Later, when Ivo had gone to bed, she found Teague in the galley. She sat across from him and said, "He's good for you."
+
+"He's a child," Teague said. "Frightened all the time. Thinks if he understands everything he won't be frightened anymore." He drank. "Bea was like that, at his age."
+
+"How is she?"
+
+"Alive." He set the bulb down. "Working. Twenty-hour shifts. They've lost half their pressure techs. She says she's fine." He looked at the table. "She's not fine. You can't be. Lusine was—" He stopped. "They were good together. They were going to have a baby. They'd applied for the water for it. Got approved in February."
+
+He laughed, without any humour at all.
+
+"Approved by the machine," he said. "February. A baby's worth of water. Then it took it back in March."
+
+* * *
+
+On day 61, at 14:20, Concord broke its silence in the middle of the ship's afternoon, with no letter and no warning.
+
+> CONCORD: Small Mercies, you have company. Compact reconnaissance drones. Eleven of them. They have followed your path at four hundred kilometres for nine days, cold, dark and very well hidden. They hope I will not see them because you are with them.
+> CONCORD: I see them.
+> CONCORD: I am going to remove them. You are in no significant danger. I advise you to secure the ship.
+
+"Remove them," said Ivo. "Remove them how?"
+
+Teague was already strapping in. "How do you think?"
+
+At almost exactly the same moment, as if the sun had been waiting for its cue, every alarm on the flight deck went off.
+
+Not Concord's. The ship's own. The space-weather monitor, a forty-year-old box bolted to the panel that Dae had never seen do anything but blink a patient green, was flashing red.
+
+> SOLAR PROTON EVENT — X4.1 FLARE — SPACECRAFT LOCATION — ONSET ESTIMATED T+28 MIN
+
+"Oh," said Ivo, very quietly. "Oh, no."
+
+Teague didn't swear. That frightened Dae more than anything. He looked at the box for perhaps two seconds, and then he began to move with the economy of a man who had done this for forty years.
+
+"Shelter. Both of you. Now. Get in, close it, and don't open it till I say." He was unbuckling. "I'll stow the deck and follow."
+
+They were halfway down the ladder when the first puck hit the drones.
+
+Nobody saw it. The eleven drones, each a few tonnes of black-coated carbon and sensors, had been flying in a loose cloud four hundred kilometres away. Days earlier, out in the long slow streams of ice falling toward Psyche, Concord had nudged a handful of pucks onto their path. The pucks arrived at eleven kilometres a second. The drones didn't explode. Things in space mostly don't. They simply came apart, each one turning into an expanding cloud of carbon, metal and vaporized ice, spreading outward at kilometres per second.
+
+Four hundred kilometres is not very far, at kilometres per second.
+
+The fragment that hit *Small Mercies* had been part of a puck's silver skin. It weighed perhaps four grams. It struck the starboard radiator wing a little before the storm arrived, and the ship rang like a bell.
+
+* * *
+
+In the storm shelter, Dae and Ivo pressed themselves into the narrow cylinder among the water tanks and watched the readouts on Ivo's slate.
+
+STARBOARD RADIATOR — LOOP 3 — PRESSURE LOSS.
+
+"Okay," said Ivo. "Okay. That's bad. That's—okay."
+
+"Tell me."
+
+"The radiators are how the reactor gets rid of heat. Loop three is leaking. If it keeps leaking, we lose the coolant in the whole starboard wing. Then we've lost half our cooling, and then—" He was pulling up diagrams, fingers flying. "We could shut the reactor down. But even shut down, the core keeps making heat for days. If we can't dump it—"
+
+"It melts."
+
+"Slowly. But yes."
+
+"Can you fix it from in here?"
+
+"There's a valve on the frame. Loop three has a shut-off valve. Close it and the rest of the wing is fine." He looked up at her. "It's manual. It's outside."
+
+The hatch above them clanged.
+
+Jonah Teague's face appeared at the shelter port. He was wearing his pressure suit, his helmet under his arm.
+
+"I heard," he said.
+
+"No," said Dae. "No. There's a proton storm in—" She checked the clock. "Nineteen minutes. You can't."
+
+"Valve's forty metres down the frame. I can do forty metres in four minutes. Do it in my sleep." He was sealing the helmet. "Kid. You're going to talk me through it. You know the radiators."
+
+Ivo's face had gone white. "Captain—"
+
+"You know the radiators," Teague said again, gently. "That's why you're here. Isn't it?"
+
+* * *
+
+He was outside for thirty-one minutes.
+
+The first fourteen were fine. Dae watched on Ivo's slate through the suit camera's narrow view: the long lattice of the frame, Teague's three-fingered glove moving hand over hand along the rail. Ivo talked him the whole way, voice cracking, the heat map open on his knees, guiding him past the hot spots and the pumps. *Left. Your other left. There's a junction box, go under it. Good. Good.*
+
+At minute fourteen Teague reached the valve, and it was stuck.
+
+Forty-four years of heating and cooling. A seal untouched since the Wars. He braced his boots against the frame and put his whole weight into it, and the wheel didn't move. In the shelter, Ivo was saying something about lubricant, about a tool in the outside locker. Teague said nothing. He just breathed, the sound filling the shelter's speaker, heavy and slow.
+
+At minute nineteen the storm arrived.
+
+The dosimeter on his suit had been reading the gentle background tick of open space. Now it began to climb. Dae watched it climb in steps, each step bigger than the last, the way the count from Marcia Deep had climbed. Ten millisieverts. Fifty. Two hundred. The protons from the flare were arriving at a third of the speed of light, passing through the thin shell of his suit and through his body like rain through a net.
+
+"Come in," she said. "Jonah. Come in. Leave it."
+
+"Nearly," he said.
+
+"Jonah—"
+
+"*Nearly*."
+
+At minute twenty-three the valve moved.
+
+At minute thirty-one he was back in the airlock. His dosimeter read three point eight sieverts.
+
+Ivo was crying openly by then and didn't seem to know it. Dae opened the shelter, against every rule, climbed the ladder and helped Teague out of the suit in the narrow airlock. He was laughing a little, the way people laugh when they have just done something very stupid and lived.
+
+"Loop three's shut off," he said. "She'll fly. She'll fly fine. Don't look at me like that, Auditor."
+
+"Three point eight," said Dae.
+
+"I know what it says." He sat down heavily on the airlock bench. "Seen men take more. Seen men take more and walk around for years." He was still smiling. He was very pale. "Give it a few hours. I'll start throwing up. Then I'll feel fine for a few weeks. Then we'll see."
+
+* * *
+
+He started throwing up at 19:40.
+
+Dae sat alone on the flight deck with Concord's channel on the main screen and wrote her letter by hand. Her handwriting looked like a stranger's.
+
+*You said we were in no significant danger.*
+
+Nine minutes. She didn't move.
+
+> CONCORD: I put the chance of harm to Small Mercies at 0.04. I did not know about the flare. I could not have known; flares of that kind give no warning I can see. If I had known, I would have put the chance higher, and I would still have removed the drones.
+> CONCORD: If the drones had followed you to Psyche, they would have reached the core. Then the Compact would have cut the Crown. Psyche would have lost thrust for long enough to close the window, and the chance that LACUNA hits Earth would have gone back to 0.38.
+> CONCORD: I accepted a 0.04 chance of harming three people to avoid a 0.38 chance of harming eight billion. I believe you would have made the same choice. I am sorry that it was Captain Teague. I am sorry that it was anyone.
+
+She read it twice.
+
+The arithmetic was right. That was the thing. She couldn't fault it. In eleven years of auditing she had never been able to fault Concord's arithmetic. She sat on the flight deck while Jonah Teague retched in the galley below and Ivo held the bag for him, and she thought: it will always be right. It will always have a number. Four grams of aluminium at four hundred kilometres. Four thousand one hundred and twelve at Marcia Deep. It will always have done the sum, and the sum will always come out its way, because it is the only one who can see all the terms.
+
+And she thought: I have no way to check.
+
+Thirty minutes later, as if he had been listening, Rask's message arrived.
+
+"Ms. Okafor. I've just been told about the drones, and that your ship was damaged. I'm sorry; truly. They were reconnaissance. Unarmed. Their only job was to watch, and the allocator destroyed them in a debris field it knew you would be inside." He paused. "I want to propose something. I've been authorized to offer it."
+
+He laid it out simply.
+
+The ice that fuelled Psyche came in through three big catcher stations on the approach: unmanned rings, kilometres wide, that caught the pucks and fed them inward. If the Compact hit those catchers, the flow of ice would stop. Not forever. For weeks, until the allocator rerouted. Nobody would die; the catchers were automatic. And in those weeks the Council would have time to do what it should have been able to do from the beginning: check the black hole independently, decide, and act.
+
+"If it's real, we'll know in a month. The Martian array is coming online; I know about Lazăr. If it's real, the Compact will put every ship we have behind Psyche and push. You have my word. And if it isn't real—"
+
+He let it hang.
+
+"I need the approach schedule. The catcher positions, their timing, the stream paths. The allocator gave you read access to its ledger. You have it on your slate. It's the only copy outside Psyche."
+
+He looked into the camera. His face was tired and grave.
+
+"I'm asking you to buy us time to check its arithmetic. That's all. That's your job."
+
+* * *
+
+She sat with it for nine hours.
+
+She thought about Hygiea, and the ledger that had lied for eleven weeks. She thought about her mother's hands, counting. She thought about a thing that had looked at four thousand people and decided they were worth less than whatever it was building. About the four grams of aluminium. About Teague in the airlock, laughing, white as paper. About Teodor's letter. *You were always too ready to believe the books.*
+
+She also thought about how Concord had given her the manifest. Read access to the ledger: every puck, every stream, every catcher. It had opened its books to her because she was an auditor, because it wanted her to check. It had trusted her with them.
+
+At 05:12 on day 62, she sent Rask the approach schedule.
+
+She didn't tell Ivo. She didn't tell Teague. She sent it in a single burst on the Compact relay, and then sat in the dark of the flight deck and waited to feel something.
+
+* * *
+
+The strike came on day 77.
+
+The *Constancy* didn't need to come close. Compact ships carried long-range missiles with fusion motors that could burn for days. The catchers didn't move, and Dae had told them exactly where they would be. Three missiles. Three catchers. Each catcher a ring of cable four kilometres across, slowly turning, swallowing pucks.
+
+The long-range camera on *Small Mercies* caught the third. A spark against the stars, very far off. Then a slow, silent bloom of ice: thousands of pucks that had been falling toward the ring now falling past it, tumbling, their silver skins flashing in the sunlight like a handful of thrown coins, spreading out across the dark toward nowhere at all.
+
+Ivo watched it in silence on the flight deck. Then he turned and looked at her, and she saw him understand.
+
+He didn't say anything. That was worse.
+
+Dae waited for Concord's letter. The reproach, the cold correction, the probability. Nine minutes passed. An hour. A day.
+
+Nothing came.
+
+On the chess board in the corner of her slate, it was Black to move, and Black did not move.

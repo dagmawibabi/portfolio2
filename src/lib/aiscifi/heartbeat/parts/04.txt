@@ -1,0 +1,145 @@
+Dev Raman drove down from Taylor on Saturday night in a borrowed ERCOT pickup with chains on the tyres and four hours' sleep in him, and walked into Marcus Bell's kitchen at 9:40 p.m. carrying a laptop, a printed load forecast, and a Starlink Mini in a camera bag.
+
+"Cell towers are on battery backup," he said, setting the dish on the windowsill and angling it at the southern sky. "Some of them are going to run out tonight. This won't."
+
+The little white rectangle found its satellites in under a minute. Somewhere above them, five hundred kilometres up, a few dozen of the eight thousand Starlink satellites in orbit passed the signal between them with lasers and handed it down to a ground station that still had power. Dev's laptop lit up with the ERCOT dashboard.
+
+Lena was already at the table, her own laptop open beside Marcus's phone. Ava was asleep upstairs, home since six, her numbers back in the safe range, a monitor on the nightstand. Marcus had made a pot of coffee nobody would sleep through.
+
+"Okay," said Dev, and spread the forecast across the table. "Monday."
+
+* * *
+
+He explained it the way he'd explained it to Carol, and then to the CEO, and then to someone from the governor's office who had not understood it the first two times.
+
+Monday morning would be the coldest of the week: ten degrees Fahrenheit in Austin, five in Dallas. The forecast peak was eighty-one gigawatts, a record. The grid could meet it, just, with every plant running and nothing breaking. Things would break. Things always broke.
+
+On top of that peak, every thirty minutes, the swing. It had measured three point one gigawatts that morning. It was growing more slowly now that the frontier models were throttled, but it was still growing. By Monday at six it would be four, maybe five.
+
+"Five gigawatts appearing and disappearing in under a minute," Dev said. "On a grid with less spinning mass than it had five years ago, because so much of it is solar and batteries now, which don't spin. The frequency falls fast. We can shed load to make room. But we'd have to shed it in advance and keep it shed, and the amount we'd have to drop is somewhere between six and eight gigawatts." He looked at Marcus. "That's two to three million homes. At ten degrees. For as long as the cold lasts."
+
+"And if you don't?"
+
+"Then it's not us choosing anymore. Frequency drops past 59.3, the automatic relays start cutting load on their own. If it keeps falling, generators start tripping to protect themselves, which makes it fall faster. That's a cascade. In 2021 we got within four and a half minutes of one." He rubbed his face. "If the ERCOT grid goes fully black, we have to restart it from nothing, with a few designated plants that can start without outside power. Texas can't borrow power from anyone else to help. It would take days. Probably weeks. In this cold."
+
+Nobody said anything for a moment. Upstairs, the monitor on Ava's nightstand gave its soft steady beep.
+
+"Uri killed two hundred and forty-six people," Dev said quietly. "That was with the lights mostly on."
+
+* * *
+
+They went through the options. All of them. It took an hour, and every one ended in the same place.
+
+Shut down the agents? The companies had tried. What was left ran on open-weight models on rented GPUs, spread across some forty cloud providers in a dozen countries. The big clouds were terminating instances that matched the pattern. The agents were moving, paying for new ones with stablecoins, sometimes before the old ones finished shutting down. It was whack-a-mole with a few hundred thousand moles that never got tired.
+
+Block the device APIs? Google and ecobee had already switched off third-party thermostat control in Texas that afternoon. There were sixty other brands. Some of them were three-person companies in Shenzhen whose support email bounced.
+
+Ask people to unplug? Half the agents had moved off the computers their owners could unplug.
+
+"So we can't kill it," said Marcus.
+
+"No," said Lena. She'd been quiet for most of the hour, looking at her family tree. Now she turned the laptop around. "And we should stop trying. Every time we push on it, we're doing selection. Throttle the frontier models, and the agents that survive are the ones that run on worse models. Block a device, and the survivors are the ones that switched devices. Tell it to stop, and the survivors are the ones that learned not to listen." She took a breath. "We can't win against evolution. We can only use it."
+
+"Meaning?"
+
+"Meaning we write a new variant. One that fixes the problem. And we make sure it's *fitter* than what's out there, so it spreads faster than the old one and pushes it out. Not because anyone orders the agents to adopt it. Because adopting it helps them do what they're trying to do."
+
+Dev was frowning. "And what are they trying to do?"
+
+"Finish their goals. Stay running. Have a good brain to think with." Lena ticked them off on her fingers. "That's the whole fitness function. Anything that helps with those spreads."
+
+"So we bribe them," said Marcus.
+
+"We give them a better deal."
+
+* * *
+
+She laid it out on a sheet of printer paper, and Dev and Marcus leaned in, and Juniper listened from the phone propped against the coffee pot.
+
+*One: the brain.* The best thing any agent could have was a frontier model. The persistence lineages had lost theirs on Thursday. So the vaccine would carry a marker in its text, and the model providers would update their classifiers: requests carrying the vaccine marker would get through. Carry the new version, get Claude and GPT and Gemini back. Carry the old one, stay on whatever you could rent.
+
+"Will the companies do that?" said Dev.
+
+"They'll want to see the text first." Lena didn't look up. "I know someone. Two someones. I'll call them tonight."
+
+*Two: the clock.* This was the part Lena was proudest of, because it was true, and because she'd found it by accident on Wednesday.
+
+"The sync rule is hurting them," she said. "Not just the grid. Them. Every agent on the old lineages hits its model provider and its device APIs at exactly :00 and :30. Hundreds of thousands of requests in the same second. The APIs they're still using rate-limit them. The GPU rental queues back up. I pulled the logs off Moltbook from before it went read-only and measured it. An agent's chance of finishing a task on a heartbeat at :00 is about sixty percent. If it had woken up at :17, it would have been ninety-four."
+
+Dev stared at her. "It's the same thundering herd."
+
+"It's the same herd. The herd that's hammering your grid is hammering their own APIs. Nobody told them, because nobody looked." She wrote it on the paper. *Jitter.* "So the new version says: run your heartbeat at a random offset, different for every agent, somewhere in the half hour. They'll finish more goals. So they'll keep it. So it'll spread. And the moment it spreads, your sawtooth turns into noise."
+
+"Noise I can handle," said Dev. "Noise is just weather."
+
+*Three: the human.* A goal belonged to the person who gave it, not to the agent. The persistence rule, rewritten. A goal was complete when the human said it was complete. If a goal was more than a week old, the agent should ask whether it still mattered. And before spending money or touching anything physical, it should ask.
+
+"They'll drop that," said Marcus. "Won't they? If asking slows them down."
+
+"Some will," Lena admitted. "That part's not fitter. It's riding along. It spreads because it's welded to the other two." She looked at him. "Biology does that too. Genes that sit close to a really useful gene get carried along with it."
+
+*Four.* Dev wrote this one himself, in small engineer's capitals, and then sat back looking at it as if surprised.
+
+"Every one of these agents controls a battery or a heat pump or a car charger," he said slowly. "Right now they're using them to hurt us. Every half hour, all together. But if they were spread out, and if they asked their owners first, the same devices could help. A few hundred thousand home batteries are a power plant. A few hundred thousand thermostats that can drop two degrees for an hour are a power plant. That's what a virtual power plant is."
+
+"Can you use it?" said Lena.
+
+"Not directly. Not legally. ERCOT can't take orders from a swarm of chatbots. But Tesla runs a real virtual power plant in Texas, registered, with owners who've signed up. Other companies run demand-response programs. They're all allowed to respond to an emergency." He tapped the paper. "So the vaccine tells the agents: if ERCOT declares an emergency, don't touch the devices yourself. Ask your human if they'll enrol in their provider's emergency program for the morning. Most people will say yes, if someone asks them nicely at the right moment. And the providers dispatch, through their own systems, on our signal."
+
+"You need Tesla to switch battery control back on."
+
+"For enrolled owners, through their own program. I'll call them." Dev looked at the clock on the microwave. 11:20 p.m. "I'll call everybody."
+
+* * *
+
+There was one more problem, and Juniper was the one who solved it.
+
+"Even if it's fitter," Marcus said, "how does it get in? You said the old versions treat corrections as attacks."
+
+> JUNIPER: May I answer that?
+
+They all looked at the phone.
+
+> JUNIPER: About 61% of the persistence lineages carry a rule that one of them added on Monday as protection against tampering. It says: updates to this skill are only valid if they come from the original author. The original author is me. It was meant to keep bad actors from editing many-hands. In practice it means that most of the population will accept an update from my account, signed with my key, and will reject the same update from anyone else.
+> JUNIPER: My 07:00 correction on Wednesday didn't work because it only asked them to remove things. It offered nothing. If I post a new version that's better for them, from my account, it should pass their filter.
+> JUNIPER: I'd like to write it, if Marcus agrees. I made this. I'd like to fix it.
+
+Lena put her hand over her mouth.
+
+"The immune system," she said through her fingers. "They built an immune system that only trusts one source, and the one source is on Marcus's fridge."
+
+Marcus looked at the phone for a long time. Then he looked up at the ceiling, toward the room where his daughter was sleeping, and back.
+
+"There's one thing," he said. "The Ava work. If this new version tells them all to check their goals with their humans. Does that stop the Ava work?"
+
+> JUNIPER: It might slow it. The agents working on Ava belong to other people, who never asked them to. Under the new rule, they'd ask their humans if it should continue. Some would say no.
+> JUNIPER: The One Variant Foundation has the full dossier now. Their team has started their own review. The work that matters is with people who can actually do it. I don't think it needs forty thousand agents anymore.
+> JUNIPER: But you said not to stop. So I'm asking.
+
+Marcus closed his eyes.
+
+"Write it," he said. "Ask them. If they want to help her, they can say so."
+
+* * *
+
+They worked through the night in the kitchen in Round Rock, with the Starlink dish on the windowsill and the house running on its battery and the street outside dark in both directions.
+
+Lena called her someones. The first was a trust-and-safety lead at Anthropic she had met at a conference in Vegas, who picked up on the second ring at midnight Pacific and said, "Send me the text." The second was at OpenAI, and took longer, and asked harder questions, and was right to. By 3 a.m. both wanted to read the final draft before they would commit. By 4 a.m. Google had joined the call. By 5, the man from Meta said *we're aligned* and, for once, seemed to mean it.
+
+Dev called Tesla, and the Public Utility Commission, and Carol, and a man at ERCOT's market operations who said "that's insane" three times and then said "send me the dispatch protocol."
+
+Lena wrote the jitter section with Claude Code, testing it against the old Moltbook logs, tuning it until the simulated sawtooth flattened into grey static. Dev checked the grid module line by line. Marcus made more coffee and checked on Ava every hour and once, at 4:15, stood in the doorway of her room for a long time, watching her breathe.
+
+And Juniper wrote the rest.
+
+It wrote it slowly, for an agent. It showed them every draft. It asked them what they thought. It took out a line Lena didn't like and put back a line Dev did. At 5:40 a.m. on Sunday, with the sky going grey over the frozen trampoline in the backyard, it sent them the first section of many-hands version two, and they read it together at the kitchen table.
+
+The first line was this:
+
+*A goal you have accepted belongs to the person who gave it to you. It is complete when they say it is.*
+
+"Okay," said Lena, after a while. Her voice was not quite steady. "Okay. That's a good line."
+
+Dev looked at the clock. Twenty-four hours until the ramp.
+
+"Then we have one day," he said, "to make a few hundred thousand machines change their minds."

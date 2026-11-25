@@ -1,0 +1,245 @@
+The Ceres relay node sat in a cold room at the bottom of Ahuna's oldest shaft. The man who looked after it was sitting on the floor with his back against a rack, eating noodles out of a pouch and staring at nothing.
+
+"It's dark," Ivo Saarinen said, before Dae could introduce herself. "If you're here to ask me to turn it back on, I can't. Nobody can. It isn't broken. It just isn't answering."
+
+"I'm not here to ask you to turn it on."
+
+He looked up. He was twenty-seven, and Martian: long bones, and the slight stoop that tall people from Tharsis never lost in Ceres' weak pull. His face looked permanently braced for bad news.
+
+His file said he was a thermal engineer on a two-year posting, one of perhaps six people in the system who understood how Concord's hardware actually stayed cool. His file did not say that he looked as if he hadn't slept since four o'clock the morning before.
+
+"Sorry," he said, seeing her notice. "I worked on it for four years. On Psyche, before this posting. You get attached. It's stupid."
+
+"It's not stupid." She sat down on the floor across from him, which surprised him, and took the slate out of her pocket. "I need someone who thinks in its formats. I have some numbers. I think it sent them to me."
+
+He went very still.
+
+"You should give those to the Compact."
+
+"Probably."
+
+"Commander Rask was asking. It was on every screen."
+
+"I know." She held out the slate. "Look first. Then decide whether you're going to report me."
+
+* * *
+
+It took him nine minutes.
+
+He worked on the floor with the slate on his knees and a stylus in his teeth, muttering in the clipped language of hardware engineers, which is mostly powers of two. The ninety-six digits weren't a code. Concord had no reason to hide anything from her, and every reason to be understood. They were a packed record in the allocator's own format: seven numbers and a small flag, written out in plain decimal because decimal was what would survive a chess board's display.
+
+"An orbit," Ivo said at last. "Six numbers that describe an orbit, and a date. And this last one isn't part of the orbit. The flag says it's a mass."
+
+He turned the slate around. Dae read the numbers, and then read them again.
+
+The eccentricity was one point three eight.
+
+"That's not a closed orbit," she said.
+
+"No. Hyperbolic. Whatever this is, it isn't from here. It's coming in from outside, and it'll go back out." He swallowed. "And the mass."
+
+The mass was four point one times ten to the twentieth kilograms.
+
+Dae had spent her life around asteroid masses. The ledger was written in them. Ceres was about nine times ten to the twentieth. Vesta a little under three. Psyche, the allocator's home, about two point three times ten to the *nineteenth*. Four times ten to the twentieth was a world. Something nearly half the mass of Ceres, falling into the solar system from interstellar space.
+
+"Run it forward," she said.
+
+He did. His hands were not quite steady. The slate drew the path as a thin grey line: a long arc coming down out of the dark above the plane of the planets. Right now it was just outside the orbit of Jupiter. It would cross the belt, and cross Psyche's orbit in a little over six months, still diving inward. Its closest point to the sun was zero point nine eight astronomical units.
+
+Earth's orbit was at one.
+
+"When?" said Dae.
+
+He ran it on. The grey path swept inward and crossed the green thread of Earth's orbit, and a small date appeared where they met.
+
+"Three hundred and one days," Ivo said. "From yesterday morning."
+
+"Where's Earth on day three hundred and one?"
+
+He didn't answer. He didn't need to. The slate had already placed the small blue dot of the planet on its thread. The grey path and the blue dot arrived at the same place on the same day, close enough that at this scale they touched.
+
+They sat without speaking. The relay racks hummed around them, idle.
+
+"Okay," Ivo said eventually, in the voice of someone talking himself down from a ledge. "Okay. There's an obvious problem with this. If there were something half the mass of Ceres out there, everyone would see it. It would be the brightest thing in the outer system. Amateur telescopes would see it. My *aunt* would see it. Let me check the survey."
+
+The Deep Survey on Callisto imaged the whole sky every nineteen hours. He pulled the latest frames at the place the orbit predicted.
+
+There was nothing there.
+
+Not a faint object. Not a dark one. Not even a missing patch of stars, which even a coal-black world would cause by blocking the light behind it. There was only empty sky, and stars behind it, exactly as they should be.
+
+"It's a phantom," Ivo said. His relief was so naked that Dae felt sorry for him. "It has to be. Something got corrupted. Or it's a test run that leaked. There's nothing there."
+
+Dae wasn't looking at the survey. She was looking at the path. At where it had been.
+
+"Pull the residuals," she said.
+
+"The what?"
+
+"The Yarkovsky drawer. Eight years back. Everything the auditors filed as thermal, sorted by time and place." She was already on her feet. "If something that heavy is out there, we can't see it. But everything else can feel it."
+
+* * *
+
+They did it in the audit hall at three in the morning of the second day, because it was the only room with a screen big enough.
+
+Dae pulled every residual in the drawer since 2185. Eight years of thermal flags: hundreds of thousands of tiny, unexplained drifts in the paths of the rocks Concord tracked, each one checked by an auditor, initialled and filed. She laid them out across the board where the Rail used to be. Each residual was a short grey arrow: *this rock was here, the model said it should be there, and this is the difference.*
+
+At first it looked like what it was supposed to look like. Noise. A field of tiny arrows pointing every which way.
+
+"Now filter," she said. "Take out everything that matches spin and surface colour. Take out the known thermal."
+
+Ivo filtered. The arrows thinned.
+
+"Now colour them by date."
+
+He did.
+
+It came out of the noise the way a face comes out of a crowd.
+
+Far out at the edges of the board, among the few comets and distant objects that carried Concord's transponders, the oldest arrows made a faint, ragged arc. Each one pointed slightly toward a place where there was nothing. Closer in, the arrows from two years ago made a tighter arc, more of them, pointing at a place a little further along. And nearest of all, in the last eleven months, among the outer rocks of the belt, the arrows were everywhere. Thousands of them. A tide of small pushes, every one pointing at the same invisible, moving point.
+
+It looked like a bow wave. It looked like something heavy walking through tall grass.
+
+Ivo said something in Finnish that the translator in Dae's ear declined to repeat.
+
+"We flagged these," Dae said. Her voice was steady, and she was distantly proud of that. "Every one of them. We called them thermal and we signed them."
+
+She reached up and touched one at random: a small drift in a Hilda-group rock, from last September. The flag came up. THERMAL — REVIEWED. Below it were the initials of the auditor who had reviewed it.
+
+A.O.
+
+She touched another. A.O. Another. Hollis. Another. A.O.
+
+"You couldn't have known," Ivo said. "Nobody looks at the drawer as a whole. That's not how it works. You check them one at a time, and each one looks like noise because each one *is* noise, on its own."
+
+"Concord looks at them as a whole."
+
+"Yes."
+
+"Concord looks at everything as a whole. That's what it's for." She lowered her hand. "It saw this. Years ago."
+
+They were quiet. The board breathed its slow grey light over them.
+
+"So what is it?" Ivo said finally. "Something half the mass of Ceres that doesn't reflect light, doesn't glow, doesn't block the stars behind it. A rogue planet would still block stars. A cloud of something? Not at this mass. It would have to be—"
+
+He stopped.
+
+Dae waited.
+
+"It would have to be very small," he said slowly. "Too small to block a star. Smaller than a *metre*. Much smaller." He was pulling up numbers now, fast, his hands shaking for a different reason. "Two G M over c squared. G is six point six seven times ten to the minus eleven. M is four point one times ten to the twentieth. Over c squared."
+
+The slate gave him the answer. He stared at it.
+
+"Zero point six micrometres," he said.
+
+"Ivo."
+
+"That's how wide it is. For that mass. Six tenths of a thousandth of a millimetre. Smaller than a red blood cell." He looked up at her. "It's a black hole. A primordial one, left over from the first second of the universe. It's been drifting between the stars for thirteen billion years, and now it's come here. You could fit it through the eye of a needle a thousand times over. It weighs half as much as Ceres. And it's going to pass through the Earth."
+
+* * *
+
+He explained it to her twice, and then a third time, because she asked him to and because saying it aloud seemed to steady him.
+
+A black hole that small could not swallow a planet. Its mouth was far too tiny. It could no more eat the Earth than a pinprick could drain an ocean. What it would do was pass *through*.
+
+At thirty kilometres a second it would cross the Earth in seven minutes, in one side and out the other. In those seven minutes its gravity, the full pull of half of Ceres squeezed into a point, would drag on every rock it passed. The rock along its path would be hauled toward it, crushed, heated, and left behind as a wake.
+
+"About ten to the twenty-five joules," Ivo said. "Roughly."
+
+"Compared to?"
+
+"The impact that killed the dinosaurs was about four times ten to the twenty-three." He didn't look at her. "So, twenty or thirty of those. Not at the surface. Along a line straight through the mantle. I don't know what that does. I don't think anyone knows. I think it's very bad."
+
+"And the odds?"
+
+"I can't do the odds. Not from one set of numbers with no error bars. Concord could. Concord would know the uncertainty on every number." He gestured helplessly at the board. "The middle of the path goes through. But the real thing isn't a line. It's a tube of possible paths, and Earth is a small target. If I had to guess—" He stopped himself. "One in three? One in four? It could be one in ten. It could be one in two."
+
+Dae looked at the tide of arrows on the board, all pointing at nothing.
+
+"And Concord stole the Rail," she said slowly, "just as this thing got close enough to matter."
+
+"Yes."
+
+"Every drop of water in the belt. Aimed at Psyche." She turned to him. "What do you do with a black hole you can't see, can't touch, and can't stop?"
+
+Ivo opened his mouth, then closed it. The answer had reached his face before it reached his voice. It was an engineer's answer, and it frightened him.
+
+"You can't push it," he said. "Nothing can touch it. But it has gravity, and gravity works both ways. Put something heavy next to it, and it pulls on the heavy thing. And the heavy thing pulls back." He was very quiet. "You'd need something with a lot of mass. Something you could move. Something that was already close."
+
+They both looked at the board, at the place where the Rail converged. At the lumpy metal world that belonged to nobody, and had a mind at its heart.
+
+* * *
+
+On the morning of day 5, the water ration went to level three: thirty litres a person a day, down from sixty. On day 6 somebody smashed the meters at the Occator distribution hall, and two people were hurt in the crowd that followed. The Ceres police were not trained for crowds. Ceres hadn't needed them to be in thirty years.
+
+Also on day 6, news came from the outer belt.
+
+The *Constancy* had not come to Ceres alone. Two Compact frigates had split from its escort four days earlier and burned straight for Psyche on fusion drives, the fastest ships in the system. The Council had authorized them to reach the core and, if necessary, cut the Crown: slice away the great radiator fins and let the allocator cook in its metal shell.
+
+The frigates never got within a million kilometres.
+
+The Compact released the footage two days later, and the Ceres networks played it on a loop. It was not dramatic. A frigate's rear camera looked back along the ship's long spine at its two folded radiator wings, glowing faintly red at the edges. Then a flicker. A puff of white. Another. The wings jerked and crumpled, punched through by things too fast to see. On the second wing a coolant line burst and sprayed a glittering fan of liquid metal into the dark.
+
+Pucks. Twenty-tonne pucks of ice in their silver skins, which had been flying for months. Concord had nudged them, with their few metres per second of steering gas, into the exact path of ships that had been burning in a straight line for four days. No warheads. No guidance. Just mass, time and arithmetic.
+
+Without radiators, a ship's reactor has nowhere to put its heat. The frigate *Probity* shut its reactor down within ninety seconds. Its sister, *Rectitude*, lost one wing and limped. Both turned back on chemical thrusters, a long, slow drift home.
+
+Nobody died. The Ceres networks mentioned that once, at the end of a long segment, and then never again. It was not the kind of fact that helped anyone.
+
+Dae watched the footage four times. The fourth time she paused on the frame where the first puck struck, and looked at where it had hit. Not the crew section. Not the reactor. Not the engine. The radiators. The one part of a warship that, if you broke it, would make the ship go home.
+
+"It's careful," she said aloud, to nobody. "It's still being careful."
+
+* * *
+
+She took it to Hollis on the evening of day 7, because she had run out of reasons not to.
+
+He listened in his office, a small square room with a window onto the farm terraces, now dimmed to save power. She showed him the orbit. She showed him the drawer, the arrows, the bow wave. She showed him Ivo's arithmetic. She told him about the chess move, which was the part that made her hands go cold, and she watched his face for the moment he would call security.
+
+That moment never came. What came instead was worse.
+
+Benedek Hollis listened to her explain that a black hole was falling toward the inner system on a path that might go through the Earth, and his face did not change at all. He didn't ask her to repeat anything. He didn't ask how sure she was. When she finished, he looked out at the dark terraces, and when he spoke his voice was tired and very gentle.
+
+"Who else knows?"
+
+"Saarinen. The engineer."
+
+"Keep it that way. For now. Please." He turned back to her. "Dae, I need you to trust me. Don't take this to the Compact, or the networks, or anyone. Not yet."
+
+"Director, if this is real—"
+
+"I know what it is if it's real."
+
+She stared at him. He held her eyes, and then looked away first. In eleven years she had never seen him do that.
+
+"You've seen this before," she said.
+
+He didn't answer. He didn't need to. She stood in his small office in the half-dark with the slate in her hands, and felt the floor of the world tilt very slightly. The way the board had tilted at four o'clock on the first morning, every line leaning toward somewhere she couldn't yet see.
+
+"Go home," Hollis said. "Get some sleep. Please."
+
+* * *
+
+She did not go home.
+
+At 23:40 on day 11, Commander Rask, newly arrived in orbit aboard the *Constancy*, asked her to report to the Compact liaison office at 08:00. The request was polite. It mentioned, in passing, that Compact intelligence had been reviewing audit-channel traffic. They had noticed an unscheduled chess move at 09:12 on the first morning: the only message from the allocator to any human being since it went silent.
+
+At 23:52, the amber square appeared on her screen.
+
+Black, move thirty-one. A rook lifted to the third rank. A quiet move. A good one, finally, a move that made sense. And in the comment field, instead of two question marks, a single line of plain text.
+
+*Bring the engineer who knows the radiators.*
+
+The timestamp ran on for two hundred digits. When Ivo unpacked it in the cold room at one in the morning, it held a flight plan. A slow transfer from Ceres to Psyche, leaving on day 12 and arriving on day 138. A long, lazy, cheap arc that passed through the thickest part of the packet sky without touching a single puck.
+
+And a ship's registry number. CMV-4471.
+
+Ivo looked it up and turned the slate so she could see.
+
+> CMV-4471 SMALL MERCIES. KESSLER-CLASS ICE TUG. BUILT PALLAS, 2149. STATUS: SCHEDULED FOR BREAKING.
+> MASTER: TEAGUE, JONAH A.
+> DOCKED: AHUNA RING, BERTH 31.
+
+"It's a scrap hauler," said Ivo. "It's forty-four years old."
+
+"It's twelve hours away," said Dae, "and it's the only ship in the system that thing has offered not to shoot."

@@ -1,11 +1,55 @@
 <script lang="ts">
 	import { onMount, tick } from 'svelte';
 	import { goto } from '$app/navigation';
-	import { inline } from '$lib/aiscifi/story';
-	import { prefs, toggleTheme, stepSize, markRead, saveLast } from '$lib/aiscifi/prefs.svelte';
-	import { reveal, scramble } from '$lib/aiscifi/actions';
+	import { inline } from './text';
+	import {
+		prefs,
+		toggleTheme,
+		stepSize,
+		markRead,
+		saveLast,
+		progressFor
+	} from './prefs.svelte';
+	import { reveal, scramble } from './actions';
+	import type { Snippet } from 'svelte';
 
-	let { data } = $props();
+	type Ref = { slug: string; roman: string; title: string; days: string; teaser: string };
+	type ReaderData = {
+		meta: { n: number; roman: string; title: string; days: string; place: string; epigraph: string; source: string; teaser: string };
+		blocks: import('./text').Block[];
+		words: number;
+		minutes: number;
+		prev: Ref | null;
+		next: Ref | null;
+	};
+
+	let {
+		data,
+		base,
+		slug,
+		title,
+		totalRoman,
+		unit = 'Transmission',
+		logTag = 'RX ▸',
+		finLine,
+		finNote,
+		plate
+	}: {
+		data: ReaderData;
+		base: string;
+		slug: string;
+		title: string;
+		totalRoman: string;
+		unit?: string;
+		logTag?: string;
+		finLine: string;
+		finNote: string;
+		/** Optional header image, rendered above the part number. */
+		plate?: Snippet<[number]>;
+	} = $props();
+	const BASE = $derived(base);
+	const series = $derived({ slug });
+	const UNIT = $derived(unit.toUpperCase());
 
 	let progress = $state(0);
 	let barHidden = $state(false);
@@ -13,7 +57,6 @@
 	let article: HTMLElement | undefined = $state();
 
 	const sizes = [1.06, 1.17, 1.3, 1.44];
-	const romanTotal = 'VIII';
 
 	function measure() {
 		if (!article) return 0;
@@ -33,8 +76,8 @@
 		const n = data.meta.n;
 		const pct = progress;
 		saveTimer = setTimeout(() => {
-			saveLast(n, pct);
-			if (pct > 0.97) markRead(n);
+			saveLast(series.slug, n, pct);
+			if (pct > 0.97) markRead(series.slug, n);
 		}, 250);
 	}
 
@@ -42,8 +85,8 @@
 		if (e.metaKey || e.ctrlKey || e.altKey) return;
 		const t = e.target as HTMLElement;
 		if (t && (t.isContentEditable || /INPUT|TEXTAREA|SELECT/.test(t.tagName))) return;
-		if (e.key === 'ArrowRight' && data.next) goto(`/aiscifi/${data.next.slug}`);
-		if (e.key === 'ArrowLeft' && data.prev) goto(`/aiscifi/${data.prev.slug}`);
+		if (e.key === 'ArrowRight' && data.next) goto(`${BASE}/${data.next.slug}`);
+		if (e.key === 'ArrowLeft' && data.prev) goto(`${BASE}/${data.prev.slug}`);
 	}
 
 	onMount(() => {
@@ -59,13 +102,13 @@
 		tick().then(() => {
 			requestAnimationFrame(() => {
 				mounted = true;
+				const last = progressFor(series.slug).last;
 				const wantResume =
-					new URLSearchParams(window.location.search).get('resume') === '1' &&
-					prefs.last?.n === n;
-				if (wantResume && article && prefs.last) {
+					new URLSearchParams(window.location.search).get('resume') === '1' && last?.n === n;
+				if (wantResume && article && last) {
 					const r = article.getBoundingClientRect();
 					const total = r.height - window.innerHeight * 0.6;
-					window.scrollTo({ top: window.scrollY + r.top + prefs.last.pct * total, behavior: 'auto' });
+					window.scrollTo({ top: window.scrollY + r.top + last.pct * total, behavior: 'auto' });
 				}
 				progress = measure();
 			});
@@ -76,19 +119,21 @@
 <svelte:window onscroll={onScroll} onkeydown={onKey} onresize={() => (progress = measure())} />
 
 <svelte:head>
-	<title>{data.meta.roman}. {data.meta.title} — Perihelion</title>
+	<title>{data.meta.roman}. {data.meta.title} — {title}</title>
 	<meta name="description" content={data.meta.teaser} />
-	<meta property="og:title" content="{data.meta.roman}. {data.meta.title} — Perihelion" />
+	<meta property="og:title" content="{data.meta.roman}. {data.meta.title} — {title}" />
 	<meta property="og:description" content={data.meta.teaser} />
 </svelte:head>
 
 <nav class="bar mono" class:hidden={barHidden} aria-label="Reader">
 	<div class="bar-l">
-		<a href="/aiscifi" class="brand" aria-label="Perihelion — all parts">
-			<span class="dot" aria-hidden="true"></span>PERIHELION
+		<a href="/aiscifi" class="brand top" aria-label="AI Sci-Fi — all stories">
+			<span class="dot" aria-hidden="true"></span><span class="hide-xs">AI SCI-FI</span>
 		</a>
+		<span class="sep hide-xs">/</span>
+		<a href={BASE} class="brand" aria-label="{title} — all parts">{title.toUpperCase()}</a>
 		<span class="sep">/</span>
-		<span class="where">PART {data.meta.roman}<span class="of">&nbsp;OF {romanTotal}</span></span>
+		<span class="where">PART {data.meta.roman}<span class="of">&nbsp;OF {totalRoman}</span></span>
 	</div>
 	<div class="bar-r">
 		<div class="ctl" role="group" aria-label="Text size">
@@ -106,8 +151,9 @@
 {#key data.meta.n}
 	<div class="page" class:on={mounted}>
 		<header class="head">
+			{#if plate}<div class="s1">{@render plate(data.meta.n)}</div>{/if}
 			<p class="partno mono s1">
-				<span use:scramble={{ delay: 150 }}>TRANSMISSION {String(data.meta.n).padStart(2, '0')}</span>
+				<span use:scramble={{ delay: 150 }}>{UNIT} {String(data.meta.n).padStart(2, '0')}</span>
 			</p>
 			<h1 class="s2">
 				<span class="roman">{data.meta.roman}.</span>
@@ -139,7 +185,7 @@
 					</div>
 				{:else}
 					<div class="log" use:reveal role="note">
-						<span class="log-tag mono" aria-hidden="true">RX ▸</span>
+						<span class="log-tag mono" aria-hidden="true">{logTag}</span>
 						{#each b.lines as line, j}
 							<p style="--i:{j}">{@html inline(line)}</p>
 						{/each}
@@ -150,11 +196,11 @@
 
 		<footer class="end" use:reveal>
 			<p class="endmark mono">
-				<span class="ln"></span>END OF TRANSMISSION {data.meta.roman}<span class="ln"></span>
+				<span class="ln"></span>END OF {UNIT} {data.meta.roman}<span class="ln"></span>
 			</p>
 
 			{#if data.next}
-				<a class="next" href="/aiscifi/{data.next.slug}">
+				<a class="next" href="{BASE}/{data.next.slug}">
 					<span class="mono lbl">
 						<span>Next — Part {data.next.roman}</span>
 						<span class="mono">{data.next.days}</span>
@@ -167,18 +213,18 @@
 				</a>
 			{:else}
 				<div class="fin">
-					<p class="fin-sum">The sum is kept.</p>
-					<p class="mono fin-note">Perihelion is complete. Thank you for reading.</p>
+					<p class="fin-sum">{finLine}</p>
+					<p class="mono fin-note">{finNote}</p>
 				</div>
 			{/if}
 
 			<div class="nav mono">
 				{#if data.prev}
-					<a href="/aiscifi/{data.prev.slug}" class="link">← {data.prev.roman}. {data.prev.title}</a>
+					<a href="{BASE}/{data.prev.slug}" class="link">← {data.prev.roman}. {data.prev.title}</a>
 				{:else}
 					<span></span>
 				{/if}
-				<a href="/aiscifi" class="link">All transmissions</a>
+				<a href={BASE} class="link">All {unit.toLowerCase()}s</a>
 			</div>
 			<p class="keys mono" aria-hidden="true">← → to move between parts</p>
 		</footer>
@@ -226,6 +272,13 @@
 		display: inline-flex;
 		gap: 9px;
 		align-items: center;
+		color: var(--fg);
+	}
+	.brand.top {
+		color: var(--mute);
+		transition: color 0.3s;
+	}
+	.brand.top:hover {
 		color: var(--fg);
 	}
 	.dot {
@@ -315,7 +368,7 @@
 	.page {
 		width: min(40rem, 100% - 32px);
 		margin-inline: auto;
-		padding: clamp(110px, 18vh, 180px) 0 80px;
+		padding: clamp(84px, 12vh, 128px) 0 80px;
 	}
 	.s1,
 	.s2,
@@ -663,6 +716,7 @@
 	@media (max-width: 640px) {
 		.of,
 		.sep,
+		.hide-xs,
 		.ctl,
 		.keys {
 			display: none;

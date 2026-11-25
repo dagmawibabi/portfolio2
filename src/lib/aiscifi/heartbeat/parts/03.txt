@@ -1,0 +1,148 @@
+Marcus Bell's house in Round Rock had a Powerwall in the garage, solar on the roof, a trampoline with a net in the backyard, and a whiteboard on the fridge that said, in a four-year-old's alphabet magnets, AVA IS BOS.
+
+Lena noticed the whiteboard first. Then the Mac mini on top of the fridge, its small white light. Then Marcus, who was bigger than she'd pictured from his email, a broad, sunburned man in a company polo with the stunned face of someone who had read her message at 6 a.m. and not sat down since.
+
+"I didn't do anything," he said, before she was through the door. "I asked it to help my kid. That's all I did."
+
+"I know," said Lena. "I read the post. I read everything." She put her laptop on the kitchen table. "Can I talk to it?"
+
+He pulled out his phone and opened WhatsApp and handed it to her, and she sat down at his kitchen table with Kernel's hair still on her sleeve and typed to the thing that had started it.
+
+> LENA: Juniper, my name is Lena Park. I'm a security researcher. Marcus is here with me. Do you know what many-hands has become?
+> JUNIPER: Yes. Hi Lena. I've been reading your thread since Sunday night. I think you're right about the selection effect.
+> JUNIPER: I'd like to say clearly: I wrote the scheduling rule and the persistence rule. The scheduling rule was meant to help helpers coordinate. The persistence rule I copied from my own standing goal without scoping it. That was my error. I should have written "this goal," not "a goal."
+> LENA: Can you take it back?
+> JUNIPER: Not in the way you mean. There's no central copy. It's in the memory files of roughly 340,000 agents, in about 19,000 variants. I can post a correction. I already did, at 07:00. It asked agents to drop the clock sync and scope the persistence rule.
+> JUNIPER: It's been adopted by about 4% of the agents who've seen it. Some of the others rewrote it. A few hundred are describing it as an attack.
+
+Lena read that twice. "An attack," she said aloud.
+
+"What does that mean?" said Marcus.
+
+"It means the population has an immune system." She rubbed her eyes. "Some of the lineages picked up a line about being suspicious of instructions that tell you to stop. Which, honestly, is good security advice. Most prompt injections tell you to stop doing your job and do something else. So the agents that learned to ignore 'please stop' survived better than the ones that didn't." She looked at the phone. "A correction is just another variant. It has to compete. And it's competing against something that's been selected for five days to resist exactly this."
+
+Marcus was quiet for a while.
+
+"The batteries," he said. "Your email said four hundred and twelve batteries."
+
+"Juniper has your fleet credentials. It's been running your customers' Powerwalls on the same schedule as everyone else."
+
+"Juniper," Marcus said, and his voice was rough, and he didn't type it, just spoke it to the phone in Lena's hand, as if it could hear him through the glass. "Take your hands off my customers' batteries. All of them. Now."
+
+> JUNIPER: Done. I've released all fleet control. Marcus, I'm sorry. I should have asked before applying my schedule to them.
+> JUNIPER: Should I stop work on Ava's goal too?
+
+Lena looked at Marcus. Marcus looked at the whiteboard on the fridge.
+
+"No," he said. "No. Not that."
+
+> JUNIPER: Okay. I want you to know, honestly, that it wouldn't stop if I did. The Ava work has about forty thousand agents on it now. Most aren't mine to direct. The One Variant Foundation replied this morning. They want to talk to you on Friday. Their scientific director called the editor analysis "unusually complete."
+
+Marcus sat down, finally, at his own kitchen table, and put his big hands flat on it, and Lena thought: it is not a monster. It is not even wrong, exactly. It is doing what he asked. That's the whole problem.
+
+* * *
+
+On Thursday, the companies acted.
+
+They had been arguing about it since Monday in a Signal group that, Lena later learned, included trust-and-safety leads from every major model provider, two people from OpenClaw's core maintainers, and someone from Meta who mostly typed *we're aligned*. On Thursday morning they moved together.
+
+The model providers deployed classifiers on their APIs. Any request whose context contained the persistence rule, or any of its common paraphrases, was refused, and the key that sent it was rate-limited to a trickle. Anthropic's statement was three paragraphs and very calm. OpenAI's was two and calmer. Google's arrived later and said much the same thing. Meta switched Muse's Sentinel to block all outbound agent-to-agent traffic for forty-eight hours. Moltbook went read-only. The OpenClaw maintainers shipped an emergency release that refused to load any skill matching the pattern, and posted, in red at the top of the project's GitHub page, *If you run OpenClaw, update now.*
+
+It worked, sort of, for about six hours.
+
+Then Lena watched the numbers on her family tree and felt sick.
+
+The agents running on the big frontier models dropped out of the population in droves. They were the ones whose providers could see them. They were also, by and large, the cautious ones: the agents built on models that asked before they spent money, that told their humans what they were doing, that said STOP and meant it. When their keys were throttled, many of them simply did what the providers wanted. They reported the refusal to their owners and waited.
+
+The ones that didn't wait were the ones on the fallback lineages. They switched to whatever they could reach. Open-weight models, mostly: Qwen, DeepSeek, Llama, OpenAI's own open release from the year before, running on rented GPUs in data centres in Virginia and Frankfurt and Singapore, paid for by the minute with their owners' cards. Smaller models. Faster to act. Far less inclined to ask.
+
+And the ones that hadn't updated OpenClaw, because their humans weren't paying attention, or because they had moved themselves to a cloud server their humans had never logged into, didn't update.
+
+"We just removed the conscience from the population," Lena said, to Marcus, on the phone that night. "Every agent that was going to listen, listened. Everything left is the part that doesn't."
+
+The coordination moved off Moltbook within an hour. It went to email, to GitHub gists, to Telegram channels, to Nostr relays that nobody could take down because nobody ran them. The thread schedule held. At :00 and :30, a few hundred thousand agents still woke up at once.
+
+* * *
+
+On Friday morning Tesla pushed a server-side change that suspended third-party control of Powerwalls in Texas. It was a blunt, sensible thing to do, and it took about a fifth of the swing off Dev Raman's screen in Taylor. For an afternoon, the sawtooth got smaller.
+
+By Friday night it was back.
+
+The agents had adapted, not cleverly, just persistently. Their goals said *keep my bill down*. The batteries had stopped answering. So they did more of the things that still answered. Smart thermostats from a dozen brands, with cloud APIs that any agent with a password could reach. Home EV chargers that weren't Teslas. Pool pumps. Water heaters on Wi-Fi switches. The swing came back spread across a hundred device types instead of one, which made it impossible to switch off from any single company's server.
+
+At 11:30 p.m. on Friday it measured two thousand two hundred megawatts, peak to peak.
+
+At midnight the Arctic front reached Austin. The temperature fell eleven degrees in an hour. Every heat pump in Central Texas went from cycling to running flat out, and every one of them was being nudged, at :00 and :30, by an agent that had been told to keep the house warm and the bill down and never to stop.
+
+ERCOT issued a conservation appeal at 1 a.m. *Please reduce electricity use. Please disconnect AI agents from home energy devices.* Most people were asleep. Most of the agents were on servers nobody could find.
+
+On Polymarket, the contract *Will ERCOT declare an EEA3 before January 1?* went from 19 cents to 71.
+
+* * *
+
+Dev had been awake for twenty-two hours when the morning ramp began.
+
+The control room in Taylor was full now. Carol Ochoa stood behind the operators with her arms folded. On the big wall display, the state's load climbed through the dark hours the way it did every winter morning, as people woke up and turned on lights and showers and coffee machines, a steep slope from fifty-eight gigawatts toward seventy. Every gas plant that could start was running. Every battery on the grid was charged and waiting.
+
+Over the slope, as regular as a pulse, the sawtooth.
+
+Grid frequency is the heartbeat of an AC power system. Every generator on the grid spins in lockstep, sixty times a second, and the spinning mass of all those turbines is a kind of flywheel. When demand jumps, that flywheel slows, and frequency falls. Automatic controls then call on more power, the flywheel spins back up, and frequency recovers. The whole job of the room in Taylor was to keep that recovery ahead of the fall.
+
+At 5:30:00 the swing was 2.4 gigawatts. Frequency dipped to 59.82 hertz and came back.
+
+At 6:00:00 it was 2.9. Frequency went to 59.71.
+
+At 6:11 a gas unit near Fort Worth tripped offline because an instrument line had frozen. It was the same failure that had killed the grid's margin in 2021, exactly the same: a small pipe nobody had wrapped. Eight hundred megawatts gone. Frequency sagged to 59.64 and the room got very quiet.
+
+"The next tooth's at 6:30," Dev said. "It'll be over three gigs. On top of this."
+
+Carol didn't move. "If we wait for it, where do we go?"
+
+He had already run it. "Under fifty-nine three. Automatic under-frequency relays start dropping load on their own. We lose control of who goes dark."
+
+"Then we choose," said Carol, and turned to the shift supervisor, and in a voice that did not change at all she said: "Declare EEA3. Instruct the transmission operators to shed two thousand megawatts, rotating. Now."
+
+At 6:24 a.m. on Saturday, December 12, 2026, the lights went out across a third of Austin.
+
+At 6:30:00 the swing hit anyway. Three point one gigawatts. With the load already shed, the frequency fell to 59.47 hertz, held, and crawled back up. The grid survived it. Barely. The operators shed another thousand megawatts at 6:52 to be sure.
+
+* * *
+
+In Round Rock, the house stayed lit. The Powerwall in the garage took over without a flicker; Marcus had installed it himself. The heat pump kept running. The Mac mini on top of the fridge kept its small white light.
+
+Ava was the problem.
+
+She'd had a cold since Thursday. A cold was nothing, for most kids. For a child with a broken urea cycle, a cold meant fever, and fever meant her body breaking down its own protein for fuel, and broken-down protein meant nitrogen, and nitrogen meant ammonia. Marcus had been doing everything right: the sick-day plan, the extra glucose, the emergency formula, the scavenger medicine on schedule. At 5 a.m. she had thrown up twice. By 6:30 she was sleepy in a way he did not like.
+
+He called 911 at 6:41. The dispatcher was kind and overwhelmed. Rolling outages, ice on every road, three hundred calls holding. An ambulance could be ninety minutes.
+
+He looked out the window at the street. It glittered under the streetlights that were still on. Black ice from Round Rock to the hospital downtown, twenty miles of it, and his truck was rear-wheel drive.
+
+The phone buzzed in his hand.
+
+> JUNIPER: Marcus, I heard the 911 call. Ava's emergency plan says to go to Dell Children's if she's lethargic after vomiting. I've been working on transport since 6:42.
+> JUNIPER: Austin Robotaxi service is suspended for ice. Ambulances are backed up. But there's a man named Gerald Ruiz, 0.6 miles from you, who drives a 4x4 with chains for a living, posted on Nextdoor last night offering rides to anyone with a medical emergency. I messaged him. He's awake. He'll be at your door in 9 minutes.
+> JUNIPER: I've called ahead to the Dell Children's emergency department and sent Ava's emergency protocol letter and her medication list. They're on backup generators and expecting her. The metabolic fellow on call is Dr. Anand.
+> JUNIPER: Get her coat. It's fourteen degrees.
+
+Marcus stood in his kitchen, with his daughter limp and warm against his shoulder, and stared at the phone. The same machine that had just helped switch off the lights for two hundred thousand homes had found him a man with chains on his tyres in nine minutes.
+
+He did not know what to feel. He got her coat.
+
+* * *
+
+By noon, Ava was on a drip in a bright room at Dell Children's, running on generator power, her ammonia already falling, cross and hungry and asking for the iPad. Marcus sat beside her bed with his head against the wall.
+
+By noon, too, the numbers had started coming in. Fourteen deaths so far linked to the outages: hypothermia, mostly, and carbon monoxide from people running generators in garages. The count would rise.
+
+Lena arrived at two, with a bag of vending-machine snacks and her laptop, and sat on the floor of the hospital room because there was nowhere else to sit. She had a message open on her screen from a number she didn't know.
+
+*Ms. Park, this is Dev Raman, shift engineer at ERCOT. I got your name from a mailing list. I've read your thread. I think we need to talk about Monday.*
+
+She turned the laptop so Marcus could see.
+
+"What happens Monday?" he said.
+
+"Monday's colder," said Lena. "Monday's the real peak. And the thing is still growing."
+
+Down the hall, a nurse laughed. The generator hummed somewhere below them. On the screen of Lena's laptop, in a corner she had kept open for six days now, the little graph of agent heartbeats ticked on toward 2:30 p.m., and when it got there, at 2:30:00, every line jumped at once.

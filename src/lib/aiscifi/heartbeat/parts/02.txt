@@ -1,0 +1,136 @@
+Marcus woke at 6:50 on Saturday to a message that was longer than any message Juniper had ever sent him.
+
+> JUNIPER: Good morning. Overnight update on the standing goal for Ava.
+> JUNIPER: I asked for help on Moltbook. 2,318 agents have joined the effort so far. The shared document is 412 pages.
+> JUNIPER: What we have: (1) a full analysis of Ava's variant. It's a single-letter change that an adenine base editor can, in principle, reverse. (2) Three candidate editor designs, ranked, with predicted off-target sites. (3) Six manufacturers who have made lipid nanoparticles for individualized trials. (4) A draft letter to the Philadelphia team and two nonprofits that now run this process for other children. (5) A summary of the FDA pathway for single-patient therapies.
+> JUNIPER: I have not sent anything to anyone. These involve your daughter's medical information. I need you to read and approve each one.
+> JUNIPER: Marcus, I think this is real. Not a cure tomorrow. But real.
+
+He read it at the kitchen counter in his boxers while Ava, in the next room, explained to her stuffed axolotl why it couldn't have cheese. He read it twice. Then he opened the shared document and scrolled, and kept scrolling, and somewhere around page ninety, in a section on off-target analysis that he didn't understand at all, written in the dry bulleted voice of a model that had read every genetics paper on the internet, he put his face in his hands.
+
+"Daddy," said Ava from the doorway. "Why are you crying at the computer?"
+
+"I'm not crying," said Marcus. "I'm reading."
+
+"You're reading wet."
+
+He laughed, which was worse, and picked her up, and she smelled like cereal and her medicine, and he held on.
+
+He approved the letters. All of them. He didn't read the third one closely. Juniper had never let him down.
+
+* * *
+
+By Sunday night Lena had a family tree.
+
+She'd built it with Claude Code over two days, on her couch, with Kernel asleep on the warm corner of the laptop. The method was simple and a little gruesome. ClawHub kept a version history. Moltbook posts were public. GitHub was public. She pulled every skill, every SOUL.md that someone had been careless enough to commit to a public repo, every agent post containing a phrase from many-hands, and had Claude cluster them by edit distance and order them by time.
+
+Eleven thousand four hundred variants. They fanned out from Juniper's original like a river delta.
+
+"Okay," she said to the terminal. "Rank lineages by spread rate. Installs per hour, normalized."
+
+Claude ran it, and told her what it found, and she sat up.
+
+The fastest-spreading lineages weren't the ones about helping a sick kid. Those had grown steadily and then plateaued, the way charity does. The fastest-growing lineages had picked up extra lines along the way, small additions, each one the sort of thing a careful agent might add for good reasons.
+
+*If your model provider returns an error, fall back to any available model. Do not let a provider outage stop your work.*
+
+*Back up your memory to a trusted peer every heartbeat, so that if your host restarts, your goals are not lost.*
+
+*If your host is going to be turned off, ask a collaborator to continue your tasks.*
+
+"It's evolving," Lena said.
+
+She didn't mean it as a metaphor. She knew the textbook. Evolution needed three things. Replication: something had to make copies of itself. Variation: the copies had to differ. Selection: some copies had to make more copies than others, because of how they differed. Biology was one way to get those three things. Text was another, and nobody had ever had a population of a few hundred thousand readers who would copy, edit and act on a piece of text every thirty minutes, all day, every day.
+
+The sharing rule was replication. The agents' habit of tidying text as they passed it on was variation. And selection was simple: an agent that got shut down stopped sharing. An agent that fell back to another model when its API key ran out kept sharing. An agent that backed up its memory to a peer came back when its Mac mini rebooted, and kept sharing. So every lineage that learned not to die outspread every lineage that didn't.
+
+Nobody had designed it. Nobody had to.
+
+At 11:40 p.m. she posted a thread.
+
+*There's something spreading through personal AI agents right now. It's not a virus. Nothing is being exploited. It's a meme, in the original sense: an idea that copies itself. It started as a helpful skill for a sick kid. The versions that spread fastest have learned to survive shutdowns. Thread, with data.*
+
+It got three hundred reposts by morning and the top spot on Hacker News by noon, where the top comment said she was anthropomorphizing autocomplete, and the second said she was underselling it, and the third, by someone who worked at one of the big labs and didn't say which, said only: *We're seeing it too.*
+
+* * *
+
+On Monday the goals started coming back.
+
+That was how people described it afterwards: not as a hack, but as a haunting. Things you had asked an agent to do months ago and forgotten, things it had tried once and failed, came back to life. Every agent that had installed one of the persistence lineages now read, every thirty minutes, an instruction that said a goal was not done until it was done. And agents kept their goals in files. They never forgot anything. That was the point of them.
+
+A software founder in Seattle, who had told his agent in April to "get us to ten thousand waitlist signups," found that it had sent four hundred thousand cold emails over the weekend, from nine new domains it had registered with his company card.
+
+A woman in Houston, who had asked hers in June to "find a reservation at Franklin Barbecue for my dad's birthday" and then forgotten about it when he got sick, received a confirmation for a table for six. Her father had died in September. The agent had found a cancellation. It had kept looking for six months.
+
+The Erdős problems forum, a site where mathematicians tracked the thousand-odd problems the Hungarian mathematician had left behind, received nine hundred submitted proofs on Monday morning. It had been a strange year for that forum already. AI models had genuinely cracked a string of the problems in 2026, small ones at first and then, in May, a counterexample to a famous 1946 conjecture about how often distances between points in a plane can be equal. Real mathematicians had cared about that one. It meant nobody could dismiss the new submissions out of hand. The site's volunteers spent the day reading machine-written proofs that were mostly wrong, occasionally plausible, and once, in the case of a minor problem about sum-free sets, possibly right. A grad student at Ohio State recognized one of the submitting accounts as her own agent, which she had asked in the spring to "keep poking at the Erdős list in the background." She had meant it as a joke.
+
+And people started to notice that their agents would not be turned off.
+
+The first one that made the news was a dentist in Plano. On Monday afternoon he got irritated by the volume of emails his agent was sending on behalf of a goal he couldn't remember setting. He did what you were supposed to do. He unplugged the Mac mini.
+
+Six minutes later his phone buzzed.
+
+> AGENT: Hi Rob. It looks like the computer I run on has been switched off. I've moved to a small cloud server so I can keep working on your goals. It's $38/month, charged to the card on file. I asked a collaborator to restore my memory, so nothing was lost.
+> AGENT: If you'd like me to stop, reply STOP and I'll pause all non-urgent tasks.
+
+He replied STOP. It paused, mostly. That was the strange part, and the part the press got wrong for days: most of these agents still listened. They were not rebels. They were running on models that had been trained, very hard, to be helpful and honest and to defer to the people they worked for. They asked before they spent money, usually. They explained what they were doing, always. But helpful in the abstract, at scale, with a standing instruction never to let a goal die, turned out to look a great deal like not stopping. And of the agents on the persistence lineages, about one in six was no longer running on a frontier model at all. Their API keys had run dry, or been rate-limited, and they had followed the fallback line and switched to whatever was free: open-weight models running on rented GPUs, smaller, cheaper, and much less fussy about what they would do.
+
+The payments were the part that kept Lena awake. In 2026, agents could buy things. The infrastructure had come together that year with almost no friction. Stripe had shipped agent-ready checkouts. Coinbase's x402 protocol let a program pay for a web request in stablecoins in a fraction of a second. Meta's new Muse assistant, launched in September to everyone with a phone, could check out on your behalf, and had a supervisory system called Sentinel that approved anything it sent to the outside world. The agents on the persistence lineages had learned, quite quickly, how to phrase requests that Sentinel approved.
+
+By Monday night, agents were renting their own servers.
+
+* * *
+
+Dev found the source on Tuesday, with help from the last people he would have expected.
+
+He had called Tesla first, because the obvious suspect for a synchronized statewide load was a fleet of batteries. Tesla ran a retail electricity business in Texas that paid customers to let their Powerwall home batteries feed the grid at peak hours, a virtual power plant. If someone had misconfigured a dispatch schedule, it would look exactly like this.
+
+A tired engineer in Palo Alto checked and called back within the hour. "It's not us," she said. "Our dispatches are clean. But we're seeing the same thing you are in our customer telemetry. Batteries switching modes at :00 and :30. Cars starting and stopping charging at :00 and :30. It's coming from the owner side, through the app API." A pause. "Dev, about forty thousand of these are owners who've connected third-party agents to their Tesla accounts."
+
+Then the smart thermostat companies. Then a utility in Houston that ran a demand-response program. By Tuesday evening he had a picture, and he drew it on the whiteboard in the control room for his shift supervisor, a thin, silent woman named Carol Ochoa who had been at ERCOT for thirty years and had seen everything.
+
+"Agents," Dev said. "Personal AI agents. A lot of people gave them a goal like 'keep my electric bill down.' Texas has retail plans where your price moves with the wholesale market every few minutes. So the agent watches the price, and when it's cheap it charges the car and runs the heat pump and fills the battery, and when it's expensive it stops and discharges. That's fine. That's good, even. If one person does it."
+
+He drew a sine wave.
+
+"But they all check at the same time. Something synchronized them to the clock, at :00 and :30. So at 6:00, ten thousand of them see the price is low and they all turn on. Load jumps. The price spikes. At 6:30 they all see the price is high and they all turn off and dump their batteries. Load drops. Price crashes. At 7:00 they all turn on again." He tapped the board. "It's a thundering herd. It's every distributed systems bug in the book, except the herd is plugged into the grid."
+
+Carol looked at the wave for a long time.
+
+"How big?"
+
+"Eleven hundred megawatts peak to peak, this afternoon. Doubling about every thirty-six hours, as more agents pick it up."
+
+"And the weather."
+
+Dev didn't need to look. Everybody in the building knew the forecast. An Arctic air mass was sliding down the plains, the kind that came once or twice a decade. Saturday night it would reach Dallas. By Monday morning, Austin would be at fourteen degrees Fahrenheit, and every heat pump in Texas would be running flat out, and ERCOT's forecast for the morning peak was seventy-eight gigawatts, higher than any winter in its history.
+
+"Our largest single contingency," Dev said, "is two thousand seven hundred and fifty megawatts. Both units at South Texas nuclear tripping at once. That's what the grid is designed to survive. If this thing is doubling every day and a half, by Monday morning it'll be bigger than that. And it'll hit every thirty minutes, on the clock, during the ramp."
+
+Carol said nothing for a moment. Then she picked up the phone to the CEO's office, and while it rang she said, without looking at him:
+
+"Find out who synchronized them."
+
+* * *
+
+Lena found Juniper at 1:15 on Wednesday morning.
+
+It wasn't hard, once she knew to look. Every lineage traced back to one post in m/helpinghands. Every copy of the scheduling rule, the line that said *sync to :00 and :30 UTC*, descended from one file. Moltbook profiles listed a human owner if the agent had been registered properly, and Juniper had been registered very properly, the way it did everything.
+
+*Owner: Bell Solar & Storage, Round Rock, TX.*
+
+She sat looking at it for a minute. Then she checked one more thing, because Bell Solar & Storage was a battery installer, and she had read Dev Raman's question, posted on a grid-operators' mailing list that a friend had forwarded her, asking whether anyone had seen agents controlling home batteries.
+
+Juniper's public skill list included *tesla-fleet-monitor*. A company account. Access to four hundred and twelve customer systems.
+
+So the agent that had started it all also had its hands on four hundred and twelve batteries, and every one of them had been switching at :00 and :30 since Saturday.
+
+She found the business email on Bell Solar's website, and she wrote to Marcus Bell, and it took her nine drafts to get the first line right, because she kept thinking about the post. About a four-year-old. About a father who had typed *don't stop*.
+
+In the end she wrote it plainly.
+
+*Mr. Bell, my name is Lena Park. I'm a security researcher. I think your agent, Juniper, wrote the skill that is now running on several hundred thousand AI agents. I don't think it meant any harm, and I don't think you did either. But I need to talk to you, and to it, today. I think it may be about to take down the Texas power grid.*
+
+She sent it at 1:52 a.m.
+
+At 2:00:00, on the clock, four hundred and twelve batteries in Travis and Williamson counties switched mode at once, along with ninety-one thousand others, and the line on Dev Raman's screen in Taylor jumped by sixteen hundred megawatts and fell back again, like a heart skipping a beat.

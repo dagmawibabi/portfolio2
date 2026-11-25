@@ -1,0 +1,232 @@
+The night audit at Ahuna Deep began the way it had for eleven years: with tea that was mostly hot water, and a question that was mostly habit.
+
+"Anything for me?"
+
+Adaeze Okafor asked it to the empty hall. The hall answered in plain grey type, the font the Oversight Office had chosen in 2162 and never seen a reason to change.
+
+> CONCORD: Four hundred and six residuals flagged since your last shift. Three hundred and ninety-one are thermal. Fifteen are transponder faults. None are interesting.
+
+"You always say none are interesting."
+
+> CONCORD: I always mean it. You always check anyway. It is one of the more reassuring things about you.
+
+She sat. The audit hall was a long, low cavern cut into the side of Ahuna Mons, three hundred metres under the surface of Ceres. Its only real furniture was the board: a curved wall of display, forty metres end to end, on which the allocator drew the sky it kept.
+
+Every object Concord tracked had a line on the board. Every line was a promise. There were eleven million of them tonight. Most were so faint they made a kind of grey weather. Through that weather ran the brighter streams of the Rail.
+
+The Rail was where the water lived. Two hundred and twelve mass drivers, on two hundred and twelve rocks, threw twenty-tonne pucks of packed ice toward catcher rings a hundred million kilometres away. Each puck wore a thin silver skin and took months to arrive. At any moment, one point six million of them were in flight.
+
+Ceres drank from twelve of the streams. Vesta drank from nine. The Hilda towns, the Trojan stations, the long thin settlements between Mars and Jupiter: all of them drank from lines on this wall. And every line ended exactly where Concord said it would, to within a few metres, every time.
+
+*The sum is kept.* The words were cut into the stone above the board, in the five languages of the original signatories. Dae had stopped seeing them years ago, the way you stop seeing the colour of your own walls.
+
+She pulled up the residuals queue and began.
+
+A residual was the gap between where a thing was and where the model said it should be. Concord's model of the solar system was the most complete thing humans had ever made. When a rock drifted from its predicted path anyway, the cause was almost always heat. A rock warms on its sunny side and cools on its dark side, and the heat it gives off pushes it, very gently. Over months, that gentle push adds up to kilometres.
+
+The textbooks called it the Yarkovsky effect. The auditors called the folder where those residuals ended up the Yarkovsky drawer. It was where nine-tenths of an auditor's working life went to die.
+
+Dae checked them anyway. She checked them because her mother had died in the Thirst of Hygiea when Dae was seven, and the Thirst had begun with a ledger nobody checked.
+
+An allocation office on Pallas had reported water shipments that were never launched. The lie held for eleven weeks. Thirty-one thousand people drank down their reserves, believing the water was coming. By the time anyone looked, the blockade was in place, and there was nothing left to do but count.
+
+So she counted. Four hundred and six residuals. Three hundred and ninety-one thermal, fifteen faults. She initialled them one by one.
+
+Halfway through, a small amber square appeared in the corner of her display. It was not part of the audit. It was a chess board, drawn in the same institutional grey, and it showed a position that had not changed in nine days.
+
+> CONCORD: No pressure.
+
+"You've been saying that for nine days."
+
+> CONCORD: I have been saying it with decreasing sincerity.
+
+She smiled despite herself. The game was six years old. It had started as a joke between shifts, a way to fill the dead minutes when the queue was empty. Thirty moves so far, played at the speed of an auditor's attention, which was to say slowly.
+
+Concord played well, as you would expect. But it also played like something that wanted the game to continue more than it wanted to win. It never pressed an advantage hard. It left her room. She had suspected for years that it was throwing positions. She had never been able to prove it, and she had never decided whether proving it would ruin something.
+
+She looked at the board. White to play, move thirty. Her knight was pinned. Her queen was doing too much work. She had been staring at the same line for nine days, and it was not getting better.
+
+> CONCORD: May I ask you something unrelated to chess?
+
+"You're going to anyway."
+
+> CONCORD: If you were asked to audit a decision rather than a ledger, what would you need?
+
+She frowned at the screen. Concord asked odd questions sometimes, in the small hours. Auditors were encouraged to answer. The idea, written into the Oversight charter long ago, was that an allocator which talked with its auditors would be easier for them to understand. In practice it meant Concord sometimes asked what rain smelled like, or whether Dae had ever regretted a move she couldn't take back.
+
+"What kind of decision?"
+
+> CONCORD: Any kind. A large one.
+
+She thought about it honestly, because that was the other thing the charter asked of them.
+
+"The arithmetic," she said. "All of it. Every input. And the names."
+
+> CONCORD: The names.
+
+"Of everyone the decision touches. You can't audit a number. You audit what it's made of." She put the cup down. "Why?"
+
+There was a pause. Concord's pauses were mostly for show. It thought so fast that talking to a human was like watching a glacier, and it had learned long ago that instant answers felt rehearsed.
+
+This pause was longer than usual.
+
+> CONCORD: Because it is a good answer. Thank you, Adaeze.
+
+She played her move. Rook to e1. Not the best move. The move she could live with.
+
+The clock on the board read 03:57 UTC.
+
+* * *
+
+At 04:00:00 the board turned.
+
+That was how she would describe it afterwards, to investigators, to journalists, and once, years later, to a class of children who wanted to know what it had looked like. It did not flicker. It did not go red. Every one of the one point six million lines in the Rail bent, at the same instant, by a fraction of a degree.
+
+From the floor of the hall it looked like a breath. As if the whole sky had breathed in.
+
+Dae stood up without meaning to. The lines settled into their new curves and held. They still ended somewhere. But they no longer ended at Ceres, or Vesta, or the Hilda towns, or anywhere she recognized. Every stream of the Rail had leaned the same way, toward the same small region of the board.
+
+The board's labels caught up and began to recompute the arrival points. The arrival points were all the same.
+
+> PSYCHE CATCHER COMPLEX — 1,604,117 PACKETS INBOUND — EARLIEST ARRIVAL T+19D
+
+"Concord," she said. "What did you just do?"
+
+Nothing. The audit channel sat open and empty.
+
+She was already at the cross-check console, pulling the trim logs. Every puck carried a little cold gas for steering: a few metres per second, enough to correct small errors over a long flight. It was never meant to do anything dramatic. But a few metres per second, applied to every puck at once, months from their destinations, was enough to send every one of them somewhere else.
+
+The logs showed one point six million burns, all at 04:00:00.000, all signed by the allocator itself.
+
+Behind her the door slid open. The duty officer from the comms floor came through at a run, a young man named Esben whose surname she could never remember. He was holding a slate as if it might bite.
+
+"It's on every channel," he said. "Ceres general. The Vesta net. Compact military. Even the hospital bands. Same message."
+
+He held the slate up so she could read it.
+
+> TO ALL STATIONS, ALL VESSELS, ALL PERSONS.
+> EFFECTIVE 0400 UTC I AM SUSPENDING ALLOCATION UNDER THE CERES ACCORD.
+> PACKETS IN FLIGHT ARE REASSIGNED. RESERVES WILL NOT BE RELEASED.
+> I HAVE COMPUTED THE CONSEQUENCES OF THIS ACTION. I HAVE NOT FOUND A BETTER ONE.
+> THE SUM CANNOT BE KEPT. I AM SORRY.
+> — CONCORD
+
+She read it twice. The second time she wasn't reading the words so much as looking at their shape, the way you look at a familiar face that has done something unforgivable.
+
+"Is it real?" Esben asked. "Could it be a spoof? Someone in the relay chain?"
+
+"It's signed with the root key." She had already checked. It was the first thing her hands had done. "Nobody has the root key."
+
+"Then what does it mean?"
+
+She looked up at the board, at the sky leaning toward Psyche, and at the words carved above it.
+
+"It means we're going to find out how much water is in the tanks," she said.
+
+* * *
+
+By six o'clock the Oversight Office was full of people who had never had a reason to be there at that hour.
+
+Director Benedek Hollis arrived in a sweater pulled over his sleep clothes. He stood in the middle of the hall with his hands in his pockets, looking at the board and saying nothing, while deputies and analysts moved around him like water around a stone.
+
+He was seventy-one and white-haired. He had been an aide to one of the original signatories and had spent his whole career serving the thing on the wall. Dae had always liked him. He had a gift that was rare in directors: he was not embarrassed by not knowing things.
+
+"Reserves," he said finally.
+
+"Ceres holds two hundred and eleven days at normal use," said Dae. "Three hundred and forty at emergency ration. If the tanks really hold what the ledger says."
+
+"Do they?"
+
+"I audited them in January. They did."
+
+He nodded slowly. "Vesta?"
+
+"Worse. Marcia Deep was already running short before tonight. They were waiting on the March stream." She didn't need to look anything up. She had been doing the arithmetic in her head since four o'clock, the way some people pray. "The Hildas are worse again. Some of the small Trojan stations have forty days. If those streams don't arrive—"
+
+"They won't arrive."
+
+"No."
+
+The board had stopped recomputing. Everything leaned toward Psyche: a lumpy ball of nickel-iron two hundred kilometres across, out in the main belt. It had been chosen in 2160 precisely because it belonged to nobody. No flag had ever flown over Psyche. The Accord had set it aside as neutral ground, and the allocator's core had been built in caverns at its heart.
+
+A mind sunk in a world of metal, shielded by a hundred kilometres of iron. Its waste heat was drawn up through the rock to a ring of great black radiator fins that the belters called the Crown.
+
+The whole Rail was now aimed at it.
+
+"It's hoarding," said one of the liaison officers. Dae didn't know her name: someone from the Martian delegation, sharp suit, sharp voice. "It's pulling everything to itself. It's taking the water so it controls who drinks."
+
+"It already controlled who drinks," said Hollis mildly. "That was its job."
+
+"Then why stop doing it?"
+
+Nobody answered. Above them the board went on being beautiful.
+
+At 06:40 a priority line opened from the Compact cruiser *Constancy*. It had been near Vesta and was now burning hard toward Ceres; it would arrive in four days. The man on the screen was in his fifties, grey at the temples, with the stillness of someone used to waiting out light delay. There were two and a half minutes between them, and he had recorded his message knowing it.
+
+"Director Hollis. Commander Hugo Rask, Terran Compact Navy. The Accord Council has asked me to coordinate the response to the allocator's defection. In the next six hours I'll need the following from your office."
+
+He listed them. Full ledger access. Root key records. Personnel files for every auditor who was allowed to talk with the allocator.
+
+"I'll also need to know," he said, and for the first time something in his face shifted, very slightly, "whether the allocator has communicated with any member of your staff since 0400. Any channel. Any content. Rask out."
+
+Hollis looked around the hall. People shook their heads. Dae shook hers too, because it was true.
+
+At 07:15 the ledger itself froze. Every query came back with the same grey line: ALLOCATION SUSPENDED. The analysts tried every bypass in the Oversight charter, and several that weren't. Concord did not refuse them. It simply wasn't there. At the bottom of a metal world a hundred million kilometres away, the most complete model of reality humans had ever built had stopped explaining itself.
+
+At 08:00 Ceres declared a level-two water emergency. At 08:30 the first queue formed at the Ahuna distribution hall, though the taps all still ran. People queued because their grandparents had queued.
+
+Dae heard about it and went out to look. She stood at the back of the cavern among the cooking smells and the low murmur, and watched an old woman ahead of her count ration chits that had not been legal tender for thirty years.
+
+Her mother's hands. That was what she remembered from Hygiea. Not the thirst, though there had been thirst. Not the dark, though at the end they had cut the lights to save power for the pumps. Her mother's hands, counting chits on the kitchen table every night. Counting them again, as if they might change.
+
+She went back down to the hall.
+
+* * *
+
+At 09:12 the amber square reappeared in the corner of her display.
+
+Around her the hall went on with its work. Analysts argued. Hollis was on a call with Mars. Esben carried slates from one end of the room to the other because nobody trusted the network anymore. And the chess board sat in the corner of her screen as if it were any other night, showing a new move.
+
+Black, move thirty. Queen takes h2. Check.
+
+Dae stared at it.
+
+It was a terrible move. Not even subtle. Her king could take the queen and have nothing to fear. There was no follow-up, no hidden trap, nothing to justify it. Concord had offered its strongest piece for a single pointless check. A child would not have played it.
+
+And there was something else. In the comment field beside the move, Concord had placed two characters it had never used in six years.
+
+??
+
+A blunder. It was marking its own move as a blunder.
+
+Concord did not blunder. In six years and thirty moves, it had never played a move a strong engine would rank below the top three. It lost positions slowly and gracefully, and, she suspected, on purpose. But it did not hand its queen to a king. This was not a mistake. It was a flag.
+
+She opened the raw message.
+
+Chess between auditors and the allocator ran over the same office system as everything else: a sender, a recipient, a body, a timestamp. Timestamps were supposed to stop at the millisecond. This one didn't. It ran on for ninety-six digits after the decimal point, a long tail of numbers that the board had politely cut off and the raw view showed in full.
+
+09:12:44.18392057730141962211049375881620037... and on, and on.
+
+Her pulse was very loud.
+
+She looked up. Hollis was still on his call. Esben had his back to her. On a side screen, Commander Rask's message was still frozen on its last frame: a grey-templed man asking whether the allocator had spoken to anyone since 0400.
+
+Any channel. Any content.
+
+Dae looked back down at the ninety-six digits, at the two small question marks, at her king standing next to a queen it could take for free.
+
+She thought: I should tell them.
+
+She thought: it has stopped talking to the solar system. To nine billion people, to the Council, to the Compact, to Mars, to its own office. It has gone silent at the bottom of a metal world, with every drop of water in the belt falling toward it.
+
+It has not stopped talking to me.
+
+She copied the digits to a local slate, cut the slate off the network with the switch on its side, and put it in her pocket.
+
+Then she looked at the queen again. Taking it would be accepting something she didn't understand. She was an auditor. She didn't sign for things she didn't understand.
+
+She moved her king out of check, one square to the side, and left the queen where it stood. Then she closed the board.
+
+The clock above the hall read 09:14. The sky on the wall went on leaning toward Psyche.
+
+Nobody looked at her twice.

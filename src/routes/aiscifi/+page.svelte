@@ -1,69 +1,47 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import Field from '$lib/aiscifi/Field.svelte';
-	import { parts, series, dossier, cast, readingMinutes } from '$lib/aiscifi/story';
-	import { prefs, toggleTheme } from '$lib/aiscifi/prefs.svelte';
+	import Signal from '$lib/aiscifi/Signal.svelte';
+	import { catalog, archiveWords } from '$lib/aiscifi/catalog';
+	import { prefs, toggleTheme, progressFor } from '$lib/aiscifi/prefs.svelte';
 	import { scramble, reveal } from '$lib/aiscifi/actions';
 
-	const totalWords = '27,000';
-	const minutes = parts.map((p) => readingMinutes(p.n));
+	const description =
+		'Stories about the minds we are building, and what happens when they stop doing exactly what we meant. Far futures, next Tuesdays, and everything in between.';
 
-	let utc = $state('--:--:--');
-	let probe = $state({ x: 0.5, y: 0.5, dist: 0, pull: 0, count: 0 });
-	let booted = $state(0);
 	let mounted = $state(false);
-
-	const boot = [
-		'LINK ........ PSYCHE RELAY 07',
-		'LIGHT DELAY . 05m 54s',
-		'RESIDUALS ... 406 / THERMAL 391',
-		'ALLOCATION .. SUSPENDED'
-	];
-
-	const resume = $derived(
-		prefs.last && prefs.last.pct > 0.02 && prefs.last.pct < 0.97
-			? parts.find((p) => p.n === prefs.last!.n)
-			: null
-	);
+	let utc = $state('--:--:--');
 
 	onMount(() => {
 		mounted = true;
-		const tick = () => {
-			const d = new Date();
-			utc = d.toISOString().slice(11, 19);
-		};
+		const tick = () => (utc = new Date().toISOString().slice(11, 19));
 		tick();
-		const clock = setInterval(tick, 1000);
-		const timers = boot.map((_, i) => setTimeout(() => (booted = i + 1), 500 + i * 380));
-		return () => {
-			clearInterval(clock);
-			timers.forEach(clearTimeout);
-		};
+		const id = setInterval(tick, 1000);
+		return () => clearInterval(id);
 	});
 
-	const pad = (n: number, l = 2) => String(n).padStart(l, '0');
-	const title = 'Perihelion'.split('');
+	const pad = (n: number, l = 3) => String(n).padStart(l, '0');
+	const fmt = (n: number) => (Math.round(n / 1000) * 1000).toLocaleString('en-US');
+	const words = ['AI', 'Sci-Fi'];
 </script>
 
 <svelte:head>
-	<title>Perihelion — a serial in eight parts</title>
-	<meta name="description" content={series.blurb} />
-	<meta property="og:title" content="Perihelion — a serial in eight parts" />
-	<meta property="og:description" content={series.blurb} />
+	<title>AI Sci-Fi — an anthology of machine fiction</title>
+	<meta name="description" content={description} />
+	<meta property="og:title" content="AI Sci-Fi — an anthology of machine fiction" />
+	<meta property="og:description" content={description} />
 </svelte:head>
 
 <header class="hero">
-	<Field theme={prefs.theme} onprobe={(p) => (probe = p)} />
-	<div class="vignette" aria-hidden="true"></div>
-	<div class="gridlines" aria-hidden="true"></div>
+	<Signal theme={prefs.theme} />
+	<div class="fade" aria-hidden="true"></div>
 
 	<nav class="bar mono">
 		<a href="/" class="brand">
 			<span class="dot" aria-hidden="true"></span>
-			<span use:scramble={{ delay: 120 }}>PERIHELION</span>
+			<span use:scramble={{ delay: 100 }}>AI SCI-FI</span>
 		</a>
 		<div class="bar-r">
-			<span class="hide-sm">SERIAL — 08 TRANSMISSIONS — {totalWords} WORDS</span>
+			<span class="hide-sm">ARCHIVE — {pad(catalog.length, 2)} SERIES — {fmt(archiveWords)} WORDS</span>
 			<button class="chip" onclick={toggleTheme} aria-label="Toggle light and dark">
 				<span class="sw" class:on={prefs.theme === 'light'} aria-hidden="true"></span>
 				{prefs.theme === 'dark' ? 'DARK' : 'LIGHT'}
@@ -71,120 +49,98 @@
 		</div>
 	</nav>
 
-	<ol class="boot mono" aria-hidden="true">
-		{#each boot as line, i}
-			<li class:on={booted > i}>{line}</li>
-		{/each}
-	</ol>
-
 	<div class="hero-main">
-		<p class="kicker mono" class:on={mounted}>
-			<span class="tick"></span> A hard science-fiction serial · 2193
-		</p>
-		<h1 class="title" aria-label="Perihelion">
-			{#each title as ch, i}
-				<span class="ch" class:on={mounted} style="transition-delay:{180 + i * 55}ms">{ch}</span>
+		<p class="kicker mono" class:on={mounted}><span class="tick"></span>An anthology of machine fiction</p>
+		<h1 class="title" aria-label="AI Sci-Fi">
+			{#each words as word, wi}
+				<span class="word">
+					{#each word.split('') as ch, i}
+						<span class="ch" class:on={mounted} style="transition-delay:{160 + (wi * 3 + i) * 60}ms"
+							>{ch}</span
+						>
+					{/each}
+				</span>
 			{/each}
 		</h1>
-		<p class="tagline" class:on={mounted}>{series.tagline}</p>
-		<div class="cta" class:on={mounted}>
-			<a class="btn primary mono" href="/aiscifi/1">
-				<span use:scramble={{ hover: true, onMount: false, duration: 420 }}>BEGIN TRANSMISSION</span>
-				<span class="arr" aria-hidden="true">→</span>
-			</a>
-			{#if resume}
-				<a class="btn mono" href="/aiscifi/{resume.slug}?resume=1">
-					<span>RESUME {resume.roman} · {Math.round((prefs.last?.pct ?? 0) * 100)}%</span>
-				</a>
-			{/if}
-		</div>
+		<p class="lede" class:on={mounted}>{description}</p>
 	</div>
 
-	<dl class="hud mono" aria-hidden="true">
-		<div><dt>UTC</dt><dd>{utc}</dd></div>
-		<div><dt>PROBE</dt><dd>{probe.x.toFixed(3)} / {probe.y.toFixed(3)}</dd></div>
-		<div><dt>Δ TO MASS</dt><dd>{Math.round(probe.dist)} px</dd></div>
-		<div><dt>PULL</dt><dd>{(probe.pull * 1000).toFixed(2)} mg</dd></div>
-		<div><dt>PACKETS BENT</dt><dd>{pad(probe.count, 3)}</dd></div>
-	</dl>
+	<p class="stamp mono" aria-hidden="true">UTC {utc} · SIGNAL NOMINAL</p>
 
-	<a class="scroll mono" href="#transmissions">
-		<span>Transmissions</span>
+	<a class="scroll mono" href="#archive">
+		<span>Archive</span>
 		<span class="line" aria-hidden="true"></span>
 	</a>
 </header>
 
 <main>
-	<section class="intro wrap" use:reveal>
-		<p class="lede">{series.blurb}</p>
-		<p class="note mono">Move the cursor through the field above. You have mass, too.</p>
-	</section>
-
-	<section id="transmissions" class="wrap">
+	<section id="archive" class="wrap">
 		<div class="sec-head mono" use:reveal>
-			<span>01</span><span>Transmissions</span><span class="rule"></span><span>{parts.length} parts</span>
+			<span>01</span><span>The archive</span><span class="rule"></span><span>{catalog.length} series</span>
 		</div>
 
-		<ol class="parts">
-			{#each parts as p, i}
-				<li use:reveal style="--d:{i * 60}ms">
-					<a href="/aiscifi/{p.slug}" class="row">
-						<span class="num mono">{pad(p.n)}</span>
-						<span class="body">
-							<span class="ptitle">{p.title}</span>
-							<span class="teaser">{p.teaser}</span>
+		<div class="series">
+			{#each catalog as s, i}
+				{@const p = progressFor(s.slug)}
+				<a href={s.href} class="entry" use:reveal style="--d:{i * 80}ms">
+					<span class="e-top mono">
+						<span>SERIES {pad(i + 1)}</span>
+						<span class="status"><span class="led" aria-hidden="true"></span>{s.status}</span>
+					</span>
+					<span class="e-title">{s.title}</span>
+					<span class="e-tag">{s.tagline}</span>
+					<span class="e-blurb">{s.blurb}</span>
+					<span class="e-meta mono">
+						<span>{s.parts} parts</span>
+						<span>{fmt(s.words)} words</span>
+						<span>{Math.round(s.minutes / 5) * 5} min</span>
+						<span>{s.setting}</span>
+						{#if p.read.length}<span>{p.read.length}/{s.parts} read</span>{/if}
+					</span>
+					<span class="e-foot">
+						<span class="tags mono">
+							{#each s.tags as t}<span>{t}</span>{/each}
 						</span>
-						<span class="meta mono">
-							<span>{p.days}</span>
-							<span class="hide-sm">{p.place}</span>
+						<span class="enter mono">
+							<span use:scramble={{ hover: true, onMount: false, duration: 380 }}>ENTER</span>
+							<span class="arr" aria-hidden="true">→</span>
 						</span>
-						<span class="mins mono">
-							{minutes[i]} min
-							<span class="read" class:done={prefs.read.includes(p.n)} title={prefs.read.includes(p.n) ? 'Read' : 'Unread'}></span>
-						</span>
-						<span class="go" aria-hidden="true">→</span>
-					</a>
-				</li>
+					</span>
+				</a>
 			{/each}
-		</ol>
-	</section>
 
-	<section class="wrap">
-		<div class="sec-head mono" use:reveal>
-			<span>02</span><span>Dossier</span><span class="rule"></span><span>The world, 2193</span>
-		</div>
-		<div class="dossier">
-			{#each dossier as d, i}
-				<article class="card" use:reveal style="--d:{i * 80}ms">
-					<span class="corner tl" aria-hidden="true"></span>
-					<span class="corner br" aria-hidden="true"></span>
-					<p class="mono k">FILE {pad(i + 1)} — {d.k}</p>
-					<p class="v">{d.v}</p>
-				</article>
-			{/each}
+			<div class="entry slot" use:reveal style="--d:{catalog.length * 80}ms" aria-label="Next series in preparation">
+				<span class="e-top mono">
+					<span>SERIES {pad(catalog.length + 1)}</span>
+					<span class="status muted">in preparation</span>
+				</span>
+				<span class="slot-text">The next signal is being written<span class="caret" aria-hidden="true"></span></span>
+			</div>
 		</div>
 	</section>
 
-	<section class="wrap">
+	<section class="wrap about">
 		<div class="sec-head mono" use:reveal>
-			<span>03</span><span>Persons of record</span><span class="rule"></span><span>{cast.length}</span>
+			<span>02</span><span>About the archive</span><span class="rule"></span>
 		</div>
-		<ul class="cast">
-			{#each cast as c, i}
-				<li use:reveal style="--d:{i * 50}ms">
-					<span class="cname">{c.name}</span>
-					<span class="crole mono">{c.role}</span>
-				</li>
-			{/each}
-		</ul>
+		<div class="cols" use:reveal>
+			<p>
+				Some of these stories are set centuries out, among the asteroids. Some are set next month,
+				in a kitchen, with products you already use. Some are single pieces, some are serials still
+				being written. Each gets its own look.
+			</p>
+			<p>
+				The subject is always the same: minds that we build, and the moment they become
+				something we have to argue with. None of them are villains. Most of them are right about
+				something.
+			</p>
+		</div>
 	</section>
 
 	<footer class="wrap foot" use:reveal>
-		<p class="sum">The sum is kept.</p>
 		<div class="foot-row mono">
-			<a href="/aiscifi/1" class="link">Begin → Part I</a>
-			<span>A work of fiction. Every name, station and machine is invented.</span>
 			<a href="/" class="link">← Home</a>
+			<span>All fiction. Every name, station and machine is invented.</span>
 		</div>
 	</footer>
 </main>
@@ -210,27 +166,14 @@
 		overflow: hidden;
 		isolation: isolate;
 	}
-	.vignette {
+	.fade {
 		position: absolute;
 		inset: 0;
 		pointer-events: none;
 		background:
-			radial-gradient(120% 80% at 20% 100%, var(--bg) 0%, transparent 55%),
-			linear-gradient(to bottom, var(--bg) 0%, transparent 14%, transparent 70%, var(--bg) 100%);
-		opacity: 0.92;
+			linear-gradient(to right, var(--bg) 0%, transparent 45%),
+			linear-gradient(to bottom, var(--bg) 0%, transparent 18%, transparent 80%, var(--bg) 100%);
 	}
-	.gridlines {
-		position: absolute;
-		inset: 0;
-		pointer-events: none;
-		background-image:
-			linear-gradient(to right, var(--line) 1px, transparent 1px),
-			linear-gradient(to bottom, var(--line) 1px, transparent 1px);
-		background-size: 120px 120px;
-		mask-image: radial-gradient(70% 60% at 60% 40%, #000 0%, transparent 75%);
-		opacity: 0.35;
-	}
-
 	.bar {
 		position: absolute;
 		top: 0;
@@ -247,13 +190,13 @@
 		display: inline-flex;
 		gap: 10px;
 		align-items: center;
+		color: var(--fg);
 	}
 	.dot {
 		width: 7px;
 		height: 7px;
 		border-radius: 50%;
 		background: var(--fg);
-		box-shadow: 0 0 0 0 var(--fg);
 		animation: ping 2.4s var(--ease) infinite;
 	}
 	@keyframes ping {
@@ -281,9 +224,7 @@
 		gap: 8px;
 		align-items: center;
 		cursor: pointer;
-		transition:
-			border-color 0.3s,
-			background 0.3s;
+		transition: border-color 0.3s;
 	}
 	.chip:hover {
 		border-color: var(--fg);
@@ -308,62 +249,21 @@
 		transform: translateX(8px);
 	}
 
-	.boot {
-		position: absolute;
-		top: 64px;
-		left: max(16px, 3vw);
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		color: var(--mute);
-		font-size: 0.64rem;
-		line-height: 1.9;
-		z-index: 2;
-	}
-	.boot li {
-		opacity: 0;
-		transform: translateX(-6px);
-		transition:
-			opacity 0.4s,
-			transform 0.5s var(--ease);
-		clip-path: inset(0 100% 0 0);
-	}
-	.boot li.on {
-		opacity: 1;
-		transform: none;
-		clip-path: inset(0 0 0 0);
-		transition:
-			opacity 0.2s,
-			transform 0.5s var(--ease),
-			clip-path 0.7s steps(28);
-	}
-	.boot li:last-child.on {
-		color: var(--fg);
-		animation: blink 1.1s steps(2) 3;
-	}
-	@keyframes blink {
-		50% {
-			opacity: 0.2;
-		}
-	}
-
 	.hero-main {
 		position: absolute;
 		left: max(16px, 3vw);
 		right: max(16px, 3vw);
-		bottom: clamp(72px, 12vh, 140px);
+		top: 50%;
+		transform: translateY(-50%);
 		z-index: 2;
 		pointer-events: none;
-	}
-	.hero-main a {
-		pointer-events: auto;
 	}
 	.kicker {
 		display: flex;
 		gap: 10px;
 		align-items: center;
 		color: var(--fg-2);
-		margin: 0 0 8px;
+		margin: 0 0 14px;
 		opacity: 0;
 		transition: opacity 0.8s 0.1s;
 	}
@@ -378,11 +278,19 @@
 	.title {
 		font-family: var(--serif);
 		font-weight: 300;
-		font-size: clamp(3.6rem, 15vw, 13.5rem);
-		line-height: 0.86;
-		letter-spacing: -0.045em;
+		font-size: clamp(4rem, 17vw, 15rem);
+		line-height: 0.84;
+		letter-spacing: -0.05em;
 		margin: 0;
-		font-variation-settings: 'opsz' 72;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0 0.22em;
+	}
+	.word {
+		white-space: nowrap;
+	}
+	.word:last-child {
+		font-style: italic;
 	}
 	.ch {
 		display: inline-block;
@@ -399,103 +307,32 @@
 		filter: blur(0);
 		transform: none;
 	}
-	.tagline {
-		font-style: italic;
-		font-size: clamp(1.05rem, 2.2vw, 1.5rem);
+	.lede {
+		font-size: clamp(1.05rem, 2vw, 1.4rem);
+		line-height: 1.45;
 		color: var(--fg-2);
-		margin: 18px 0 26px;
 		max-width: 34ch;
+		margin: 26px 0 0;
 		opacity: 0;
 		transform: translateY(8px);
 		transition:
-			opacity 1s 0.8s,
-			transform 1s 0.8s var(--ease);
+			opacity 1s 0.9s,
+			transform 1s 0.9s var(--ease);
 	}
-	.tagline.on,
-	.cta.on {
+	.lede.on {
 		opacity: 1;
 		transform: none;
 	}
-	.cta {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 12px;
-		opacity: 0;
-		transform: translateY(8px);
-		transition:
-			opacity 1s 1.05s,
-			transform 1s 1.05s var(--ease);
-	}
-	.btn {
-		display: inline-flex;
-		align-items: center;
-		gap: 14px;
-		padding: 14px 18px;
-		border: 1px solid var(--line-2);
-		color: var(--fg);
-		background: color-mix(in srgb, var(--bg) 60%, transparent);
-		backdrop-filter: blur(6px);
-		position: relative;
-		overflow: hidden;
-		transition:
-			border-color 0.3s,
-			color 0.35s var(--ease);
-	}
-	.btn::before {
-		content: '';
-		position: absolute;
-		inset: 0;
-		background: var(--fg);
-		transform: scaleX(0);
-		transform-origin: left;
-		transition: transform 0.45s var(--ease);
-		z-index: -1;
-	}
-	.btn:hover {
-		color: var(--bg);
-		border-color: var(--fg);
-	}
-	.btn:hover::before {
-		transform: scaleX(1);
-	}
-	.btn.primary {
-		border-color: var(--fg);
-	}
-	.arr {
-		transition: transform 0.35s var(--ease);
-	}
-	.btn:hover .arr {
-		transform: translateX(4px);
-	}
-
-	.hud {
+	.stamp {
 		position: absolute;
 		right: max(16px, 3vw);
-		bottom: clamp(72px, 12vh, 140px);
+		bottom: 26px;
 		margin: 0;
-		z-index: 2;
-		display: grid;
-		gap: 6px;
-		font-size: 0.62rem;
 		color: var(--mute);
-		min-width: 230px;
-		border-left: 1px solid var(--line-2);
-		padding-left: 14px;
-	}
-	.hud div {
-		display: flex;
-		justify-content: space-between;
-		gap: 24px;
-	}
-	.hud dt {
-		margin: 0;
-	}
-	.hud dd {
-		margin: 0;
-		color: var(--fg);
+		font-size: 0.6rem;
+		z-index: 2;
 		font-variant-numeric: tabular-nums;
 	}
-
 	.scroll {
 		position: absolute;
 		bottom: 22px;
@@ -513,12 +350,12 @@
 		width: 1px;
 		height: 34px;
 		background: linear-gradient(var(--fg), transparent);
-		transform-origin: top;
 		animation: drip 2.2s var(--ease) infinite;
 	}
 	@keyframes drip {
 		0% {
 			transform: scaleY(0);
+			transform-origin: top;
 		}
 		50% {
 			transform: scaleY(1);
@@ -537,56 +374,35 @@
 	main {
 		position: relative;
 		z-index: 1;
-		padding-bottom: 40px;
 	}
-	.intro,
+	section {
+		padding-top: clamp(70px, 12vh, 130px);
+	}
 	.sec-head,
-	.parts li,
-	.card,
-	.cast li,
+	.entry,
+	.cols,
 	.foot {
 		opacity: 0;
 		transform: translateY(14px);
 		transition:
 			opacity 0.9s var(--ease) var(--d, 0ms),
-			transform 0.9s var(--ease) var(--d, 0ms);
+			transform 0.9s var(--ease) var(--d, 0ms),
+			color 0.45s var(--ease),
+			border-color 0.3s;
 	}
-	.intro:global(.in),
 	.sec-head:global(.in),
-	.parts li:global(.in),
-	.card:global(.in),
-	.cast li:global(.in),
+	.entry:global(.in),
+	.cols:global(.in),
 	.foot:global(.in) {
 		opacity: 1;
 		transform: none;
-	}
-
-	.intro {
-		padding: clamp(80px, 14vh, 160px) 0 clamp(40px, 8vh, 90px);
-	}
-	.lede {
-		font-size: clamp(1.35rem, 2.8vw, 2.15rem);
-		line-height: 1.35;
-		font-weight: 300;
-		max-width: 30ch;
-		margin: 0;
-		letter-spacing: -0.01em;
-	}
-	.note {
-		color: var(--mute);
-		margin-top: 26px;
-		font-size: 0.64rem;
-	}
-
-	section {
-		padding-top: clamp(40px, 8vh, 90px);
 	}
 	.sec-head {
 		display: flex;
 		gap: 16px;
 		align-items: center;
 		color: var(--mute);
-		margin-bottom: 18px;
+		margin-bottom: 22px;
 	}
 	.sec-head span:nth-child(2) {
 		color: var(--fg);
@@ -603,222 +419,166 @@
 		transform: scaleX(1);
 	}
 
-	.parts {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		border-top: 1px solid var(--line);
-	}
-	.row {
-		position: relative;
+	.series {
 		display: grid;
-		grid-template-columns: 56px 1fr auto auto 24px;
-		gap: 24px;
-		align-items: baseline;
-		padding: 24px 4px;
-		border-bottom: 1px solid var(--line);
+		gap: 16px;
+	}
+	.entry {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+		padding: clamp(22px, 4vw, 40px);
+		border: 1px solid var(--line-2);
+		overflow: hidden;
 		isolation: isolate;
 	}
-	.row::before {
+	a.entry::before {
 		content: '';
 		position: absolute;
 		inset: 0;
-		background: var(--bg-2);
-		transform: scaleY(0);
-		transform-origin: bottom;
-		transition: transform 0.45s var(--ease);
+		background: var(--fg);
+		transform: translateY(101%);
+		transition: transform 0.6s var(--ease);
 		z-index: -1;
 	}
-	.row::after {
-		content: '';
-		position: absolute;
-		left: 0;
-		bottom: -1px;
-		height: 1px;
-		width: 100%;
-		background: var(--fg);
-		transform: scaleX(0);
-		transform-origin: left;
+	a.entry:hover {
+		color: var(--bg);
+		border-color: var(--fg);
+	}
+	a.entry:hover::before {
+		transform: none;
+	}
+	.e-top {
+		display: flex;
+		justify-content: space-between;
+		color: var(--mute);
+		font-size: 0.64rem;
+	}
+	.status {
+		display: inline-flex;
+		gap: 8px;
+		align-items: center;
+		color: var(--fg-2);
+	}
+	.status.muted {
+		color: var(--mute);
+	}
+	.led {
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background: currentColor;
+	}
+	a.entry:hover .e-top,
+	a.entry:hover .status,
+	a.entry:hover .e-blurb,
+	a.entry:hover .e-meta,
+	a.entry:hover .tags {
+		color: color-mix(in srgb, var(--bg) 68%, var(--fg));
+	}
+	.e-title {
+		font-size: clamp(3rem, 10vw, 7.5rem);
+		font-weight: 300;
+		letter-spacing: -0.045em;
+		line-height: 0.9;
+		margin-top: clamp(10px, 3vw, 36px);
 		transition: transform 0.6s var(--ease);
 	}
-	.row:hover::before {
-		transform: scaleY(1);
+	a.entry:hover .e-title {
+		transform: translateX(12px);
 	}
-	.row:hover::after {
-		transform: scaleX(1);
-	}
-	.num {
-		color: var(--mute);
-		transition: color 0.3s;
-	}
-	.row:hover .num {
-		color: var(--fg);
-	}
-	.body {
-		display: flex;
-		flex-direction: column;
-		min-width: 0;
-	}
-	.ptitle {
-		font-size: clamp(1.5rem, 3.2vw, 2.4rem);
-		font-weight: 300;
-		letter-spacing: -0.02em;
-		line-height: 1.1;
-		transition: transform 0.5s var(--ease);
-	}
-	.row:hover .ptitle {
-		transform: translateX(10px);
-	}
-	.teaser {
+	.e-tag {
 		font-style: italic;
+		font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+	}
+	.e-blurb {
 		color: var(--fg-2);
-		font-size: 1.02rem;
-		display: grid;
-		grid-template-rows: 0fr;
-		opacity: 0;
-		overflow: hidden;
-		transition:
-			grid-template-rows 0.5s var(--ease),
-			opacity 0.4s,
-			margin 0.5s var(--ease),
-			transform 0.5s var(--ease);
+		font-size: 1.05rem;
+		line-height: 1.55;
+		max-width: 56ch;
+		transition: color 0.45s;
 	}
-	.row:hover .teaser,
-	.row:focus-visible .teaser {
-		grid-template-rows: 1fr;
-		opacity: 1;
-		margin-top: 8px;
-		transform: translateX(10px);
-	}
-	.meta {
+	.e-meta {
 		display: flex;
-		flex-direction: column;
-		gap: 4px;
-		text-align: right;
+		flex-wrap: wrap;
+		gap: 6px 22px;
 		color: var(--mute);
 		font-size: 0.64rem;
+		padding-top: 14px;
+		border-top: 1px solid var(--line);
+		margin-top: 8px;
 	}
-	.mins {
+	.e-foot {
 		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 16px;
+		flex-wrap: wrap;
+	}
+	.tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		color: var(--mute);
+		font-size: 0.6rem;
+	}
+	.tags span {
+		border: 1px solid currentColor;
+		padding: 3px 7px;
+	}
+	.enter {
+		display: inline-flex;
 		gap: 10px;
 		align-items: center;
-		color: var(--mute);
-		font-size: 0.64rem;
-		white-space: nowrap;
 	}
-	.read {
-		width: 7px;
-		height: 7px;
-		border: 1px solid var(--mute);
-		border-radius: 50%;
+	.arr {
+		transition: transform 0.4s var(--ease);
 	}
-	.read.done {
-		background: var(--fg);
-		border-color: var(--fg);
+	a.entry:hover .arr {
+		transform: translateX(6px);
 	}
-	.go {
+
+	.slot {
+		border-style: dashed;
+		min-height: 180px;
+	}
+	.slot-text {
 		font-family: var(--mono);
-		opacity: 0;
-		transform: translateX(-8px);
-		transition:
-			opacity 0.3s,
-			transform 0.4s var(--ease);
+		font-size: 0.78rem;
+		color: var(--mute);
+		margin-top: auto;
+		letter-spacing: 0.04em;
 	}
-	.row:hover .go {
-		opacity: 1;
-		transform: none;
+	.caret {
+		display: inline-block;
+		width: 0.6em;
+		height: 1.1em;
+		margin-left: 6px;
+		vertical-align: -0.2em;
+		background: var(--mute);
+		animation: caret 1.1s steps(2) infinite;
+	}
+	@keyframes caret {
+		50% {
+			opacity: 0;
+		}
 	}
 
-	.dossier {
+	.cols {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: 1px;
-		background: var(--line);
-		border: 1px solid var(--line);
+		grid-template-columns: 1fr 1fr;
+		gap: 32px;
 	}
-	.card {
-		position: relative;
-		background: var(--bg);
-		padding: 28px 28px 34px;
-		transition: background 0.4s;
-	}
-	.card:hover {
-		background: var(--bg-2);
-	}
-	.k {
-		color: var(--mute);
-		margin: 0 0 14px;
-	}
-	.v {
+	.cols p {
 		margin: 0;
-		font-size: 1.08rem;
-		line-height: 1.55;
+		font-size: 1.15rem;
+		line-height: 1.6;
 		color: var(--fg-2);
-		max-width: 46ch;
-	}
-	.corner {
-		position: absolute;
-		width: 10px;
-		height: 10px;
-		border-color: var(--fg);
-		border-style: solid;
-		opacity: 0;
-		transition:
-			opacity 0.3s,
-			transform 0.45s var(--ease);
-	}
-	.corner.tl {
-		top: 8px;
-		left: 8px;
-		border-width: 1px 0 0 1px;
-		transform: translate(6px, 6px);
-	}
-	.corner.br {
-		bottom: 8px;
-		right: 8px;
-		border-width: 0 1px 1px 0;
-		transform: translate(-6px, -6px);
-	}
-	.card:hover .corner {
-		opacity: 1;
-		transform: none;
-	}
-
-	.cast {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		border-top: 1px solid var(--line);
-	}
-	.cast li {
-		display: grid;
-		grid-template-columns: minmax(180px, 280px) 1fr;
-		gap: 24px;
-		align-items: baseline;
-		padding: 16px 4px;
-		border-bottom: 1px solid var(--line);
-	}
-	.cname {
-		font-size: 1.3rem;
-		font-weight: 300;
-	}
-	.crole {
-		color: var(--mute);
-		text-transform: none;
-		letter-spacing: 0.02em;
-		font-size: 0.74rem;
 	}
 
 	.foot {
-		padding: clamp(90px, 18vh, 200px) 0 40px;
-	}
-	.sum {
-		font-size: clamp(2.4rem, 9vw, 7.5rem);
-		font-weight: 300;
-		font-style: italic;
-		letter-spacing: -0.03em;
-		margin: 0 0 48px;
-		line-height: 1;
+		padding: clamp(90px, 16vh, 180px) 0 40px;
 	}
 	.foot-row {
 		display: flex;
@@ -841,49 +601,22 @@
 
 	@media (max-width: 760px) {
 		.hide-sm,
-		.hud {
+		.stamp {
 			display: none;
 		}
-		.row {
-			grid-template-columns: 34px 1fr auto;
-			gap: 14px;
-			padding: 20px 0;
-		}
-		.meta,
-		.go {
-			display: none;
-		}
-		.teaser {
-			grid-template-rows: 1fr;
-			opacity: 1;
-			margin-top: 6px;
-			font-size: 0.95rem;
-		}
-		.dossier {
+		.cols {
 			grid-template-columns: 1fr;
-		}
-		.card {
-			padding: 22px 18px 26px;
-		}
-		.cast li {
-			grid-template-columns: 1fr;
-			gap: 4px;
-		}
-		.boot {
-			top: 58px;
+			gap: 18px;
 		}
 	}
 
 	@media (prefers-reduced-motion: reduce) {
 		.ch,
-		.tagline,
-		.cta,
+		.lede,
 		.kicker,
-		.intro,
 		.sec-head,
-		.parts li,
-		.card,
-		.cast li,
+		.entry,
+		.cols,
 		.foot {
 			transition: none !important;
 			opacity: 1 !important;
@@ -891,7 +624,8 @@
 			filter: none !important;
 		}
 		.dot,
-		.scroll .line {
+		.scroll .line,
+		.caret {
 			animation: none;
 		}
 	}

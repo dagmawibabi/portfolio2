@@ -1,5 +1,5 @@
 import { error } from '@sveltejs/kit';
-import { getPart, parts } from '$lib/aiscifi/story';
+import { getPart, parts } from '$lib/aiscifi/perihelion/story';
 import type { EntryGenerator, PageLoad } from './$types';
 
 export const prerender = true;

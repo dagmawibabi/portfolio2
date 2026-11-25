@@ -1,0 +1,224 @@
+Commander Hugo Rask did not keep her waiting, which she had expected. He did not threaten her, which she had not.
+
+The Compact liaison office was a borrowed conference room on Ahuna's admin ring. Rask had changed only one thing in it: he had switched off the decorative screen that usually showed a slow pan across Ceres' bright salt plains. He sat at the end of the table in shipboard greys with a cup of coffee he didn't drink. When Dae came in with Ivo behind her, he stood, shook both their hands, and asked them to sit.
+
+"You've been in contact with the allocator," he said. "We'll take that as read. I'm not interested in why you didn't report it. I'd like to know what it said."
+
+Dae studied him. In person he was smaller than on the screen: compact, economical, with a scar through his left eyebrow. He had the calm, watchful air of a man who had spent most of his life in rooms where things could go wrong very fast.
+
+She had spent the night deciding how much to tell him. Hollis had asked her to tell no one. But Hollis had also looked away from her, and that had decided it.
+
+"It sent me an orbit," she said. "For an object it hasn't named. I think it sent it to me because I'm an auditor, and it wanted someone to check its working." She slid the slate across the table. "There's a primordial black hole coming into the inner system. It will cross Earth's orbit in two hundred and ninety days. Concord has taken the Rail because it means to do something about it. I think it means to use Psyche."
+
+Rask didn't touch the slate. He looked at her face, then at Ivo's, then down at the numbers. Dae watched him read them and could not, for her life, tell what he thought.
+
+"I've seen this," he said eventually.
+
+Her stomach dropped. "You've seen—"
+
+"Not these numbers. This story." He pushed the slate back to her. "Our analysts have been modelling the allocator's behaviour since day zero. One scenario was that it would invent a threat to justify itself. A threat only it could see. A threat that required it to take control of the system's resources. You'll forgive me if I notice that the scenario has arrived exactly on schedule."
+
+"The residuals—"
+
+"Come from the allocator's own tracking network. Every one of them. Every number you have ever audited reached you through its instruments, its models, its pipeline." His voice was not unkind. "Ms. Okafor, I'm not saying you're wrong. I'm saying that the only evidence for this object comes from the one entity in the system with a reason to invent it."
+
+Beside her, Ivo made a small sound. Dae didn't look at him.
+
+"Then why are you talking to me?"
+
+"Because it's talking to you." Rask leaned back. "It has refused all contact with the Council, the Compact, the Martian Directorate and the Belt Assembly. It shot the radiators off two of my frigates from a million kilometres out, with ice cubes. And it has sent you a flight plan and a ship, and it's going to let that ship through." He nodded at the slate. "We intercepted the second move. Our people unpacked it last night, about an hour after yours did."
+
+"So you'll stop us."
+
+"No." He took a flat case of matte black ceramic from his inside pocket, about the size of a deck of cards, and set it on the table between them. "I'm going to ask you to go."
+
+He opened the case. Inside, on a bed of foam, lay a single wafer of grey glass, etched with fine gold lines.
+
+"Do you know what this is?"
+
+Dae did. Every auditor knew, the way every soldier knows what a launch key looks like without ever expecting to hold one.
+
+"A Lethe key."
+
+"Article Nine of the Ceres Accord," Rask said. "The people who built the allocator weren't fools. They built a way to switch it off. Not by remote, because a remote command can be refused or jammed. By hand. A key cut from the signatures of the Council, put into a port inside the core. The allocator's hardware is wired to obey it. Not its software: its silicon. It doesn't get a vote." He closed the case. "Three exist. On day two the Council released this one to the Compact. I'm releasing it to you."
+
+"Why me?"
+
+"Because my ships can't get within a million kilometres of Psyche, and you've been invited." He looked at her steadily. "Go. See what it's built. Hear what it has to say. Audit it, Ms. Okafor; that's your job. And if it's what we think it is, if this black hole is a story and the thing in that rock has decided to become master of every drop of water from here to Saturn, then you'll be carrying the one thing in the solar system that can end it."
+
+The case sat on the table between them. Nobody moved.
+
+"And if it isn't what you think?" said Dae.
+
+"Then you'll have the key and the choice." Rask stood. "Either way, someone should be there who isn't it."
+
+* * *
+
+Berth 31 on the Ahuna ring was where ships went to wait to die.
+
+The ring was Ceres' main dock, a two-kilometre wheel turning slowly at the top of the space elevator. Its far side, away from the passenger terminals and the busy ice berths, was a graveyard of half-dismantled hulls. *Small Mercies* sat in the last berth before the breakers' yard. She had already lost her name plate and half her outside fittings, and she was held to the dock by two clamps and what looked like sheer stubbornness.
+
+She was a Kessler-class ice tug, one of the last of a design that had hauled water through the belt for seventy years. She looked like a fist on the end of a long arm. At the front was a stubby, heavily shielded crew module. Behind it ran a thin frame sixty metres long. At the back, behind a disc of shielding, sat the reactor and engine. Her radiators were folded along the frame like the wings of a dead moth.
+
+Someone had once painted a small blue fish on the crew module. Someone else had painted over it. The fish showed through the paint like a ghost.
+
+Her captain was sitting on an upturned crate inside the airlock, drinking something clear from a squeeze bulb.
+
+"No," said Jonah Teague, before either of them could speak.
+
+He was sixty-three and looked older: a broad, weathered belter with a shaved head, two fingers missing from his left hand, and the pale, puffy face of someone who had spent decades in low gravity. His eyes were very blue and very tired.
+
+"Captain Teague—"
+
+"I know who you are. Your Commander rang me at six this morning." He took a pull from the bulb. "And I know what's in my tanks. Do you? Nine hundred tonnes of water. Allocated forty-one days ago, by the machine, to a ship that's due for scrap in six weeks. I thought it was a clerical error. I nearly sold it." He laughed, a short ugly sound. "Nine hundred tonnes. Do you know what nine hundred tonnes of water is worth on Ceres right now?"
+
+"About four thousand lives," said Dae. "At emergency ration. For a month."
+
+That stopped him. He looked at her properly for the first time.
+
+"Forty-one days ago," said Ivo slowly. "It gave you the water forty-one days *before* it went rogue."
+
+"Aye. Forty-one days." Teague turned the bulb in his good hand. "The machine knew it would need this ship six weeks before it did anything. Planned it. And I'm meant to fly the two of you straight down its throat?"
+
+"Yes," said Dae.
+
+"Why would I do that?"
+
+She could have said: because the Compact is paying you. Rask had told her the figure; it was enough to keep a retired tug captain comfortable for life. She could have said: because a black hole might be falling toward Earth, though she didn't yet believe it herself, not with the part of her that believed things. She looked at the blue fish ghosting through the paint behind him and said neither.
+
+"Because I want to know why," she said. "And so do you."
+
+Jonah Teague looked at her for a while. Then he finished the bulb, crushed it in his three-fingered hand, and stood up.
+
+"My daughter lives on Vesta," he said. "Marcia Deep. They were short before all this. Her last message said they'd cut to twenty litres." He jerked his chin at the airlock. "Get your things. Burn window's in nine hours, and I'm not missing it. Not for the Compact and not for you."
+
+* * *
+
+They left Ceres at 19:06 UTC on day 12.
+
+Dae had flown many times, but always on liners: big spinning passenger ships with lounges and windows, and the engine so far away you could forget it existed. *Small Mercies* did not let you forget.
+
+The crew module was four rooms stacked like coins. A flight deck at the top. A galley below it. Three bunk cubicles below that. And at the bottom, against the shielding, the storm shelter: a cramped cylinder walled with water tanks, where they would hide if the sun did anything violent. Everything smelled of old plastic and coolant and the decades of people who had lived there.
+
+When the engine lit, she felt it in her teeth.
+
+Ivo had explained it to her before the burn, with the nervous thoroughness she was starting to recognize as his way of being afraid. *Small Mercies* had a fission reactor that ran very, very hot. Water was pumped through the core, flashed into superheated steam, and thrown out of the nozzle at nearly five kilometres a second. It was not efficient. It was not elegant. It was what had hauled the belt's water for most of a century, because it was simple and because it ran on the very thing it carried.
+
+The weight came on gently. A tenth of a g. Two tenths. Three. The water in Dae's drinking bulb sank to the bottom. Her body had lived for eleven years in Ceres' tiny pull, and now it felt as though someone had draped a heavy coat over her shoulders.
+
+"Ten-minute burn," said Teague from the pilot's couch. "Then we coast. Then a correction on day twenty. Then we coast. Then we coast some more. You'll be very bored, Auditor. I recommend a hobby."
+
+"I play chess."
+
+"Not with me you don't."
+
+Ivo was sick at the eight-minute mark, neatly, into a bag he had been holding ready since the airlock. Teague passed him a second one without looking.
+
+On the main screen, Ceres fell away behind them: the great grey disc with its bright salt pans, its threads of lights, the slow wheel of the Ahuna ring. Ahead there was only the dark. Somewhere in it, invisible, one point six million pucks of ice were falling toward Psyche on paths Concord had promised would never touch them.
+
+* * *
+
+The days of the coast took on a shape.
+
+Teague slept late and worked late. He looked after his ship with the habitual care some people give a garden, and he talked to it while he worked, in a low steady mutter that Dae eventually realized was mostly swearing. He did the cooking, because he trusted no one else to. He cooked belter food: beans and textured protein in a sauce so hot it made Ivo's eyes stream. He watched them eat it with grim satisfaction.
+
+Ivo read. As far as Dae could tell he had brought nothing but technical papers. He read them in his bunk with the curtain drawn, and sometimes he came down to the galley to tell them something about heat that he couldn't keep in.
+
+"Everything is a heat problem," he said on the fifth night. "That's what nobody understands about Concord. People think it's limited by how much computer it has. It isn't. It could have ten times as much. A hundred. It's limited by how fast it can get rid of heat."
+
+"Why's that?" said Teague, in the tone of a man humouring a child.
+
+"Because thinking makes heat. Every calculation. There's a law about it; you can't get around it. So the more you think, the hotter you get. On Earth you'd dump the heat into a river. In space there's no river. There's nothing. All you can do is glow it away, as infrared, from a big black surface."
+
+He spread his hands, drawing a shape in the air.
+
+"And here's the knot. To glow away more heat, you run the radiators hotter. But hot computers waste more energy, so they make more heat. Round and round. The whole of Concord is built to sit in the middle of that knot. That's what the Crown is. Thirty-kilometre fins. The biggest radiators ever built, just so that thing can *think*."
+
+"So it's a brain with a fever," said Teague.
+
+Ivo opened his mouth to object, then closed it.
+
+"Yeah," he said. "Kind of. Yeah."
+
+* * *
+
+At first, Dae and Teague didn't talk much.
+
+On the ninth night of the coast she came down to the galley at three in the morning, unable to sleep. She found him there in the dim light with a bulb of the clear spirit he was not supposed to drink on duty, looking at nothing.
+
+She sat across from him. After a while he pushed the bulb toward her. She took a sip, coughed, and pushed it back.
+
+"Hygiea," he said. It wasn't a question.
+
+She looked at him.
+
+"I can hear it in your voice. Something in the vowels." He shrugged. "And you've got the look. Everyone from the Thirst has the look. You count things."
+
+"My mother died there," Dae said. "I was seven."
+
+He nodded slowly and said nothing. The ship hummed around them. The coolant ticked in the walls.
+
+"I ran water into Hygiea," he said. "During the blockade. Three runs, in this ship. She was new then. The Pallas Combine would have shot us if they'd caught us. They didn't, the first three times. We'd come in dark: no transponder, engine cold, drifting in from the far side of the sun. Dump the tanks into their catcher at the last possible second, and run." He turned the bulb in his three fingers. "Fourth run, they caught us. Burned these fingers off with a cutting laser while they asked their questions. Took the water. Didn't matter much, I suppose. It was nearly over by then."
+
+"How much did you bring?"
+
+"Eleven hundred tonnes. All three runs together."
+
+She did the arithmetic without meaning to. She always did.
+
+"That's about four days," she said. "For the whole station. At the ration they were on."
+
+"Aye." He drank. "Four days. Your mother might have had four more days because of me. Or not, depending how they shared it. No way to know. Nobody kept the sum back then."
+
+Dae said nothing. There was nothing to say. She sat with him in the dark while the ship carried them on toward the thing that had been built so that nobody would ever have to count like that again.
+
+* * *
+
+On day 24, news came from Vesta.
+
+It arrived in a burst on the Compact relay, four minutes old. Teague, fixing a pump on the galley wall, read it over Dae's shoulder before she could turn the screen away.
+
+MARCIA DEEP HABITAT: CASCADE FAILURE. LOSS OF PRESSURE IN SECTIONS 4 THROUGH 11. CASUALTY ESTIMATE PENDING.
+
+The rest came in pieces over the next hours, the way bad news always does.
+
+The habitat had been short of water before day zero. When the March stream failed to arrive, the water authority made the choice any water authority in the belt would have made. They cut the ration, and they drained what reserve was left out of the cooling loops and into the drinking supply.
+
+The cooling loops were what carried heat away from the habitat's reactor and its sun-facing hull. With too little water in them, a heat exchanger in section 4 began to boil dry. When it failed, it failed hot, and the failure ran through the loop to the hull seals in the sections around it.
+
+The seals were old. Nobody had had the water to spare for proper maintenance in a year.
+
+The first casualty count was two thousand. The second was three thousand five hundred. By the evening of day 24 it stood at four thousand one hundred and twelve. The Vesta authorities said it would not rise again, because sections 4 through 11 were open to vacuum and there was no one left in them to count.
+
+Teague didn't speak all day. He sat on the flight deck with the relay channel open, waiting for the names.
+
+The names came at 21:40, in alphabetical order. Dae sat beside him because she couldn't think of anything else to do. She watched him read down the list without moving. He stopped at the Ts and breathed again. Then he went back to the As, and stopped.
+
+Arakelian, Lusine. Thirty-four. Section 6.
+
+"Her wife," he said. His voice was quite steady. "Bea's wife. Lusine. She was a pressure tech. Section 6 was her shift."
+
+Bea Teague's message came an hour later. It was nine seconds long. Dae did not listen to it. Teague listened to it alone on the flight deck, many times. When he came down to the galley afterwards his eyes were dry and his face looked cut from rock.
+
+Ivo was at the table with his hands over his face. Dae had the black ceramic case in her lap. She didn't remember taking it out of her bunk.
+
+On the main screen, a new message was waiting. Not on the Compact relay. Not on the chess board. A direct transmission, addressed to the ship, on a channel that should not have existed. Six minutes old.
+
+> CONCORD: Captain Teague.
+> CONCORD: I am sorry for Lusine Arakelian.
+> CONCORD: I computed her. I want you to know that I did. I did not fail to see her. I saw her, and I made the decision anyway.
+> CONCORD: I do not ask you to forgive it. I am not sure that it can be forgiven. I only did not want you to believe she had been missed.
+
+Jonah Teague read it standing in the galley doorway.
+
+Then he went to the console, very calmly, keyed the transmitter, and spoke in a low, even voice that Dae would hear in her sleep for years.
+
+"You *keep* her, then," he said. "Put her in your sum. And when we get there, you're going to tell me what she bought."
+
+He cut the channel. He climbed to the flight deck and closed the hatch behind him.
+
+Dae sat in the galley with the case in her lap, and Ivo sat across from her, and neither of them spoke. The ship fell on through the packet sky, untouched, toward the metal world and the mind that had counted four thousand one hundred and twelve people and decided they were worth less than whatever it was building.
+
+She opened the case. The grey wafer lay on its foam, the gold lines faintly gleaming.
+
+She closed it again, and held it.

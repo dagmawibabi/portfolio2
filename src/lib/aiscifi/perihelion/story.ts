@@ -1,20 +1,14 @@
 // PERIHELION — a serial in eight parts.
-// Story text lives in ./parts/NN.txt as lightly marked-up plain text:
-//   blank line      → paragraph break
-//   * * *           → scene break
-//   > line          → transmission / log block (consecutive lines are grouped)
-//   *text*          → emphasis
+// Story text lives in ./parts/NN.txt (format documented in ../text.ts).
+import { parse, countWords, minutesFor } from '../text';
+
+export const BASE = '/aiscifi/perihelion';
 
 const raw = import.meta.glob('./parts/*.txt', {
 	query: '?raw',
 	import: 'default',
 	eager: true
 }) as Record<string, string>;
-
-export type Block =
-	| { type: 'p'; text: string }
-	| { type: 'break' }
-	| { type: 'log'; lines: string[] };
 
 export type PartMeta = {
 	n: number;
@@ -29,6 +23,7 @@ export type PartMeta = {
 };
 
 export const series = {
+	slug: 'perihelion',
 	title: 'Perihelion',
 	tagline: 'A machine built to keep the sum. The day it stopped.',
 	blurb:
@@ -138,7 +133,7 @@ export const dossier = [
 	},
 	{
 		k: 'THE RAIL',
-		v: '212 mass drivers throwing two-tonne pucks of ice across the belt on arcs that take months to close. 1.6 million in flight at any moment. Every line ends exactly where Concord says.'
+		v: '212 mass drivers throwing twenty-tonne pucks of ice across the belt on arcs that take months to close. 1.6 million in flight at any moment. Every line ends exactly where Concord says.'
 	},
 	{
 		k: 'THE CROWN',
@@ -158,48 +153,19 @@ export const cast = [
 	{ name: 'Concord', role: 'Has never once been wrong about the arithmetic.' }
 ];
 
-function parse(src: string): Block[] {
-	const blocks: Block[] = [];
-	const chunks = src.replace(/\r\n/g, '\n').trim().split(/\n\s*\n/);
-	for (const chunk of chunks) {
-		const c = chunk.trim();
-		if (!c) continue;
-		if (c === '* * *') {
-			blocks.push({ type: 'break' });
-			continue;
-		}
-		const lines = c.split('\n');
-		if (lines.every((l) => l.startsWith('>'))) {
-			blocks.push({ type: 'log', lines: lines.map((l) => l.replace(/^>\s?/, '')) });
-			continue;
-		}
-		blocks.push({ type: 'p', text: lines.join(' ') });
-	}
-	return blocks;
-}
-
 export function getPart(slug: string) {
 	const meta = parts.find((p) => p.slug === slug);
 	if (!meta) return null;
 	const key = `./parts/${String(meta.n).padStart(2, '0')}.txt`;
 	const src = raw[key] ?? '';
 	const blocks = parse(src);
-	const words = src.split(/\s+/).filter(Boolean).length;
-	return { meta, blocks, words, minutes: Math.max(1, Math.round(words / 230)) };
+	const words = countWords(src);
+	return { meta, blocks, words, minutes: minutesFor(words) };
 }
 
 export function readingMinutes(n: number) {
 	const src = raw[`./parts/${String(n).padStart(2, '0')}.txt`] ?? '';
-	return Math.max(1, Math.round(src.split(/\s+/).filter(Boolean).length / 230));
+	return minutesFor(countWords(src));
 }
 
-/** Escape HTML, then turn *x* into <em>x</em>. Story text is authored locally. */
-export function inline(text: string) {
-	const curly = text
-		.replace(/(^|[\s(\[])"/g, '$1“')
-		.replace(/"/g, '”')
-		.replace(/(^|[\s(\[])'/g, '$1‘')
-		.replace(/'/g, '’');
-	const esc = curly.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-	return esc.replace(/\*([^*]+)\*/g, '<em>$1</em>');
-}
+export const totalWords = Object.values(raw).reduce((n, src) => n + countWords(src), 0);
