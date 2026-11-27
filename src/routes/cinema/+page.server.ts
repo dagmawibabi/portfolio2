@@ -1,4 +1,4 @@
-import data from '$lib/channel/movies.json';
+import data from '$lib/channel/cinema.json';
 import type { Segment } from '$lib/channel';
 import type { PageServerLoad } from './$types';
 

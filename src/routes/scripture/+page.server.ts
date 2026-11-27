@@ -1,4 +1,4 @@
-import data from '$lib/channel/goodnight.json';
+import data from '$lib/channel/scripture.json';
 import type { PageServerLoad } from './$types';
 
 export const prerender = true;

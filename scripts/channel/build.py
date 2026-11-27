@@ -152,7 +152,7 @@ for m in messages:
         'reactions': reactions(m),
     })
 verses.reverse()  # newest first
-json.dump({'verses': verses}, open(os.path.join(OUT, 'goodnight.json'), 'w', encoding='utf-8'),
+json.dump({'verses': verses}, open(os.path.join(OUT, 'scripture.json'), 'w', encoding='utf-8'),
           ensure_ascii=False, separators=(',', ':'))
 print('verses', len(verses), 'with text', sum(1 for v in verses if v['text']),
       'image-only', sum(1 for v in verses if not v['text'] and not v['ref']))
@@ -512,5 +512,5 @@ json.dump({
     'films': out_films,
     'lists': lists,
     'channelLog': list(reversed(channel_log)),
-}, open(os.path.join(OUT, 'movies.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+}, open(os.path.join(OUT, 'cinema.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
 print('wrote', OUT)
