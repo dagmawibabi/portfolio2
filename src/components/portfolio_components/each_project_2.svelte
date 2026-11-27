@@ -15,12 +15,12 @@
 		MongoDB: 'https://cdn.iconscout.com/icon/free/png-256/free-mongodb-2-1175137.png?f=webp',
 		Docker:
 			'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Docker-svgrepo-com.svg/960px-Docker-svgrepo-com.svg.png?_=20230427111848',
-		Kubernetes: 'https://static-00.iconduck.com/assets.00/kubernetes-icon-2048x1995-r1q3f8n7.png',
+		Kubernetes: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-original.svg',
 		Python: 'https://cdn.freebiesupply.com/logos/large/2x/python-5-logo-png-transparent.png',
-		Rust: 'https://static-00.iconduck.com/assets.00/rust-icon-2048x2047-5s6wkmk1.png',
-		'C#': 'https://www.netgen.co.za/wp-content/uploads/2022/03/C-image-for-Netgen-1024x1024.png',
+		Rust: 'https://www.rust-lang.org/logos/rust-logo-512x512.png',
+		'C#': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg',
 		'C++':
-			'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/C%2B%2B_logo.png/800px-C%2B%2B_logo.png?20210422185554',
+			'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg',
 		ChromiaDB:
 			'https://imagedelivery.net/hbJAA5-ie3CnRrtzIJuUXA/5ee06278-16a7-4812-a260-9c1758a84800/public',
 		Unity:
@@ -32,7 +32,7 @@
 		OpenAI:
 			'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/OpenAI_logo_2025_%28symbol%29.svg/960px-OpenAI_logo_2025_%28symbol%29.svg.png?_=20250205041901',
 		'JS-TikToken':
-			'https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/640px-Npm-logo.svg.png',
+			'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg',
 		ReactJS: 'https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png',
 		Godot: 'https://godotengine.org/assets/press/icon_color.png',
 		Evalite: 'https://v1.evalite.dev/_astro/logo-light.KI0aShDY.svg',

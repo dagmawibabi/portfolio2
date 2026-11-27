@@ -32,9 +32,19 @@
 	import Nostalgia from '$lib/assets/projects/Nostalgia.png';
 	import OmniAI from '$lib/assets/projects/OmniAI.png';
 	import BuildRemove from '$lib/assets/projects/BuildRemove.png';
+	import ManimPro from '$lib/assets/projects/ManimPro.jpg';
 	import VibeCodedProjects from '../vibe_coded_projects.svelte';
 
 	let vibeCodedApps = [
+		{
+			title: 'ManimPro',
+			image: ManimPro,
+			description:
+				'ManimPro is a desktop studio for making math animation videos with Manim, the engine behind 3Blue1Brown-style videos. Write scenes or describe them to an AI assistant (Claude Code, Codex or OpenCode), see them render beside the code, and cut them into a finished video on a timeline with transitions, ElevenLabs voiceovers, a built-in music library and captions. Python, Manim, FFmpeg and LaTeX ship inside one Windows installer, so there is nothing to set up.',
+			link: 'https://manimpro.dagmawi.dev',
+			code: 'https://github.com/dagmawibabi/ManimPro',
+			tools: ['Rust', 'SvelteKit', 'Python']
+		},
 		{
 			title: 'Triangle',
 			image: Triangle,
