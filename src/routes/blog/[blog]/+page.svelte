@@ -197,4 +197,15 @@
 			opacity: 0.5;
 		}
 	}
+
+	/* Images written on the same Markdown line sit side by side: ![a](x) ![b](y) */
+	.blog-content :global(p:has(> img + img)) {
+		display: flex;
+		gap: 0.5rem;
+	}
+
+	.blog-content :global(p:has(> img + img) > img) {
+		flex: 1 1 0;
+		min-width: 0;
+	}
 </style>

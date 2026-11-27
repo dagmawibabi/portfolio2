@@ -95,18 +95,12 @@ Every message (and every reaction) uses your Claude usage just like a normal cha
 
 ### My Thoughts
 
-This was so fun. I went into a whole new rabbit hole of game modding and sites I haven't seen before, and this is just the surface. There's so much that can be done with script mods and AI.
-
 ![You: hey claude you there?](/blog-images/ClaudeInGTASA/hey-claude.webp)
 
-[CLEO](https://github.com/cleolibrary/CLEO4/releases) is what I used for this mod. It's the scripting library and it's pretty darn good and easy to understand, not to mention very up-to-date.
+![Claude is thinking...](/blog-images/ClaudeInGTASA/thinking.webp) ![Claude: Yeah homie, I'm here](/blog-images/ClaudeInGTASA/reply.webp)
 
-Doing this feels like some weird mashup of the future and the past. Putting a 2026 technology inside a game made 21 years ago is just epic! Reading "Claude is thinking..." while the scene is some low poly art style, limited by the tech of its time, is a bit poetic tbh.
+Modding this game was so fun, [CLEO](https://github.com/cleolibrary/CLEO4/releases) is what I used for this mod, it's the scripting library and it's pretty darn good and easy to understand, not to mention very up-to-date, and I went into a whole new rabbit hole of game modding and sites I haven't seen before and this is just the surface, there's so much that can be done with script mods and AI. 
 
-![Claude is thinking...](/blog-images/ClaudeInGTASA/thinking.webp)
+Doing this feels like some weird mashup of the future and the past. Putting a 2026 technology inside a game made 21 years ago is just epic! Reading "Claude is thinking..." while the scene is some low poly art style limited by the tech of its time is a bit poetic tbh. For context when the game came out, the PS2 only had 32MB of RAM and 300 MHz CPU. Then there's Claude running in massive datacenters.
 
-For context, when the game came out the PS2 only had 32MB of RAM and a 300 MHz CPU. Then there's Claude, running in massive datacenters, answering CJ in an alley in Jefferson.
-
-![Claude: Yeah homie, I'm here](/blog-images/ClaudeInGTASA/reply.webp)
-
-San Andreas was one of my most favorite games, and now it's even more. Just epic! Go try it, make the whole of Los Santos worship you and send me screenshots :)
+San Andreas was one of my most favorite games, and now it's even more. Just epic!
