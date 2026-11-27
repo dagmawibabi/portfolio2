@@ -1,4 +1,4 @@
-"""Build the /goodnight, /communityshowcase and /movies data from a Telegram channel export
+"""Build the /scripture, /communityshowcase and /cinema data from a Telegram channel export
 and a Letterboxd export.
 
     python -I -X utf8 scripts/channel/build.py <telegram result.json> <letterboxd export dir>
@@ -107,7 +107,7 @@ def seg_text(segs):
 ETHIOPIC = re.compile(r'[ሀ-᎟]')
 
 
-# ---------------------------------------------------------------- /goodnight
+# ---------------------------------------------------------------- /scripture
 GREETING = re.compile(
     r'^(good\s*night|good\s*morning|good\s*day|gm|gn|have a .{0,40}(day|night|week|weekend|sunday|evening))\b', re.I)
 REF_LINE = re.compile(r'^\s*(?:[—–\-~]+|―)\s*(.+)$')
@@ -248,7 +248,7 @@ json.dump({'posts': showcase}, open(os.path.join(OUT, 'showcase.json'), 'w', enc
 print('showcase', len(showcase), Counter(c for p in showcase for c in p['categories']))
 
 
-# ---------------------------------------------------------------- /movies: Letterboxd
+# ---------------------------------------------------------------- /cinema: Letterboxd
 def norm(s):
     s = unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode().lower()
     s = s.replace('&', 'and')
@@ -332,7 +332,7 @@ for f in films.values():
     if f['uri'] in fav_uris:
         f['favorite'] = True
 
-# ---------------------------------------------------------------- /movies: channel posts
+# ---------------------------------------------------------------- /cinema: channel posts
 channel_log = []
 for m in messages:
     tg = tags(m)

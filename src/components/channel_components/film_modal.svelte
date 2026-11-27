@@ -4,7 +4,7 @@
 	import Stars from './stars.svelte';
 	import RichText from './rich_text.svelte';
 	import { fmtDate, postUrl } from '$lib/channel';
-	import type { Film, FilmList } from '../../routes/movies/+page.server';
+	import type { Film, FilmList } from '../../routes/cinema/+page.server';
 
 	let { film, lists, onClose }: { film: Film; lists: FilmList[]; onClose: () => void } = $props();
 

@@ -1,7 +1,7 @@
 <script lang="ts">
 	// A film poster, or a typographic stand-in when no artwork was found.
 	import { hash } from '$lib/channel';
-	import type { Film } from '../../routes/movies/+page.server';
+	import type { Film } from '../../routes/cinema/+page.server';
 
 	let { film, eager = false, class: klass = '' }: { film: Film; eager?: boolean; class?: string } = $props();
 	let failed = $state(false);

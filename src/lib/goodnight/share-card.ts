@@ -1,10 +1,10 @@
-// Share cards for /goodnight verses, drawn on a <canvas> in the browser so every template,
+// Share cards for /scripture verses, drawn on a <canvas> in the browser so every template,
 // size, palette and toggle previews instantly and exports as a PNG without a server.
 // Fonts come from the page's own Google Fonts stylesheet (Newsreader, Geist, Geist Mono,
 // Noto Serif/Sans Ethiopic); loadCardFonts() makes sure the glyphs a verse needs are loaded.
 
 export const SITE_HOST = 'dagmawibabi.com';
-export const SITE_PATH = '/goodnight';
+export const SITE_PATH = '/scripture';
 export const TELEGRAM_HOST = 't.me/Dagmawi_Babi';
 export const SIGNATURE = 'Dagmawi Babi';
 
