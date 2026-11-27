@@ -131,6 +131,8 @@ const getStaticImageSize = (src: string) => {
 	return imageSizeCache.get(src) ?? null;
 };
 
+const videoPattern = /\.(mp4|webm)$/i;
+
 // Lazy-load every image except the first (usually the header, which should show right away)
 // and add width/height so the page doesn't jump around while images load
 const optimizeImages = () => {
@@ -141,6 +143,26 @@ const optimizeImages = () => {
 			if (node.type === 'element' && node.tagName === 'img') {
 				const properties = (node.properties ??= {});
 				const src = typeof properties.src === 'string' ? properties.src : '';
+
+				// ![caption](/path/video.mp4) becomes a video player; an image with the same name
+				// plus "-poster.jpg" (e.g. demo-poster.jpg) is used as its thumbnail
+				if (videoPattern.test(src)) {
+					const path = src.split(/[?#]/)[0];
+					const poster = path.replace(videoPattern, '-poster.jpg');
+					node.tagName = 'video';
+					node.properties = {
+						src,
+						controls: true,
+						playsInline: true,
+						preload: 'metadata',
+						title: typeof properties.alt === 'string' ? properties.alt : undefined,
+						poster: getStaticImageSize(poster) ? poster : undefined,
+						style: 'width:100%;height:auto;border-radius:0.5rem'
+					};
+					node.children?.forEach(visit);
+					return;
+				}
+
 				const size = getStaticImageSize(src);
 
 				if (size && properties.width === undefined && properties.height === undefined) {

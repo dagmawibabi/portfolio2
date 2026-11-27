@@ -1,19 +1,23 @@
 ---
-title: Talk to Claude in GTA San Andreas
+title: Claude in GTA SA
 date: 2026-11-27
-description: A quick and simple guide on how to set up Claude Chat, a GTA San Andreas mod I made where you can talk to Claude inside the game, make it follow you as a character and even run cheats for you.
+description: A quick and simple guide on how to set up Claude in GTA SA, a GTA San Andreas mod I made where you can talk to Claude inside the game, make it follow you as a character and even run cheats for you.
 category: "Tech"
 ---
 
-![image](/blog-images/TalkToClaudeInGTASanAndreas/banner.webp)
+![image](/blog-images/ClaudeInGTASA/banner.webp)
 
 So I was setting up GTA San Andreas again with some graphics mods and one thing led to another and now Claude lives inside the game. You type `claude` like a cheat code, a chat box pops up, you ask it something and it answers you right there on the screen as subtitles. And it doesn't just talk. It can spawn cars, change the weather, run cheat codes, follow you around as a character, help you with the mission you're currently on and even make everyone on the street follow you and fall down worshipping you. Yes, that last one is real lol.
+
+Here's a quick demo of it in action.
+
+![Claude in GTA SA demo](/blog-images/ClaudeInGTASA/demo.mp4)
 
 This is a very quick guide on how to get it running. So let's get to it.
 
 ### What You Need
 
-Before anything, here is what you need. Nothing fancy.
+Before anything, here is what you need.
 
 1. **GTA San Andreas v1.0 US**
 
@@ -41,7 +45,7 @@ Before anything, here is what you need. Nothing fancy.
 
 ### Installing the Mod
 
-Now the easy part. [Download the mod zip](/blog-images/TalkToClaudeInGTASanAndreas/Claude-Chat-for-GTA-SA.zip) (it's tiny, about 19 KB), extract it and copy EVERYTHING into your GTA San Andreas folder (the one with `gta_sa.exe`). Your folder should look something like this:
+Now the easy part. [Download Claude in GTA SA](/blog-images/ClaudeInGTASA/Claude%20in%20GTA%20SA.zip) (it's tiny, about 19 KB), extract it and copy EVERYTHING into your GTA San Andreas folder (the one with `gta_sa.exe`). Your folder should look something like this:
 
 ```
 GTA San Andreas/
@@ -89,6 +93,20 @@ Claude takes a few seconds to answer so think of it like texting a friend, not a
 
 Every message (and every reaction) uses your Claude usage just like a normal chat, so keep that in mind.
 
-### Summary
+### My Thoughts
 
-This started as a "let me just make the game look nicer" night and ended with Claude living in Grove Street. Honestly one of the most fun things I've built in a while. Go try it, make the whole of Los Santos worship you and send me screenshots :)
+This was so fun. I went into a whole new rabbit hole of game modding and sites I haven't seen before, and this is just the surface. There's so much that can be done with script mods and AI.
+
+![You: hey claude you there?](/blog-images/ClaudeInGTASA/hey-claude.webp)
+
+[CLEO](https://github.com/cleolibrary/CLEO4/releases) is what I used for this mod. It's the scripting library and it's pretty darn good and easy to understand, not to mention very up-to-date.
+
+Doing this feels like some weird mashup of the future and the past. Putting a 2026 technology inside a game made 21 years ago is just epic! Reading "Claude is thinking..." while the scene is some low poly art style, limited by the tech of its time, is a bit poetic tbh.
+
+![Claude is thinking...](/blog-images/ClaudeInGTASA/thinking.webp)
+
+For context, when the game came out the PS2 only had 32MB of RAM and a 300 MHz CPU. Then there's Claude, running in massive datacenters, answering CJ in an alley in Jefferson.
+
+![Claude: Yeah homie, I'm here](/blog-images/ClaudeInGTASA/reply.webp)
+
+San Andreas was one of my most favorite games, and now it's even more. Just epic! Go try it, make the whole of Los Santos worship you and send me screenshots :)
